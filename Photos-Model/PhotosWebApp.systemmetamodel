@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<co.edu.unal.mdd.photos.SystemMetamodel:LayeredStyle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:co.edu.unal.mdd.photos.SystemMetamodel="http://co/edu/unal/mdd/photos/SystemMetamodel">
+  <layer name="Presentation">
+    <layerSegments name="View"/>
+    <layerSegments name="Component"/>
+    <layerSegments name="Action"/>
+  </layer>
+  <layer name="Business Logic">
+    <layerSegments name="Controller"/>
+    <layerSegments name="Model"/>
+    <layerSegments name="Repository"/>
+  </layer>
+  <layer name="Data">
+    <layerSegments name="Database"/>
+  </layer>
+</co.edu.unal.mdd.photos.SystemMetamodel:LayeredStyle>
