@@ -13,11 +13,72 @@
   <layer name="Business Logic">
     <layerSegments name="Controller">
       <folders name="co.edu.unal.photosappback">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotosAppBackApplication" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotosAppBackApplication" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotosAppBackApplication">
+            <annotations>
+              <element name="@SpringBootApplication"/>
+            </annotations>
+            <members name="version"/>
+            <methods name="main"/>
+          </contains>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.config">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AuthorizationServerConfig" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="CORSFilter" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AuthorizationServerConfig" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AuthorizationServerConfig">
+            <annotations>
+              <element name="@Configuration"/>
+              <element name="@EnableAuthorizationServer"/>
+            </annotations>
+            <annotations>
+              <element name="@Autowired"/>
+            </annotations>
+            <members name="CLIENT_ID"/>
+            <members name="CLIENT_SECRET"/>
+            <members name="GRANT_TYPE_PASSWORD"/>
+            <members name="AUTHORIZATION_CODE"/>
+            <members name="REFRESH_TOKEN"/>
+            <members name="IMPLICIT"/>
+            <members name="SCOPE_READ"/>
+            <members name="SCOPE_WRITE"/>
+            <members name="TRUST"/>
+            <members name="ACCESS_TOKEN_VALIDITY_SECONDS"/>
+            <members name="FREFRESH_TOKEN_VALIDITY_SECONDS"/>
+            <members name="authenticationManager"/>
+            <methods name="accessTokenConverter">
+              <annotations>
+                <element name="@Bean"/>
+              </annotations>
+            </methods>
+            <methods name="tokenStore">
+              <annotations>
+                <element name="@Bean"/>
+              </annotations>
+            </methods>
+            <methods name="configure">
+              <annotations>
+                <element name="@Override"/>
+              </annotations>
+              <parameters name="configurer"/>
+            </methods>
+            <methods name="configure">
+              <annotations>
+                <element name="@Override"/>
+              </annotations>
+              <parameters name="endpoints"/>
+            </methods>
+          </contains>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="CORSFilter" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="CORSFilter">
+            <annotations>
+              <element name="@Component"/>
+            </annotations>
+            <annotations>
+              <element name="@Order"/>
+            </annotations>
+          </contains>
+        </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="ResourceServerConfig" extension="java"/>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="SecurityConfig" extension="java"/>
       </folders>
