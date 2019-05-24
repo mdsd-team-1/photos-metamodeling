@@ -3,24 +3,119 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SystemMetamodel" nsURI="http://co/edu/unal/mdd/photos/SystemMetamodel"
     nsPrefix="co.edu.unal.mdd.photos.SystemMetamodel">
   <eClassifiers xsi:type="ecore:EClass" name="LayeredStyle">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relation" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
         eType="#//Relation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layer" upperBound="-1"
         eType="#//Layer" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Layer"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Relation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LayerSegment"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUseBelow"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Table"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Column"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ForeignKey"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Classifier"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Class"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Association"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Attribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Operation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Layer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layerSegments" upperBound="-1"
+        eType="#//LayerSegment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//Connection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLayer" eType="#//Layer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLayer" eType="#//Layer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LayerSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="folders" upperBound="-1"
+        eType="#//Folder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
+        eType="#//File" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="databases" upperBound="-1"
+        eType="#//Database" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse" eSuperTypes="#//Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUseBelow" eSuperTypes="#//Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Table">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+        eType="#//Column" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primaryKey" eType="#//Column"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foreignKeys" upperBound="-1"
+        eType="#//ForeignKey" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Column">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForeignKey">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersTo" eType="#//Table"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="column" eType="#//Column"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Classifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" upperBound="-1"
+        eType="#//Annotation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" eSuperTypes="#//Classifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//Classifier">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
+        eType="#//Member" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
+        eType="#//Function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Association">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isComposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAggregation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Member">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Classifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Classifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnType" eType="#//Classifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Classifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Folder">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
+        eType="#//File" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//Folder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extension" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceSegment" eType="#//LayerSegment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetSegment" eType="#//LayerSegment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Database">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="schemas" upperBound="-1"
+        eType="#//Schema" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Media" eSuperTypes="#//File"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//File">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//Classifier" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Schema">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
+        eType="#//Table" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>
