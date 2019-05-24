@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SystemMetamodel" nsURI="http://co/edu/unal/mdd/photos/SystemMetamodel"
+    nsPrefix="co.edu.unal.mdd.photos.SystemMetamodel">
+  <eClassifiers xsi:type="ecore:EClass" name="LayeredStyle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relation" upperBound="-1"
+        eType="#//Relation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layer" upperBound="-1"
+        eType="#//Layer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Layer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LayerSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUseBelow"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Table"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Column"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForeignKey"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Classifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Class"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter"/>
+</ecore:EPackage>
