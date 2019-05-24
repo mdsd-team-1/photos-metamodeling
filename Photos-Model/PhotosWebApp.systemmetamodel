@@ -11,9 +11,78 @@
     <connections sourceSegment="//@layer.0/@layerSegments.2" targetSegment="//@layer.1/@layerSegments.0"/>
   </layer>
   <layer name="Business Logic">
-    <layerSegments name="Controller"/>
-    <layerSegments name="Model"/>
-    <layerSegments name="Repository"/>
+    <layerSegments name="Controller">
+      <folders name="co.edu.unal.photosappback">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotosAppBackApplication" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.config">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AuthorizationServerConfig" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="CORSFilter" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="ResourceServerConfig" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="SecurityConfig" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.controller">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumController" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="HomeController" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoController" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserController" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.controller.amazon">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AmazonClient" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.controller.exception.album">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumHasNoPhotosException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumNotCreatedException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumNotFoundException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="MissingParametersForNewAlbumException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotosFromAlbumNotFoundException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotosFromAlbumNotFoundException" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.controller.exception.photo">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumIdIsNotNumberException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumIdIsNotNumberException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoNotCreatedException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoNotDeletedException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoNotFoundException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoUploadErrorException" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.controller.exception.user">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumNotCreatedForNewUserException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumsFromUserNotFoundException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="MissingParametersForEditUserException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="MissingParametersForLoginException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="MissingParametersForNewUserException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserHasNoAlbumsException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserHasNoPhotosException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserNotCreatedException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserNotEditedException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserNotFoundException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserToEditDoesNotExist" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="WrongLoginInfoException" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.specification">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumSpecification" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoSpecification" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserSpecification" extension="java"/>
+      </folders>
+      <folders name="co.edu.unal.photosappback.specification.criteria">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="SearchCriteria" extension="java"/>
+      </folders>
+    </layerSegments>
+    <layerSegments name="Model">
+      <folders name="co.edu.unal.photosappback.model">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="Album" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="Photo" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="User" extension="java"/>
+      </folders>
+    </layerSegments>
+    <layerSegments name="Repository">
+      <folders name="co.edu.unal.photosappback.repository">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="AlbumRepository" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="PhotoRepository" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Code" name="UserRespository" extension="java"/>
+      </folders>
+    </layerSegments>
     <connections sourceSegment="//@layer.1/@layerSegments.0" targetSegment="//@layer.1/@layerSegments.1"/>
     <connections sourceSegment="//@layer.1/@layerSegments.1" targetSegment="//@layer.1/@layerSegments.2"/>
     <connections sourceSegment="//@layer.1/@layerSegments.2" targetSegment="//@layer.2/@layerSegments.0"/>
