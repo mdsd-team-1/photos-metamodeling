@@ -2,7 +2,7 @@
  */
 package SystemMetamodel.impl;
 
-import SystemMetamodel.Classifier;
+import SystemMetamodel.Entity;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.SystemMetamodelPackage;
 
@@ -57,7 +57,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected Classifier type;
+	protected Entity type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,10 +107,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 */
 	@Override
-	public Classifier getType() {
+	public Entity getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (Classifier)eResolveProxy(oldType);
+			type = (Entity)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.PARAMETER__TYPE, oldType, type));
@@ -124,7 +124,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Classifier basicGetType() {
+	public Entity basicGetType() {
 		return type;
 	}
 
@@ -134,8 +134,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 */
 	@Override
-	public void setType(Classifier newType) {
-		Classifier oldType = type;
+	public void setType(Entity newType) {
+		Entity oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.PARAMETER__TYPE, oldType, type));
@@ -170,7 +170,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				setName((String)newValue);
 				return;
 			case SystemMetamodelPackage.PARAMETER__TYPE:
-				setType((Classifier)newValue);
+				setType((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,7 +188,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				setName(NAME_EDEFAULT);
 				return;
 			case SystemMetamodelPackage.PARAMETER__TYPE:
-				setType((Classifier)null);
+				setType((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);

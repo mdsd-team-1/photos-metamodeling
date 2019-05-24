@@ -2,8 +2,8 @@
  */
 package SystemMetamodel.impl;
 
+import SystemMetamodel.Attribute;
 import SystemMetamodel.Function;
-import SystemMetamodel.Member;
 import SystemMetamodel.SystemMetamodelPackage;
 
 import java.util.Collection;
@@ -29,35 +29,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link SystemMetamodel.impl.ClassImpl#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link SystemMetamodel.impl.ClassImpl#getMembers <em>Members</em>}</li>
  *   <li>{@link SystemMetamodel.impl.ClassImpl#getMethods <em>Methods</em>}</li>
- *   <li>{@link SystemMetamodel.impl.ClassImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.ClassImpl#getExtends <em>Extends</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
-	/**
-	 * The default value of the '{@link #isIsAbstract() <em>Is Abstract</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsAbstract()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_ABSTRACT_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsAbstract() <em>Is Abstract</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsAbstract()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isAbstract = IS_ABSTRACT_EDEFAULT;
-
+public class ClassImpl extends EntityImpl implements SystemMetamodel.Class {
 	/**
 	 * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -66,7 +45,7 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Member> members;
+	protected EList<Attribute> members;
 
 	/**
 	 * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
@@ -79,14 +58,14 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	protected EList<Function> methods;
 
 	/**
-	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * The cached value of the '{@link #getExtends() <em>Extends</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParent()
+	 * @see #getExtends()
 	 * @generated
 	 * @ordered
 	 */
-	protected SystemMetamodel.Class parent;
+	protected SystemMetamodel.Class extends_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,32 +92,9 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	 * @generated
 	 */
 	@Override
-	public boolean isIsAbstract() {
-		return isAbstract;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIsAbstract(boolean newIsAbstract) {
-		boolean oldIsAbstract = isAbstract;
-		isAbstract = newIsAbstract;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.CLASS__IS_ABSTRACT, oldIsAbstract, isAbstract));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Member> getMembers() {
+	public EList<Attribute> getMembers() {
 		if (members == null) {
-			members = new EObjectContainmentEList<Member>(Member.class, this, SystemMetamodelPackage.CLASS__MEMBERS);
+			members = new EObjectContainmentEList<Attribute>(Attribute.class, this, SystemMetamodelPackage.CLASS__MEMBERS);
 		}
 		return members;
 	}
@@ -162,16 +118,16 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	 * @generated
 	 */
 	@Override
-	public SystemMetamodel.Class getParent() {
-		if (parent != null && parent.eIsProxy()) {
-			InternalEObject oldParent = (InternalEObject)parent;
-			parent = (SystemMetamodel.Class)eResolveProxy(oldParent);
-			if (parent != oldParent) {
+	public SystemMetamodel.Class getExtends() {
+		if (extends_ != null && extends_.eIsProxy()) {
+			InternalEObject oldExtends = (InternalEObject)extends_;
+			extends_ = (SystemMetamodel.Class)eResolveProxy(oldExtends);
+			if (extends_ != oldExtends) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.CLASS__PARENT, oldParent, parent));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.CLASS__EXTENDS, oldExtends, extends_));
 			}
 		}
-		return parent;
+		return extends_;
 	}
 
 	/**
@@ -179,8 +135,8 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemMetamodel.Class basicGetParent() {
-		return parent;
+	public SystemMetamodel.Class basicGetExtends() {
+		return extends_;
 	}
 
 	/**
@@ -189,11 +145,11 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	 * @generated
 	 */
 	@Override
-	public void setParent(SystemMetamodel.Class newParent) {
-		SystemMetamodel.Class oldParent = parent;
-		parent = newParent;
+	public void setExtends(SystemMetamodel.Class newExtends) {
+		SystemMetamodel.Class oldExtends = extends_;
+		extends_ = newExtends;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.CLASS__PARENT, oldParent, parent));
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.CLASS__EXTENDS, oldExtends, extends_));
 	}
 
 	/**
@@ -220,15 +176,13 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.CLASS__IS_ABSTRACT:
-				return isIsAbstract();
 			case SystemMetamodelPackage.CLASS__MEMBERS:
 				return getMembers();
 			case SystemMetamodelPackage.CLASS__METHODS:
 				return getMethods();
-			case SystemMetamodelPackage.CLASS__PARENT:
-				if (resolve) return getParent();
-				return basicGetParent();
+			case SystemMetamodelPackage.CLASS__EXTENDS:
+				if (resolve) return getExtends();
+				return basicGetExtends();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,19 +196,16 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.CLASS__IS_ABSTRACT:
-				setIsAbstract((Boolean)newValue);
-				return;
 			case SystemMetamodelPackage.CLASS__MEMBERS:
 				getMembers().clear();
-				getMembers().addAll((Collection<? extends Member>)newValue);
+				getMembers().addAll((Collection<? extends Attribute>)newValue);
 				return;
 			case SystemMetamodelPackage.CLASS__METHODS:
 				getMethods().clear();
 				getMethods().addAll((Collection<? extends Function>)newValue);
 				return;
-			case SystemMetamodelPackage.CLASS__PARENT:
-				setParent((SystemMetamodel.Class)newValue);
+			case SystemMetamodelPackage.CLASS__EXTENDS:
+				setExtends((SystemMetamodel.Class)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -268,17 +219,14 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.CLASS__IS_ABSTRACT:
-				setIsAbstract(IS_ABSTRACT_EDEFAULT);
-				return;
 			case SystemMetamodelPackage.CLASS__MEMBERS:
 				getMembers().clear();
 				return;
 			case SystemMetamodelPackage.CLASS__METHODS:
 				getMethods().clear();
 				return;
-			case SystemMetamodelPackage.CLASS__PARENT:
-				setParent((SystemMetamodel.Class)null);
+			case SystemMetamodelPackage.CLASS__EXTENDS:
+				setExtends((SystemMetamodel.Class)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -292,32 +240,14 @@ public class ClassImpl extends ClassifierImpl implements SystemMetamodel.Class {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.CLASS__IS_ABSTRACT:
-				return isAbstract != IS_ABSTRACT_EDEFAULT;
 			case SystemMetamodelPackage.CLASS__MEMBERS:
 				return members != null && !members.isEmpty();
 			case SystemMetamodelPackage.CLASS__METHODS:
 				return methods != null && !methods.isEmpty();
-			case SystemMetamodelPackage.CLASS__PARENT:
-				return parent != null;
+			case SystemMetamodelPackage.CLASS__EXTENDS:
+				return extends_ != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (isAbstract: ");
-		result.append(isAbstract);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ClassImpl

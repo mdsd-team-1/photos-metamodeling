@@ -12,7 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassTest extends ClassifierTest {
+public class ClassTest extends EntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->

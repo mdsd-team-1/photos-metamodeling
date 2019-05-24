@@ -17,12 +17,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -61,8 +63,31 @@ public class AnnotationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Annotation_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Annotation_name_feature", "_UI_Annotation_type"),
+				 SystemMetamodelPackage.Literals.ANNOTATION__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -77,7 +102,7 @@ public class AnnotationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SystemMetamodelPackage.Literals.ANNOTATION__ELEMENT);
+			childrenFeatures.add(SystemMetamodelPackage.Literals.ANNOTATION__ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -114,7 +139,10 @@ public class AnnotationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Annotation_type");
+		String label = ((Annotation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Annotation_type") :
+			getString("_UI_Annotation_type") + " " + label;
 	}
 
 
@@ -130,7 +158,10 @@ public class AnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Annotation.class)) {
-			case SystemMetamodelPackage.ANNOTATION__ELEMENT:
+			case SystemMetamodelPackage.ANNOTATION__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case SystemMetamodelPackage.ANNOTATION__ELEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,7 +181,7 @@ public class AnnotationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SystemMetamodelPackage.Literals.ANNOTATION__ELEMENT,
+				(SystemMetamodelPackage.Literals.ANNOTATION__ELEMENTS,
 				 SystemMetamodelFactory.eINSTANCE.createElement()));
 	}
 

@@ -17,7 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link SystemMetamodel.Database#getSchemas <em>Schemas</em>}</li>
  *   <li>{@link SystemMetamodel.Database#getName <em>Name</em>}</li>
+ *   <li>{@link SystemMetamodel.Database#getServer <em>Server</em>}</li>
  *   <li>{@link SystemMetamodel.Database#getPort <em>Port</em>}</li>
+ *   <li>{@link SystemMetamodel.Database#getEngine <em>Engine</em>}</li>
  * </ul>
  *
  * @see SystemMetamodel.SystemMetamodelPackage#getDatabase()
@@ -60,6 +62,28 @@ public interface Database extends EObject {
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Server</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Server</em>' attribute.
+	 * @see #setServer(String)
+	 * @see SystemMetamodel.SystemMetamodelPackage#getDatabase_Server()
+	 * @model
+	 * @generated
+	 */
+	String getServer();
+
+	/**
+	 * Sets the value of the '{@link SystemMetamodel.Database#getServer <em>Server</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Server</em>' attribute.
+	 * @see #getServer()
+	 * @generated
+	 */
+	void setServer(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Port</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -80,5 +104,27 @@ public interface Database extends EObject {
 	 * @generated
 	 */
 	void setPort(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Engine</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Engine</em>' attribute.
+	 * @see #setEngine(String)
+	 * @see SystemMetamodel.SystemMetamodelPackage#getDatabase_Engine()
+	 * @model
+	 * @generated
+	 */
+	String getEngine();
+
+	/**
+	 * Sets the value of the '{@link SystemMetamodel.Database#getEngine <em>Engine</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Engine</em>' attribute.
+	 * @see #getEngine()
+	 * @generated
+	 */
+	void setEngine(String value);
 
 } // Database

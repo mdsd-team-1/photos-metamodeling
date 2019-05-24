@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link SystemMetamodel.impl.ForeignKeyImpl#getRefersTo <em>Refers To</em>}</li>
  *   <li>{@link SystemMetamodel.impl.ForeignKeyImpl#getColumn <em>Column</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.ForeignKeyImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +50,26 @@ public class ForeignKeyImpl extends MinimalEObjectImpl.Container implements Fore
 	 * @ordered
 	 */
 	protected Column column;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,6 +176,29 @@ public class ForeignKeyImpl extends MinimalEObjectImpl.Container implements Fore
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.FOREIGN_KEY__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SystemMetamodelPackage.FOREIGN_KEY__REFERS_TO:
@@ -163,6 +207,8 @@ public class ForeignKeyImpl extends MinimalEObjectImpl.Container implements Fore
 			case SystemMetamodelPackage.FOREIGN_KEY__COLUMN:
 				if (resolve) return getColumn();
 				return basicGetColumn();
+			case SystemMetamodelPackage.FOREIGN_KEY__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,6 +226,9 @@ public class ForeignKeyImpl extends MinimalEObjectImpl.Container implements Fore
 				return;
 			case SystemMetamodelPackage.FOREIGN_KEY__COLUMN:
 				setColumn((Column)newValue);
+				return;
+			case SystemMetamodelPackage.FOREIGN_KEY__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,6 +248,9 @@ public class ForeignKeyImpl extends MinimalEObjectImpl.Container implements Fore
 			case SystemMetamodelPackage.FOREIGN_KEY__COLUMN:
 				setColumn((Column)null);
 				return;
+			case SystemMetamodelPackage.FOREIGN_KEY__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -215,8 +267,26 @@ public class ForeignKeyImpl extends MinimalEObjectImpl.Container implements Fore
 				return refersTo != null;
 			case SystemMetamodelPackage.FOREIGN_KEY__COLUMN:
 				return column != null;
+			case SystemMetamodelPackage.FOREIGN_KEY__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ForeignKeyImpl

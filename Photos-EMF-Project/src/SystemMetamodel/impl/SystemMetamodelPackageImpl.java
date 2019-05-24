@@ -6,12 +6,13 @@ import SystemMetamodel.AllowedToUse;
 import SystemMetamodel.AllowedToUseBelow;
 import SystemMetamodel.Annotation;
 import SystemMetamodel.Association;
-import SystemMetamodel.Classifier;
-import SystemMetamodel.Code;
+import SystemMetamodel.Attribute;
+import SystemMetamodel.CodeFile;
 import SystemMetamodel.Column;
 import SystemMetamodel.Connection;
 import SystemMetamodel.Database;
 import SystemMetamodel.Element;
+import SystemMetamodel.Entity;
 import SystemMetamodel.File;
 import SystemMetamodel.Folder;
 import SystemMetamodel.ForeignKey;
@@ -19,8 +20,7 @@ import SystemMetamodel.Function;
 import SystemMetamodel.Layer;
 import SystemMetamodel.LayerSegment;
 import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.Media;
-import SystemMetamodel.Member;
+import SystemMetamodel.MediaFile;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.PrimitiveDataType;
 import SystemMetamodel.Relation;
@@ -111,7 +111,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass classifierEClass = null;
+	private EClass entityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,7 +139,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass memberEClass = null;
+	private EClass attributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -188,14 +188,14 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mediaEClass = null;
+	private EClass mediaFileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass codeEClass = null;
+	private EClass codeFileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -565,8 +565,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getClassifier() {
-		return classifierEClass;
+	public EAttribute getForeignKey_Name() {
+		return (EAttribute)foreignKeyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -575,8 +575,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getClassifier_Annotations() {
-		return (EReference)classifierEClass.getEStructuralFeatures().get(0);
+	public EClass getEntity() {
+		return entityEClass;
 	}
 
 	/**
@@ -585,8 +585,28 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getClassifier_Name() {
-		return (EAttribute)classifierEClass.getEStructuralFeatures().get(1);
+	public EReference getEntity_Annotations() {
+		return (EReference)entityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntity_Name() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntity_Access() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -605,6 +625,16 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getPrimitiveDataType_IsStatic() {
+		return (EAttribute)primitiveDataTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getClass_() {
 		return classEClass;
 	}
@@ -615,18 +645,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getClass_IsAbstract() {
-		return (EAttribute)classEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getClass_Members() {
-		return (EReference)classEClass.getEStructuralFeatures().get(1);
+		return (EReference)classEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -636,7 +656,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 */
 	@Override
 	public EReference getClass_Methods() {
-		return (EReference)classEClass.getEStructuralFeatures().get(2);
+		return (EReference)classEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -645,8 +665,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getClass_Parent() {
-		return (EReference)classEClass.getEStructuralFeatures().get(3);
+	public EReference getClass_Extends() {
+		return (EReference)classEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -705,8 +725,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getMember() {
-		return memberEClass;
+	public EClass getAttribute() {
+		return attributeEClass;
 	}
 
 	/**
@@ -715,8 +735,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getMember_Name() {
-		return (EAttribute)memberEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAttribute_Name() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -725,8 +745,28 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getMember_Type() {
-		return (EReference)memberEClass.getEStructuralFeatures().get(1);
+	public EReference getAttribute_Type() {
+		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAttribute_IsStatic() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAttribute_Access() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -757,6 +797,26 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	@Override
 	public EReference getFunction_ReturnType() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFunction_Throws() {
+		return (EReference)functionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFunction_IsStatic() {
+		return (EAttribute)functionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -925,7 +985,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDatabase_Port() {
+	public EAttribute getDatabase_Server() {
 		return (EAttribute)databaseEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -935,8 +995,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getMedia() {
-		return mediaEClass;
+	public EAttribute getDatabase_Port() {
+		return (EAttribute)databaseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -945,8 +1005,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getCode() {
-		return codeEClass;
+	public EAttribute getDatabase_Engine() {
+		return (EAttribute)databaseEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -955,8 +1015,28 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getCode_Contains() {
-		return (EReference)codeEClass.getEStructuralFeatures().get(0);
+	public EClass getMediaFile() {
+		return mediaFileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCodeFile() {
+		return codeFileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCodeFile_Contains() {
+		return (EReference)codeFileEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1005,8 +1085,18 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getAnnotation_Element() {
+	public EReference getAnnotation_Elements() {
 		return (EReference)annotationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAnnotation_Name() {
+		return (EAttribute)annotationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1104,18 +1194,20 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		foreignKeyEClass = createEClass(FOREIGN_KEY);
 		createEReference(foreignKeyEClass, FOREIGN_KEY__REFERS_TO);
 		createEReference(foreignKeyEClass, FOREIGN_KEY__COLUMN);
+		createEAttribute(foreignKeyEClass, FOREIGN_KEY__NAME);
 
-		classifierEClass = createEClass(CLASSIFIER);
-		createEReference(classifierEClass, CLASSIFIER__ANNOTATIONS);
-		createEAttribute(classifierEClass, CLASSIFIER__NAME);
+		entityEClass = createEClass(ENTITY);
+		createEReference(entityEClass, ENTITY__ANNOTATIONS);
+		createEAttribute(entityEClass, ENTITY__NAME);
+		createEAttribute(entityEClass, ENTITY__ACCESS);
 
 		primitiveDataTypeEClass = createEClass(PRIMITIVE_DATA_TYPE);
+		createEAttribute(primitiveDataTypeEClass, PRIMITIVE_DATA_TYPE__IS_STATIC);
 
 		classEClass = createEClass(CLASS);
-		createEAttribute(classEClass, CLASS__IS_ABSTRACT);
 		createEReference(classEClass, CLASS__MEMBERS);
 		createEReference(classEClass, CLASS__METHODS);
-		createEReference(classEClass, CLASS__PARENT);
+		createEReference(classEClass, CLASS__EXTENDS);
 
 		associationEClass = createEClass(ASSOCIATION);
 		createEReference(associationEClass, ASSOCIATION__TARGET);
@@ -1123,13 +1215,17 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		createEAttribute(associationEClass, ASSOCIATION__IS_COMPOSITION);
 		createEAttribute(associationEClass, ASSOCIATION__IS_AGGREGATION);
 
-		memberEClass = createEClass(MEMBER);
-		createEAttribute(memberEClass, MEMBER__NAME);
-		createEReference(memberEClass, MEMBER__TYPE);
+		attributeEClass = createEClass(ATTRIBUTE);
+		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
+		createEReference(attributeEClass, ATTRIBUTE__TYPE);
+		createEAttribute(attributeEClass, ATTRIBUTE__IS_STATIC);
+		createEAttribute(attributeEClass, ATTRIBUTE__ACCESS);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__PARAMETERS);
 		createEReference(functionEClass, FUNCTION__RETURN_TYPE);
+		createEReference(functionEClass, FUNCTION__THROWS);
+		createEAttribute(functionEClass, FUNCTION__IS_STATIC);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEAttribute(parameterEClass, PARAMETER__NAME);
@@ -1151,19 +1247,22 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		databaseEClass = createEClass(DATABASE);
 		createEReference(databaseEClass, DATABASE__SCHEMAS);
 		createEAttribute(databaseEClass, DATABASE__NAME);
+		createEAttribute(databaseEClass, DATABASE__SERVER);
 		createEAttribute(databaseEClass, DATABASE__PORT);
+		createEAttribute(databaseEClass, DATABASE__ENGINE);
 
-		mediaEClass = createEClass(MEDIA);
+		mediaFileEClass = createEClass(MEDIA_FILE);
 
-		codeEClass = createEClass(CODE);
-		createEReference(codeEClass, CODE__CONTAINS);
+		codeFileEClass = createEClass(CODE_FILE);
+		createEReference(codeFileEClass, CODE_FILE__CONTAINS);
 
 		schemaEClass = createEClass(SCHEMA);
 		createEReference(schemaEClass, SCHEMA__TABLES);
 		createEAttribute(schemaEClass, SCHEMA__NAME);
 
 		annotationEClass = createEClass(ANNOTATION);
-		createEReference(annotationEClass, ANNOTATION__ELEMENT);
+		createEReference(annotationEClass, ANNOTATION__ELEMENTS);
+		createEAttribute(annotationEClass, ANNOTATION__NAME);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
@@ -1200,11 +1299,11 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		// Add supertypes to classes
 		allowedToUseEClass.getESuperTypes().add(this.getRelation());
 		allowedToUseBelowEClass.getESuperTypes().add(this.getRelation());
-		primitiveDataTypeEClass.getESuperTypes().add(this.getClassifier());
-		classEClass.getESuperTypes().add(this.getClassifier());
-		functionEClass.getESuperTypes().add(this.getClassifier());
-		mediaEClass.getESuperTypes().add(this.getFile());
-		codeEClass.getESuperTypes().add(this.getFile());
+		primitiveDataTypeEClass.getESuperTypes().add(this.getEntity());
+		classEClass.getESuperTypes().add(this.getEntity());
+		functionEClass.getESuperTypes().add(this.getEntity());
+		mediaFileEClass.getESuperTypes().add(this.getFile());
+		codeFileEClass.getESuperTypes().add(this.getFile());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(layeredStyleEClass, LayeredStyle.class, "LayeredStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1243,18 +1342,20 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		initEClass(foreignKeyEClass, ForeignKey.class, "ForeignKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getForeignKey_RefersTo(), this.getTable(), null, "refersTo", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getForeignKey_Column(), this.getColumn(), null, "column", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForeignKey_Name(), ecorePackage.getEString(), "name", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(classifierEClass, Classifier.class, "Classifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClassifier_Annotations(), this.getAnnotation(), null, "annotations", null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClassifier_Name(), ecorePackage.getEString(), "name", null, 0, 1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEntity_Annotations(), this.getAnnotation(), null, "annotations", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_Access(), ecorePackage.getEString(), "access", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primitiveDataTypeEClass, PrimitiveDataType.class, "PrimitiveDataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrimitiveDataType_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, PrimitiveDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classEClass, SystemMetamodel.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClass_IsAbstract(), ecorePackage.getEBoolean(), "isAbstract", null, 0, 1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_Members(), this.getMember(), null, "members", null, 0, -1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_Members(), this.getAttribute(), null, "members", null, 0, -1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClass_Methods(), this.getFunction(), null, "methods", null, 0, -1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_Parent(), this.getClass_(), null, "parent", null, 0, 1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_Extends(), this.getClass_(), null, "extends", null, 0, 1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociation_Target(), this.getClass_(), null, "target", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1262,17 +1363,21 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		initEAttribute(getAssociation_IsComposition(), ecorePackage.getEBoolean(), "isComposition", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_IsAggregation(), ecorePackage.getEBoolean(), "isAggregation", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(memberEClass, Member.class, "Member", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMember_Name(), ecorePackage.getEString(), "name", null, 0, 1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMember_Type(), this.getClassifier(), null, "type", null, 0, 1, Member.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Type(), this.getEntity(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_Access(), ecorePackage.getEString(), "access", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunction_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_ReturnType(), this.getClassifier(), null, "returnType", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_ReturnType(), this.getEntity(), null, "returnType", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_Throws(), this.getClass_(), null, "throws", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunction_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameter_Type(), this.getClassifier(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameter_Type(), this.getEntity(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(folderEClass, Folder.class, "Folder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFolder_Files(), this.getFile(), null, "files", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1290,19 +1395,22 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDatabase_Schemas(), this.getSchema(), null, "schemas", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDatabase_Name(), ecorePackage.getEString(), "name", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDatabase_Server(), ecorePackage.getEString(), "server", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDatabase_Port(), ecorePackage.getEInt(), "port", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDatabase_Engine(), ecorePackage.getEString(), "engine", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(mediaEClass, Media.class, "Media", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(mediaFileEClass, MediaFile.class, "MediaFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCode_Contains(), this.getClassifier(), null, "contains", null, 0, -1, Code.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(codeFileEClass, CodeFile.class, "CodeFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCodeFile_Contains(), this.getEntity(), null, "contains", null, 0, -1, CodeFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSchema_Tables(), this.getTable(), null, "tables", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSchema_Name(), ecorePackage.getEString(), "name", null, 0, 1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAnnotation_Element(), this.getElement(), null, "element", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnnotation_Elements(), this.getElement(), null, "elements", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnnotation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

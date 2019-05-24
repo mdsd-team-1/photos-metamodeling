@@ -279,26 +279,26 @@ public class SystemMetamodelItemProviderAdapterFactory extends SystemMetamodelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Classifier} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Entity} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClassifierItemProvider classifierItemProvider;
+	protected EntityItemProvider entityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Classifier}.
+	 * This creates an adapter for a {@link SystemMetamodel.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createClassifierAdapter() {
-		if (classifierItemProvider == null) {
-			classifierItemProvider = new ClassifierItemProvider(this);
+	public Adapter createEntityAdapter() {
+		if (entityItemProvider == null) {
+			entityItemProvider = new EntityItemProvider(this);
 		}
 
-		return classifierItemProvider;
+		return entityItemProvider;
 	}
 
 	/**
@@ -371,26 +371,26 @@ public class SystemMetamodelItemProviderAdapterFactory extends SystemMetamodelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Member} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Attribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MemberItemProvider memberItemProvider;
+	protected AttributeItemProvider attributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Member}.
+	 * This creates an adapter for a {@link SystemMetamodel.Attribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMemberAdapter() {
-		if (memberItemProvider == null) {
-			memberItemProvider = new MemberItemProvider(this);
+	public Adapter createAttributeAdapter() {
+		if (attributeItemProvider == null) {
+			attributeItemProvider = new AttributeItemProvider(this);
 		}
 
-		return memberItemProvider;
+		return attributeItemProvider;
 	}
 
 	/**
@@ -532,49 +532,49 @@ public class SystemMetamodelItemProviderAdapterFactory extends SystemMetamodelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Media} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.MediaFile} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MediaItemProvider mediaItemProvider;
+	protected MediaFileItemProvider mediaFileItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Media}.
+	 * This creates an adapter for a {@link SystemMetamodel.MediaFile}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMediaAdapter() {
-		if (mediaItemProvider == null) {
-			mediaItemProvider = new MediaItemProvider(this);
+	public Adapter createMediaFileAdapter() {
+		if (mediaFileItemProvider == null) {
+			mediaFileItemProvider = new MediaFileItemProvider(this);
 		}
 
-		return mediaItemProvider;
+		return mediaFileItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Code} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.CodeFile} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CodeItemProvider codeItemProvider;
+	protected CodeFileItemProvider codeFileItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Code}.
+	 * This creates an adapter for a {@link SystemMetamodel.CodeFile}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCodeAdapter() {
-		if (codeItemProvider == null) {
-			codeItemProvider = new CodeItemProvider(this);
+	public Adapter createCodeFileAdapter() {
+		if (codeFileItemProvider == null) {
+			codeFileItemProvider = new CodeFileItemProvider(this);
 		}
 
-		return codeItemProvider;
+		return codeFileItemProvider;
 	}
 
 	/**
@@ -760,19 +760,19 @@ public class SystemMetamodelItemProviderAdapterFactory extends SystemMetamodelAd
 		if (tableItemProvider != null) tableItemProvider.dispose();
 		if (columnItemProvider != null) columnItemProvider.dispose();
 		if (foreignKeyItemProvider != null) foreignKeyItemProvider.dispose();
-		if (classifierItemProvider != null) classifierItemProvider.dispose();
+		if (entityItemProvider != null) entityItemProvider.dispose();
 		if (primitiveDataTypeItemProvider != null) primitiveDataTypeItemProvider.dispose();
 		if (classItemProvider != null) classItemProvider.dispose();
 		if (associationItemProvider != null) associationItemProvider.dispose();
-		if (memberItemProvider != null) memberItemProvider.dispose();
+		if (attributeItemProvider != null) attributeItemProvider.dispose();
 		if (functionItemProvider != null) functionItemProvider.dispose();
 		if (parameterItemProvider != null) parameterItemProvider.dispose();
 		if (folderItemProvider != null) folderItemProvider.dispose();
 		if (fileItemProvider != null) fileItemProvider.dispose();
 		if (connectionItemProvider != null) connectionItemProvider.dispose();
 		if (databaseItemProvider != null) databaseItemProvider.dispose();
-		if (mediaItemProvider != null) mediaItemProvider.dispose();
-		if (codeItemProvider != null) codeItemProvider.dispose();
+		if (mediaFileItemProvider != null) mediaFileItemProvider.dispose();
+		if (codeFileItemProvider != null) codeFileItemProvider.dispose();
 		if (schemaItemProvider != null) schemaItemProvider.dispose();
 		if (annotationItemProvider != null) annotationItemProvider.dispose();
 		if (elementItemProvider != null) elementItemProvider.dispose();

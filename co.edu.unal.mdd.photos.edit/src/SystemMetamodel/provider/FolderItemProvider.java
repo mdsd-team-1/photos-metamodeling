@@ -189,12 +189,12 @@ public class FolderItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemMetamodelPackage.Literals.FOLDER__FILES,
-				 SystemMetamodelFactory.eINSTANCE.createMedia()));
+				 SystemMetamodelFactory.eINSTANCE.createMediaFile()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemMetamodelPackage.Literals.FOLDER__FILES,
-				 SystemMetamodelFactory.eINSTANCE.createCode()));
+				 SystemMetamodelFactory.eINSTANCE.createCodeFile()));
 
 		newChildDescriptors.add
 			(createChildParameter

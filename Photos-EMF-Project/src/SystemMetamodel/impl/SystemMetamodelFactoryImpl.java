@@ -6,12 +6,13 @@ import SystemMetamodel.AllowedToUse;
 import SystemMetamodel.AllowedToUseBelow;
 import SystemMetamodel.Annotation;
 import SystemMetamodel.Association;
-import SystemMetamodel.Classifier;
-import SystemMetamodel.Code;
+import SystemMetamodel.Attribute;
+import SystemMetamodel.CodeFile;
 import SystemMetamodel.Column;
 import SystemMetamodel.Connection;
 import SystemMetamodel.Database;
 import SystemMetamodel.Element;
+import SystemMetamodel.Entity;
 import SystemMetamodel.File;
 import SystemMetamodel.Folder;
 import SystemMetamodel.ForeignKey;
@@ -19,8 +20,7 @@ import SystemMetamodel.Function;
 import SystemMetamodel.Layer;
 import SystemMetamodel.LayerSegment;
 import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.Media;
-import SystemMetamodel.Member;
+import SystemMetamodel.MediaFile;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.PrimitiveDataType;
 import SystemMetamodel.Relation;
@@ -90,19 +90,19 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 			case SystemMetamodelPackage.TABLE: return createTable();
 			case SystemMetamodelPackage.COLUMN: return createColumn();
 			case SystemMetamodelPackage.FOREIGN_KEY: return createForeignKey();
-			case SystemMetamodelPackage.CLASSIFIER: return createClassifier();
+			case SystemMetamodelPackage.ENTITY: return createEntity();
 			case SystemMetamodelPackage.PRIMITIVE_DATA_TYPE: return createPrimitiveDataType();
 			case SystemMetamodelPackage.CLASS: return createClass();
 			case SystemMetamodelPackage.ASSOCIATION: return createAssociation();
-			case SystemMetamodelPackage.MEMBER: return createMember();
+			case SystemMetamodelPackage.ATTRIBUTE: return createAttribute();
 			case SystemMetamodelPackage.FUNCTION: return createFunction();
 			case SystemMetamodelPackage.PARAMETER: return createParameter();
 			case SystemMetamodelPackage.FOLDER: return createFolder();
 			case SystemMetamodelPackage.FILE: return createFile();
 			case SystemMetamodelPackage.CONNECTION: return createConnection();
 			case SystemMetamodelPackage.DATABASE: return createDatabase();
-			case SystemMetamodelPackage.MEDIA: return createMedia();
-			case SystemMetamodelPackage.CODE: return createCode();
+			case SystemMetamodelPackage.MEDIA_FILE: return createMediaFile();
+			case SystemMetamodelPackage.CODE_FILE: return createCodeFile();
 			case SystemMetamodelPackage.SCHEMA: return createSchema();
 			case SystemMetamodelPackage.ANNOTATION: return createAnnotation();
 			case SystemMetamodelPackage.ELEMENT: return createElement();
@@ -216,9 +216,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Classifier createClassifier() {
-		ClassifierImpl classifier = new ClassifierImpl();
-		return classifier;
+	public Entity createEntity() {
+		EntityImpl entity = new EntityImpl();
+		return entity;
 	}
 
 	/**
@@ -260,9 +260,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Member createMember() {
-		MemberImpl member = new MemberImpl();
-		return member;
+	public Attribute createAttribute() {
+		AttributeImpl attribute = new AttributeImpl();
+		return attribute;
 	}
 
 	/**
@@ -337,9 +337,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Media createMedia() {
-		MediaImpl media = new MediaImpl();
-		return media;
+	public MediaFile createMediaFile() {
+		MediaFileImpl mediaFile = new MediaFileImpl();
+		return mediaFile;
 	}
 
 	/**
@@ -348,9 +348,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Code createCode() {
-		CodeImpl code = new CodeImpl();
-		return code;
+	public CodeFile createCodeFile() {
+		CodeFileImpl codeFile = new CodeFileImpl();
+		return codeFile;
 	}
 
 	/**

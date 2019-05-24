@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PrimitiveDataTypeTest extends ClassifierTest {
+public class PrimitiveDataTypeTest extends EntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->

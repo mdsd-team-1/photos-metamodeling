@@ -49,12 +49,12 @@ public interface Parameter extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(Classifier)
+	 * @see #setType(Entity)
 	 * @see SystemMetamodel.SystemMetamodelPackage#getParameter_Type()
 	 * @model
 	 * @generated
 	 */
-	Classifier getType();
+	Entity getType();
 
 	/**
 	 * Sets the value of the '{@link SystemMetamodel.Parameter#getType <em>Type</em>}' reference.
@@ -64,6 +64,6 @@ public interface Parameter extends EObject {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(Classifier value);
+	void setType(Entity value);
 
 } // Parameter

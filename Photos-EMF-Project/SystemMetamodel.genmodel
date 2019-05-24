@@ -40,17 +40,20 @@
     <genClasses ecoreClass="SystemMetamodel.ecore#//ForeignKey">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//ForeignKey/refersTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//ForeignKey/column"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//ForeignKey/name"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Classifier">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Classifier/annotations"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Classifier/name"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Entity/annotations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Entity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Entity/access"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//PrimitiveDataType"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//PrimitiveDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//PrimitiveDataType/isStatic"/>
+    </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Class">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Class/isAbstract"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Class/members"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Class/methods"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Class/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Class/extends"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Association">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Association/target"/>
@@ -58,13 +61,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Association/isComposition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Association/isAggregation"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Member">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Member/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Member/type"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Attribute/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Attribute/isStatic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Attribute/access"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Function">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Function/parameters"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Function/returnType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Function/throws"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Function/isStatic"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Parameter/name"/>
@@ -86,18 +93,21 @@
     <genClasses ecoreClass="SystemMetamodel.ecore#//Database">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Database/schemas"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Database/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Database/server"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Database/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Database/engine"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Media"/>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Code">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Code/contains"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//MediaFile"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//CodeFile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//CodeFile/contains"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Schema">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Schema/tables"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Schema/name"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Annotation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Annotation/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Annotation/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Annotation/name"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Element/name"/>

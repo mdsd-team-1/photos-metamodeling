@@ -32,7 +32,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link SystemMetamodel.impl.DatabaseImpl#getSchemas <em>Schemas</em>}</li>
  *   <li>{@link SystemMetamodel.impl.DatabaseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.DatabaseImpl#getServer <em>Server</em>}</li>
  *   <li>{@link SystemMetamodel.impl.DatabaseImpl#getPort <em>Port</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.DatabaseImpl#getEngine <em>Engine</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +71,26 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getServer() <em>Server</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getServer()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SERVER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getServer() <em>Server</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getServer()
+	 * @generated
+	 * @ordered
+	 */
+	protected String server = SERVER_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getPort() <em>Port</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -87,6 +109,26 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * @ordered
 	 */
 	protected int port = PORT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEngine() <em>Engine</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ENGINE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEngine() <em>Engine</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected String engine = ENGINE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,6 +191,29 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * @generated
 	 */
 	@Override
+	public String getServer() {
+		return server;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setServer(String newServer) {
+		String oldServer = server;
+		server = newServer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.DATABASE__SERVER, oldServer, server));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getPort() {
 		return port;
 	}
@@ -164,6 +229,29 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		port = newPort;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.DATABASE__PORT, oldPort, port));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getEngine() {
+		return engine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEngine(String newEngine) {
+		String oldEngine = engine;
+		engine = newEngine;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.DATABASE__ENGINE, oldEngine, engine));
 	}
 
 	/**
@@ -192,8 +280,12 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 				return getSchemas();
 			case SystemMetamodelPackage.DATABASE__NAME:
 				return getName();
+			case SystemMetamodelPackage.DATABASE__SERVER:
+				return getServer();
 			case SystemMetamodelPackage.DATABASE__PORT:
 				return getPort();
+			case SystemMetamodelPackage.DATABASE__ENGINE:
+				return getEngine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,8 +306,14 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			case SystemMetamodelPackage.DATABASE__NAME:
 				setName((String)newValue);
 				return;
+			case SystemMetamodelPackage.DATABASE__SERVER:
+				setServer((String)newValue);
+				return;
 			case SystemMetamodelPackage.DATABASE__PORT:
 				setPort((Integer)newValue);
+				return;
+			case SystemMetamodelPackage.DATABASE__ENGINE:
+				setEngine((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -235,8 +333,14 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			case SystemMetamodelPackage.DATABASE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case SystemMetamodelPackage.DATABASE__SERVER:
+				setServer(SERVER_EDEFAULT);
+				return;
 			case SystemMetamodelPackage.DATABASE__PORT:
 				setPort(PORT_EDEFAULT);
+				return;
+			case SystemMetamodelPackage.DATABASE__ENGINE:
+				setEngine(ENGINE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -254,8 +358,12 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 				return schemas != null && !schemas.isEmpty();
 			case SystemMetamodelPackage.DATABASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case SystemMetamodelPackage.DATABASE__SERVER:
+				return SERVER_EDEFAULT == null ? server != null : !SERVER_EDEFAULT.equals(server);
 			case SystemMetamodelPackage.DATABASE__PORT:
 				return port != PORT_EDEFAULT;
+			case SystemMetamodelPackage.DATABASE__ENGINE:
+				return ENGINE_EDEFAULT == null ? engine != null : !ENGINE_EDEFAULT.equals(engine);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -272,8 +380,12 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", server: ");
+		result.append(server);
 		result.append(", port: ");
 		result.append(port);
+		result.append(", engine: ");
+		result.append(engine);
 		result.append(')');
 		return result.toString();
 	}

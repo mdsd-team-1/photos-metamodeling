@@ -8,6 +8,7 @@ import SystemMetamodel.SystemMetamodelPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -28,21 +30,42 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link SystemMetamodel.impl.AnnotationImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.AnnotationImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.AnnotationImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AnnotationImpl extends MinimalEObjectImpl.Container implements Annotation {
 	/**
-	 * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
+	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElement()
+	 * @see #getElements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Element> element;
+	protected EList<Element> elements;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,11 +92,34 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * @generated
 	 */
 	@Override
-	public EList<Element> getElement() {
-		if (element == null) {
-			element = new EObjectContainmentEList<Element>(Element.class, this, SystemMetamodelPackage.ANNOTATION__ELEMENT);
+	public EList<Element> getElements() {
+		if (elements == null) {
+			elements = new EObjectContainmentEList<Element>(Element.class, this, SystemMetamodelPackage.ANNOTATION__ELEMENTS);
 		}
-		return element;
+		return elements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.ANNOTATION__NAME, oldName, name));
 	}
 
 	/**
@@ -84,8 +130,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ANNOTATION__ELEMENT:
-				return ((InternalEList<?>)getElement()).basicRemove(otherEnd, msgs);
+			case SystemMetamodelPackage.ANNOTATION__ELEMENTS:
+				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -98,8 +144,10 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ANNOTATION__ELEMENT:
-				return getElement();
+			case SystemMetamodelPackage.ANNOTATION__ELEMENTS:
+				return getElements();
+			case SystemMetamodelPackage.ANNOTATION__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,9 +161,12 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ANNOTATION__ELEMENT:
-				getElement().clear();
-				getElement().addAll((Collection<? extends Element>)newValue);
+			case SystemMetamodelPackage.ANNOTATION__ELEMENTS:
+				getElements().clear();
+				getElements().addAll((Collection<? extends Element>)newValue);
+				return;
+			case SystemMetamodelPackage.ANNOTATION__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,8 +180,11 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ANNOTATION__ELEMENT:
-				getElement().clear();
+			case SystemMetamodelPackage.ANNOTATION__ELEMENTS:
+				getElements().clear();
+				return;
+			case SystemMetamodelPackage.ANNOTATION__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -144,10 +198,28 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ANNOTATION__ELEMENT:
-				return element != null && !element.isEmpty();
+			case SystemMetamodelPackage.ANNOTATION__ELEMENTS:
+				return elements != null && !elements.isEmpty();
+			case SystemMetamodelPackage.ANNOTATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //AnnotationImpl

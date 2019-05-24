@@ -103,13 +103,13 @@ public interface SystemMetamodelFactory extends EFactory {
 	ForeignKey createForeignKey();
 
 	/**
-	 * Returns a new object of class '<em>Classifier</em>'.
+	 * Returns a new object of class '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Classifier</em>'.
+	 * @return a new object of class '<em>Entity</em>'.
 	 * @generated
 	 */
-	Classifier createClassifier();
+	Entity createEntity();
 
 	/**
 	 * Returns a new object of class '<em>Primitive Data Type</em>'.
@@ -139,13 +139,13 @@ public interface SystemMetamodelFactory extends EFactory {
 	Association createAssociation();
 
 	/**
-	 * Returns a new object of class '<em>Member</em>'.
+	 * Returns a new object of class '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Member</em>'.
+	 * @return a new object of class '<em>Attribute</em>'.
 	 * @generated
 	 */
-	Member createMember();
+	Attribute createAttribute();
 
 	/**
 	 * Returns a new object of class '<em>Function</em>'.
@@ -202,22 +202,22 @@ public interface SystemMetamodelFactory extends EFactory {
 	Database createDatabase();
 
 	/**
-	 * Returns a new object of class '<em>Media</em>'.
+	 * Returns a new object of class '<em>Media File</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Media</em>'.
+	 * @return a new object of class '<em>Media File</em>'.
 	 * @generated
 	 */
-	Media createMedia();
+	MediaFile createMediaFile();
 
 	/**
-	 * Returns a new object of class '<em>Code</em>'.
+	 * Returns a new object of class '<em>Code File</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Code</em>'.
+	 * @return a new object of class '<em>Code File</em>'.
 	 * @generated
 	 */
-	Code createCode();
+	CodeFile createCodeFile();
 
 	/**
 	 * Returns a new object of class '<em>Schema</em>'.

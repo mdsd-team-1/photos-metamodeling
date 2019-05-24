@@ -6,12 +6,13 @@ import SystemMetamodel.AllowedToUse;
 import SystemMetamodel.AllowedToUseBelow;
 import SystemMetamodel.Annotation;
 import SystemMetamodel.Association;
-import SystemMetamodel.Classifier;
-import SystemMetamodel.Code;
+import SystemMetamodel.Attribute;
+import SystemMetamodel.CodeFile;
 import SystemMetamodel.Column;
 import SystemMetamodel.Connection;
 import SystemMetamodel.Database;
 import SystemMetamodel.Element;
+import SystemMetamodel.Entity;
 import SystemMetamodel.File;
 import SystemMetamodel.Folder;
 import SystemMetamodel.ForeignKey;
@@ -19,8 +20,7 @@ import SystemMetamodel.Function;
 import SystemMetamodel.Layer;
 import SystemMetamodel.LayerSegment;
 import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.Media;
-import SystemMetamodel.Member;
+import SystemMetamodel.MediaFile;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.PrimitiveDataType;
 import SystemMetamodel.Relation;
@@ -128,8 +128,8 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createForeignKeyAdapter();
 			}
 			@Override
-			public Adapter caseClassifier(Classifier object) {
-				return createClassifierAdapter();
+			public Adapter caseEntity(Entity object) {
+				return createEntityAdapter();
 			}
 			@Override
 			public Adapter casePrimitiveDataType(PrimitiveDataType object) {
@@ -144,8 +144,8 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createAssociationAdapter();
 			}
 			@Override
-			public Adapter caseMember(Member object) {
-				return createMemberAdapter();
+			public Adapter caseAttribute(Attribute object) {
+				return createAttributeAdapter();
 			}
 			@Override
 			public Adapter caseFunction(Function object) {
@@ -172,12 +172,12 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createDatabaseAdapter();
 			}
 			@Override
-			public Adapter caseMedia(Media object) {
-				return createMediaAdapter();
+			public Adapter caseMediaFile(MediaFile object) {
+				return createMediaFileAdapter();
 			}
 			@Override
-			public Adapter caseCode(Code object) {
-				return createCodeAdapter();
+			public Adapter caseCodeFile(CodeFile object) {
+				return createCodeFileAdapter();
 			}
 			@Override
 			public Adapter caseSchema(Schema object) {
@@ -338,16 +338,16 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Classifier <em>Classifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Entity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Classifier
+	 * @see SystemMetamodel.Entity
 	 * @generated
 	 */
-	public Adapter createClassifierAdapter() {
+	public Adapter createEntityAdapter() {
 		return null;
 	}
 
@@ -394,16 +394,16 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Member <em>Member</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Member
+	 * @see SystemMetamodel.Attribute
 	 * @generated
 	 */
-	public Adapter createMemberAdapter() {
+	public Adapter createAttributeAdapter() {
 		return null;
 	}
 
@@ -492,30 +492,30 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Media <em>Media</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.MediaFile <em>Media File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Media
+	 * @see SystemMetamodel.MediaFile
 	 * @generated
 	 */
-	public Adapter createMediaAdapter() {
+	public Adapter createMediaFileAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Code <em>Code</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.CodeFile <em>Code File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Code
+	 * @see SystemMetamodel.CodeFile
 	 * @generated
 	 */
-	public Adapter createCodeAdapter() {
+	public Adapter createCodeFileAdapter() {
 		return null;
 	}
 

@@ -6,12 +6,13 @@ import SystemMetamodel.AllowedToUse;
 import SystemMetamodel.AllowedToUseBelow;
 import SystemMetamodel.Annotation;
 import SystemMetamodel.Association;
-import SystemMetamodel.Classifier;
-import SystemMetamodel.Code;
+import SystemMetamodel.Attribute;
+import SystemMetamodel.CodeFile;
 import SystemMetamodel.Column;
 import SystemMetamodel.Connection;
 import SystemMetamodel.Database;
 import SystemMetamodel.Element;
+import SystemMetamodel.Entity;
 import SystemMetamodel.File;
 import SystemMetamodel.Folder;
 import SystemMetamodel.ForeignKey;
@@ -19,8 +20,7 @@ import SystemMetamodel.Function;
 import SystemMetamodel.Layer;
 import SystemMetamodel.LayerSegment;
 import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.Media;
-import SystemMetamodel.Member;
+import SystemMetamodel.MediaFile;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.PrimitiveDataType;
 import SystemMetamodel.Relation;
@@ -146,23 +146,23 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.CLASSIFIER: {
-				Classifier classifier = (Classifier)theEObject;
-				T result = caseClassifier(classifier);
+			case SystemMetamodelPackage.ENTITY: {
+				Entity entity = (Entity)theEObject;
+				T result = caseEntity(entity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SystemMetamodelPackage.PRIMITIVE_DATA_TYPE: {
 				PrimitiveDataType primitiveDataType = (PrimitiveDataType)theEObject;
 				T result = casePrimitiveDataType(primitiveDataType);
-				if (result == null) result = caseClassifier(primitiveDataType);
+				if (result == null) result = caseEntity(primitiveDataType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SystemMetamodelPackage.CLASS: {
 				SystemMetamodel.Class class_ = (SystemMetamodel.Class)theEObject;
 				T result = caseClass(class_);
-				if (result == null) result = caseClassifier(class_);
+				if (result == null) result = caseEntity(class_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -172,16 +172,16 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.MEMBER: {
-				Member member = (Member)theEObject;
-				T result = caseMember(member);
+			case SystemMetamodelPackage.ATTRIBUTE: {
+				Attribute attribute = (Attribute)theEObject;
+				T result = caseAttribute(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SystemMetamodelPackage.FUNCTION: {
 				Function function = (Function)theEObject;
 				T result = caseFunction(function);
-				if (result == null) result = caseClassifier(function);
+				if (result == null) result = caseEntity(function);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -215,17 +215,17 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.MEDIA: {
-				Media media = (Media)theEObject;
-				T result = caseMedia(media);
-				if (result == null) result = caseFile(media);
+			case SystemMetamodelPackage.MEDIA_FILE: {
+				MediaFile mediaFile = (MediaFile)theEObject;
+				T result = caseMediaFile(mediaFile);
+				if (result == null) result = caseFile(mediaFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.CODE: {
-				Code code = (Code)theEObject;
-				T result = caseCode(code);
-				if (result == null) result = caseFile(code);
+			case SystemMetamodelPackage.CODE_FILE: {
+				CodeFile codeFile = (CodeFile)theEObject;
+				T result = caseCodeFile(codeFile);
+				if (result == null) result = caseFile(codeFile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -387,17 +387,17 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Classifier</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Classifier</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClassifier(Classifier object) {
+	public T caseEntity(Entity object) {
 		return null;
 	}
 
@@ -447,17 +447,17 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Member</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Member</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMember(Member object) {
+	public T caseAttribute(Attribute object) {
 		return null;
 	}
 
@@ -552,32 +552,32 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Media</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Media File</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Media</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Media File</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMedia(Media object) {
+	public T caseMediaFile(MediaFile object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Code</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Code File</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Code</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Code File</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCode(Code object) {
+	public T caseCodeFile(CodeFile object) {
 		return null;
 	}
 

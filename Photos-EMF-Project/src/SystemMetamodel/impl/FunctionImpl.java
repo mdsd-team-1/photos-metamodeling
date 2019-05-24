@@ -2,7 +2,7 @@
  */
 package SystemMetamodel.impl;
 
-import SystemMetamodel.Classifier;
+import SystemMetamodel.Entity;
 import SystemMetamodel.Function;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.SystemMetamodelPackage;
@@ -32,11 +32,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link SystemMetamodel.impl.FunctionImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link SystemMetamodel.impl.FunctionImpl#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.FunctionImpl#getThrows <em>Throws</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.FunctionImpl#isIsStatic <em>Is Static</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionImpl extends ClassifierImpl implements Function {
+public class FunctionImpl extends EntityImpl implements Function {
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,7 +57,37 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 	 * @generated
 	 * @ordered
 	 */
-	protected Classifier returnType;
+	protected Entity returnType;
+
+	/**
+	 * The cached value of the '{@link #getThrows() <em>Throws</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getThrows()
+	 * @generated
+	 * @ordered
+	 */
+	protected SystemMetamodel.Class throws_;
+
+	/**
+	 * The default value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_STATIC_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStatic()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isStatic = IS_STATIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,10 +127,10 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public Classifier getReturnType() {
+	public Entity getReturnType() {
 		if (returnType != null && returnType.eIsProxy()) {
 			InternalEObject oldReturnType = (InternalEObject)returnType;
-			returnType = (Classifier)eResolveProxy(oldReturnType);
+			returnType = (Entity)eResolveProxy(oldReturnType);
 			if (returnType != oldReturnType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.FUNCTION__RETURN_TYPE, oldReturnType, returnType));
@@ -112,7 +144,7 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Classifier basicGetReturnType() {
+	public Entity basicGetReturnType() {
 		return returnType;
 	}
 
@@ -122,11 +154,74 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public void setReturnType(Classifier newReturnType) {
-		Classifier oldReturnType = returnType;
+	public void setReturnType(Entity newReturnType) {
+		Entity oldReturnType = returnType;
 		returnType = newReturnType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.FUNCTION__RETURN_TYPE, oldReturnType, returnType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SystemMetamodel.Class getThrows() {
+		if (throws_ != null && throws_.eIsProxy()) {
+			InternalEObject oldThrows = (InternalEObject)throws_;
+			throws_ = (SystemMetamodel.Class)eResolveProxy(oldThrows);
+			if (throws_ != oldThrows) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.FUNCTION__THROWS, oldThrows, throws_));
+			}
+		}
+		return throws_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemMetamodel.Class basicGetThrows() {
+		return throws_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setThrows(SystemMetamodel.Class newThrows) {
+		SystemMetamodel.Class oldThrows = throws_;
+		throws_ = newThrows;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.FUNCTION__THROWS, oldThrows, throws_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isIsStatic() {
+		return isStatic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsStatic(boolean newIsStatic) {
+		boolean oldIsStatic = isStatic;
+		isStatic = newIsStatic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.FUNCTION__IS_STATIC, oldIsStatic, isStatic));
 	}
 
 	/**
@@ -156,6 +251,11 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 			case SystemMetamodelPackage.FUNCTION__RETURN_TYPE:
 				if (resolve) return getReturnType();
 				return basicGetReturnType();
+			case SystemMetamodelPackage.FUNCTION__THROWS:
+				if (resolve) return getThrows();
+				return basicGetThrows();
+			case SystemMetamodelPackage.FUNCTION__IS_STATIC:
+				return isIsStatic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,7 +274,13 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 				getParameters().addAll((Collection<? extends Parameter>)newValue);
 				return;
 			case SystemMetamodelPackage.FUNCTION__RETURN_TYPE:
-				setReturnType((Classifier)newValue);
+				setReturnType((Entity)newValue);
+				return;
+			case SystemMetamodelPackage.FUNCTION__THROWS:
+				setThrows((SystemMetamodel.Class)newValue);
+				return;
+			case SystemMetamodelPackage.FUNCTION__IS_STATIC:
+				setIsStatic((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,7 +298,13 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 				getParameters().clear();
 				return;
 			case SystemMetamodelPackage.FUNCTION__RETURN_TYPE:
-				setReturnType((Classifier)null);
+				setReturnType((Entity)null);
+				return;
+			case SystemMetamodelPackage.FUNCTION__THROWS:
+				setThrows((SystemMetamodel.Class)null);
+				return;
+			case SystemMetamodelPackage.FUNCTION__IS_STATIC:
+				setIsStatic(IS_STATIC_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -210,8 +322,28 @@ public class FunctionImpl extends ClassifierImpl implements Function {
 				return parameters != null && !parameters.isEmpty();
 			case SystemMetamodelPackage.FUNCTION__RETURN_TYPE:
 				return returnType != null;
+			case SystemMetamodelPackage.FUNCTION__THROWS:
+				return throws_ != null;
+			case SystemMetamodelPackage.FUNCTION__IS_STATIC:
+				return isStatic != IS_STATIC_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (isStatic: ");
+		result.append(isStatic);
+		result.append(')');
+		return result.toString();
 	}
 
 } //FunctionImpl

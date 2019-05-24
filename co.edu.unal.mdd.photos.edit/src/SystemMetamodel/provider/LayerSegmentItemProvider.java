@@ -196,12 +196,12 @@ public class LayerSegmentItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemMetamodelPackage.Literals.LAYER_SEGMENT__FILES,
-				 SystemMetamodelFactory.eINSTANCE.createMedia()));
+				 SystemMetamodelFactory.eINSTANCE.createMediaFile()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemMetamodelPackage.Literals.LAYER_SEGMENT__FILES,
-				 SystemMetamodelFactory.eINSTANCE.createCode()));
+				 SystemMetamodelFactory.eINSTANCE.createCodeFile()));
 
 		newChildDescriptors.add
 			(createChildParameter

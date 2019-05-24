@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link SystemMetamodel.ForeignKey#getRefersTo <em>Refers To</em>}</li>
  *   <li>{@link SystemMetamodel.ForeignKey#getColumn <em>Column</em>}</li>
+ *   <li>{@link SystemMetamodel.ForeignKey#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see SystemMetamodel.SystemMetamodelPackage#getForeignKey()
@@ -65,5 +66,27 @@ public interface ForeignKey extends EObject {
 	 * @generated
 	 */
 	void setColumn(Column value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see SystemMetamodel.SystemMetamodelPackage#getForeignKey_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link SystemMetamodel.ForeignKey#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // ForeignKey

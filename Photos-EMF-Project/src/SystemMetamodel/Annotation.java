@@ -15,7 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link SystemMetamodel.Annotation#getElement <em>Element</em>}</li>
+ *   <li>{@link SystemMetamodel.Annotation#getElements <em>Elements</em>}</li>
+ *   <li>{@link SystemMetamodel.Annotation#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see SystemMetamodel.SystemMetamodelPackage#getAnnotation()
@@ -24,15 +25,37 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Annotation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Element</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link SystemMetamodel.Element}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Element</em>' containment reference list.
-	 * @see SystemMetamodel.SystemMetamodelPackage#getAnnotation_Element()
+	 * @return the value of the '<em>Elements</em>' containment reference list.
+	 * @see SystemMetamodel.SystemMetamodelPackage#getAnnotation_Elements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Element> getElement();
+	EList<Element> getElements();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see SystemMetamodel.SystemMetamodelPackage#getAnnotation_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link SystemMetamodel.Annotation#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Annotation

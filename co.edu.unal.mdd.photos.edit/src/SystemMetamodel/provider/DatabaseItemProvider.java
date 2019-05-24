@@ -64,7 +64,9 @@ public class DatabaseItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addServerPropertyDescriptor(object);
 			addPortPropertyDescriptor(object);
+			addEnginePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,6 +94,28 @@ public class DatabaseItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Server feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addServerPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Database_server_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Database_server_feature", "_UI_Database_type"),
+				 SystemMetamodelPackage.Literals.DATABASE__SERVER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Port feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,6 +133,28 @@ public class DatabaseItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Engine feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEnginePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Database_engine_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Database_engine_feature", "_UI_Database_type"),
+				 SystemMetamodelPackage.Literals.DATABASE__ENGINE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -182,7 +228,9 @@ public class DatabaseItemProvider
 
 		switch (notification.getFeatureID(Database.class)) {
 			case SystemMetamodelPackage.DATABASE__NAME:
+			case SystemMetamodelPackage.DATABASE__SERVER:
 			case SystemMetamodelPackage.DATABASE__PORT:
+			case SystemMetamodelPackage.DATABASE__ENGINE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SystemMetamodelPackage.DATABASE__SCHEMAS:

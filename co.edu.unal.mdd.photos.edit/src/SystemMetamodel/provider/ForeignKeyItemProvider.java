@@ -3,6 +3,7 @@
 package SystemMetamodel.provider;
 
 
+import SystemMetamodel.ForeignKey;
 import SystemMetamodel.SystemMetamodelPackage;
 
 import java.util.Collection;
@@ -20,7 +21,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link SystemMetamodel.ForeignKey} object.
@@ -59,6 +62,7 @@ public class ForeignKeyItemProvider
 
 			addRefersToPropertyDescriptor(object);
 			addColumnPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,6 +112,28 @@ public class ForeignKeyItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ForeignKey_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ForeignKey_name_feature", "_UI_ForeignKey_type"),
+				 SystemMetamodelPackage.Literals.FOREIGN_KEY__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ForeignKey.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126,7 +152,10 @@ public class ForeignKeyItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ForeignKey_type");
+		String label = ((ForeignKey)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ForeignKey_type") :
+			getString("_UI_ForeignKey_type") + " " + label;
 	}
 
 
@@ -140,6 +169,12 @@ public class ForeignKeyItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ForeignKey.class)) {
+			case SystemMetamodelPackage.FOREIGN_KEY__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

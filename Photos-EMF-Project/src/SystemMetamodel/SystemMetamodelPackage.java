@@ -498,13 +498,22 @@ public interface SystemMetamodelPackage extends EPackage {
 	int FOREIGN_KEY__COLUMN = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOREIGN_KEY__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Foreign Key</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY_FEATURE_COUNT = 2;
+	int FOREIGN_KEY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Foreign Key</em>' class.
@@ -516,14 +525,14 @@ public interface SystemMetamodelPackage extends EPackage {
 	int FOREIGN_KEY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ClassifierImpl <em>Classifier</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.EntityImpl <em>Entity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ClassifierImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getClassifier()
+	 * @see SystemMetamodel.impl.EntityImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getEntity()
 	 * @generated
 	 */
-	int CLASSIFIER = 9;
+	int ENTITY = 9;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -532,7 +541,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__ANNOTATIONS = 0;
+	int ENTITY__ANNOTATIONS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -541,25 +550,34 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER__NAME = 1;
+	int ENTITY__NAME = 1;
 
 	/**
-	 * The number of structural features of the '<em>Classifier</em>' class.
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER_FEATURE_COUNT = 2;
+	int ENTITY__ACCESS = 2;
 
 	/**
-	 * The number of operations of the '<em>Classifier</em>' class.
+	 * The number of structural features of the '<em>Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIFIER_OPERATION_COUNT = 0;
+	int ENTITY_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link SystemMetamodel.impl.PrimitiveDataTypeImpl <em>Primitive Data Type</em>}' class.
@@ -578,7 +596,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__ANNOTATIONS = CLASSIFIER__ANNOTATIONS;
+	int PRIMITIVE_DATA_TYPE__ANNOTATIONS = ENTITY__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -587,7 +605,25 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__NAME = CLASSIFIER__NAME;
+	int PRIMITIVE_DATA_TYPE__NAME = ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_DATA_TYPE__ACCESS = ENTITY__ACCESS;
+
+	/**
+	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_DATA_TYPE__IS_STATIC = ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Primitive Data Type</em>' class.
@@ -596,7 +632,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 0;
+	int PRIMITIVE_DATA_TYPE_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Primitive Data Type</em>' class.
@@ -605,7 +641,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 0;
+	int PRIMITIVE_DATA_TYPE_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link SystemMetamodel.impl.ClassImpl <em>Class</em>}' class.
@@ -624,7 +660,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__ANNOTATIONS = CLASSIFIER__ANNOTATIONS;
+	int CLASS__ANNOTATIONS = ENTITY__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -633,16 +669,16 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__NAME = CLASSIFIER__NAME;
+	int CLASS__NAME = ENTITY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__IS_ABSTRACT = CLASSIFIER_FEATURE_COUNT + 0;
+	int CLASS__ACCESS = ENTITY__ACCESS;
 
 	/**
 	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -651,7 +687,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__MEMBERS = CLASSIFIER_FEATURE_COUNT + 1;
+	int CLASS__MEMBERS = ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
@@ -660,16 +696,16 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__METHODS = CLASSIFIER_FEATURE_COUNT + 2;
+	int CLASS__METHODS = ENTITY_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Extends</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__PARENT = CLASSIFIER_FEATURE_COUNT + 3;
+	int CLASS__EXTENDS = ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Class</em>' class.
@@ -678,7 +714,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 4;
+	int CLASS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Class</em>' class.
@@ -687,7 +723,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 0;
+	int CLASS_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link SystemMetamodel.impl.AssociationImpl <em>Association</em>}' class.
@@ -754,14 +790,14 @@ public interface SystemMetamodelPackage extends EPackage {
 	int ASSOCIATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.MemberImpl <em>Member</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.AttributeImpl <em>Attribute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.MemberImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMember()
+	 * @see SystemMetamodel.impl.AttributeImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAttribute()
 	 * @generated
 	 */
-	int MEMBER = 13;
+	int ATTRIBUTE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -770,7 +806,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBER__NAME = 0;
+	int ATTRIBUTE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -779,25 +815,43 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBER__TYPE = 1;
+	int ATTRIBUTE__TYPE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Member</em>' class.
+	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBER_FEATURE_COUNT = 2;
+	int ATTRIBUTE__IS_STATIC = 2;
 
 	/**
-	 * The number of operations of the '<em>Member</em>' class.
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBER_OPERATION_COUNT = 0;
+	int ATTRIBUTE__ACCESS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link SystemMetamodel.impl.FunctionImpl <em>Function</em>}' class.
@@ -816,7 +870,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ANNOTATIONS = CLASSIFIER__ANNOTATIONS;
+	int FUNCTION__ANNOTATIONS = ENTITY__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -825,7 +879,16 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__NAME = CLASSIFIER__NAME;
+	int FUNCTION__NAME = ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__ACCESS = ENTITY__ACCESS;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -834,7 +897,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__PARAMETERS = CLASSIFIER_FEATURE_COUNT + 0;
+	int FUNCTION__PARAMETERS = ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Return Type</b></em>' reference.
@@ -843,7 +906,25 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__RETURN_TYPE = CLASSIFIER_FEATURE_COUNT + 1;
+	int FUNCTION__RETURN_TYPE = ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Throws</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__THROWS = ENTITY_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__IS_STATIC = ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -852,7 +933,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = CLASSIFIER_FEATURE_COUNT + 2;
+	int FUNCTION_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -861,7 +942,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_OPERATION_COUNT = CLASSIFIER_OPERATION_COUNT + 0;
+	int FUNCTION_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link SystemMetamodel.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -1085,13 +1166,31 @@ public interface SystemMetamodelPackage extends EPackage {
 	int DATABASE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Server</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__SERVER = 2;
+
+	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__PORT = 2;
+	int DATABASE__PORT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Engine</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATABASE__ENGINE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Database</em>' class.
@@ -1100,7 +1199,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_FEATURE_COUNT = 3;
+	int DATABASE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Database</em>' class.
@@ -1112,14 +1211,14 @@ public interface SystemMetamodelPackage extends EPackage {
 	int DATABASE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.MediaImpl <em>Media</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.MediaFileImpl <em>Media File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.MediaImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMedia()
+	 * @see SystemMetamodel.impl.MediaFileImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMediaFile()
 	 * @generated
 	 */
-	int MEDIA = 20;
+	int MEDIA_FILE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1128,7 +1227,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIA__NAME = FILE__NAME;
+	int MEDIA_FILE__NAME = FILE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' attribute.
@@ -1137,35 +1236,35 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIA__EXTENSION = FILE__EXTENSION;
+	int MEDIA_FILE__EXTENSION = FILE__EXTENSION;
 
 	/**
-	 * The number of structural features of the '<em>Media</em>' class.
+	 * The number of structural features of the '<em>Media File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIA_FEATURE_COUNT = FILE_FEATURE_COUNT + 0;
+	int MEDIA_FILE_FEATURE_COUNT = FILE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Media</em>' class.
+	 * The number of operations of the '<em>Media File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIA_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
+	int MEDIA_FILE_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.CodeImpl <em>Code</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.CodeFileImpl <em>Code File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.CodeImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCode()
+	 * @see SystemMetamodel.impl.CodeFileImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCodeFile()
 	 * @generated
 	 */
-	int CODE = 21;
+	int CODE_FILE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1174,7 +1273,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE__NAME = FILE__NAME;
+	int CODE_FILE__NAME = FILE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' attribute.
@@ -1183,7 +1282,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE__EXTENSION = FILE__EXTENSION;
+	int CODE_FILE__EXTENSION = FILE__EXTENSION;
 
 	/**
 	 * The feature id for the '<em><b>Contains</b></em>' containment reference list.
@@ -1192,25 +1291,25 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE__CONTAINS = FILE_FEATURE_COUNT + 0;
+	int CODE_FILE__CONTAINS = FILE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Code</em>' class.
+	 * The number of structural features of the '<em>Code File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
+	int CODE_FILE_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Code</em>' class.
+	 * The number of operations of the '<em>Code File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
+	int CODE_FILE_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link SystemMetamodel.impl.SchemaImpl <em>Schema</em>}' class.
@@ -1269,13 +1368,22 @@ public interface SystemMetamodelPackage extends EPackage {
 	int ANNOTATION = 23;
 
 	/**
-	 * The feature id for the '<em><b>Element</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANNOTATION__ELEMENT = 0;
+	int ANNOTATION__ELEMENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANNOTATION__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Annotation</em>' class.
@@ -1284,7 +1392,7 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANNOTATION_FEATURE_COUNT = 1;
+	int ANNOTATION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Annotation</em>' class.
@@ -1642,36 +1750,58 @@ public interface SystemMetamodelPackage extends EPackage {
 	EReference getForeignKey_Column();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Classifier <em>Classifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Classifier</em>'.
-	 * @see SystemMetamodel.Classifier
-	 * @generated
-	 */
-	EClass getClassifier();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Classifier#getAnnotations <em>Annotations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
-	 * @see SystemMetamodel.Classifier#getAnnotations()
-	 * @see #getClassifier()
-	 * @generated
-	 */
-	EReference getClassifier_Annotations();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Classifier#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.ForeignKey#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Classifier#getName()
-	 * @see #getClassifier()
+	 * @see SystemMetamodel.ForeignKey#getName()
+	 * @see #getForeignKey()
 	 * @generated
 	 */
-	EAttribute getClassifier_Name();
+	EAttribute getForeignKey_Name();
+
+	/**
+	 * Returns the meta object for class '{@link SystemMetamodel.Entity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entity</em>'.
+	 * @see SystemMetamodel.Entity
+	 * @generated
+	 */
+	EClass getEntity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Entity#getAnnotations <em>Annotations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
+	 * @see SystemMetamodel.Entity#getAnnotations()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Annotations();
+
+	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Entity#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see SystemMetamodel.Entity#getName()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Entity#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Access</em>'.
+	 * @see SystemMetamodel.Entity#getAccess()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_Access();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.PrimitiveDataType <em>Primitive Data Type</em>}'.
@@ -1684,6 +1814,17 @@ public interface SystemMetamodelPackage extends EPackage {
 	EClass getPrimitiveDataType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.PrimitiveDataType#isIsStatic <em>Is Static</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Static</em>'.
+	 * @see SystemMetamodel.PrimitiveDataType#isIsStatic()
+	 * @see #getPrimitiveDataType()
+	 * @generated
+	 */
+	EAttribute getPrimitiveDataType_IsStatic();
+
+	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Class <em>Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1692,17 +1833,6 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getClass_();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Class#isIsAbstract <em>Is Abstract</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Abstract</em>'.
-	 * @see SystemMetamodel.Class#isIsAbstract()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EAttribute getClass_IsAbstract();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Class#getMembers <em>Members</em>}'.
@@ -1727,15 +1857,15 @@ public interface SystemMetamodelPackage extends EPackage {
 	EReference getClass_Methods();
 
 	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Class#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference '{@link SystemMetamodel.Class#getExtends <em>Extends</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see SystemMetamodel.Class#getParent()
+	 * @return the meta object for the reference '<em>Extends</em>'.
+	 * @see SystemMetamodel.Class#getExtends()
 	 * @see #getClass_()
 	 * @generated
 	 */
-	EReference getClass_Parent();
+	EReference getClass_Extends();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Association <em>Association</em>}'.
@@ -1792,36 +1922,58 @@ public interface SystemMetamodelPackage extends EPackage {
 	EAttribute getAssociation_IsAggregation();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Member <em>Member</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Member</em>'.
-	 * @see SystemMetamodel.Member
+	 * @return the meta object for class '<em>Attribute</em>'.
+	 * @see SystemMetamodel.Attribute
 	 * @generated
 	 */
-	EClass getMember();
+	EClass getAttribute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Member#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Attribute#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Member#getName()
-	 * @see #getMember()
+	 * @see SystemMetamodel.Attribute#getName()
+	 * @see #getAttribute()
 	 * @generated
 	 */
-	EAttribute getMember_Name();
+	EAttribute getAttribute_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Member#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link SystemMetamodel.Attribute#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see SystemMetamodel.Member#getType()
-	 * @see #getMember()
+	 * @see SystemMetamodel.Attribute#getType()
+	 * @see #getAttribute()
 	 * @generated
 	 */
-	EReference getMember_Type();
+	EReference getAttribute_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Attribute#isIsStatic <em>Is Static</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Static</em>'.
+	 * @see SystemMetamodel.Attribute#isIsStatic()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_IsStatic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Attribute#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Access</em>'.
+	 * @see SystemMetamodel.Attribute#getAccess()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_Access();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Function <em>Function</em>}'.
@@ -1854,6 +2006,28 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunction_ReturnType();
+
+	/**
+	 * Returns the meta object for the reference '{@link SystemMetamodel.Function#getThrows <em>Throws</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Throws</em>'.
+	 * @see SystemMetamodel.Function#getThrows()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_Throws();
+
+	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Function#isIsStatic <em>Is Static</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Static</em>'.
+	 * @see SystemMetamodel.Function#isIsStatic()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EAttribute getFunction_IsStatic();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Parameter <em>Parameter</em>}'.
@@ -2027,6 +2201,17 @@ public interface SystemMetamodelPackage extends EPackage {
 	EAttribute getDatabase_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getServer <em>Server</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Server</em>'.
+	 * @see SystemMetamodel.Database#getServer()
+	 * @see #getDatabase()
+	 * @generated
+	 */
+	EAttribute getDatabase_Server();
+
+	/**
 	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getPort <em>Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2038,35 +2223,46 @@ public interface SystemMetamodelPackage extends EPackage {
 	EAttribute getDatabase_Port();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Media <em>Media</em>}'.
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getEngine <em>Engine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Media</em>'.
-	 * @see SystemMetamodel.Media
+	 * @return the meta object for the attribute '<em>Engine</em>'.
+	 * @see SystemMetamodel.Database#getEngine()
+	 * @see #getDatabase()
 	 * @generated
 	 */
-	EClass getMedia();
+	EAttribute getDatabase_Engine();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Code <em>Code</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.MediaFile <em>Media File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Code</em>'.
-	 * @see SystemMetamodel.Code
+	 * @return the meta object for class '<em>Media File</em>'.
+	 * @see SystemMetamodel.MediaFile
 	 * @generated
 	 */
-	EClass getCode();
+	EClass getMediaFile();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Code#getContains <em>Contains</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.CodeFile <em>Code File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code File</em>'.
+	 * @see SystemMetamodel.CodeFile
+	 * @generated
+	 */
+	EClass getCodeFile();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.CodeFile#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Contains</em>'.
-	 * @see SystemMetamodel.Code#getContains()
-	 * @see #getCode()
+	 * @see SystemMetamodel.CodeFile#getContains()
+	 * @see #getCodeFile()
 	 * @generated
 	 */
-	EReference getCode_Contains();
+	EReference getCodeFile_Contains();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Schema <em>Schema</em>}'.
@@ -2111,15 +2307,26 @@ public interface SystemMetamodelPackage extends EPackage {
 	EClass getAnnotation();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Annotation#getElement <em>Element</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Annotation#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Element</em>'.
-	 * @see SystemMetamodel.Annotation#getElement()
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see SystemMetamodel.Annotation#getElements()
 	 * @see #getAnnotation()
 	 * @generated
 	 */
-	EReference getAnnotation_Element();
+	EReference getAnnotation_Elements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link SystemMetamodel.Annotation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see SystemMetamodel.Annotation#getName()
+	 * @see #getAnnotation()
+	 * @generated
+	 */
+	EAttribute getAnnotation_Name();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Element <em>Element</em>}'.
@@ -2419,14 +2626,22 @@ public interface SystemMetamodelPackage extends EPackage {
 		EReference FOREIGN_KEY__COLUMN = eINSTANCE.getForeignKey_Column();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ClassifierImpl <em>Classifier</em>}' class.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ClassifierImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getClassifier()
 		 * @generated
 		 */
-		EClass CLASSIFIER = eINSTANCE.getClassifier();
+		EAttribute FOREIGN_KEY__NAME = eINSTANCE.getForeignKey_Name();
+
+		/**
+		 * The meta object literal for the '{@link SystemMetamodel.impl.EntityImpl <em>Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.EntityImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getEntity()
+		 * @generated
+		 */
+		EClass ENTITY = eINSTANCE.getEntity();
 
 		/**
 		 * The meta object literal for the '<em><b>Annotations</b></em>' containment reference list feature.
@@ -2434,7 +2649,7 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLASSIFIER__ANNOTATIONS = eINSTANCE.getClassifier_Annotations();
+		EReference ENTITY__ANNOTATIONS = eINSTANCE.getEntity_Annotations();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2442,7 +2657,15 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CLASSIFIER__NAME = eINSTANCE.getClassifier_Name();
+		EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTITY__ACCESS = eINSTANCE.getEntity_Access();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.PrimitiveDataTypeImpl <em>Primitive Data Type</em>}' class.
@@ -2455,6 +2678,14 @@ public interface SystemMetamodelPackage extends EPackage {
 		EClass PRIMITIVE_DATA_TYPE = eINSTANCE.getPrimitiveDataType();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIMITIVE_DATA_TYPE__IS_STATIC = eINSTANCE.getPrimitiveDataType_IsStatic();
+
+		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.ClassImpl <em>Class</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2463,14 +2694,6 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CLASS = eINSTANCE.getClass_();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Abstract</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CLASS__IS_ABSTRACT = eINSTANCE.getClass_IsAbstract();
 
 		/**
 		 * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
@@ -2489,12 +2712,12 @@ public interface SystemMetamodelPackage extends EPackage {
 		EReference CLASS__METHODS = eINSTANCE.getClass_Methods();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Extends</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLASS__PARENT = eINSTANCE.getClass_Parent();
+		EReference CLASS__EXTENDS = eINSTANCE.getClass_Extends();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.AssociationImpl <em>Association</em>}' class.
@@ -2539,14 +2762,14 @@ public interface SystemMetamodelPackage extends EPackage {
 		EAttribute ASSOCIATION__IS_AGGREGATION = eINSTANCE.getAssociation_IsAggregation();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.MemberImpl <em>Member</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.AttributeImpl <em>Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.MemberImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMember()
+		 * @see SystemMetamodel.impl.AttributeImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAttribute()
 		 * @generated
 		 */
-		EClass MEMBER = eINSTANCE.getMember();
+		EClass ATTRIBUTE = eINSTANCE.getAttribute();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2554,7 +2777,7 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEMBER__NAME = eINSTANCE.getMember_Name();
+		EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -2562,7 +2785,23 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MEMBER__TYPE = eINSTANCE.getMember_Type();
+		EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__IS_STATIC = eINSTANCE.getAttribute_IsStatic();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__ACCESS = eINSTANCE.getAttribute_Access();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.FunctionImpl <em>Function</em>}' class.
@@ -2589,6 +2828,22 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FUNCTION__RETURN_TYPE = eINSTANCE.getFunction_ReturnType();
+
+		/**
+		 * The meta object literal for the '<em><b>Throws</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__THROWS = eINSTANCE.getFunction_Throws();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION__IS_STATIC = eINSTANCE.getFunction_IsStatic();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -2729,6 +2984,14 @@ public interface SystemMetamodelPackage extends EPackage {
 		EAttribute DATABASE__NAME = eINSTANCE.getDatabase_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Server</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATABASE__SERVER = eINSTANCE.getDatabase_Server();
+
+		/**
 		 * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2737,24 +3000,32 @@ public interface SystemMetamodelPackage extends EPackage {
 		EAttribute DATABASE__PORT = eINSTANCE.getDatabase_Port();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.MediaImpl <em>Media</em>}' class.
+		 * The meta object literal for the '<em><b>Engine</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.MediaImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMedia()
 		 * @generated
 		 */
-		EClass MEDIA = eINSTANCE.getMedia();
+		EAttribute DATABASE__ENGINE = eINSTANCE.getDatabase_Engine();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.CodeImpl <em>Code</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.MediaFileImpl <em>Media File</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.CodeImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCode()
+		 * @see SystemMetamodel.impl.MediaFileImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMediaFile()
 		 * @generated
 		 */
-		EClass CODE = eINSTANCE.getCode();
+		EClass MEDIA_FILE = eINSTANCE.getMediaFile();
+
+		/**
+		 * The meta object literal for the '{@link SystemMetamodel.impl.CodeFileImpl <em>Code File</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.CodeFileImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCodeFile()
+		 * @generated
+		 */
+		EClass CODE_FILE = eINSTANCE.getCodeFile();
 
 		/**
 		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference list feature.
@@ -2762,7 +3033,7 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CODE__CONTAINS = eINSTANCE.getCode_Contains();
+		EReference CODE_FILE__CONTAINS = eINSTANCE.getCodeFile_Contains();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.SchemaImpl <em>Schema</em>}' class.
@@ -2801,12 +3072,20 @@ public interface SystemMetamodelPackage extends EPackage {
 		EClass ANNOTATION = eINSTANCE.getAnnotation();
 
 		/**
-		 * The meta object literal for the '<em><b>Element</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ANNOTATION__ELEMENT = eINSTANCE.getAnnotation_Element();
+		EReference ANNOTATION__ELEMENTS = eINSTANCE.getAnnotation_Elements();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANNOTATION__NAME = eINSTANCE.getAnnotation_Name();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.ElementImpl <em>Element</em>}' class.

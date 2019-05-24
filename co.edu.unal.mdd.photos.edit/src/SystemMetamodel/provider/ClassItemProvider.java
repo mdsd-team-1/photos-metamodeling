@@ -14,9 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -25,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassItemProvider extends ClassifierItemProvider {
+public class ClassItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,54 +45,8 @@ public class ClassItemProvider extends ClassifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIsAbstractPropertyDescriptor(object);
-			addParentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Abstract feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsAbstractPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Class_isAbstract_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Class_isAbstract_feature", "_UI_Class_type"),
-				 SystemMetamodelPackage.Literals.CLASS__IS_ABSTRACT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Parent feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addParentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Class_parent_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Class_parent_feature", "_UI_Class_type"),
-				 SystemMetamodelPackage.Literals.CLASS__PARENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -111,6 +63,7 @@ public class ClassItemProvider extends ClassifierItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SystemMetamodelPackage.Literals.CLASS__MEMBERS);
 			childrenFeatures.add(SystemMetamodelPackage.Literals.CLASS__METHODS);
+			childrenFeatures.add(SystemMetamodelPackage.Literals.CLASS__EXTENDS);
 		}
 		return childrenFeatures;
 	}
@@ -166,11 +119,9 @@ public class ClassItemProvider extends ClassifierItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SystemMetamodel.Class.class)) {
-			case SystemMetamodelPackage.CLASS__IS_ABSTRACT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case SystemMetamodelPackage.CLASS__MEMBERS:
 			case SystemMetamodelPackage.CLASS__METHODS:
+			case SystemMetamodelPackage.CLASS__EXTENDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,12 +142,17 @@ public class ClassItemProvider extends ClassifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemMetamodelPackage.Literals.CLASS__MEMBERS,
-				 SystemMetamodelFactory.eINSTANCE.createMember()));
+				 SystemMetamodelFactory.eINSTANCE.createAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemMetamodelPackage.Literals.CLASS__METHODS,
 				 SystemMetamodelFactory.eINSTANCE.createFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SystemMetamodelPackage.Literals.CLASS__EXTENDS,
+				 SystemMetamodelFactory.eINSTANCE.createClass()));
 	}
 
 }
