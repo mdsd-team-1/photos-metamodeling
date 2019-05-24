@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated SystemMetamodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="SystemMetamodel.presentation.SystemMetamodelModelWizardID"
+            name="%_UI_SystemMetamodelModelWizard_label"
+            class="SystemMetamodel.presentation.SystemMetamodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SystemMetamodelModelFile.gif">
+         <description>%_UI_SystemMetamodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated SystemMetamodel -->
+      <editor
+            id="SystemMetamodel.presentation.SystemMetamodelEditorID"
+            name="%_UI_SystemMetamodelEditor_label"
+            icon="icons/full/obj16/SystemMetamodelModelFile.gif"
+            extensions="systemmetamodel"
+            class="SystemMetamodel.presentation.SystemMetamodelEditor"
+            contributorClass="SystemMetamodel.presentation.SystemMetamodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
