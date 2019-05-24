@@ -75,68 +75,148 @@
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="ResourceServerConfig" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ResourceServerConfig"/>
         </files>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="SecurityConfig" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="SecurityConfig" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="SecurityConfig" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumController" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="HomeController" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoController" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserController" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumController" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumController" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="HomeController" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HomeController" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoController" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoController" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserController" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserController" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller.amazon">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AmazonClient" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AmazonClient" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AmazonClient" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller.exception.album">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumHasNoPhotosException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumNotCreatedException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumNotFoundException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForNewAlbumException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotosFromAlbumNotFoundException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotosFromAlbumNotFoundException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumHasNoPhotosException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumHasNoPhotosException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumNotCreatedException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumNotCreatedException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumNotFoundException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumNotFoundException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForNewAlbumException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="MissingParametersForNewAlbumException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotosFromAlbumNotFoundException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotosFromAlbumNotFoundException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotosFromAlbumNotFoundException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotosFromAlbumNotFoundException" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller.exception.photo">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumIdIsNotNumberException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumIdIsNotNumberException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoNotCreatedException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoNotDeletedException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoNotFoundException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoUploadErrorException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumIdIsNotNumberException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumIdIsNotNumberException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumIdIsNotNumberException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumIdIsNotNumberException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoNotCreatedException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoNotCreatedException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoNotDeletedException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoNotDeletedException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoNotFoundException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoNotFoundException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoUploadErrorException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoUploadErrorException" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller.exception.user">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumNotCreatedForNewUserException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumsFromUserNotFoundException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForEditUserException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForLoginException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForNewUserException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserHasNoAlbumsException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserHasNoPhotosException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserNotCreatedException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserNotEditedException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserNotFoundException" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserToEditDoesNotExist" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="WrongLoginInfoException" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumNotCreatedForNewUserException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumNotCreatedForNewUserException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumsFromUserNotFoundException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumsFromUserNotFoundException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForEditUserException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="MissingParametersForEditUserException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForLoginException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="MissingParametersForLoginException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="MissingParametersForNewUserException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="MissingParametersForNewUserException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserHasNoAlbumsException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserHasNoAlbumsException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserHasNoPhotosException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserHasNoPhotosException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserNotCreatedException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserNotCreatedException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserNotEditedException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserNotEditedException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserNotFoundException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserNotFoundException" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserToEditDoesNotExist" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserToEditDoesNotExist" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="WrongLoginInfoException" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="WrongLoginInfoException" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.specification">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumSpecification" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoSpecification" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserSpecification" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumSpecification" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumSpecification" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoSpecification" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoSpecification" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserSpecification" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserSpecification" access="public"/>
+        </files>
       </folders>
       <folders name="co.edu.unal.photosappback.specification.criteria">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="SearchCriteria" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="SearchCriteria" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="SearchCriteria" access="public"/>
+        </files>
       </folders>
     </layerSegments>
     <layerSegments name="Model">
       <folders name="co.edu.unal.photosappback.model">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="Album" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="Photo" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="User" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="Album" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="Album" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="Photo" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="Photo" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="User" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="User" access="public"/>
+        </files>
       </folders>
     </layerSegments>
     <layerSegments name="Repository">
       <folders name="co.edu.unal.photosappback.repository">
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumRepository" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoRepository" extension="java"/>
-        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserRespository" extension="java"/>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumRepository" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumRepository" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoRepository" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoRepository" access="public"/>
+        </files>
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserRespository" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserRespository" access="public"/>
+        </files>
       </folders>
     </layerSegments>
     <connections sourceSegment="//@layer.1/@layerSegments.0" targetSegment="//@layer.1/@layerSegments.1"/>
