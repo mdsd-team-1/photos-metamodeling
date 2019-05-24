@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<co.edu.unal.mdd.photos.SystemMetamodel:LayeredStyle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:co.edu.unal.mdd.photos.SystemMetamodel="http://co/edu/unal/mdd/photos/SystemMetamodel">
+<co.edu.unal.mdd.photos.SystemMetamodel:LayeredStyle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.unal.mdd.photos.SystemMetamodel="http://co/edu/unal/mdd/photos/SystemMetamodel">
+  <relations xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:AllowedToUse" sourceLayer="//@layer.0" targetLayer="//@layer.1"/>
+  <relations xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:AllowedToUse" sourceLayer="//@layer.1" targetLayer="//@layer.2"/>
   <layer name="Presentation">
     <layerSegments name="View"/>
     <layerSegments name="Component"/>
     <layerSegments name="Action"/>
+    <connections sourceSegment="//@layer.0/@layerSegments.0" targetSegment="//@layer.0/@layerSegments.1"/>
+    <connections sourceSegment="//@layer.0/@layerSegments.1" targetSegment="//@layer.0/@layerSegments.2"/>
+    <connections sourceSegment="//@layer.0/@layerSegments.2" targetSegment="//@layer.1/@layerSegments.0"/>
   </layer>
   <layer name="Business Logic">
     <layerSegments name="Controller"/>
     <layerSegments name="Model"/>
     <layerSegments name="Repository"/>
+    <connections sourceSegment="//@layer.1/@layerSegments.0" targetSegment="//@layer.1/@layerSegments.1"/>
+    <connections sourceSegment="//@layer.1/@layerSegments.1" targetSegment="//@layer.1/@layerSegments.2"/>
+    <connections sourceSegment="//@layer.1/@layerSegments.2" targetSegment="//@layer.2/@layerSegments.0"/>
   </layer>
   <layer name="Data">
-    <layerSegments name="Database"/>
+    <layerSegments name="Database">
+      <databases name="photos" port="5432">
+        <schemas name="public">
+          <tables primaryKey="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.0/@columns.0" name="users">
+            <columns name="id" type="integer"/>
+            <columns name="first_name" type="varchar"/>
+            <columns name="last_name" type="varchar"/>
+            <columns name="profile_description" type="varchar"/>
+            <columns name="user_name" type="varchar"/>
+            <columns name="password" type="varchar"/>
+            <columns name="email" type="varchar"/>
+          </tables>
+          <tables primaryKey="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.1/@columns.0" name="album">
+            <columns name="id" type="integer"/>
+            <columns name="name" type="varchar"/>
+            <columns name="user_id" type="integer"/>
+            <foreignKeys refersTo="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.0" column="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.1/@columns.2"/>
+          </tables>
+          <tables primaryKey="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.2/@columns.0" name="photo">
+            <columns name="id" type="integer"/>
+            <columns name="url" type="varchar"/>
+            <columns name="name" type="varchar"/>
+            <columns name="album_id" type="integer"/>
+            <foreignKeys refersTo="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.1" column="//@layer.2/@layerSegments.0/@databases.0/@schemas.0/@tables.2/@columns.3"/>
+          </tables>
+        </schemas>
+      </databases>
+    </layerSegments>
   </layer>
 </co.edu.unal.mdd.photos.SystemMetamodel:LayeredStyle>
