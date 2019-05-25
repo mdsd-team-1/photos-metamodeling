@@ -102,7 +102,43 @@
       </folders>
       <folders name="co.edu.unal.photosappback.controller">
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AlbumController" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumController" access="public"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AlbumController" access="public">
+            <annotation name="RestController"/>
+            <annotation name="RequestMapping">
+              <elements name="value" value="&quot;/album&quot;"/>
+            </annotation>
+            <members name="albumRepository" type="//@layer.1/@layerSegments.0/@folders.2/@files.0/@contains.0">
+              <annotation name="Autowired"/>
+            </members>
+            <members name="photoRepository" type="//@layer.1/@layerSegments.2/@folders.0/@files.1/@contains.0">
+              <annotation name="Autowired"/>
+            </members>
+            <methods name="getAlbum" access="public">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/id/{id}&quot;"/>
+                <elements name="method" value="RequestMethod.GET"/>
+                <elements name="produces" value="&quot;application/json&quot;"/>
+              </annotation>
+              <parameters name="id"/>
+            </methods>
+            <methods name="getPhotosFromAlbum" access="public">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/{id}/photos&quot;"/>
+                <elements name="method" value="RequestMethod.GET"/>
+                <elements name="produces" value="&quot;application/json&quot;"/>
+              </annotation>
+            </methods>
+            <methods name="createAlbum" access="public">
+              <annotation name="PostMapping">
+                <elements name="value" value="&quot;/create&quot;"/>
+              </annotation>
+            </methods>
+            <methods name="handleException" access="public">
+              <annotation name="ExceptionHandler">
+                <elements name="value" value="Exception.class"/>
+              </annotation>
+            </methods>
+          </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="HomeController" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HomeController" access="public"/>
