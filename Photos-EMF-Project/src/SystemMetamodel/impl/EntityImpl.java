@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link SystemMetamodel.impl.EntityImpl#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.EntityImpl#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link SystemMetamodel.impl.EntityImpl#getName <em>Name</em>}</li>
  *   <li>{@link SystemMetamodel.impl.EntityImpl#getAccess <em>Access</em>}</li>
  * </ul>
@@ -39,14 +39,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	/**
-	 * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnnotations()
+	 * @see #getAnnotation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Annotation> annotations;
+	protected EList<Annotation> annotation;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -113,11 +113,11 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	 * @generated
 	 */
 	@Override
-	public EList<Annotation> getAnnotations() {
-		if (annotations == null) {
-			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, SystemMetamodelPackage.ENTITY__ANNOTATIONS);
+	public EList<Annotation> getAnnotation() {
+		if (annotation == null) {
+			annotation = new EObjectContainmentEList<Annotation>(Annotation.class, this, SystemMetamodelPackage.ENTITY__ANNOTATION);
 		}
-		return annotations;
+		return annotation;
 	}
 
 	/**
@@ -174,8 +174,8 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ENTITY__ANNOTATIONS:
-				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
+			case SystemMetamodelPackage.ENTITY__ANNOTATION:
+				return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -188,8 +188,8 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ENTITY__ANNOTATIONS:
-				return getAnnotations();
+			case SystemMetamodelPackage.ENTITY__ANNOTATION:
+				return getAnnotation();
 			case SystemMetamodelPackage.ENTITY__NAME:
 				return getName();
 			case SystemMetamodelPackage.ENTITY__ACCESS:
@@ -207,9 +207,9 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ENTITY__ANNOTATIONS:
-				getAnnotations().clear();
-				getAnnotations().addAll((Collection<? extends Annotation>)newValue);
+			case SystemMetamodelPackage.ENTITY__ANNOTATION:
+				getAnnotation().clear();
+				getAnnotation().addAll((Collection<? extends Annotation>)newValue);
 				return;
 			case SystemMetamodelPackage.ENTITY__NAME:
 				setName((String)newValue);
@@ -229,8 +229,8 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ENTITY__ANNOTATIONS:
-				getAnnotations().clear();
+			case SystemMetamodelPackage.ENTITY__ANNOTATION:
+				getAnnotation().clear();
 				return;
 			case SystemMetamodelPackage.ENTITY__NAME:
 				setName(NAME_EDEFAULT);
@@ -250,8 +250,8 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.ENTITY__ANNOTATIONS:
-				return annotations != null && !annotations.isEmpty();
+			case SystemMetamodelPackage.ENTITY__ANNOTATION:
+				return annotation != null && !annotation.isEmpty();
 			case SystemMetamodelPackage.ENTITY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SystemMetamodelPackage.ENTITY__ACCESS:

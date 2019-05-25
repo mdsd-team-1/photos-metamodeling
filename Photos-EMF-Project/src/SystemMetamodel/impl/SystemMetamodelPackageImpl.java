@@ -585,7 +585,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getEntity_Annotations() {
+	public EReference getEntity_Annotation() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -767,6 +767,16 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	@Override
 	public EAttribute getAttribute_Access() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAttribute_Annotation() {
+		return (EReference)attributeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1197,7 +1207,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		createEAttribute(foreignKeyEClass, FOREIGN_KEY__NAME);
 
 		entityEClass = createEClass(ENTITY);
-		createEReference(entityEClass, ENTITY__ANNOTATIONS);
+		createEReference(entityEClass, ENTITY__ANNOTATION);
 		createEAttribute(entityEClass, ENTITY__NAME);
 		createEAttribute(entityEClass, ENTITY__ACCESS);
 
@@ -1220,6 +1230,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		createEReference(attributeEClass, ATTRIBUTE__TYPE);
 		createEAttribute(attributeEClass, ATTRIBUTE__IS_STATIC);
 		createEAttribute(attributeEClass, ATTRIBUTE__ACCESS);
+		createEReference(attributeEClass, ATTRIBUTE__ANNOTATION);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__PARAMETERS);
@@ -1345,7 +1356,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		initEAttribute(getForeignKey_Name(), ecorePackage.getEString(), "name", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntity_Annotations(), this.getAnnotation(), null, "annotations", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Annotation(), this.getAnnotation(), null, "annotation", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_Access(), ecorePackage.getEString(), "access", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1368,6 +1379,7 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		initEReference(getAttribute_Type(), this.getEntity(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttribute_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttribute_Access(), ecorePackage.getEString(), "access", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Annotation(), this.getAnnotation(), null, "annotation", null, 0, -1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunction_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

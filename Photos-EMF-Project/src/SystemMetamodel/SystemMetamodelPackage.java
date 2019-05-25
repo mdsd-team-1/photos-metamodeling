@@ -535,13 +535,13 @@ public interface SystemMetamodelPackage extends EPackage {
 	int ENTITY = 9;
 
 	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ANNOTATIONS = 0;
+	int ENTITY__ANNOTATION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -590,13 +590,13 @@ public interface SystemMetamodelPackage extends EPackage {
 	int PRIMITIVE_DATA_TYPE = 10;
 
 	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__ANNOTATIONS = ENTITY__ANNOTATIONS;
+	int PRIMITIVE_DATA_TYPE__ANNOTATION = ENTITY__ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -654,13 +654,13 @@ public interface SystemMetamodelPackage extends EPackage {
 	int CLASS = 11;
 
 	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__ANNOTATIONS = ENTITY__ANNOTATIONS;
+	int CLASS__ANNOTATION = ENTITY__ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -836,13 +836,22 @@ public interface SystemMetamodelPackage extends EPackage {
 	int ATTRIBUTE__ACCESS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__ANNOTATION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = 4;
+	int ATTRIBUTE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -864,13 +873,13 @@ public interface SystemMetamodelPackage extends EPackage {
 	int FUNCTION = 14;
 
 	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ANNOTATIONS = ENTITY__ANNOTATIONS;
+	int FUNCTION__ANNOTATION = ENTITY__ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1771,15 +1780,15 @@ public interface SystemMetamodelPackage extends EPackage {
 	EClass getEntity();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Entity#getAnnotations <em>Annotations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Entity#getAnnotation <em>Annotation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Annotations</em>'.
-	 * @see SystemMetamodel.Entity#getAnnotations()
+	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
+	 * @see SystemMetamodel.Entity#getAnnotation()
 	 * @see #getEntity()
 	 * @generated
 	 */
-	EReference getEntity_Annotations();
+	EReference getEntity_Annotation();
 
 	/**
 	 * Returns the meta object for the attribute '{@link SystemMetamodel.Entity#getName <em>Name</em>}'.
@@ -1974,6 +1983,17 @@ public interface SystemMetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAttribute_Access();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Attribute#getAnnotation <em>Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
+	 * @see SystemMetamodel.Attribute#getAnnotation()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_Annotation();
 
 	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Function <em>Function</em>}'.
@@ -2644,12 +2664,12 @@ public interface SystemMetamodelPackage extends EPackage {
 		EClass ENTITY = eINSTANCE.getEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Annotations</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY__ANNOTATIONS = eINSTANCE.getEntity_Annotations();
+		EReference ENTITY__ANNOTATION = eINSTANCE.getEntity_Annotation();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2802,6 +2822,14 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ATTRIBUTE__ACCESS = eINSTANCE.getAttribute_Access();
+
+		/**
+		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__ANNOTATION = eINSTANCE.getAttribute_Annotation();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.FunctionImpl <em>Function</em>}' class.

@@ -15,68 +15,89 @@
       <folders name="co.edu.unal.photosappback">
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotosAppBackApplication" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotosAppBackApplication" access="public">
-            <annotations name="@SpringBootApplication"/>
+            <annotation name="SpringBootApplication"/>
             <members name="version" isStatic="true" access="public"/>
-            <methods name="main" access="public"/>
+            <methods name="main" access="public" isStatic="true">
+              <parameters name="args"/>
+            </methods>
           </contains>
         </files>
       </folders>
       <folders name="co.edu.unal.photosappback.config">
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="AuthorizationServerConfig" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AuthorizationServerConfig" access="public">
-            <annotations name="@Configuration"/>
-            <annotations name="@EnableAuthorizationServer"/>
-            <members name="CLIENT_ID"/>
-            <members name="CLIENT_SECRET"/>
-            <members name="GRANT_TYPE_PASSWORD"/>
-            <members name="AUTHORIZATION_CODE"/>
-            <members name="REFRESH_TOKEN"/>
-            <members name="IMPLICIT"/>
-            <members name="SCOPE_READ"/>
-            <members name="SCOPE_WRITE"/>
-            <members name="TRUST"/>
-            <members name="ACCESS_TOKEN_VALIDITY_SECONDS"/>
-            <members name="FREFRESH_TOKEN_VALIDITY_SECONDS"/>
-            <members name="authenticationManager"/>
-            <methods name="accessTokenConverter">
-              <annotations>
-                <elements name="@Bean"/>
-              </annotations>
+            <annotation name="Configuration"/>
+            <annotation name="EnableAuthorizationServer"/>
+            <members name="CLIENT_ID" isStatic="true"/>
+            <members name="CLIENT_SECRET" isStatic="true"/>
+            <members name="GRANT_TYPE_PASSWORD" isStatic="true"/>
+            <members name="AUTHORIZATION_CODE" isStatic="true"/>
+            <members name="REFRESH_TOKEN" isStatic="true"/>
+            <members name="IMPLICIT" isStatic="true"/>
+            <members name="SCOPE_READ" isStatic="true"/>
+            <members name="SCOPE_WRITE" isStatic="true"/>
+            <members name="TRUST" isStatic="true"/>
+            <members name="ACCESS_TOKEN_VALIDITY_SECONDS" isStatic="true"/>
+            <members name="FREFRESH_TOKEN_VALIDITY_SECONDS" isStatic="true"/>
+            <members name="authenticationManager" access="private">
+              <annotation name="Autowired"/>
+            </members>
+            <methods name="accessTokenConverter" access="public">
+              <annotation name="Bean"/>
             </methods>
-            <methods name="tokenStore">
-              <annotations>
-                <elements name="@Bean"/>
-              </annotations>
+            <methods name="tokenStore" access="public">
+              <annotation name="Bean"/>
             </methods>
-            <methods name="configure">
-              <annotations>
-                <elements name="@Override"/>
-              </annotations>
+            <methods name="configure" access="public">
+              <annotation name="Override"/>
               <parameters name="configurer"/>
             </methods>
-            <methods name="configure">
-              <annotations>
-                <elements name="@Override"/>
-              </annotations>
+            <methods name="configure" access="public">
+              <annotation name="Override"/>
               <parameters name="endpoints"/>
             </methods>
           </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="CORSFilter" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="CORSFilter">
-            <annotations>
-              <elements name="@Component"/>
-            </annotations>
-            <annotations>
-              <elements name="@Order"/>
-            </annotations>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="CORSFilter" access="public">
+            <annotation name="Component"/>
+            <annotation name="Order">
+              <elements name="value" value="Ordered.HIGHEST_PRECEDENCE"/>
+            </annotation>
+            <methods name="CORSFilter" access="public"/>
+            <methods name="doFilter" access="public">
+              <annotation name="Override"/>
+              <parameters name="req"/>
+              <parameters name="res"/>
+              <parameters name="chain"/>
+            </methods>
+            <methods name="init" access="public">
+              <annotation name="Override"/>
+              <parameters name="filterConfig"/>
+            </methods>
+            <methods name="destroy" access="public">
+              <annotation name="Override"/>
+            </methods>
           </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="ResourceServerConfig" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ResourceServerConfig"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ResourceServerConfig" access="public">
+            <annotation name="Configuration"/>
+            <annotation name="EnableResourceServer"/>
+            <methods name="configure" access="public">
+              <annotation name="Override"/>
+              <parameters name="http"/>
+            </methods>
+          </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="SecurityConfig" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="SecurityConfig" access="public"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="SecurityConfig" access="public">
+            <annotation name="Configuration"/>
+            <annotation name="EnableWebSecurity"/>
+            <annotation name="EnableGlobalMethodSecurity">
+              <elements name="prePostEnabled" value="true"/>
+            </annotation>
+          </contains>
         </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller">

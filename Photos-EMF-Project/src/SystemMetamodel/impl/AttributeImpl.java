@@ -2,17 +2,26 @@
  */
 package SystemMetamodel.impl;
 
+import SystemMetamodel.Annotation;
 import SystemMetamodel.Attribute;
 import SystemMetamodel.Entity;
 import SystemMetamodel.SystemMetamodelPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +35,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link SystemMetamodel.impl.AttributeImpl#getType <em>Type</em>}</li>
  *   <li>{@link SystemMetamodel.impl.AttributeImpl#isIsStatic <em>Is Static</em>}</li>
  *   <li>{@link SystemMetamodel.impl.AttributeImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.AttributeImpl#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,6 +110,16 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @ordered
 	 */
 	protected String access = ACCESS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnnotation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Annotation> annotation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,6 +255,33 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * @generated
 	 */
 	@Override
+	public EList<Annotation> getAnnotation() {
+		if (annotation == null) {
+			annotation = new EObjectContainmentEList<Annotation>(Annotation.class, this, SystemMetamodelPackage.ATTRIBUTE__ANNOTATION);
+		}
+		return annotation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SystemMetamodelPackage.ATTRIBUTE__ANNOTATION:
+				return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SystemMetamodelPackage.ATTRIBUTE__NAME:
@@ -246,6 +293,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return isIsStatic();
 			case SystemMetamodelPackage.ATTRIBUTE__ACCESS:
 				return getAccess();
+			case SystemMetamodelPackage.ATTRIBUTE__ANNOTATION:
+				return getAnnotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -255,6 +304,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -269,6 +319,10 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return;
 			case SystemMetamodelPackage.ATTRIBUTE__ACCESS:
 				setAccess((String)newValue);
+				return;
+			case SystemMetamodelPackage.ATTRIBUTE__ANNOTATION:
+				getAnnotation().clear();
+				getAnnotation().addAll((Collection<? extends Annotation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -294,6 +348,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			case SystemMetamodelPackage.ATTRIBUTE__ACCESS:
 				setAccess(ACCESS_EDEFAULT);
 				return;
+			case SystemMetamodelPackage.ATTRIBUTE__ANNOTATION:
+				getAnnotation().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -314,6 +371,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 				return isStatic != IS_STATIC_EDEFAULT;
 			case SystemMetamodelPackage.ATTRIBUTE__ACCESS:
 				return ACCESS_EDEFAULT == null ? access != null : !ACCESS_EDEFAULT.equals(access);
+			case SystemMetamodelPackage.ATTRIBUTE__ANNOTATION:
+				return annotation != null && !annotation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

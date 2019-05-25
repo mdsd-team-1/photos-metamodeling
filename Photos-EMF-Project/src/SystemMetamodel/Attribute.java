@@ -2,6 +2,8 @@
  */
 package SystemMetamodel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link SystemMetamodel.Attribute#getType <em>Type</em>}</li>
  *   <li>{@link SystemMetamodel.Attribute#isIsStatic <em>Is Static</em>}</li>
  *   <li>{@link SystemMetamodel.Attribute#getAccess <em>Access</em>}</li>
+ *   <li>{@link SystemMetamodel.Attribute#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @see SystemMetamodel.SystemMetamodelPackage#getAttribute()
@@ -111,5 +114,17 @@ public interface Attribute extends EObject {
 	 * @generated
 	 */
 	void setAccess(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Annotation</b></em>' containment reference list.
+	 * The list contents are of type {@link SystemMetamodel.Annotation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Annotation</em>' containment reference list.
+	 * @see SystemMetamodel.SystemMetamodelPackage#getAttribute_Annotation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Annotation> getAnnotation();
 
 } // Attribute

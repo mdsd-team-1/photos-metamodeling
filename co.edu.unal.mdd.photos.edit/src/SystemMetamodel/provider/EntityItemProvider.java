@@ -125,7 +125,7 @@ public class EntityItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SystemMetamodelPackage.Literals.ENTITY__ANNOTATIONS);
+			childrenFeatures.add(SystemMetamodelPackage.Literals.ENTITY__ANNOTATION);
 		}
 		return childrenFeatures;
 	}
@@ -185,7 +185,7 @@ public class EntityItemProvider
 			case SystemMetamodelPackage.ENTITY__ACCESS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SystemMetamodelPackage.ENTITY__ANNOTATIONS:
+			case SystemMetamodelPackage.ENTITY__ANNOTATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -205,7 +205,7 @@ public class EntityItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SystemMetamodelPackage.Literals.ENTITY__ANNOTATIONS,
+				(SystemMetamodelPackage.Literals.ENTITY__ANNOTATION,
 				 SystemMetamodelFactory.eINSTANCE.createAnnotation()));
 	}
 

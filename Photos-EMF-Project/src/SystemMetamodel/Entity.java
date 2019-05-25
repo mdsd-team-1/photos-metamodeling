@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link SystemMetamodel.Entity#getAnnotations <em>Annotations</em>}</li>
+ *   <li>{@link SystemMetamodel.Entity#getAnnotation <em>Annotation</em>}</li>
  *   <li>{@link SystemMetamodel.Entity#getName <em>Name</em>}</li>
  *   <li>{@link SystemMetamodel.Entity#getAccess <em>Access</em>}</li>
  * </ul>
@@ -26,16 +26,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Entity extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Annotations</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Annotation</b></em>' containment reference list.
 	 * The list contents are of type {@link SystemMetamodel.Annotation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Annotations</em>' containment reference list.
-	 * @see SystemMetamodel.SystemMetamodelPackage#getEntity_Annotations()
+	 * @return the value of the '<em>Annotation</em>' containment reference list.
+	 * @see SystemMetamodel.SystemMetamodelPackage#getEntity_Annotation()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Annotation> getAnnotations();
+	EList<Annotation> getAnnotation();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
