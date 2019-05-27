@@ -982,13 +982,22 @@ public interface SystemMetamodelPackage extends EPackage {
 	int PARAMETER__TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__ANNOTATION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = 2;
+	int PARAMETER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Parameter</em>' class.
@@ -2082,6 +2091,17 @@ public interface SystemMetamodelPackage extends EPackage {
 	EReference getParameter_Type();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Parameter#getAnnotation <em>Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
+	 * @see SystemMetamodel.Parameter#getAnnotation()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EReference getParameter_Annotation();
+
+	/**
 	 * Returns the meta object for class '{@link SystemMetamodel.Folder <em>Folder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2898,6 +2918,14 @@ public interface SystemMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER__ANNOTATION = eINSTANCE.getParameter_Annotation();
 
 		/**
 		 * The meta object literal for the '{@link SystemMetamodel.impl.FolderImpl <em>Folder</em>}' class.

@@ -2,6 +2,8 @@
  */
 package SystemMetamodel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link SystemMetamodel.Parameter#getName <em>Name</em>}</li>
  *   <li>{@link SystemMetamodel.Parameter#getType <em>Type</em>}</li>
+ *   <li>{@link SystemMetamodel.Parameter#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @see SystemMetamodel.SystemMetamodelPackage#getParameter()
@@ -65,5 +68,17 @@ public interface Parameter extends EObject {
 	 * @generated
 	 */
 	void setType(Entity value);
+
+	/**
+	 * Returns the value of the '<em><b>Annotation</b></em>' containment reference list.
+	 * The list contents are of type {@link SystemMetamodel.Annotation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Annotation</em>' containment reference list.
+	 * @see SystemMetamodel.SystemMetamodelPackage#getParameter_Annotation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Annotation> getAnnotation();
 
 } // Parameter

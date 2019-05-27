@@ -119,7 +119,9 @@
                 <elements name="method" value="RequestMethod.GET"/>
                 <elements name="produces" value="&quot;application/json&quot;"/>
               </annotation>
-              <parameters name="id"/>
+              <parameters name="id">
+                <annotation name="PathVariable"/>
+              </parameters>
             </methods>
             <methods name="getPhotosFromAlbum" access="public">
               <annotation name="RequestMapping">
@@ -127,24 +129,107 @@
                 <elements name="method" value="RequestMethod.GET"/>
                 <elements name="produces" value="&quot;application/json&quot;"/>
               </annotation>
+              <parameters name="id">
+                <annotation name="PathVariable"/>
+              </parameters>
             </methods>
             <methods name="createAlbum" access="public">
               <annotation name="PostMapping">
                 <elements name="value" value="&quot;/create&quot;"/>
               </annotation>
+              <parameters name="body">
+                <annotation name="RequestBody"/>
+              </parameters>
             </methods>
             <methods name="handleException" access="public">
               <annotation name="ExceptionHandler">
                 <elements name="value" value="Exception.class"/>
               </annotation>
+              <parameters name="exception"/>
             </methods>
           </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="HomeController" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HomeController" access="public"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HomeController" access="public">
+            <annotation name="RestController"/>
+            <methods name="home" access="public">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/&quot;"/>
+              </annotation>
+            </methods>
+            <methods name="error" access="public">
+              <annotation name="ExceptionHandler">
+                <elements name="value" value="Exception.class"/>
+              </annotation>
+              <parameters name="req"/>
+              <parameters name="ex"/>
+            </methods>
+          </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotoController" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoController" access="public"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotoController" access="public">
+            <annotation name="RestController"/>
+            <annotation name="RequestMapping">
+              <elements name="value" value="&quot;/photo&quot;"/>
+            </annotation>
+            <members name="amazonClient" type="//@layer.1/@layerSegments.0/@folders.3/@files.0/@contains.0" access="private"/>
+            <members name="photoRepository">
+              <annotation name="Autowired"/>
+            </members>
+            <methods name="PhotoController">
+              <annotation name="Autowired"/>
+              <parameters name="amazonClient" type="//@layer.1/@layerSegments.0/@folders.3/@files.0/@contains.0"/>
+            </methods>
+            <methods name="getPhoto" access="public">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/id/{id}&quot;"/>
+                <elements name="method" value="RequestMethod.GET"/>
+                <elements name="produces" value="&quot;application/json&quot;"/>
+              </annotation>
+              <parameters name="id">
+                <annotation name="PathVariable"/>
+              </parameters>
+            </methods>
+            <methods name="uploadPhoto" access="public">
+              <annotation name="PostMapping">
+                <elements name="value" value="&quot;/upload&quot;"/>
+              </annotation>
+              <parameters name="file">
+                <annotation name="RequestPart">
+                  <elements name="value" value="&quot;file&quot;"/>
+                  <elements name="required" value="true"/>
+                </annotation>
+              </parameters>
+              <parameters name="photoName">
+                <annotation name="RequestPart">
+                  <elements name="value" value="&quot;photo_name&quot;"/>
+                  <elements name="required" value="true"/>
+                </annotation>
+              </parameters>
+              <parameters name="albumId">
+                <annotation name="RequestPart">
+                  <elements name="value" value="&quot;album_id&quot;"/>
+                  <elements name="required" value="true"/>
+                </annotation>
+              </parameters>
+            </methods>
+            <methods name="deleteFile" access="public">
+              <annotation name="DeleteMapping">
+                <elements name="value" value="&quot;/delete&quot;"/>
+              </annotation>
+              <parameters name="fileUrl">
+                <annotation name="RequestPart">
+                  <elements name="value" value="&quot;url&quot;"/>
+                </annotation>
+              </parameters>
+            </methods>
+            <methods access="public">
+              <annotation/>
+            </methods>
+            <methods>
+              <annotation/>
+            </methods>
+          </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserController" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserController" access="public"/>
@@ -260,6 +345,17 @@
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="User" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="User" access="public"/>
+        </files>
+      </folders>
+      <folders name="JavaFramework">
+        <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="JavaFramework" extension="java">
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="int"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="float"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="double"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="String"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="Exception"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ResponseEntity&lt;?>"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="String[]"/>
         </files>
       </folders>
     </layerSegments>

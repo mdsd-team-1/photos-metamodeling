@@ -2,17 +2,26 @@
  */
 package SystemMetamodel.impl;
 
+import SystemMetamodel.Annotation;
 import SystemMetamodel.Entity;
 import SystemMetamodel.Parameter;
 import SystemMetamodel.SystemMetamodelPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link SystemMetamodel.impl.ParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link SystemMetamodel.impl.ParameterImpl#getType <em>Type</em>}</li>
+ *   <li>{@link SystemMetamodel.impl.ParameterImpl#getAnnotation <em>Annotation</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,6 +68,16 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @ordered
 	 */
 	protected Entity type;
+
+	/**
+	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnnotation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Annotation> annotation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,6 +167,33 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 */
 	@Override
+	public EList<Annotation> getAnnotation() {
+		if (annotation == null) {
+			annotation = new EObjectContainmentEList<Annotation>(Annotation.class, this, SystemMetamodelPackage.PARAMETER__ANNOTATION);
+		}
+		return annotation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SystemMetamodelPackage.PARAMETER__ANNOTATION:
+				return ((InternalEList<?>)getAnnotation()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SystemMetamodelPackage.PARAMETER__NAME:
@@ -154,6 +201,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 			case SystemMetamodelPackage.PARAMETER__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case SystemMetamodelPackage.PARAMETER__ANNOTATION:
+				return getAnnotation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,6 +212,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -171,6 +221,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				return;
 			case SystemMetamodelPackage.PARAMETER__TYPE:
 				setType((Entity)newValue);
+				return;
+			case SystemMetamodelPackage.PARAMETER__ANNOTATION:
+				getAnnotation().clear();
+				getAnnotation().addAll((Collection<? extends Annotation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,6 +244,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 			case SystemMetamodelPackage.PARAMETER__TYPE:
 				setType((Entity)null);
 				return;
+			case SystemMetamodelPackage.PARAMETER__ANNOTATION:
+				getAnnotation().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -206,6 +263,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SystemMetamodelPackage.PARAMETER__TYPE:
 				return type != null;
+			case SystemMetamodelPackage.PARAMETER__ANNOTATION:
+				return annotation != null && !annotation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
