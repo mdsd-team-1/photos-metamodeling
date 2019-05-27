@@ -648,21 +648,77 @@
             <members name="password" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" access="private"/>
             <members name="email" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" access="private"/>
             <methods name="User" access="public"/>
-            <methods name="User" access="public"/>
-            <methods name="getId" access="public"/>
-            <methods name="setId" access="public"/>
-            <methods name="getUserName" access="public"/>
-            <methods name="setUserName" access="public"/>
-            <methods name="getFirstName" access="public"/>
-            <methods name="setFirstName" access="public"/>
-            <methods name="getLastName" access="public"/>
-            <methods name="setLastName" access="public"/>
-            <methods name="getProfileDescription" access="public"/>
-            <methods name="setProfileDescription" access="public"/>
-            <methods name="getPassword" access="public"/>
-            <methods name="setPassword" access="public"/>
-            <methods name="getEmail" access="public"/>
-            <methods name="setEmail" access="public"/>
+            <methods name="User" access="public">
+              <parameters name="userName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+              <parameters name="firstName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+              <parameters name="lastName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+              <parameters name="profileDescription" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+              <parameters name="password" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+              <parameters name="email" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
+            <methods name="getId" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.0">
+              <annotation name="Id"/>
+              <annotation name="GeneratedValue">
+                <elements name="strategy" value="GenerationType.AUTO"/>
+              </annotation>
+            </methods>
+            <methods name="setId" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.0"/>
+            </methods>
+            <methods name="getUserName" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
+              <annotation name="Column">
+                <elements name="name" value="&quot;user_name&quot;"/>
+                <elements name="nullable" value="false"/>
+              </annotation>
+            </methods>
+            <methods name="setUserName" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="userName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
+            <methods name="getFirstName" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
+              <annotation name="Column">
+                <elements name="name" value="&quot;first_name&quot;"/>
+                <elements name="nullable" value="false"/>
+              </annotation>
+            </methods>
+            <methods name="setFirstName" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="firstName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
+            <methods name="getLastName" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
+              <annotation name="Column">
+                <elements name="name" value="&quot;last_name&quot;"/>
+                <elements name="nullable" value="false"/>
+              </annotation>
+            </methods>
+            <methods name="setLastName" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="lastName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
+            <methods name="getProfileDescription" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
+              <annotation name="Column">
+                <elements name="name" value="&quot;profile_description&quot;"/>
+                <elements name="nullable" value="false"/>
+              </annotation>
+            </methods>
+            <methods name="setProfileDescription" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="profileDescription" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
+            <methods name="getPassword" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
+              <annotation name="Column">
+                <elements name="name" value="&quot;password&quot;"/>
+                <elements name="nullable" value="false"/>
+              </annotation>
+            </methods>
+            <methods name="setPassword" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="password" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
+            <methods name="getEmail" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
+              <annotation name="Column">
+                <elements name="name" value="&quot;email&quot;"/>
+                <elements name="nullable" value="false"/>
+              </annotation>
+            </methods>
+            <methods name="setEmail" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
+              <parameters name="email" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4"/>
+            </methods>
             <methods name="toString" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
               <annotation name="Override"/>
             </methods>
