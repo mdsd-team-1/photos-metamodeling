@@ -16,9 +16,9 @@
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="PhotosAppBackApplication" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PhotosAppBackApplication" access="public">
             <annotation name="SpringBootApplication"/>
-            <members name="version" isStatic="true" access="public"/>
-            <methods name="main" access="public" isStatic="true">
-              <parameters name="args"/>
+            <members name="version" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.3" isStatic="true" access="public"/>
+            <methods name="main" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2" isStatic="true">
+              <parameters name="args" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.7"/>
             </methods>
           </contains>
         </files>
@@ -28,33 +28,33 @@
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AuthorizationServerConfig" access="public">
             <annotation name="Configuration"/>
             <annotation name="EnableAuthorizationServer"/>
-            <members name="CLIENT_ID" isStatic="true"/>
-            <members name="CLIENT_SECRET" isStatic="true"/>
-            <members name="GRANT_TYPE_PASSWORD" isStatic="true"/>
-            <members name="AUTHORIZATION_CODE" isStatic="true"/>
-            <members name="REFRESH_TOKEN" isStatic="true"/>
-            <members name="IMPLICIT" isStatic="true"/>
-            <members name="SCOPE_READ" isStatic="true"/>
-            <members name="SCOPE_WRITE" isStatic="true"/>
-            <members name="TRUST" isStatic="true"/>
-            <members name="ACCESS_TOKEN_VALIDITY_SECONDS" isStatic="true"/>
-            <members name="FREFRESH_TOKEN_VALIDITY_SECONDS" isStatic="true"/>
-            <members name="authenticationManager" access="private">
+            <members name="CLIENT_ID" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="CLIENT_SECRET" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="GRANT_TYPE_PASSWORD" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="AUTHORIZATION_CODE" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="REFRESH_TOKEN" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="IMPLICIT" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="SCOPE_READ" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="SCOPE_WRITE" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="TRUST" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4" isStatic="true"/>
+            <members name="ACCESS_TOKEN_VALIDITY_SECONDS" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.0" isStatic="true"/>
+            <members name="FREFRESH_TOKEN_VALIDITY_SECONDS" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.0" isStatic="true"/>
+            <members name="authenticationManager" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.8" access="private">
               <annotation name="Autowired"/>
             </members>
-            <methods name="accessTokenConverter" access="public">
+            <methods name="accessTokenConverter" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.9">
               <annotation name="Bean"/>
             </methods>
-            <methods name="tokenStore" access="public">
+            <methods name="tokenStore" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.10">
               <annotation name="Bean"/>
             </methods>
-            <methods name="configure" access="public">
+            <methods name="configure" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
               <annotation name="Override"/>
-              <parameters name="configurer"/>
+              <parameters name="configurer" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.11"/>
             </methods>
-            <methods name="configure" access="public">
+            <methods name="configure" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
               <annotation name="Override"/>
-              <parameters name="endpoints"/>
+              <parameters name="endpoints" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.12"/>
             </methods>
           </contains>
         </files>
@@ -65,17 +65,17 @@
               <elements name="value" value="Ordered.HIGHEST_PRECEDENCE"/>
             </annotation>
             <methods name="CORSFilter" access="public"/>
-            <methods name="doFilter" access="public">
+            <methods name="doFilter" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.13">
               <annotation name="Override"/>
-              <parameters name="req"/>
-              <parameters name="res"/>
-              <parameters name="chain"/>
+              <parameters name="req" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.14"/>
+              <parameters name="res" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.15"/>
+              <parameters name="chain" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.16"/>
             </methods>
-            <methods name="init" access="public">
+            <methods name="init" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
               <annotation name="Override"/>
-              <parameters name="filterConfig"/>
+              <parameters name="filterConfig" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.17"/>
             </methods>
-            <methods name="destroy" access="public">
+            <methods name="destroy" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2">
               <annotation name="Override"/>
             </methods>
           </contains>
@@ -84,9 +84,9 @@
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ResourceServerConfig" access="public">
             <annotation name="Configuration"/>
             <annotation name="EnableResourceServer"/>
-            <methods name="configure" access="public">
+            <methods name="configure" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.2" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="Override"/>
-              <parameters name="http"/>
+              <parameters name="http" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.18"/>
             </methods>
           </contains>
         </files>
@@ -97,6 +97,17 @@
             <annotation name="EnableGlobalMethodSecurity">
               <elements name="prePostEnabled" value="true"/>
             </annotation>
+            <methods name="authenticationManagerBean" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.8" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="Override"/>
+              <annotation name="Bean"/>
+            </methods>
+            <methods name="userDetailsService" access="public">
+              <annotation name="Override"/>
+              <annotation name="Bean"/>
+            </methods>
+            <methods name="passwordEncoder" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.20">
+              <annotation name="Bean"/>
+            </methods>
           </contains>
         </files>
       </folders>
@@ -113,56 +124,56 @@
             <members name="photoRepository" type="//@layer.1/@layerSegments.2/@folders.0/@files.1/@contains.0">
               <annotation name="Autowired"/>
             </members>
-            <methods name="getAlbum" access="public">
+            <methods name="getAlbum" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="RequestMapping">
                 <elements name="value" value="&quot;/id/{id}&quot;"/>
                 <elements name="method" value="RequestMethod.GET"/>
                 <elements name="produces" value="&quot;application/json&quot;"/>
               </annotation>
-              <parameters name="id">
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
                 <annotation name="PathVariable"/>
               </parameters>
             </methods>
-            <methods name="getPhotosFromAlbum" access="public">
+            <methods name="getPhotosFromAlbum" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="RequestMapping">
                 <elements name="value" value="&quot;/{id}/photos&quot;"/>
                 <elements name="method" value="RequestMethod.GET"/>
                 <elements name="produces" value="&quot;application/json&quot;"/>
               </annotation>
-              <parameters name="id">
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
                 <annotation name="PathVariable"/>
               </parameters>
             </methods>
-            <methods name="createAlbum" access="public">
+            <methods name="createAlbum" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="PostMapping">
                 <elements name="value" value="&quot;/create&quot;"/>
               </annotation>
-              <parameters name="body">
+              <parameters name="body" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.22">
                 <annotation name="RequestBody"/>
               </parameters>
             </methods>
-            <methods name="handleException" access="public">
+            <methods name="handleException" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6">
               <annotation name="ExceptionHandler">
                 <elements name="value" value="Exception.class"/>
               </annotation>
-              <parameters name="exception"/>
+              <parameters name="exception" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5"/>
             </methods>
           </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="HomeController" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HomeController" access="public">
             <annotation name="RestController"/>
-            <methods name="home" access="public">
+            <methods name="home" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
               <annotation name="RequestMapping">
                 <elements name="value" value="&quot;/&quot;"/>
               </annotation>
             </methods>
-            <methods name="error" access="public">
+            <methods name="error" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
               <annotation name="ExceptionHandler">
                 <elements name="value" value="Exception.class"/>
               </annotation>
-              <parameters name="req"/>
-              <parameters name="ex"/>
+              <parameters name="req" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.23"/>
+              <parameters name="ex" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5"/>
             </methods>
           </contains>
         </files>
@@ -180,54 +191,58 @@
               <annotation name="Autowired"/>
               <parameters name="amazonClient" type="//@layer.1/@layerSegments.0/@folders.3/@files.0/@contains.0"/>
             </methods>
-            <methods name="getPhoto" access="public">
+            <methods name="getPhoto" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="RequestMapping">
                 <elements name="value" value="&quot;/id/{id}&quot;"/>
                 <elements name="method" value="RequestMethod.GET"/>
                 <elements name="produces" value="&quot;application/json&quot;"/>
               </annotation>
-              <parameters name="id">
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
                 <annotation name="PathVariable"/>
               </parameters>
             </methods>
-            <methods name="uploadPhoto" access="public">
+            <methods name="uploadPhoto" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="PostMapping">
                 <elements name="value" value="&quot;/upload&quot;"/>
               </annotation>
-              <parameters name="file">
+              <parameters name="file" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.24">
                 <annotation name="RequestPart">
                   <elements name="value" value="&quot;file&quot;"/>
                   <elements name="required" value="true"/>
                 </annotation>
               </parameters>
-              <parameters name="photoName">
+              <parameters name="photoName" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
                 <annotation name="RequestPart">
                   <elements name="value" value="&quot;photo_name&quot;"/>
                   <elements name="required" value="true"/>
                 </annotation>
               </parameters>
-              <parameters name="albumId">
+              <parameters name="albumId" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
                 <annotation name="RequestPart">
                   <elements name="value" value="&quot;album_id&quot;"/>
                   <elements name="required" value="true"/>
                 </annotation>
               </parameters>
             </methods>
-            <methods name="deleteFile" access="public">
+            <methods name="deleteFile" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
               <annotation name="DeleteMapping">
                 <elements name="value" value="&quot;/delete&quot;"/>
               </annotation>
-              <parameters name="fileUrl">
+              <parameters name="fileUrl" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.4">
                 <annotation name="RequestPart">
                   <elements name="value" value="&quot;url&quot;"/>
                 </annotation>
               </parameters>
             </methods>
-            <methods access="public">
-              <annotation/>
+            <methods name="findAll" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="GetMapping">
+                <elements name="value" value="&quot;/all&quot;"/>
+              </annotation>
             </methods>
-            <methods>
-              <annotation/>
+            <methods name="handleException" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6">
+              <annotation name="ExceptionHandler">
+                <elements name="value" value="Exception.class"/>
+              </annotation>
             </methods>
           </contains>
         </files>
@@ -351,11 +366,29 @@
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="JavaFramework" extension="java">
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="int"/>
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="float"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="void"/>
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:PrimitiveDataType" name="double"/>
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="String"/>
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="Exception"/>
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ResponseEntity&lt;?>"/>
           <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="String[]"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AuthenticationManager"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="JwtAccessTokenConverter"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="TokenStore"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ClientDetailsServiceConfigurer"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="AuthorizationServerEndpointsConfigurer"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="IOException"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ServletRequest"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="ServletResponse"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="FilterChain"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="FilterConfig"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HttpSecurity"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserDetailsService"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="PasswordEncoder"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="Long"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="Map&lt;String, String>"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="HttpServletRequest"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="MultipartFile"/>
         </files>
       </folders>
     </layerSegments>
