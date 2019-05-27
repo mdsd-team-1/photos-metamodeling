@@ -243,11 +243,89 @@
               <annotation name="ExceptionHandler">
                 <elements name="value" value="Exception.class"/>
               </annotation>
+              <parameters name="exception" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5"/>
             </methods>
           </contains>
         </files>
         <files xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:CodeFile" name="UserController" extension="java">
-          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserController" access="public"/>
+          <contains xsi:type="co.edu.unal.mdd.photos.SystemMetamodel:Class" name="UserController" access="public">
+            <annotation name="RestController"/>
+            <annotation name="RequestMapping">
+              <elements name="value" value="&quot;/user&quot;"/>
+            </annotation>
+            <members name="userRepository" type="//@layer.1/@layerSegments.2/@folders.0/@files.2/@contains.0">
+              <annotation name="Autowired"/>
+            </members>
+            <members name="albumRepository" type="//@layer.1/@layerSegments.0/@folders.2/@files.0/@contains.0">
+              <annotation name="Autowired"/>
+            </members>
+            <members name="photoRepository" type="//@layer.1/@layerSegments.2/@folders.0/@files.1/@contains.0">
+              <annotation name="Autowired"/>
+            </members>
+            <methods name="getUser" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/id/{id}&quot;"/>
+                <elements name="method" value="RequestMethod.GET"/>
+                <elements name="produces" value="&quot;application/json&quot;"/>
+              </annotation>
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
+                <annotation name="PathVariable"/>
+              </parameters>
+            </methods>
+            <methods name="getAlbumsFromUser" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/{id}/albums&quot;"/>
+                <elements name="method" value="RequestMethod.GET"/>
+                <elements name="produces" value="&quot;application/json&quot;"/>
+              </annotation>
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
+                <annotation name="PathVariable"/>
+              </parameters>
+            </methods>
+            <methods name="getPhotosFromUser" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="RequestMapping">
+                <elements name="value" value="&quot;/{id}/photos&quot;"/>
+                <elements name="method" value="RequestMethod.GET"/>
+                <elements name="produces" value="&quot;application/json&quot;"/>
+              </annotation>
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
+                <annotation name="PathVariable"/>
+              </parameters>
+            </methods>
+            <methods name="loginUser" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="PostMapping">
+                <elements name="value" value="&quot;/login&quot;"/>
+              </annotation>
+              <parameters name="body" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.22">
+                <annotation name="RequestBody"/>
+              </parameters>
+            </methods>
+            <methods name="createUser" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="PostMapping">
+                <elements name="value" value="&quot;/create&quot;"/>
+              </annotation>
+              <parameters name="body" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.22">
+                <annotation name="RequestBody"/>
+              </parameters>
+            </methods>
+            <methods name="editUser" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6" throws="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5">
+              <annotation name="PutMapping">
+                <elements name="value" value="&quot;/{id}/edit&quot;"/>
+              </annotation>
+              <parameters name="id" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.21">
+                <annotation name="PathVariable"/>
+              </parameters>
+              <parameters name="body" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.22">
+                <annotation name="RequestBody"/>
+              </parameters>
+            </methods>
+            <methods name="handleException" access="public" returnType="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.6">
+              <annotation name="ExceptionHandler">
+                <elements name="value" value="Exception.class"/>
+              </annotation>
+              <parameters name="exception" type="//@layer.1/@layerSegments.1/@folders.1/@files.0/@contains.5"/>
+            </methods>
+          </contains>
         </files>
       </folders>
       <folders name="co.edu.unal.photosappback.controller.amazon">
