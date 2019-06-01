@@ -2,32 +2,7 @@
  */
 package SystemMetamodel.util;
 
-import SystemMetamodel.AllowedToUse;
-import SystemMetamodel.AllowedToUseBelow;
-import SystemMetamodel.Annotation;
-import SystemMetamodel.Association;
-import SystemMetamodel.Attribute;
-import SystemMetamodel.CodeFile;
-import SystemMetamodel.Column;
-import SystemMetamodel.Connection;
-import SystemMetamodel.Database;
-import SystemMetamodel.Element;
-import SystemMetamodel.Entity;
-import SystemMetamodel.File;
-import SystemMetamodel.Folder;
-import SystemMetamodel.ForeignKey;
-import SystemMetamodel.Function;
-import SystemMetamodel.Layer;
-import SystemMetamodel.LayerSegment;
-import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.MediaFile;
-import SystemMetamodel.Parameter;
-import SystemMetamodel.PrimitiveDataType;
-import SystemMetamodel.Relation;
-import SystemMetamodel.Schema;
-import SystemMetamodel.SystemMetamodelPackage;
-import SystemMetamodel.Table;
-
+import SystemMetamodel.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -90,160 +65,103 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case SystemMetamodelPackage.LAYERED_STYLE: {
-				LayeredStyle layeredStyle = (LayeredStyle)theEObject;
-				T result = caseLayeredStyle(layeredStyle);
+			case SystemMetamodelPackage.SOFT_GALLERY: {
+				SoftGallery softGallery = (SoftGallery)theEObject;
+				T result = caseSoftGallery(softGallery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.LAYER: {
-				Layer layer = (Layer)theEObject;
-				T result = caseLayer(layer);
+			case SystemMetamodelPackage.DOMINIO: {
+				Dominio dominio = (Dominio)theEObject;
+				T result = caseDominio(dominio);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.RELATION: {
-				Relation relation = (Relation)theEObject;
-				T result = caseRelation(relation);
+			case SystemMetamodelPackage.ARQUITECTURA: {
+				Arquitectura arquitectura = (Arquitectura)theEObject;
+				T result = caseArquitectura(arquitectura);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.LAYER_SEGMENT: {
-				LayerSegment layerSegment = (LayerSegment)theEObject;
-				T result = caseLayerSegment(layerSegment);
+			case SystemMetamodelPackage.TECNOLOGÍA: {
+				Tecnología tecnología = (Tecnología)theEObject;
+				T result = caseTecnología(tecnología);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.ALLOWED_TO_USE: {
-				AllowedToUse allowedToUse = (AllowedToUse)theEObject;
-				T result = caseAllowedToUse(allowedToUse);
-				if (result == null) result = caseRelation(allowedToUse);
+			case SystemMetamodelPackage.AUTENTICACION: {
+				Autenticacion autenticacion = (Autenticacion)theEObject;
+				T result = caseAutenticacion(autenticacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.ALLOWED_TO_USE_BELOW: {
-				AllowedToUseBelow allowedToUseBelow = (AllowedToUseBelow)theEObject;
-				T result = caseAllowedToUseBelow(allowedToUseBelow);
-				if (result == null) result = caseRelation(allowedToUseBelow);
+			case SystemMetamodelPackage.REGISTRO: {
+				Registro registro = (Registro)theEObject;
+				T result = caseRegistro(registro);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.TABLE: {
-				Table table = (Table)theEObject;
-				T result = caseTable(table);
+			case SystemMetamodelPackage.USUARIO: {
+				Usuario usuario = (Usuario)theEObject;
+				T result = caseUsuario(usuario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.COLUMN: {
-				Column column = (Column)theEObject;
-				T result = caseColumn(column);
+			case SystemMetamodelPackage.FOTOS: {
+				Fotos fotos = (Fotos)theEObject;
+				T result = caseFotos(fotos);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.FOREIGN_KEY: {
-				ForeignKey foreignKey = (ForeignKey)theEObject;
-				T result = caseForeignKey(foreignKey);
+			case SystemMetamodelPackage.MANEJO_PERFIL: {
+				manejoPerfil manejoPerfil = (manejoPerfil)theEObject;
+				T result = casemanejoPerfil(manejoPerfil);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.ENTITY: {
-				Entity entity = (Entity)theEObject;
-				T result = caseEntity(entity);
+			case SystemMetamodelPackage.CATEGORIA: {
+				Categoria categoria = (Categoria)theEObject;
+				T result = caseCategoria(categoria);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.PRIMITIVE_DATA_TYPE: {
-				PrimitiveDataType primitiveDataType = (PrimitiveDataType)theEObject;
-				T result = casePrimitiveDataType(primitiveDataType);
-				if (result == null) result = caseEntity(primitiveDataType);
+			case SystemMetamodelPackage.IMAGEN: {
+				Imagen imagen = (Imagen)theEObject;
+				T result = caseImagen(imagen);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.CLASS: {
-				SystemMetamodel.Class class_ = (SystemMetamodel.Class)theEObject;
-				T result = caseClass(class_);
-				if (result == null) result = caseEntity(class_);
+			case SystemMetamodelPackage.ACCIONES: {
+				Acciones acciones = (Acciones)theEObject;
+				T result = caseAcciones(acciones);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.ASSOCIATION: {
-				Association association = (Association)theEObject;
-				T result = caseAssociation(association);
+			case SystemMetamodelPackage.CREAR_ALBUMES: {
+				CrearAlbumes crearAlbumes = (CrearAlbumes)theEObject;
+				T result = caseCrearAlbumes(crearAlbumes);
+				if (result == null) result = caseAcciones(crearAlbumes);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.ATTRIBUTE: {
-				Attribute attribute = (Attribute)theEObject;
-				T result = caseAttribute(attribute);
+			case SystemMetamodelPackage.VISUALIZAR_ALBUMES: {
+				VisualizarAlbumes visualizarAlbumes = (VisualizarAlbumes)theEObject;
+				T result = caseVisualizarAlbumes(visualizarAlbumes);
+				if (result == null) result = caseAcciones(visualizarAlbumes);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.FUNCTION: {
-				Function function = (Function)theEObject;
-				T result = caseFunction(function);
-				if (result == null) result = caseEntity(function);
+			case SystemMetamodelPackage.CARGAR_FOTOS: {
+				CargarFotos cargarFotos = (CargarFotos)theEObject;
+				T result = caseCargarFotos(cargarFotos);
+				if (result == null) result = caseAcciones(cargarFotos);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemMetamodelPackage.PARAMETER: {
-				Parameter parameter = (Parameter)theEObject;
-				T result = caseParameter(parameter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.FOLDER: {
-				Folder folder = (Folder)theEObject;
-				T result = caseFolder(folder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.FILE: {
-				File file = (File)theEObject;
-				T result = caseFile(file);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.CONNECTION: {
-				Connection connection = (Connection)theEObject;
-				T result = caseConnection(connection);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.DATABASE: {
-				Database database = (Database)theEObject;
-				T result = caseDatabase(database);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.MEDIA_FILE: {
-				MediaFile mediaFile = (MediaFile)theEObject;
-				T result = caseMediaFile(mediaFile);
-				if (result == null) result = caseFile(mediaFile);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.CODE_FILE: {
-				CodeFile codeFile = (CodeFile)theEObject;
-				T result = caseCodeFile(codeFile);
-				if (result == null) result = caseFile(codeFile);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.SCHEMA: {
-				Schema schema = (Schema)theEObject;
-				T result = caseSchema(schema);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.ANNOTATION: {
-				Annotation annotation = (Annotation)theEObject;
-				T result = caseAnnotation(annotation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemMetamodelPackage.ELEMENT: {
-				Element element = (Element)theEObject;
-				T result = caseElement(element);
+			case SystemMetamodelPackage.VISUALIZAR_TODAS_FOTOS: {
+				VisualizarTodasFotos visualizarTodasFotos = (VisualizarTodasFotos)theEObject;
+				T result = caseVisualizarTodasFotos(visualizarTodasFotos);
+				if (result == null) result = caseAcciones(visualizarTodasFotos);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -252,377 +170,242 @@ public class SystemMetamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Layered Style</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Soft Gallery</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Layered Style</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Soft Gallery</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLayeredStyle(LayeredStyle object) {
+	public T caseSoftGallery(SoftGallery object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Layer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dominio</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Layer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dominio</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLayer(Layer object) {
+	public T caseDominio(Dominio object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Relation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Arquitectura</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Relation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Arquitectura</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelation(Relation object) {
+	public T caseArquitectura(Arquitectura object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Layer Segment</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Tecnología</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Layer Segment</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Tecnología</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLayerSegment(LayerSegment object) {
+	public T caseTecnología(Tecnología object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Allowed To Use</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Autenticacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Allowed To Use</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Autenticacion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAllowedToUse(AllowedToUse object) {
+	public T caseAutenticacion(Autenticacion object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Allowed To Use Below</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Registro</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Allowed To Use Below</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Registro</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAllowedToUseBelow(AllowedToUseBelow object) {
+	public T caseRegistro(Registro object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Usuario</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Usuario</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTable(Table object) {
+	public T caseUsuario(Usuario object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Column</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Fotos</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Column</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Fotos</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseColumn(Column object) {
+	public T caseFotos(Fotos object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Foreign Key</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>manejo Perfil</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Foreign Key</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>manejo Perfil</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseForeignKey(ForeignKey object) {
+	public T casemanejoPerfil(manejoPerfil object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Categoria</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Categoria</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
+	public T caseCategoria(Categoria object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primitive Data Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Imagen</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primitive Data Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Imagen</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrimitiveDataType(PrimitiveDataType object) {
+	public T caseImagen(Imagen object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Class</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Acciones</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Class</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Acciones</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClass(SystemMetamodel.Class object) {
+	public T caseAcciones(Acciones object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Association</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Crear Albumes</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Association</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Crear Albumes</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAssociation(Association object) {
+	public T caseCrearAlbumes(CrearAlbumes object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visualizar Albumes</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visualizar Albumes</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttribute(Attribute object) {
+	public T caseVisualizarAlbumes(VisualizarAlbumes object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cargar Fotos</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Function</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cargar Fotos</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunction(Function object) {
+	public T caseCargarFotos(CargarFotos object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Visualizar Todas Fotos</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Visualizar Todas Fotos</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Folder</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Folder</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFolder(Folder object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>File</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>File</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFile(File object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Connection</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConnection(Connection object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Database</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Database</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDatabase(Database object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Media File</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Media File</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMediaFile(MediaFile object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Code File</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Code File</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCodeFile(CodeFile object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Schema</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Schema</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSchema(Schema object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Annotation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Annotation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAnnotation(Annotation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseElement(Element object) {
+	public T caseVisualizarTodasFotos(VisualizarTodasFotos object) {
 		return null;
 	}
 

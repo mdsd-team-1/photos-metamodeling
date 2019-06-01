@@ -2,32 +2,7 @@
  */
 package SystemMetamodel.util;
 
-import SystemMetamodel.AllowedToUse;
-import SystemMetamodel.AllowedToUseBelow;
-import SystemMetamodel.Annotation;
-import SystemMetamodel.Association;
-import SystemMetamodel.Attribute;
-import SystemMetamodel.CodeFile;
-import SystemMetamodel.Column;
-import SystemMetamodel.Connection;
-import SystemMetamodel.Database;
-import SystemMetamodel.Element;
-import SystemMetamodel.Entity;
-import SystemMetamodel.File;
-import SystemMetamodel.Folder;
-import SystemMetamodel.ForeignKey;
-import SystemMetamodel.Function;
-import SystemMetamodel.Layer;
-import SystemMetamodel.LayerSegment;
-import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.MediaFile;
-import SystemMetamodel.Parameter;
-import SystemMetamodel.PrimitiveDataType;
-import SystemMetamodel.Relation;
-import SystemMetamodel.Schema;
-import SystemMetamodel.SystemMetamodelPackage;
-import SystemMetamodel.Table;
-
+import SystemMetamodel.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -92,104 +67,68 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 	protected SystemMetamodelSwitch<Adapter> modelSwitch =
 		new SystemMetamodelSwitch<Adapter>() {
 			@Override
-			public Adapter caseLayeredStyle(LayeredStyle object) {
-				return createLayeredStyleAdapter();
+			public Adapter caseSoftGallery(SoftGallery object) {
+				return createSoftGalleryAdapter();
 			}
 			@Override
-			public Adapter caseLayer(Layer object) {
-				return createLayerAdapter();
+			public Adapter caseDominio(Dominio object) {
+				return createDominioAdapter();
 			}
 			@Override
-			public Adapter caseRelation(Relation object) {
-				return createRelationAdapter();
+			public Adapter caseArquitectura(Arquitectura object) {
+				return createArquitecturaAdapter();
 			}
 			@Override
-			public Adapter caseLayerSegment(LayerSegment object) {
-				return createLayerSegmentAdapter();
+			public Adapter caseTecnología(Tecnología object) {
+				return createTecnologíaAdapter();
 			}
 			@Override
-			public Adapter caseAllowedToUse(AllowedToUse object) {
-				return createAllowedToUseAdapter();
+			public Adapter caseAutenticacion(Autenticacion object) {
+				return createAutenticacionAdapter();
 			}
 			@Override
-			public Adapter caseAllowedToUseBelow(AllowedToUseBelow object) {
-				return createAllowedToUseBelowAdapter();
+			public Adapter caseRegistro(Registro object) {
+				return createRegistroAdapter();
 			}
 			@Override
-			public Adapter caseTable(Table object) {
-				return createTableAdapter();
+			public Adapter caseUsuario(Usuario object) {
+				return createUsuarioAdapter();
 			}
 			@Override
-			public Adapter caseColumn(Column object) {
-				return createColumnAdapter();
+			public Adapter caseFotos(Fotos object) {
+				return createFotosAdapter();
 			}
 			@Override
-			public Adapter caseForeignKey(ForeignKey object) {
-				return createForeignKeyAdapter();
+			public Adapter casemanejoPerfil(manejoPerfil object) {
+				return createmanejoPerfilAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
-				return createEntityAdapter();
+			public Adapter caseCategoria(Categoria object) {
+				return createCategoriaAdapter();
 			}
 			@Override
-			public Adapter casePrimitiveDataType(PrimitiveDataType object) {
-				return createPrimitiveDataTypeAdapter();
+			public Adapter caseImagen(Imagen object) {
+				return createImagenAdapter();
 			}
 			@Override
-			public Adapter caseClass(SystemMetamodel.Class object) {
-				return createClassAdapter();
+			public Adapter caseAcciones(Acciones object) {
+				return createAccionesAdapter();
 			}
 			@Override
-			public Adapter caseAssociation(Association object) {
-				return createAssociationAdapter();
+			public Adapter caseCrearAlbumes(CrearAlbumes object) {
+				return createCrearAlbumesAdapter();
 			}
 			@Override
-			public Adapter caseAttribute(Attribute object) {
-				return createAttributeAdapter();
+			public Adapter caseVisualizarAlbumes(VisualizarAlbumes object) {
+				return createVisualizarAlbumesAdapter();
 			}
 			@Override
-			public Adapter caseFunction(Function object) {
-				return createFunctionAdapter();
+			public Adapter caseCargarFotos(CargarFotos object) {
+				return createCargarFotosAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
-				return createParameterAdapter();
-			}
-			@Override
-			public Adapter caseFolder(Folder object) {
-				return createFolderAdapter();
-			}
-			@Override
-			public Adapter caseFile(File object) {
-				return createFileAdapter();
-			}
-			@Override
-			public Adapter caseConnection(Connection object) {
-				return createConnectionAdapter();
-			}
-			@Override
-			public Adapter caseDatabase(Database object) {
-				return createDatabaseAdapter();
-			}
-			@Override
-			public Adapter caseMediaFile(MediaFile object) {
-				return createMediaFileAdapter();
-			}
-			@Override
-			public Adapter caseCodeFile(CodeFile object) {
-				return createCodeFileAdapter();
-			}
-			@Override
-			public Adapter caseSchema(Schema object) {
-				return createSchemaAdapter();
-			}
-			@Override
-			public Adapter caseAnnotation(Annotation object) {
-				return createAnnotationAdapter();
-			}
-			@Override
-			public Adapter caseElement(Element object) {
-				return createElementAdapter();
+			public Adapter caseVisualizarTodasFotos(VisualizarTodasFotos object) {
+				return createVisualizarTodasFotosAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -212,352 +151,226 @@ public class SystemMetamodelAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.LayeredStyle <em>Layered Style</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.SoftGallery <em>Soft Gallery</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.LayeredStyle
+	 * @see SystemMetamodel.SoftGallery
 	 * @generated
 	 */
-	public Adapter createLayeredStyleAdapter() {
+	public Adapter createSoftGalleryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Layer <em>Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Dominio <em>Dominio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Layer
+	 * @see SystemMetamodel.Dominio
 	 * @generated
 	 */
-	public Adapter createLayerAdapter() {
+	public Adapter createDominioAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Relation <em>Relation</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Arquitectura <em>Arquitectura</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Relation
+	 * @see SystemMetamodel.Arquitectura
 	 * @generated
 	 */
-	public Adapter createRelationAdapter() {
+	public Adapter createArquitecturaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.LayerSegment <em>Layer Segment</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Tecnología <em>Tecnología</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.LayerSegment
+	 * @see SystemMetamodel.Tecnología
 	 * @generated
 	 */
-	public Adapter createLayerSegmentAdapter() {
+	public Adapter createTecnologíaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.AllowedToUse <em>Allowed To Use</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Autenticacion <em>Autenticacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.AllowedToUse
+	 * @see SystemMetamodel.Autenticacion
 	 * @generated
 	 */
-	public Adapter createAllowedToUseAdapter() {
+	public Adapter createAutenticacionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.AllowedToUseBelow <em>Allowed To Use Below</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Registro <em>Registro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.AllowedToUseBelow
+	 * @see SystemMetamodel.Registro
 	 * @generated
 	 */
-	public Adapter createAllowedToUseBelowAdapter() {
+	public Adapter createRegistroAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Table <em>Table</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Usuario <em>Usuario</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Table
+	 * @see SystemMetamodel.Usuario
 	 * @generated
 	 */
-	public Adapter createTableAdapter() {
+	public Adapter createUsuarioAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Column <em>Column</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Fotos <em>Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Column
+	 * @see SystemMetamodel.Fotos
 	 * @generated
 	 */
-	public Adapter createColumnAdapter() {
+	public Adapter createFotosAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.ForeignKey <em>Foreign Key</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.manejoPerfil <em>manejo Perfil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.ForeignKey
+	 * @see SystemMetamodel.manejoPerfil
 	 * @generated
 	 */
-	public Adapter createForeignKeyAdapter() {
+	public Adapter createmanejoPerfilAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Entity <em>Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Categoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Entity
+	 * @see SystemMetamodel.Categoria
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createCategoriaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.PrimitiveDataType <em>Primitive Data Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Imagen <em>Imagen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.PrimitiveDataType
+	 * @see SystemMetamodel.Imagen
 	 * @generated
 	 */
-	public Adapter createPrimitiveDataTypeAdapter() {
+	public Adapter createImagenAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Class <em>Class</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Acciones <em>Acciones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Class
+	 * @see SystemMetamodel.Acciones
 	 * @generated
 	 */
-	public Adapter createClassAdapter() {
+	public Adapter createAccionesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Association <em>Association</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.CrearAlbumes <em>Crear Albumes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Association
+	 * @see SystemMetamodel.CrearAlbumes
 	 * @generated
 	 */
-	public Adapter createAssociationAdapter() {
+	public Adapter createCrearAlbumesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Attribute <em>Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.VisualizarAlbumes <em>Visualizar Albumes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Attribute
+	 * @see SystemMetamodel.VisualizarAlbumes
 	 * @generated
 	 */
-	public Adapter createAttributeAdapter() {
+	public Adapter createVisualizarAlbumesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Function <em>Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.CargarFotos <em>Cargar Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Function
+	 * @see SystemMetamodel.CargarFotos
 	 * @generated
 	 */
-	public Adapter createFunctionAdapter() {
+	public Adapter createCargarFotosAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Parameter <em>Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link SystemMetamodel.VisualizarTodasFotos <em>Visualizar Todas Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SystemMetamodel.Parameter
+	 * @see SystemMetamodel.VisualizarTodasFotos
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Folder <em>Folder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.Folder
-	 * @generated
-	 */
-	public Adapter createFolderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.File <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.File
-	 * @generated
-	 */
-	public Adapter createFileAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Connection <em>Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.Connection
-	 * @generated
-	 */
-	public Adapter createConnectionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Database <em>Database</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.Database
-	 * @generated
-	 */
-	public Adapter createDatabaseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.MediaFile <em>Media File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.MediaFile
-	 * @generated
-	 */
-	public Adapter createMediaFileAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.CodeFile <em>Code File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.CodeFile
-	 * @generated
-	 */
-	public Adapter createCodeFileAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Schema <em>Schema</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.Schema
-	 * @generated
-	 */
-	public Adapter createSchemaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Annotation <em>Annotation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.Annotation
-	 * @generated
-	 */
-	public Adapter createAnnotationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link SystemMetamodel.Element <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see SystemMetamodel.Element
-	 * @generated
-	 */
-	public Adapter createElementAdapter() {
+	public Adapter createVisualizarTodasFotosAdapter() {
 		return null;
 	}
 

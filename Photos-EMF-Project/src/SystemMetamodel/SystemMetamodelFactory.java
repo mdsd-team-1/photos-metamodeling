@@ -22,229 +22,148 @@ public interface SystemMetamodelFactory extends EFactory {
 	SystemMetamodelFactory eINSTANCE = SystemMetamodel.impl.SystemMetamodelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Layered Style</em>'.
+	 * Returns a new object of class '<em>Soft Gallery</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layered Style</em>'.
+	 * @return a new object of class '<em>Soft Gallery</em>'.
 	 * @generated
 	 */
-	LayeredStyle createLayeredStyle();
+	SoftGallery createSoftGallery();
 
 	/**
-	 * Returns a new object of class '<em>Layer</em>'.
+	 * Returns a new object of class '<em>Dominio</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer</em>'.
+	 * @return a new object of class '<em>Dominio</em>'.
 	 * @generated
 	 */
-	Layer createLayer();
+	Dominio createDominio();
 
 	/**
-	 * Returns a new object of class '<em>Relation</em>'.
+	 * Returns a new object of class '<em>Arquitectura</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Relation</em>'.
+	 * @return a new object of class '<em>Arquitectura</em>'.
 	 * @generated
 	 */
-	Relation createRelation();
+	Arquitectura createArquitectura();
 
 	/**
-	 * Returns a new object of class '<em>Layer Segment</em>'.
+	 * Returns a new object of class '<em>Tecnología</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Layer Segment</em>'.
+	 * @return a new object of class '<em>Tecnología</em>'.
 	 * @generated
 	 */
-	LayerSegment createLayerSegment();
+	Tecnología createTecnología();
 
 	/**
-	 * Returns a new object of class '<em>Allowed To Use</em>'.
+	 * Returns a new object of class '<em>Autenticacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Allowed To Use</em>'.
+	 * @return a new object of class '<em>Autenticacion</em>'.
 	 * @generated
 	 */
-	AllowedToUse createAllowedToUse();
+	Autenticacion createAutenticacion();
 
 	/**
-	 * Returns a new object of class '<em>Allowed To Use Below</em>'.
+	 * Returns a new object of class '<em>Registro</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Allowed To Use Below</em>'.
+	 * @return a new object of class '<em>Registro</em>'.
 	 * @generated
 	 */
-	AllowedToUseBelow createAllowedToUseBelow();
+	Registro createRegistro();
 
 	/**
-	 * Returns a new object of class '<em>Table</em>'.
+	 * Returns a new object of class '<em>Usuario</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table</em>'.
+	 * @return a new object of class '<em>Usuario</em>'.
 	 * @generated
 	 */
-	Table createTable();
+	Usuario createUsuario();
 
 	/**
-	 * Returns a new object of class '<em>Column</em>'.
+	 * Returns a new object of class '<em>Fotos</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Column</em>'.
+	 * @return a new object of class '<em>Fotos</em>'.
 	 * @generated
 	 */
-	Column createColumn();
+	Fotos createFotos();
 
 	/**
-	 * Returns a new object of class '<em>Foreign Key</em>'.
+	 * Returns a new object of class '<em>manejo Perfil</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Foreign Key</em>'.
+	 * @return a new object of class '<em>manejo Perfil</em>'.
 	 * @generated
 	 */
-	ForeignKey createForeignKey();
+	manejoPerfil createmanejoPerfil();
 
 	/**
-	 * Returns a new object of class '<em>Entity</em>'.
+	 * Returns a new object of class '<em>Categoria</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entity</em>'.
+	 * @return a new object of class '<em>Categoria</em>'.
 	 * @generated
 	 */
-	Entity createEntity();
+	Categoria createCategoria();
 
 	/**
-	 * Returns a new object of class '<em>Primitive Data Type</em>'.
+	 * Returns a new object of class '<em>Imagen</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Primitive Data Type</em>'.
+	 * @return a new object of class '<em>Imagen</em>'.
 	 * @generated
 	 */
-	PrimitiveDataType createPrimitiveDataType();
+	Imagen createImagen();
 
 	/**
-	 * Returns a new object of class '<em>Class</em>'.
+	 * Returns a new object of class '<em>Acciones</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Class</em>'.
+	 * @return a new object of class '<em>Acciones</em>'.
 	 * @generated
 	 */
-	Class createClass();
+	Acciones createAcciones();
 
 	/**
-	 * Returns a new object of class '<em>Association</em>'.
+	 * Returns a new object of class '<em>Crear Albumes</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Association</em>'.
+	 * @return a new object of class '<em>Crear Albumes</em>'.
 	 * @generated
 	 */
-	Association createAssociation();
+	CrearAlbumes createCrearAlbumes();
 
 	/**
-	 * Returns a new object of class '<em>Attribute</em>'.
+	 * Returns a new object of class '<em>Visualizar Albumes</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Attribute</em>'.
+	 * @return a new object of class '<em>Visualizar Albumes</em>'.
 	 * @generated
 	 */
-	Attribute createAttribute();
+	VisualizarAlbumes createVisualizarAlbumes();
 
 	/**
-	 * Returns a new object of class '<em>Function</em>'.
+	 * Returns a new object of class '<em>Cargar Fotos</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function</em>'.
+	 * @return a new object of class '<em>Cargar Fotos</em>'.
 	 * @generated
 	 */
-	Function createFunction();
+	CargarFotos createCargarFotos();
 
 	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
+	 * Returns a new object of class '<em>Visualizar Todas Fotos</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
+	 * @return a new object of class '<em>Visualizar Todas Fotos</em>'.
 	 * @generated
 	 */
-	Parameter createParameter();
-
-	/**
-	 * Returns a new object of class '<em>Folder</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Folder</em>'.
-	 * @generated
-	 */
-	Folder createFolder();
-
-	/**
-	 * Returns a new object of class '<em>File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>File</em>'.
-	 * @generated
-	 */
-	File createFile();
-
-	/**
-	 * Returns a new object of class '<em>Connection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Connection</em>'.
-	 * @generated
-	 */
-	Connection createConnection();
-
-	/**
-	 * Returns a new object of class '<em>Database</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Database</em>'.
-	 * @generated
-	 */
-	Database createDatabase();
-
-	/**
-	 * Returns a new object of class '<em>Media File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Media File</em>'.
-	 * @generated
-	 */
-	MediaFile createMediaFile();
-
-	/**
-	 * Returns a new object of class '<em>Code File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Code File</em>'.
-	 * @generated
-	 */
-	CodeFile createCodeFile();
-
-	/**
-	 * Returns a new object of class '<em>Schema</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schema</em>'.
-	 * @generated
-	 */
-	Schema createSchema();
-
-	/**
-	 * Returns a new object of class '<em>Annotation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Annotation</em>'.
-	 * @generated
-	 */
-	Annotation createAnnotation();
-
-	/**
-	 * Returns a new object of class '<em>Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element</em>'.
-	 * @generated
-	 */
-	Element createElement();
+	VisualizarTodasFotos createVisualizarTodasFotos();
 
 	/**
 	 * Returns the package supported by this factory.

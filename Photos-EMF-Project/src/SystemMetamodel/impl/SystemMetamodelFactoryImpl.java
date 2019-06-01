@@ -2,33 +2,7 @@
  */
 package SystemMetamodel.impl;
 
-import SystemMetamodel.AllowedToUse;
-import SystemMetamodel.AllowedToUseBelow;
-import SystemMetamodel.Annotation;
-import SystemMetamodel.Association;
-import SystemMetamodel.Attribute;
-import SystemMetamodel.CodeFile;
-import SystemMetamodel.Column;
-import SystemMetamodel.Connection;
-import SystemMetamodel.Database;
-import SystemMetamodel.Element;
-import SystemMetamodel.Entity;
-import SystemMetamodel.File;
-import SystemMetamodel.Folder;
-import SystemMetamodel.ForeignKey;
-import SystemMetamodel.Function;
-import SystemMetamodel.Layer;
-import SystemMetamodel.LayerSegment;
-import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.MediaFile;
-import SystemMetamodel.Parameter;
-import SystemMetamodel.PrimitiveDataType;
-import SystemMetamodel.Relation;
-import SystemMetamodel.Schema;
-import SystemMetamodel.SystemMetamodelFactory;
-import SystemMetamodel.SystemMetamodelPackage;
-import SystemMetamodel.Table;
-
+import SystemMetamodel.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -81,31 +55,22 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case SystemMetamodelPackage.LAYERED_STYLE: return createLayeredStyle();
-			case SystemMetamodelPackage.LAYER: return createLayer();
-			case SystemMetamodelPackage.RELATION: return createRelation();
-			case SystemMetamodelPackage.LAYER_SEGMENT: return createLayerSegment();
-			case SystemMetamodelPackage.ALLOWED_TO_USE: return createAllowedToUse();
-			case SystemMetamodelPackage.ALLOWED_TO_USE_BELOW: return createAllowedToUseBelow();
-			case SystemMetamodelPackage.TABLE: return createTable();
-			case SystemMetamodelPackage.COLUMN: return createColumn();
-			case SystemMetamodelPackage.FOREIGN_KEY: return createForeignKey();
-			case SystemMetamodelPackage.ENTITY: return createEntity();
-			case SystemMetamodelPackage.PRIMITIVE_DATA_TYPE: return createPrimitiveDataType();
-			case SystemMetamodelPackage.CLASS: return createClass();
-			case SystemMetamodelPackage.ASSOCIATION: return createAssociation();
-			case SystemMetamodelPackage.ATTRIBUTE: return createAttribute();
-			case SystemMetamodelPackage.FUNCTION: return createFunction();
-			case SystemMetamodelPackage.PARAMETER: return createParameter();
-			case SystemMetamodelPackage.FOLDER: return createFolder();
-			case SystemMetamodelPackage.FILE: return createFile();
-			case SystemMetamodelPackage.CONNECTION: return createConnection();
-			case SystemMetamodelPackage.DATABASE: return createDatabase();
-			case SystemMetamodelPackage.MEDIA_FILE: return createMediaFile();
-			case SystemMetamodelPackage.CODE_FILE: return createCodeFile();
-			case SystemMetamodelPackage.SCHEMA: return createSchema();
-			case SystemMetamodelPackage.ANNOTATION: return createAnnotation();
-			case SystemMetamodelPackage.ELEMENT: return createElement();
+			case SystemMetamodelPackage.SOFT_GALLERY: return createSoftGallery();
+			case SystemMetamodelPackage.DOMINIO: return createDominio();
+			case SystemMetamodelPackage.ARQUITECTURA: return createArquitectura();
+			case SystemMetamodelPackage.TECNOLOGÍA: return createTecnología();
+			case SystemMetamodelPackage.AUTENTICACION: return createAutenticacion();
+			case SystemMetamodelPackage.REGISTRO: return createRegistro();
+			case SystemMetamodelPackage.USUARIO: return createUsuario();
+			case SystemMetamodelPackage.FOTOS: return createFotos();
+			case SystemMetamodelPackage.MANEJO_PERFIL: return createmanejoPerfil();
+			case SystemMetamodelPackage.CATEGORIA: return createCategoria();
+			case SystemMetamodelPackage.IMAGEN: return createImagen();
+			case SystemMetamodelPackage.ACCIONES: return createAcciones();
+			case SystemMetamodelPackage.CREAR_ALBUMES: return createCrearAlbumes();
+			case SystemMetamodelPackage.VISUALIZAR_ALBUMES: return createVisualizarAlbumes();
+			case SystemMetamodelPackage.CARGAR_FOTOS: return createCargarFotos();
+			case SystemMetamodelPackage.VISUALIZAR_TODAS_FOTOS: return createVisualizarTodasFotos();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -117,9 +82,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public LayeredStyle createLayeredStyle() {
-		LayeredStyleImpl layeredStyle = new LayeredStyleImpl();
-		return layeredStyle;
+	public SoftGallery createSoftGallery() {
+		SoftGalleryImpl softGallery = new SoftGalleryImpl();
+		return softGallery;
 	}
 
 	/**
@@ -128,9 +93,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Layer createLayer() {
-		LayerImpl layer = new LayerImpl();
-		return layer;
+	public Dominio createDominio() {
+		DominioImpl dominio = new DominioImpl();
+		return dominio;
 	}
 
 	/**
@@ -139,9 +104,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Relation createRelation() {
-		RelationImpl relation = new RelationImpl();
-		return relation;
+	public Arquitectura createArquitectura() {
+		ArquitecturaImpl arquitectura = new ArquitecturaImpl();
+		return arquitectura;
 	}
 
 	/**
@@ -150,9 +115,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public LayerSegment createLayerSegment() {
-		LayerSegmentImpl layerSegment = new LayerSegmentImpl();
-		return layerSegment;
+	public Tecnología createTecnología() {
+		TecnologíaImpl tecnología = new TecnologíaImpl();
+		return tecnología;
 	}
 
 	/**
@@ -161,9 +126,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public AllowedToUse createAllowedToUse() {
-		AllowedToUseImpl allowedToUse = new AllowedToUseImpl();
-		return allowedToUse;
+	public Autenticacion createAutenticacion() {
+		AutenticacionImpl autenticacion = new AutenticacionImpl();
+		return autenticacion;
 	}
 
 	/**
@@ -172,9 +137,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public AllowedToUseBelow createAllowedToUseBelow() {
-		AllowedToUseBelowImpl allowedToUseBelow = new AllowedToUseBelowImpl();
-		return allowedToUseBelow;
+	public Registro createRegistro() {
+		RegistroImpl registro = new RegistroImpl();
+		return registro;
 	}
 
 	/**
@@ -183,9 +148,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Table createTable() {
-		TableImpl table = new TableImpl();
-		return table;
+	public Usuario createUsuario() {
+		UsuarioImpl usuario = new UsuarioImpl();
+		return usuario;
 	}
 
 	/**
@@ -194,9 +159,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Column createColumn() {
-		ColumnImpl column = new ColumnImpl();
-		return column;
+	public Fotos createFotos() {
+		FotosImpl fotos = new FotosImpl();
+		return fotos;
 	}
 
 	/**
@@ -205,9 +170,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public ForeignKey createForeignKey() {
-		ForeignKeyImpl foreignKey = new ForeignKeyImpl();
-		return foreignKey;
+	public manejoPerfil createmanejoPerfil() {
+		manejoPerfilImpl manejoPerfil = new manejoPerfilImpl();
+		return manejoPerfil;
 	}
 
 	/**
@@ -216,9 +181,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Entity createEntity() {
-		EntityImpl entity = new EntityImpl();
-		return entity;
+	public Categoria createCategoria() {
+		CategoriaImpl categoria = new CategoriaImpl();
+		return categoria;
 	}
 
 	/**
@@ -227,9 +192,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public PrimitiveDataType createPrimitiveDataType() {
-		PrimitiveDataTypeImpl primitiveDataType = new PrimitiveDataTypeImpl();
-		return primitiveDataType;
+	public Imagen createImagen() {
+		ImagenImpl imagen = new ImagenImpl();
+		return imagen;
 	}
 
 	/**
@@ -238,9 +203,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public SystemMetamodel.Class createClass() {
-		ClassImpl class_ = new ClassImpl();
-		return class_;
+	public Acciones createAcciones() {
+		AccionesImpl acciones = new AccionesImpl();
+		return acciones;
 	}
 
 	/**
@@ -249,9 +214,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Association createAssociation() {
-		AssociationImpl association = new AssociationImpl();
-		return association;
+	public CrearAlbumes createCrearAlbumes() {
+		CrearAlbumesImpl crearAlbumes = new CrearAlbumesImpl();
+		return crearAlbumes;
 	}
 
 	/**
@@ -260,9 +225,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Attribute createAttribute() {
-		AttributeImpl attribute = new AttributeImpl();
-		return attribute;
+	public VisualizarAlbumes createVisualizarAlbumes() {
+		VisualizarAlbumesImpl visualizarAlbumes = new VisualizarAlbumesImpl();
+		return visualizarAlbumes;
 	}
 
 	/**
@@ -271,9 +236,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Function createFunction() {
-		FunctionImpl function = new FunctionImpl();
-		return function;
+	public CargarFotos createCargarFotos() {
+		CargarFotosImpl cargarFotos = new CargarFotosImpl();
+		return cargarFotos;
 	}
 
 	/**
@@ -282,108 +247,9 @@ public class SystemMetamodelFactoryImpl extends EFactoryImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public Parameter createParameter() {
-		ParameterImpl parameter = new ParameterImpl();
-		return parameter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Folder createFolder() {
-		FolderImpl folder = new FolderImpl();
-		return folder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public File createFile() {
-		FileImpl file = new FileImpl();
-		return file;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Connection createConnection() {
-		ConnectionImpl connection = new ConnectionImpl();
-		return connection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Database createDatabase() {
-		DatabaseImpl database = new DatabaseImpl();
-		return database;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MediaFile createMediaFile() {
-		MediaFileImpl mediaFile = new MediaFileImpl();
-		return mediaFile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CodeFile createCodeFile() {
-		CodeFileImpl codeFile = new CodeFileImpl();
-		return codeFile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Schema createSchema() {
-		SchemaImpl schema = new SchemaImpl();
-		return schema;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Annotation createAnnotation() {
-		AnnotationImpl annotation = new AnnotationImpl();
-		return annotation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Element createElement() {
-		ElementImpl element = new ElementImpl();
-		return element;
+	public VisualizarTodasFotos createVisualizarTodasFotos() {
+		VisualizarTodasFotosImpl visualizarTodasFotos = new VisualizarTodasFotosImpl();
+		return visualizarTodasFotos;
 	}
 
 	/**

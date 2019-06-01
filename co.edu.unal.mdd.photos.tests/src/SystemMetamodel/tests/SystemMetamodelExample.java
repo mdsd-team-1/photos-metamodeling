@@ -2,7 +2,7 @@
  */
 package SystemMetamodel.tests;
 
-import SystemMetamodel.LayeredStyle;
+import SystemMetamodel.SoftGallery;
 import SystemMetamodel.SystemMetamodelFactory;
 import SystemMetamodel.SystemMetamodelPackage;
 
@@ -60,7 +60,7 @@ public class SystemMetamodelExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.systemmetamodel"));
-				LayeredStyle root = SystemMetamodelFactory.eINSTANCE.createLayeredStyle();
+				SoftGallery root = SystemMetamodelFactory.eINSTANCE.createSoftGallery();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

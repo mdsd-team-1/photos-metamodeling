@@ -2,34 +2,24 @@
  */
 package SystemMetamodel.impl;
 
-import SystemMetamodel.AllowedToUse;
-import SystemMetamodel.AllowedToUseBelow;
-import SystemMetamodel.Annotation;
-import SystemMetamodel.Association;
-import SystemMetamodel.Attribute;
-import SystemMetamodel.CodeFile;
-import SystemMetamodel.Column;
-import SystemMetamodel.Connection;
-import SystemMetamodel.Database;
-import SystemMetamodel.Element;
-import SystemMetamodel.Entity;
-import SystemMetamodel.File;
-import SystemMetamodel.Folder;
-import SystemMetamodel.ForeignKey;
-import SystemMetamodel.Function;
-import SystemMetamodel.Layer;
-import SystemMetamodel.LayerSegment;
-import SystemMetamodel.LayeredStyle;
-import SystemMetamodel.MediaFile;
-import SystemMetamodel.Parameter;
-import SystemMetamodel.PrimitiveDataType;
-import SystemMetamodel.Relation;
-import SystemMetamodel.Schema;
+import SystemMetamodel.Acciones;
+import SystemMetamodel.Arquitectura;
+import SystemMetamodel.Autenticacion;
+import SystemMetamodel.CargarFotos;
+import SystemMetamodel.Categoria;
+import SystemMetamodel.CrearAlbumes;
+import SystemMetamodel.Dominio;
+import SystemMetamodel.Fotos;
+import SystemMetamodel.Imagen;
+import SystemMetamodel.Registro;
+import SystemMetamodel.SoftGallery;
 import SystemMetamodel.SystemMetamodelFactory;
 import SystemMetamodel.SystemMetamodelPackage;
-import SystemMetamodel.Table;
-
-import org.eclipse.emf.ecore.EAttribute;
+import SystemMetamodel.Tecnología;
+import SystemMetamodel.Usuario;
+import SystemMetamodel.VisualizarAlbumes;
+import SystemMetamodel.VisualizarTodasFotos;
+import SystemMetamodel.manejoPerfil;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -48,175 +38,112 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass layeredStyleEClass = null;
+	private EClass softGalleryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass layerEClass = null;
+	private EClass dominioEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass relationEClass = null;
+	private EClass arquitecturaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass layerSegmentEClass = null;
+	private EClass tecnologíaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass allowedToUseEClass = null;
+	private EClass autenticacionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass allowedToUseBelowEClass = null;
+	private EClass registroEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tableEClass = null;
+	private EClass usuarioEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass columnEClass = null;
+	private EClass fotosEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass foreignKeyEClass = null;
+	private EClass manejoPerfilEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entityEClass = null;
+	private EClass categoriaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass primitiveDataTypeEClass = null;
+	private EClass imagenEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass classEClass = null;
+	private EClass accionesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass associationEClass = null;
+	private EClass crearAlbumesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass attributeEClass = null;
+	private EClass visualizarAlbumesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass functionEClass = null;
+	private EClass cargarFotosEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass folderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fileEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass connectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass databaseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mediaFileEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass codeFileEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass schemaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass annotationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass elementEClass = null;
+	private EClass visualizarTodasFotosEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -285,8 +212,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getLayeredStyle() {
-		return layeredStyleEClass;
+	public EClass getSoftGallery() {
+		return softGalleryEClass;
 	}
 
 	/**
@@ -295,8 +222,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayeredStyle_Relations() {
-		return (EReference)layeredStyleEClass.getEStructuralFeatures().get(0);
+	public EReference getSoftGallery_Arquitectura() {
+		return (EReference)softGalleryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -305,8 +232,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayeredStyle_Layer() {
-		return (EReference)layeredStyleEClass.getEStructuralFeatures().get(1);
+	public EReference getSoftGallery_Dominio() {
+		return (EReference)softGalleryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -315,8 +242,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getLayer() {
-		return layerEClass;
+	public EReference getSoftGallery_Tecnologia() {
+		return (EReference)softGalleryEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -325,8 +252,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayer_LayerSegments() {
-		return (EReference)layerEClass.getEStructuralFeatures().get(0);
+	public EClass getDominio() {
+		return dominioEClass;
 	}
 
 	/**
@@ -335,8 +262,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayer_Connections() {
-		return (EReference)layerEClass.getEStructuralFeatures().get(1);
+	public EReference getDominio_Usuarios() {
+		return (EReference)dominioEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -345,8 +272,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLayer_Name() {
-		return (EAttribute)layerEClass.getEStructuralFeatures().get(2);
+	public EReference getDominio_GaleriasFotos() {
+		return (EReference)dominioEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -355,8 +282,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getRelation() {
-		return relationEClass;
+	public EClass getArquitectura() {
+		return arquitecturaEClass;
 	}
 
 	/**
@@ -365,8 +292,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getRelation_SourceLayer() {
-		return (EReference)relationEClass.getEStructuralFeatures().get(0);
+	public EClass getTecnología() {
+		return tecnologíaEClass;
 	}
 
 	/**
@@ -375,8 +302,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getRelation_TargetLayer() {
-		return (EReference)relationEClass.getEStructuralFeatures().get(1);
+	public EClass getAutenticacion() {
+		return autenticacionEClass;
 	}
 
 	/**
@@ -385,8 +312,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getLayerSegment() {
-		return layerSegmentEClass;
+	public EClass getRegistro() {
+		return registroEClass;
 	}
 
 	/**
@@ -395,8 +322,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayerSegment_Folders() {
-		return (EReference)layerSegmentEClass.getEStructuralFeatures().get(0);
+	public EClass getUsuario() {
+		return usuarioEClass;
 	}
 
 	/**
@@ -405,8 +332,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayerSegment_Files() {
-		return (EReference)layerSegmentEClass.getEStructuralFeatures().get(1);
+	public EReference getUsuario_IniciarSesion() {
+		return (EReference)usuarioEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -415,8 +342,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLayerSegment_Databases() {
-		return (EReference)layerSegmentEClass.getEStructuralFeatures().get(2);
+	public EReference getUsuario_Registro() {
+		return (EReference)usuarioEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -425,8 +352,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getLayerSegment_Name() {
-		return (EAttribute)layerSegmentEClass.getEStructuralFeatures().get(3);
+	public EReference getUsuario_Administra() {
+		return (EReference)usuarioEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -435,8 +362,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getAllowedToUse() {
-		return allowedToUseEClass;
+	public EClass getFotos() {
+		return fotosEClass;
 	}
 
 	/**
@@ -445,8 +372,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getAllowedToUseBelow() {
-		return allowedToUseBelowEClass;
+	public EReference getFotos_Categorias() {
+		return (EReference)fotosEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -455,8 +382,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getTable() {
-		return tableEClass;
+	public EReference getFotos_Imagenes() {
+		return (EReference)fotosEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -465,8 +392,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getTable_Columns() {
-		return (EReference)tableEClass.getEStructuralFeatures().get(0);
+	public EClass getmanejoPerfil() {
+		return manejoPerfilEClass;
 	}
 
 	/**
@@ -475,8 +402,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getTable_PrimaryKey() {
-		return (EReference)tableEClass.getEStructuralFeatures().get(1);
+	public EReference getmanejoPerfil_Acciones() {
+		return (EReference)manejoPerfilEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -485,8 +412,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getTable_ForeignKeys() {
-		return (EReference)tableEClass.getEStructuralFeatures().get(2);
+	public EClass getCategoria() {
+		return categoriaEClass;
 	}
 
 	/**
@@ -495,8 +422,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTable_Name() {
-		return (EAttribute)tableEClass.getEStructuralFeatures().get(3);
+	public EReference getCategoria_TienenImagenes() {
+		return (EReference)categoriaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -505,8 +432,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getColumn() {
-		return columnEClass;
+	public EClass getImagen() {
+		return imagenEClass;
 	}
 
 	/**
@@ -515,8 +442,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getColumn_Name() {
-		return (EAttribute)columnEClass.getEStructuralFeatures().get(0);
+	public EClass getAcciones() {
+		return accionesEClass;
 	}
 
 	/**
@@ -525,8 +452,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getColumn_Type() {
-		return (EAttribute)columnEClass.getEStructuralFeatures().get(1);
+	public EClass getCrearAlbumes() {
+		return crearAlbumesEClass;
 	}
 
 	/**
@@ -535,8 +462,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EClass getForeignKey() {
-		return foreignKeyEClass;
+	public EClass getVisualizarAlbumes() {
+		return visualizarAlbumesEClass;
 	}
 
 	/**
@@ -545,8 +472,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getForeignKey_RefersTo() {
-		return (EReference)foreignKeyEClass.getEStructuralFeatures().get(0);
+	public EClass getCargarFotos() {
+		return cargarFotosEClass;
 	}
 
 	/**
@@ -555,598 +482,8 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 	 * @generated
 	 */
 	@Override
-	public EReference getForeignKey_Column() {
-		return (EReference)foreignKeyEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getForeignKey_Name() {
-		return (EAttribute)foreignKeyEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getEntity() {
-		return entityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEntity_Annotation() {
-		return (EReference)entityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEntity_Name() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getEntity_Access() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPrimitiveDataType() {
-		return primitiveDataTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPrimitiveDataType_IsStatic() {
-		return (EAttribute)primitiveDataTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getClass_() {
-		return classEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getClass_Members() {
-		return (EReference)classEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getClass_Methods() {
-		return (EReference)classEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getClass_Extends() {
-		return (EReference)classEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAssociation() {
-		return associationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssociation_Target() {
-		return (EReference)associationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssociation_Source() {
-		return (EReference)associationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssociation_IsComposition() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAssociation_IsAggregation() {
-		return (EAttribute)associationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAttribute() {
-		return attributeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttribute_Name() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAttribute_Type() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttribute_IsStatic() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttribute_Access() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAttribute_Annotation() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFunction() {
-		return functionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Parameters() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_ReturnType() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFunction_Throws() {
-		return (EReference)functionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFunction_IsStatic() {
-		return (EAttribute)functionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getParameter() {
-		return parameterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getParameter_Name() {
-		return (EAttribute)parameterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameter_Type() {
-		return (EReference)parameterEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameter_Annotation() {
-		return (EReference)parameterEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFolder() {
-		return folderEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFolder_Files() {
-		return (EReference)folderEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFolder_Contains() {
-		return (EReference)folderEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFolder_Name() {
-		return (EAttribute)folderEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFile() {
-		return fileEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFile_Name() {
-		return (EAttribute)fileEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFile_Extension() {
-		return (EAttribute)fileEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getConnection() {
-		return connectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getConnection_SourceSegment() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getConnection_TargetSegment() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDatabase() {
-		return databaseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDatabase_Schemas() {
-		return (EReference)databaseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDatabase_Name() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDatabase_Server() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDatabase_Port() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDatabase_Engine() {
-		return (EAttribute)databaseEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMediaFile() {
-		return mediaFileEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getCodeFile() {
-		return codeFileEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getCodeFile_Contains() {
-		return (EReference)codeFileEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSchema() {
-		return schemaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSchema_Tables() {
-		return (EReference)schemaEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getSchema_Name() {
-		return (EAttribute)schemaEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAnnotation() {
-		return annotationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAnnotation_Elements() {
-		return (EReference)annotationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAnnotation_Name() {
-		return (EAttribute)annotationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getElement() {
-		return elementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getElement_Name() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getElement_Value() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(1);
+	public EClass getVisualizarTodasFotos() {
+		return visualizarTodasFotosEClass;
 	}
 
 	/**
@@ -1178,117 +515,49 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		isCreated = true;
 
 		// Create classes and their features
-		layeredStyleEClass = createEClass(LAYERED_STYLE);
-		createEReference(layeredStyleEClass, LAYERED_STYLE__RELATIONS);
-		createEReference(layeredStyleEClass, LAYERED_STYLE__LAYER);
+		softGalleryEClass = createEClass(SOFT_GALLERY);
+		createEReference(softGalleryEClass, SOFT_GALLERY__ARQUITECTURA);
+		createEReference(softGalleryEClass, SOFT_GALLERY__DOMINIO);
+		createEReference(softGalleryEClass, SOFT_GALLERY__TECNOLOGIA);
 
-		layerEClass = createEClass(LAYER);
-		createEReference(layerEClass, LAYER__LAYER_SEGMENTS);
-		createEReference(layerEClass, LAYER__CONNECTIONS);
-		createEAttribute(layerEClass, LAYER__NAME);
+		dominioEClass = createEClass(DOMINIO);
+		createEReference(dominioEClass, DOMINIO__USUARIOS);
+		createEReference(dominioEClass, DOMINIO__GALERIAS_FOTOS);
 
-		relationEClass = createEClass(RELATION);
-		createEReference(relationEClass, RELATION__SOURCE_LAYER);
-		createEReference(relationEClass, RELATION__TARGET_LAYER);
+		arquitecturaEClass = createEClass(ARQUITECTURA);
 
-		layerSegmentEClass = createEClass(LAYER_SEGMENT);
-		createEReference(layerSegmentEClass, LAYER_SEGMENT__FOLDERS);
-		createEReference(layerSegmentEClass, LAYER_SEGMENT__FILES);
-		createEReference(layerSegmentEClass, LAYER_SEGMENT__DATABASES);
-		createEAttribute(layerSegmentEClass, LAYER_SEGMENT__NAME);
+		tecnologíaEClass = createEClass(TECNOLOGÍA);
 
-		allowedToUseEClass = createEClass(ALLOWED_TO_USE);
+		autenticacionEClass = createEClass(AUTENTICACION);
 
-		allowedToUseBelowEClass = createEClass(ALLOWED_TO_USE_BELOW);
+		registroEClass = createEClass(REGISTRO);
 
-		tableEClass = createEClass(TABLE);
-		createEReference(tableEClass, TABLE__COLUMNS);
-		createEReference(tableEClass, TABLE__PRIMARY_KEY);
-		createEReference(tableEClass, TABLE__FOREIGN_KEYS);
-		createEAttribute(tableEClass, TABLE__NAME);
+		usuarioEClass = createEClass(USUARIO);
+		createEReference(usuarioEClass, USUARIO__INICIAR_SESION);
+		createEReference(usuarioEClass, USUARIO__REGISTRO);
+		createEReference(usuarioEClass, USUARIO__ADMINISTRA);
 
-		columnEClass = createEClass(COLUMN);
-		createEAttribute(columnEClass, COLUMN__NAME);
-		createEAttribute(columnEClass, COLUMN__TYPE);
+		fotosEClass = createEClass(FOTOS);
+		createEReference(fotosEClass, FOTOS__CATEGORIAS);
+		createEReference(fotosEClass, FOTOS__IMAGENES);
 
-		foreignKeyEClass = createEClass(FOREIGN_KEY);
-		createEReference(foreignKeyEClass, FOREIGN_KEY__REFERS_TO);
-		createEReference(foreignKeyEClass, FOREIGN_KEY__COLUMN);
-		createEAttribute(foreignKeyEClass, FOREIGN_KEY__NAME);
+		manejoPerfilEClass = createEClass(MANEJO_PERFIL);
+		createEReference(manejoPerfilEClass, MANEJO_PERFIL__ACCIONES);
 
-		entityEClass = createEClass(ENTITY);
-		createEReference(entityEClass, ENTITY__ANNOTATION);
-		createEAttribute(entityEClass, ENTITY__NAME);
-		createEAttribute(entityEClass, ENTITY__ACCESS);
+		categoriaEClass = createEClass(CATEGORIA);
+		createEReference(categoriaEClass, CATEGORIA__TIENEN_IMAGENES);
 
-		primitiveDataTypeEClass = createEClass(PRIMITIVE_DATA_TYPE);
-		createEAttribute(primitiveDataTypeEClass, PRIMITIVE_DATA_TYPE__IS_STATIC);
+		imagenEClass = createEClass(IMAGEN);
 
-		classEClass = createEClass(CLASS);
-		createEReference(classEClass, CLASS__MEMBERS);
-		createEReference(classEClass, CLASS__METHODS);
-		createEReference(classEClass, CLASS__EXTENDS);
+		accionesEClass = createEClass(ACCIONES);
 
-		associationEClass = createEClass(ASSOCIATION);
-		createEReference(associationEClass, ASSOCIATION__TARGET);
-		createEReference(associationEClass, ASSOCIATION__SOURCE);
-		createEAttribute(associationEClass, ASSOCIATION__IS_COMPOSITION);
-		createEAttribute(associationEClass, ASSOCIATION__IS_AGGREGATION);
+		crearAlbumesEClass = createEClass(CREAR_ALBUMES);
 
-		attributeEClass = createEClass(ATTRIBUTE);
-		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
-		createEReference(attributeEClass, ATTRIBUTE__TYPE);
-		createEAttribute(attributeEClass, ATTRIBUTE__IS_STATIC);
-		createEAttribute(attributeEClass, ATTRIBUTE__ACCESS);
-		createEReference(attributeEClass, ATTRIBUTE__ANNOTATION);
+		visualizarAlbumesEClass = createEClass(VISUALIZAR_ALBUMES);
 
-		functionEClass = createEClass(FUNCTION);
-		createEReference(functionEClass, FUNCTION__PARAMETERS);
-		createEReference(functionEClass, FUNCTION__RETURN_TYPE);
-		createEReference(functionEClass, FUNCTION__THROWS);
-		createEAttribute(functionEClass, FUNCTION__IS_STATIC);
+		cargarFotosEClass = createEClass(CARGAR_FOTOS);
 
-		parameterEClass = createEClass(PARAMETER);
-		createEAttribute(parameterEClass, PARAMETER__NAME);
-		createEReference(parameterEClass, PARAMETER__TYPE);
-		createEReference(parameterEClass, PARAMETER__ANNOTATION);
-
-		folderEClass = createEClass(FOLDER);
-		createEReference(folderEClass, FOLDER__FILES);
-		createEReference(folderEClass, FOLDER__CONTAINS);
-		createEAttribute(folderEClass, FOLDER__NAME);
-
-		fileEClass = createEClass(FILE);
-		createEAttribute(fileEClass, FILE__NAME);
-		createEAttribute(fileEClass, FILE__EXTENSION);
-
-		connectionEClass = createEClass(CONNECTION);
-		createEReference(connectionEClass, CONNECTION__SOURCE_SEGMENT);
-		createEReference(connectionEClass, CONNECTION__TARGET_SEGMENT);
-
-		databaseEClass = createEClass(DATABASE);
-		createEReference(databaseEClass, DATABASE__SCHEMAS);
-		createEAttribute(databaseEClass, DATABASE__NAME);
-		createEAttribute(databaseEClass, DATABASE__SERVER);
-		createEAttribute(databaseEClass, DATABASE__PORT);
-		createEAttribute(databaseEClass, DATABASE__ENGINE);
-
-		mediaFileEClass = createEClass(MEDIA_FILE);
-
-		codeFileEClass = createEClass(CODE_FILE);
-		createEReference(codeFileEClass, CODE_FILE__CONTAINS);
-
-		schemaEClass = createEClass(SCHEMA);
-		createEReference(schemaEClass, SCHEMA__TABLES);
-		createEAttribute(schemaEClass, SCHEMA__NAME);
-
-		annotationEClass = createEClass(ANNOTATION);
-		createEReference(annotationEClass, ANNOTATION__ELEMENTS);
-		createEAttribute(annotationEClass, ANNOTATION__NAME);
-
-		elementEClass = createEClass(ELEMENT);
-		createEAttribute(elementEClass, ELEMENT__NAME);
-		createEAttribute(elementEClass, ELEMENT__VALUE);
+		visualizarTodasFotosEClass = createEClass(VISUALIZAR_TODAS_FOTOS);
 	}
 
 	/**
@@ -1319,126 +588,55 @@ public class SystemMetamodelPackageImpl extends EPackageImpl implements SystemMe
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		allowedToUseEClass.getESuperTypes().add(this.getRelation());
-		allowedToUseBelowEClass.getESuperTypes().add(this.getRelation());
-		primitiveDataTypeEClass.getESuperTypes().add(this.getEntity());
-		classEClass.getESuperTypes().add(this.getEntity());
-		functionEClass.getESuperTypes().add(this.getEntity());
-		mediaFileEClass.getESuperTypes().add(this.getFile());
-		codeFileEClass.getESuperTypes().add(this.getFile());
+		crearAlbumesEClass.getESuperTypes().add(this.getAcciones());
+		visualizarAlbumesEClass.getESuperTypes().add(this.getAcciones());
+		cargarFotosEClass.getESuperTypes().add(this.getAcciones());
+		visualizarTodasFotosEClass.getESuperTypes().add(this.getAcciones());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(layeredStyleEClass, LayeredStyle.class, "LayeredStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLayeredStyle_Relations(), this.getRelation(), null, "relations", null, 0, -1, LayeredStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLayeredStyle_Layer(), this.getLayer(), null, "layer", null, 0, -1, LayeredStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(softGalleryEClass, SoftGallery.class, "SoftGallery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSoftGallery_Arquitectura(), this.getArquitectura(), null, "arquitectura", null, 1, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSoftGallery_Dominio(), this.getDominio(), null, "dominio", null, 1, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSoftGallery_Tecnologia(), this.getTecnología(), null, "tecnologia", null, 1, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLayer_LayerSegments(), this.getLayerSegment(), null, "layerSegments", null, 0, -1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLayer_Connections(), this.getConnection(), null, "connections", null, 0, -1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLayer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dominioEClass, Dominio.class, "Dominio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDominio_Usuarios(), this.getUsuario(), null, "usuarios", null, 0, -1, Dominio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDominio_GaleriasFotos(), this.getFotos(), null, "galeriasFotos", null, 0, -1, Dominio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelation_SourceLayer(), this.getLayer(), null, "sourceLayer", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelation_TargetLayer(), this.getLayer(), null, "targetLayer", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(arquitecturaEClass, Arquitectura.class, "Arquitectura", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(layerSegmentEClass, LayerSegment.class, "LayerSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLayerSegment_Folders(), this.getFolder(), null, "folders", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLayerSegment_Files(), this.getFile(), null, "files", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLayerSegment_Databases(), this.getDatabase(), null, "databases", null, 0, -1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLayerSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, LayerSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tecnologíaEClass, Tecnología.class, "Tecnología", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(allowedToUseEClass, AllowedToUse.class, "AllowedToUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(autenticacionEClass, Autenticacion.class, "Autenticacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(allowedToUseBelowEClass, AllowedToUseBelow.class, "AllowedToUseBelow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(registroEClass, Registro.class, "Registro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTable_Columns(), this.getColumn(), null, "columns", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTable_PrimaryKey(), this.getColumn(), null, "primaryKey", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTable_ForeignKeys(), this.getForeignKey(), null, "foreignKeys", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(usuarioEClass, Usuario.class, "Usuario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUsuario_IniciarSesion(), this.getAutenticacion(), null, "iniciarSesion", null, 0, -1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUsuario_Registro(), this.getRegistro(), null, "registro", null, 0, -1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUsuario_Administra(), this.getmanejoPerfil(), null, "administra", null, 1, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(columnEClass, Column.class, "Column", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getColumn_Name(), ecorePackage.getEString(), "name", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getColumn_Type(), ecorePackage.getEString(), "type", null, 0, 1, Column.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(fotosEClass, Fotos.class, "Fotos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFotos_Categorias(), this.getCategoria(), null, "categorias", null, 1, -1, Fotos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFotos_Imagenes(), this.getImagen(), null, "imagenes", null, 0, -1, Fotos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(foreignKeyEClass, ForeignKey.class, "ForeignKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getForeignKey_RefersTo(), this.getTable(), null, "refersTo", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getForeignKey_Column(), this.getColumn(), null, "column", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getForeignKey_Name(), ecorePackage.getEString(), "name", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(manejoPerfilEClass, manejoPerfil.class, "manejoPerfil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getmanejoPerfil_Acciones(), this.getAcciones(), null, "acciones", null, 4, 4, manejoPerfil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntity_Annotation(), this.getAnnotation(), null, "annotation", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_Access(), ecorePackage.getEString(), "access", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(categoriaEClass, Categoria.class, "Categoria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCategoria_TienenImagenes(), this.getImagen(), null, "tienenImagenes", null, 0, -1, Categoria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(primitiveDataTypeEClass, PrimitiveDataType.class, "PrimitiveDataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrimitiveDataType_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, PrimitiveDataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(imagenEClass, Imagen.class, "Imagen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(classEClass, SystemMetamodel.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClass_Members(), this.getAttribute(), null, "members", null, 0, -1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_Methods(), this.getFunction(), null, "methods", null, 0, -1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_Extends(), this.getClass_(), null, "extends", null, 0, 1, SystemMetamodel.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(accionesEClass, Acciones.class, "Acciones", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAssociation_Target(), this.getClass_(), null, "target", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociation_Source(), this.getClass_(), null, "source", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_IsComposition(), ecorePackage.getEBoolean(), "isComposition", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociation_IsAggregation(), ecorePackage.getEBoolean(), "isAggregation", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(crearAlbumesEClass, CrearAlbumes.class, "CrearAlbumes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttribute_Type(), this.getEntity(), null, "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_Access(), ecorePackage.getEString(), "access", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttribute_Annotation(), this.getAnnotation(), null, "annotation", null, 0, -1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(visualizarAlbumesEClass, VisualizarAlbumes.class, "VisualizarAlbumes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunction_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_ReturnType(), this.getEntity(), null, "returnType", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunction_Throws(), this.getClass_(), null, "throws", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFunction_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(cargarFotosEClass, CargarFotos.class, "CargarFotos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameter_Type(), this.getEntity(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameter_Annotation(), this.getAnnotation(), null, "annotation", null, 0, -1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(folderEClass, Folder.class, "Folder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFolder_Files(), this.getFile(), null, "files", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFolder_Contains(), this.getFolder(), null, "contains", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFolder_Name(), ecorePackage.getEString(), "name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(fileEClass, File.class, "File", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFile_Name(), ecorePackage.getEString(), "name", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFile_Extension(), ecorePackage.getEString(), "extension", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnection_SourceSegment(), this.getLayerSegment(), null, "sourceSegment", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_TargetSegment(), this.getLayerSegment(), null, "targetSegment", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDatabase_Schemas(), this.getSchema(), null, "schemas", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatabase_Name(), ecorePackage.getEString(), "name", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatabase_Server(), ecorePackage.getEString(), "server", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatabase_Port(), ecorePackage.getEInt(), "port", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatabase_Engine(), ecorePackage.getEString(), "engine", null, 0, 1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(mediaFileEClass, MediaFile.class, "MediaFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(codeFileEClass, CodeFile.class, "CodeFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCodeFile_Contains(), this.getEntity(), null, "contains", null, 0, -1, CodeFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSchema_Tables(), this.getTable(), null, "tables", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSchema_Name(), ecorePackage.getEString(), "name", null, 0, 1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(annotationEClass, Annotation.class, "Annotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAnnotation_Elements(), this.getElement(), null, "elements", null, 0, -1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnnotation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Annotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Value(), ecorePackage.getEString(), "value", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(visualizarTodasFotosEClass, VisualizarTodasFotos.class, "VisualizarTodasFotos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

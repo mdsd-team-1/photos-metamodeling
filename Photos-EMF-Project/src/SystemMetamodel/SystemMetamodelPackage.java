@@ -2,7 +2,6 @@
  */
 package SystemMetamodel;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -57,2348 +56,853 @@ public interface SystemMetamodelPackage extends EPackage {
 	SystemMetamodelPackage eINSTANCE = SystemMetamodel.impl.SystemMetamodelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.LayeredStyleImpl <em>Layered Style</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.SoftGalleryImpl <em>Soft Gallery</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.LayeredStyleImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getLayeredStyle()
+	 * @see SystemMetamodel.impl.SoftGalleryImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getSoftGallery()
 	 * @generated
 	 */
-	int LAYERED_STYLE = 0;
+	int SOFT_GALLERY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Arquitectura</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYERED_STYLE__RELATIONS = 0;
+	int SOFT_GALLERY__ARQUITECTURA = 0;
 
 	/**
-	 * The feature id for the '<em><b>Layer</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Dominio</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYERED_STYLE__LAYER = 1;
+	int SOFT_GALLERY__DOMINIO = 1;
 
 	/**
-	 * The number of structural features of the '<em>Layered Style</em>' class.
+	 * The feature id for the '<em><b>Tecnologia</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYERED_STYLE_FEATURE_COUNT = 2;
+	int SOFT_GALLERY__TECNOLOGIA = 2;
 
 	/**
-	 * The number of operations of the '<em>Layered Style</em>' class.
+	 * The number of structural features of the '<em>Soft Gallery</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYERED_STYLE_OPERATION_COUNT = 0;
+	int SOFT_GALLERY_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.LayerImpl <em>Layer</em>}' class.
+	 * The number of operations of the '<em>Soft Gallery</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.LayerImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getLayer()
 	 * @generated
-	 */
-	int LAYER = 1;
-
-	/**
-	 * The feature id for the '<em><b>Layer Segments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER__LAYER_SEGMENTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER__CONNECTIONS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER__NAME = 2;
-
-	/**
-	 * The number of structural features of the '<em>Layer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Layer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.RelationImpl <em>Relation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.RelationImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getRelation()
-	 * @generated
-	 */
-	int RELATION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION__SOURCE_LAYER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION__TARGET_LAYER = 1;
-
-	/**
-	 * The number of structural features of the '<em>Relation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Relation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.LayerSegmentImpl <em>Layer Segment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.LayerSegmentImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getLayerSegment()
-	 * @generated
-	 */
-	int LAYER_SEGMENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Folders</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT__FOLDERS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Files</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT__FILES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Databases</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT__DATABASES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT__NAME = 3;
-
-	/**
-	 * The number of structural features of the '<em>Layer Segment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Layer Segment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYER_SEGMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.AllowedToUseImpl <em>Allowed To Use</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.AllowedToUseImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAllowedToUse()
-	 * @generated
-	 */
-	int ALLOWED_TO_USE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE__SOURCE_LAYER = RELATION__SOURCE_LAYER;
-
-	/**
-	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE__TARGET_LAYER = RELATION__TARGET_LAYER;
-
-	/**
-	 * The number of structural features of the '<em>Allowed To Use</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE_FEATURE_COUNT = RELATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Allowed To Use</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE_OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.AllowedToUseBelowImpl <em>Allowed To Use Below</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.AllowedToUseBelowImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAllowedToUseBelow()
-	 * @generated
-	 */
-	int ALLOWED_TO_USE_BELOW = 5;
-
-	/**
-	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE_BELOW__SOURCE_LAYER = RELATION__SOURCE_LAYER;
-
-	/**
-	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE_BELOW__TARGET_LAYER = RELATION__TARGET_LAYER;
-
-	/**
-	 * The number of structural features of the '<em>Allowed To Use Below</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE_BELOW_FEATURE_COUNT = RELATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Allowed To Use Below</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_TO_USE_BELOW_OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.TableImpl <em>Table</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.TableImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getTable()
-	 * @generated
-	 */
-	int TABLE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__COLUMNS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Primary Key</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__PRIMARY_KEY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Foreign Keys</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__FOREIGN_KEYS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__NAME = 3;
-
-	/**
-	 * The number of structural features of the '<em>Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
 	 * @ordered
 	 */
-	int TABLE_OPERATION_COUNT = 0;
+	int SOFT_GALLERY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ColumnImpl <em>Column</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.DominioImpl <em>Dominio</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ColumnImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getColumn()
+	 * @see SystemMetamodel.impl.DominioImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getDominio()
 	 * @generated
 	 */
-	int COLUMN = 7;
+	int DOMINIO = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Usuarios</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN__NAME = 0;
+	int DOMINIO__USUARIOS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Galerias Fotos</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN__TYPE = 1;
+	int DOMINIO__GALERIAS_FOTOS = 1;
 
 	/**
-	 * The number of structural features of the '<em>Column</em>' class.
+	 * The number of structural features of the '<em>Dominio</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_FEATURE_COUNT = 2;
+	int DOMINIO_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Column</em>' class.
+	 * The number of operations of the '<em>Dominio</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_OPERATION_COUNT = 0;
+	int DOMINIO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.ArquitecturaImpl <em>Arquitectura</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ForeignKeyImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getForeignKey()
+	 * @see SystemMetamodel.impl.ArquitecturaImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getArquitectura()
 	 * @generated
 	 */
-	int FOREIGN_KEY = 8;
+	int ARQUITECTURA = 2;
 
 	/**
-	 * The feature id for the '<em><b>Refers To</b></em>' reference.
+	 * The number of structural features of the '<em>Arquitectura</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY__REFERS_TO = 0;
+	int ARQUITECTURA_FEATURE_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Column</b></em>' reference.
+	 * The number of operations of the '<em>Arquitectura</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY__COLUMN = 1;
+	int ARQUITECTURA_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The meta object id for the '{@link SystemMetamodel.impl.TecnologíaImpl <em>Tecnología</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.TecnologíaImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getTecnología()
 	 * @generated
-	 * @ordered
 	 */
-	int FOREIGN_KEY__NAME = 2;
+	int TECNOLOGÍA = 3;
 
 	/**
-	 * The number of structural features of the '<em>Foreign Key</em>' class.
+	 * The number of structural features of the '<em>Tecnología</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY_FEATURE_COUNT = 3;
+	int TECNOLOGÍA_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Foreign Key</em>' class.
+	 * The number of operations of the '<em>Tecnología</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY_OPERATION_COUNT = 0;
+	int TECNOLOGÍA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.EntityImpl <em>Entity</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.AutenticacionImpl <em>Autenticacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.EntityImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getEntity()
+	 * @see SystemMetamodel.impl.AutenticacionImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAutenticacion()
 	 * @generated
 	 */
-	int ENTITY = 9;
+	int AUTENTICACION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Autenticacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ANNOTATION = 0;
+	int AUTENTICACION_FEATURE_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of operations of the '<em>Autenticacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = 1;
+	int AUTENTICACION_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * The meta object id for the '{@link SystemMetamodel.impl.RegistroImpl <em>Registro</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.RegistroImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getRegistro()
 	 * @generated
-	 * @ordered
 	 */
-	int ENTITY__ACCESS = 2;
+	int REGISTRO = 5;
 
 	/**
-	 * The number of structural features of the '<em>Entity</em>' class.
+	 * The number of structural features of the '<em>Registro</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = 3;
+	int REGISTRO_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Entity</em>' class.
+	 * The number of operations of the '<em>Registro</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 */
-	int ENTITY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.PrimitiveDataTypeImpl <em>Primitive Data Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.PrimitiveDataTypeImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getPrimitiveDataType()
-	 * @generated
 	 */
-	int PRIMITIVE_DATA_TYPE = 10;
+	int REGISTRO_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The meta object id for the '{@link SystemMetamodel.impl.UsuarioImpl <em>Usuario</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.UsuarioImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getUsuario()
 	 * @generated
-	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__ANNOTATION = ENTITY__ANNOTATION;
+	int USUARIO = 6;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Iniciar Sesion</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__NAME = ENTITY__NAME;
+	int USUARIO__INICIAR_SESION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * The feature id for the '<em><b>Registro</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__ACCESS = ENTITY__ACCESS;
+	int USUARIO__REGISTRO = 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Administra</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE__IS_STATIC = ENTITY_FEATURE_COUNT + 0;
+	int USUARIO__ADMINISTRA = 2;
 
 	/**
-	 * The number of structural features of the '<em>Primitive Data Type</em>' class.
+	 * The number of structural features of the '<em>Usuario</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 1;
+	int USUARIO_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Primitive Data Type</em>' class.
+	 * The number of operations of the '<em>Usuario</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_DATA_TYPE_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+	int USUARIO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ClassImpl <em>Class</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.FotosImpl <em>Fotos</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ClassImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getClass_()
+	 * @see SystemMetamodel.impl.FotosImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFotos()
 	 * @generated
 	 */
-	int CLASS = 11;
+	int FOTOS = 7;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Categorias</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__ANNOTATION = ENTITY__ANNOTATION;
+	int FOTOS__CATEGORIAS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Imagenes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__NAME = ENTITY__NAME;
+	int FOTOS__IMAGENES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * The number of structural features of the '<em>Fotos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__ACCESS = ENTITY__ACCESS;
+	int FOTOS_FEATURE_COUNT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * The number of operations of the '<em>Fotos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__MEMBERS = ENTITY_FEATURE_COUNT + 0;
+	int FOTOS_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+	 * The meta object id for the '{@link SystemMetamodel.impl.manejoPerfilImpl <em>manejo Perfil</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.manejoPerfilImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getmanejoPerfil()
 	 * @generated
-	 * @ordered
 	 */
-	int CLASS__METHODS = ENTITY_FEATURE_COUNT + 1;
+	int MANEJO_PERFIL = 8;
 
 	/**
-	 * The feature id for the '<em><b>Extends</b></em>' reference.
+	 * The feature id for the '<em><b>Acciones</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS__EXTENDS = ENTITY_FEATURE_COUNT + 2;
+	int MANEJO_PERFIL__ACCIONES = 0;
 
 	/**
-	 * The number of structural features of the '<em>Class</em>' class.
+	 * The number of structural features of the '<em>manejo Perfil</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
+	int MANEJO_PERFIL_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Class</em>' class.
+	 * The number of operations of the '<em>manejo Perfil</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+	int MANEJO_PERFIL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.AssociationImpl <em>Association</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.CategoriaImpl <em>Categoria</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.AssociationImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAssociation()
+	 * @see SystemMetamodel.impl.CategoriaImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCategoria()
 	 * @generated
 	 */
-	int ASSOCIATION = 12;
+	int CATEGORIA = 9;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Tienen Imagenes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__TARGET = 0;
+	int CATEGORIA__TIENEN_IMAGENES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * The number of structural features of the '<em>Categoria</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__SOURCE = 1;
+	int CATEGORIA_FEATURE_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Composition</b></em>' attribute.
+	 * The number of operations of the '<em>Categoria</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__IS_COMPOSITION = 2;
+	int CATEGORIA_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Aggregation</b></em>' attribute.
+	 * The meta object id for the '{@link SystemMetamodel.impl.ImagenImpl <em>Imagen</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.ImagenImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getImagen()
 	 * @generated
-	 * @ordered
 	 */
-	int ASSOCIATION__IS_AGGREGATION = 3;
+	int IMAGEN = 10;
 
 	/**
-	 * The number of structural features of the '<em>Association</em>' class.
+	 * The number of structural features of the '<em>Imagen</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_FEATURE_COUNT = 4;
+	int IMAGEN_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Association</em>' class.
+	 * The number of operations of the '<em>Imagen</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION_OPERATION_COUNT = 0;
+	int IMAGEN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.AttributeImpl <em>Attribute</em>}' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.AccionesImpl <em>Acciones</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.AttributeImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAttribute()
+	 * @see SystemMetamodel.impl.AccionesImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAcciones()
 	 * @generated
 	 */
-	int ATTRIBUTE = 13;
+	int ACCIONES = 11;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The number of structural features of the '<em>Acciones</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__NAME = 0;
+	int ACCIONES_FEATURE_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * The number of operations of the '<em>Acciones</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__TYPE = 1;
+	int ACCIONES_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The meta object id for the '{@link SystemMetamodel.impl.CrearAlbumesImpl <em>Crear Albumes</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.CrearAlbumesImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCrearAlbumes()
 	 * @generated
-	 * @ordered
 	 */
-	int ATTRIBUTE__IS_STATIC = 2;
+	int CREAR_ALBUMES = 12;
 
 	/**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * The number of structural features of the '<em>Crear Albumes</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__ACCESS = 3;
+	int CREAR_ALBUMES_FEATURE_COUNT = ACCIONES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The number of operations of the '<em>Crear Albumes</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__ANNOTATION = 4;
+	int CREAR_ALBUMES_OPERATION_COUNT = ACCIONES_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Attribute</em>' class.
+	 * The meta object id for the '{@link SystemMetamodel.impl.VisualizarAlbumesImpl <em>Visualizar Albumes</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.VisualizarAlbumesImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getVisualizarAlbumes()
 	 * @generated
-	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = 5;
+	int VISUALIZAR_ALBUMES = 13;
 
 	/**
-	 * The number of operations of the '<em>Attribute</em>' class.
+	 * The number of structural features of the '<em>Visualizar Albumes</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
-	 */
-	int ATTRIBUTE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.FunctionImpl <em>Function</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.FunctionImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFunction()
-	 * @generated
 	 */
-	int FUNCTION = 14;
+	int VISUALIZAR_ALBUMES_FEATURE_COUNT = ACCIONES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The number of operations of the '<em>Visualizar Albumes</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ANNOTATION = ENTITY__ANNOTATION;
+	int VISUALIZAR_ALBUMES_OPERATION_COUNT = ACCIONES_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The meta object id for the '{@link SystemMetamodel.impl.CargarFotosImpl <em>Cargar Fotos</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.CargarFotosImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCargarFotos()
 	 * @generated
-	 * @ordered
 	 */
-	int FUNCTION__NAME = ENTITY__NAME;
+	int CARGAR_FOTOS = 14;
 
 	/**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * The number of structural features of the '<em>Cargar Fotos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ACCESS = ENTITY__ACCESS;
+	int CARGAR_FOTOS_FEATURE_COUNT = ACCIONES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * The number of operations of the '<em>Cargar Fotos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__PARAMETERS = ENTITY_FEATURE_COUNT + 0;
+	int CARGAR_FOTOS_OPERATION_COUNT = ACCIONES_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Return Type</b></em>' reference.
+	 * The meta object id for the '{@link SystemMetamodel.impl.VisualizarTodasFotosImpl <em>Visualizar Todas Fotos</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see SystemMetamodel.impl.VisualizarTodasFotosImpl
+	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getVisualizarTodasFotos()
 	 * @generated
-	 * @ordered
 	 */
-	int FUNCTION__RETURN_TYPE = ENTITY_FEATURE_COUNT + 1;
+	int VISUALIZAR_TODAS_FOTOS = 15;
 
 	/**
-	 * The feature id for the '<em><b>Throws</b></em>' reference.
+	 * The number of structural features of the '<em>Visualizar Todas Fotos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__THROWS = ENTITY_FEATURE_COUNT + 2;
+	int VISUALIZAR_TODAS_FOTOS_FEATURE_COUNT = ACCIONES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The number of operations of the '<em>Visualizar Todas Fotos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__IS_STATIC = ENTITY_FEATURE_COUNT + 3;
+	int VISUALIZAR_TODAS_FOTOS_OPERATION_COUNT = ACCIONES_OPERATION_COUNT + 0;
 
-	/**
-	 * The number of structural features of the '<em>Function</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Function</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ParameterImpl <em>Parameter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ParameterImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getParameter()
-	 * @generated
-	 */
-	int PARAMETER = 15;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__ANNOTATION = 2;
-
-	/**
-	 * The number of structural features of the '<em>Parameter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Parameter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.FolderImpl <em>Folder</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.FolderImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFolder()
-	 * @generated
-	 */
-	int FOLDER = 16;
-
-	/**
-	 * The feature id for the '<em><b>Files</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER__FILES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Contains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER__CONTAINS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER__NAME = 2;
-
-	/**
-	 * The number of structural features of the '<em>Folder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Folder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.FileImpl <em>File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.FileImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFile()
-	 * @generated
-	 */
-	int FILE = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__EXTENSION = 1;
-
-	/**
-	 * The number of structural features of the '<em>File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ConnectionImpl <em>Connection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ConnectionImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getConnection()
-	 * @generated
-	 */
-	int CONNECTION = 18;
-
-	/**
-	 * The feature id for the '<em><b>Source Segment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION__SOURCE_SEGMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Target Segment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION__TARGET_SEGMENT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Connection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Connection</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.DatabaseImpl <em>Database</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.DatabaseImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getDatabase()
-	 * @generated
-	 */
-	int DATABASE = 19;
-
-	/**
-	 * The feature id for the '<em><b>Schemas</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE__SCHEMAS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Server</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE__SERVER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Port</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE__PORT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Engine</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE__ENGINE = 4;
-
-	/**
-	 * The number of structural features of the '<em>Database</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Database</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATABASE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.MediaFileImpl <em>Media File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.MediaFileImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMediaFile()
-	 * @generated
-	 */
-	int MEDIA_FILE = 20;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIA_FILE__NAME = FILE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIA_FILE__EXTENSION = FILE__EXTENSION;
-
-	/**
-	 * The number of structural features of the '<em>Media File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIA_FILE_FEATURE_COUNT = FILE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Media File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIA_FILE_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.CodeFileImpl <em>Code File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.CodeFileImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCodeFile()
-	 * @generated
-	 */
-	int CODE_FILE = 21;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODE_FILE__NAME = FILE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODE_FILE__EXTENSION = FILE__EXTENSION;
-
-	/**
-	 * The feature id for the '<em><b>Contains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODE_FILE__CONTAINS = FILE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Code File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODE_FILE_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Code File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODE_FILE_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.SchemaImpl <em>Schema</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.SchemaImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getSchema()
-	 * @generated
-	 */
-	int SCHEMA = 22;
-
-	/**
-	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA__TABLES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Schema</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Schema</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.AnnotationImpl <em>Annotation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.AnnotationImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAnnotation()
-	 * @generated
-	 */
-	int ANNOTATION = 23;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANNOTATION__ELEMENTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANNOTATION__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Annotation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANNOTATION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Annotation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANNOTATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link SystemMetamodel.impl.ElementImpl <em>Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SystemMetamodel.impl.ElementImpl
-	 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getElement()
-	 * @generated
-	 */
-	int ELEMENT = 24;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT_OPERATION_COUNT = 0;
-
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.LayeredStyle <em>Layered Style</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Layered Style</em>'.
-	 * @see SystemMetamodel.LayeredStyle
-	 * @generated
-	 */
-	EClass getLayeredStyle();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.LayeredStyle#getRelations <em>Relations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relations</em>'.
-	 * @see SystemMetamodel.LayeredStyle#getRelations()
-	 * @see #getLayeredStyle()
-	 * @generated
-	 */
-	EReference getLayeredStyle_Relations();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.LayeredStyle#getLayer <em>Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Layer</em>'.
-	 * @see SystemMetamodel.LayeredStyle#getLayer()
-	 * @see #getLayeredStyle()
-	 * @generated
-	 */
-	EReference getLayeredStyle_Layer();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Layer <em>Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Layer</em>'.
-	 * @see SystemMetamodel.Layer
-	 * @generated
-	 */
-	EClass getLayer();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Layer#getLayerSegments <em>Layer Segments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Layer Segments</em>'.
-	 * @see SystemMetamodel.Layer#getLayerSegments()
-	 * @see #getLayer()
-	 * @generated
-	 */
-	EReference getLayer_LayerSegments();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Layer#getConnections <em>Connections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Connections</em>'.
-	 * @see SystemMetamodel.Layer#getConnections()
-	 * @see #getLayer()
-	 * @generated
-	 */
-	EReference getLayer_Connections();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Layer#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Layer#getName()
-	 * @see #getLayer()
-	 * @generated
-	 */
-	EAttribute getLayer_Name();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Relation <em>Relation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Relation</em>'.
-	 * @see SystemMetamodel.Relation
-	 * @generated
-	 */
-	EClass getRelation();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Relation#getSourceLayer <em>Source Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Layer</em>'.
-	 * @see SystemMetamodel.Relation#getSourceLayer()
-	 * @see #getRelation()
-	 * @generated
-	 */
-	EReference getRelation_SourceLayer();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Relation#getTargetLayer <em>Target Layer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Layer</em>'.
-	 * @see SystemMetamodel.Relation#getTargetLayer()
-	 * @see #getRelation()
-	 * @generated
-	 */
-	EReference getRelation_TargetLayer();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.LayerSegment <em>Layer Segment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Layer Segment</em>'.
-	 * @see SystemMetamodel.LayerSegment
-	 * @generated
-	 */
-	EClass getLayerSegment();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.LayerSegment#getFolders <em>Folders</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Folders</em>'.
-	 * @see SystemMetamodel.LayerSegment#getFolders()
-	 * @see #getLayerSegment()
-	 * @generated
-	 */
-	EReference getLayerSegment_Folders();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.LayerSegment#getFiles <em>Files</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Files</em>'.
-	 * @see SystemMetamodel.LayerSegment#getFiles()
-	 * @see #getLayerSegment()
-	 * @generated
-	 */
-	EReference getLayerSegment_Files();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.LayerSegment#getDatabases <em>Databases</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Databases</em>'.
-	 * @see SystemMetamodel.LayerSegment#getDatabases()
-	 * @see #getLayerSegment()
-	 * @generated
-	 */
-	EReference getLayerSegment_Databases();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.LayerSegment#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.LayerSegment#getName()
-	 * @see #getLayerSegment()
-	 * @generated
-	 */
-	EAttribute getLayerSegment_Name();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.AllowedToUse <em>Allowed To Use</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Allowed To Use</em>'.
-	 * @see SystemMetamodel.AllowedToUse
-	 * @generated
-	 */
-	EClass getAllowedToUse();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.AllowedToUseBelow <em>Allowed To Use Below</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Allowed To Use Below</em>'.
-	 * @see SystemMetamodel.AllowedToUseBelow
-	 * @generated
-	 */
-	EClass getAllowedToUseBelow();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Table <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Table</em>'.
-	 * @see SystemMetamodel.Table
-	 * @generated
-	 */
-	EClass getTable();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Table#getColumns <em>Columns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Columns</em>'.
-	 * @see SystemMetamodel.Table#getColumns()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EReference getTable_Columns();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Table#getPrimaryKey <em>Primary Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Primary Key</em>'.
-	 * @see SystemMetamodel.Table#getPrimaryKey()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EReference getTable_PrimaryKey();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Table#getForeignKeys <em>Foreign Keys</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Foreign Keys</em>'.
-	 * @see SystemMetamodel.Table#getForeignKeys()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EReference getTable_ForeignKeys();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Table#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Table#getName()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EAttribute getTable_Name();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Column <em>Column</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Column</em>'.
-	 * @see SystemMetamodel.Column
-	 * @generated
-	 */
-	EClass getColumn();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Column#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Column#getName()
-	 * @see #getColumn()
-	 * @generated
-	 */
-	EAttribute getColumn_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Column#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see SystemMetamodel.Column#getType()
-	 * @see #getColumn()
-	 * @generated
-	 */
-	EAttribute getColumn_Type();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.ForeignKey <em>Foreign Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Foreign Key</em>'.
-	 * @see SystemMetamodel.ForeignKey
-	 * @generated
-	 */
-	EClass getForeignKey();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.ForeignKey#getRefersTo <em>Refers To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Refers To</em>'.
-	 * @see SystemMetamodel.ForeignKey#getRefersTo()
-	 * @see #getForeignKey()
-	 * @generated
-	 */
-	EReference getForeignKey_RefersTo();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.ForeignKey#getColumn <em>Column</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Column</em>'.
-	 * @see SystemMetamodel.ForeignKey#getColumn()
-	 * @see #getForeignKey()
-	 * @generated
-	 */
-	EReference getForeignKey_Column();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.ForeignKey#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.ForeignKey#getName()
-	 * @see #getForeignKey()
-	 * @generated
-	 */
-	EAttribute getForeignKey_Name();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Entity <em>Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity</em>'.
-	 * @see SystemMetamodel.Entity
-	 * @generated
-	 */
-	EClass getEntity();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Entity#getAnnotation <em>Annotation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
-	 * @see SystemMetamodel.Entity#getAnnotation()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EReference getEntity_Annotation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Entity#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Entity#getName()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EAttribute getEntity_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Entity#getAccess <em>Access</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Access</em>'.
-	 * @see SystemMetamodel.Entity#getAccess()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EAttribute getEntity_Access();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.PrimitiveDataType <em>Primitive Data Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Primitive Data Type</em>'.
-	 * @see SystemMetamodel.PrimitiveDataType
-	 * @generated
-	 */
-	EClass getPrimitiveDataType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.PrimitiveDataType#isIsStatic <em>Is Static</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Static</em>'.
-	 * @see SystemMetamodel.PrimitiveDataType#isIsStatic()
-	 * @see #getPrimitiveDataType()
-	 * @generated
-	 */
-	EAttribute getPrimitiveDataType_IsStatic();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Class <em>Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Class</em>'.
-	 * @see SystemMetamodel.Class
-	 * @generated
-	 */
-	EClass getClass_();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Class#getMembers <em>Members</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Members</em>'.
-	 * @see SystemMetamodel.Class#getMembers()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EReference getClass_Members();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Class#getMethods <em>Methods</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Methods</em>'.
-	 * @see SystemMetamodel.Class#getMethods()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EReference getClass_Methods();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Class#getExtends <em>Extends</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Extends</em>'.
-	 * @see SystemMetamodel.Class#getExtends()
-	 * @see #getClass_()
-	 * @generated
-	 */
-	EReference getClass_Extends();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Association <em>Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Association</em>'.
-	 * @see SystemMetamodel.Association
-	 * @generated
-	 */
-	EClass getAssociation();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Association#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see SystemMetamodel.Association#getTarget()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EReference getAssociation_Target();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Association#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see SystemMetamodel.Association#getSource()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EReference getAssociation_Source();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Association#isIsComposition <em>Is Composition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Composition</em>'.
-	 * @see SystemMetamodel.Association#isIsComposition()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_IsComposition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Association#isIsAggregation <em>Is Aggregation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Aggregation</em>'.
-	 * @see SystemMetamodel.Association#isIsAggregation()
-	 * @see #getAssociation()
-	 * @generated
-	 */
-	EAttribute getAssociation_IsAggregation();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Attribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Attribute</em>'.
-	 * @see SystemMetamodel.Attribute
-	 * @generated
-	 */
-	EClass getAttribute();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Attribute#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Attribute#getName()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Attribute#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see SystemMetamodel.Attribute#getType()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EReference getAttribute_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Attribute#isIsStatic <em>Is Static</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Static</em>'.
-	 * @see SystemMetamodel.Attribute#isIsStatic()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_IsStatic();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Attribute#getAccess <em>Access</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Access</em>'.
-	 * @see SystemMetamodel.Attribute#getAccess()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_Access();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Attribute#getAnnotation <em>Annotation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
-	 * @see SystemMetamodel.Attribute#getAnnotation()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EReference getAttribute_Annotation();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Function <em>Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Function</em>'.
-	 * @see SystemMetamodel.Function
-	 * @generated
-	 */
-	EClass getFunction();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Function#getParameters <em>Parameters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
-	 * @see SystemMetamodel.Function#getParameters()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EReference getFunction_Parameters();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Function#getReturnType <em>Return Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Return Type</em>'.
-	 * @see SystemMetamodel.Function#getReturnType()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EReference getFunction_ReturnType();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Function#getThrows <em>Throws</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Throws</em>'.
-	 * @see SystemMetamodel.Function#getThrows()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EReference getFunction_Throws();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Function#isIsStatic <em>Is Static</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Static</em>'.
-	 * @see SystemMetamodel.Function#isIsStatic()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EAttribute getFunction_IsStatic();
-
-	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Parameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter</em>'.
-	 * @see SystemMetamodel.Parameter
-	 * @generated
-	 */
-	EClass getParameter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Parameter#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Parameter#getName()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EAttribute getParameter_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Parameter#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see SystemMetamodel.Parameter#getType()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EReference getParameter_Type();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Parameter#getAnnotation <em>Annotation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Annotation</em>'.
-	 * @see SystemMetamodel.Parameter#getAnnotation()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EReference getParameter_Annotation();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Folder <em>Folder</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.SoftGallery <em>Soft Gallery</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Folder</em>'.
-	 * @see SystemMetamodel.Folder
+	 * @return the meta object for class '<em>Soft Gallery</em>'.
+	 * @see SystemMetamodel.SoftGallery
 	 * @generated
 	 */
-	EClass getFolder();
+	EClass getSoftGallery();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Folder#getFiles <em>Files</em>}'.
+	 * Returns the meta object for the containment reference '{@link SystemMetamodel.SoftGallery#getArquitectura <em>Arquitectura</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Files</em>'.
-	 * @see SystemMetamodel.Folder#getFiles()
-	 * @see #getFolder()
+	 * @return the meta object for the containment reference '<em>Arquitectura</em>'.
+	 * @see SystemMetamodel.SoftGallery#getArquitectura()
+	 * @see #getSoftGallery()
 	 * @generated
 	 */
-	EReference getFolder_Files();
+	EReference getSoftGallery_Arquitectura();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Folder#getContains <em>Contains</em>}'.
+	 * Returns the meta object for the containment reference '{@link SystemMetamodel.SoftGallery#getDominio <em>Dominio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains</em>'.
-	 * @see SystemMetamodel.Folder#getContains()
-	 * @see #getFolder()
+	 * @return the meta object for the containment reference '<em>Dominio</em>'.
+	 * @see SystemMetamodel.SoftGallery#getDominio()
+	 * @see #getSoftGallery()
 	 * @generated
 	 */
-	EReference getFolder_Contains();
+	EReference getSoftGallery_Dominio();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Folder#getName <em>Name</em>}'.
+	 * Returns the meta object for the containment reference '{@link SystemMetamodel.SoftGallery#getTecnologia <em>Tecnologia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Folder#getName()
-	 * @see #getFolder()
+	 * @return the meta object for the containment reference '<em>Tecnologia</em>'.
+	 * @see SystemMetamodel.SoftGallery#getTecnologia()
+	 * @see #getSoftGallery()
 	 * @generated
 	 */
-	EAttribute getFolder_Name();
+	EReference getSoftGallery_Tecnologia();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.File <em>File</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Dominio <em>Dominio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>File</em>'.
-	 * @see SystemMetamodel.File
+	 * @return the meta object for class '<em>Dominio</em>'.
+	 * @see SystemMetamodel.Dominio
 	 * @generated
 	 */
-	EClass getFile();
+	EClass getDominio();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.File#getName <em>Name</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Dominio#getUsuarios <em>Usuarios</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.File#getName()
-	 * @see #getFile()
+	 * @return the meta object for the containment reference list '<em>Usuarios</em>'.
+	 * @see SystemMetamodel.Dominio#getUsuarios()
+	 * @see #getDominio()
 	 * @generated
 	 */
-	EAttribute getFile_Name();
+	EReference getDominio_Usuarios();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.File#getExtension <em>Extension</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Dominio#getGaleriasFotos <em>Galerias Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Extension</em>'.
-	 * @see SystemMetamodel.File#getExtension()
-	 * @see #getFile()
+	 * @return the meta object for the containment reference list '<em>Galerias Fotos</em>'.
+	 * @see SystemMetamodel.Dominio#getGaleriasFotos()
+	 * @see #getDominio()
 	 * @generated
 	 */
-	EAttribute getFile_Extension();
+	EReference getDominio_GaleriasFotos();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Connection <em>Connection</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Arquitectura <em>Arquitectura</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Connection</em>'.
-	 * @see SystemMetamodel.Connection
+	 * @return the meta object for class '<em>Arquitectura</em>'.
+	 * @see SystemMetamodel.Arquitectura
 	 * @generated
 	 */
-	EClass getConnection();
+	EClass getArquitectura();
 
 	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Connection#getSourceSegment <em>Source Segment</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Tecnología <em>Tecnología</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Segment</em>'.
-	 * @see SystemMetamodel.Connection#getSourceSegment()
-	 * @see #getConnection()
+	 * @return the meta object for class '<em>Tecnología</em>'.
+	 * @see SystemMetamodel.Tecnología
 	 * @generated
 	 */
-	EReference getConnection_SourceSegment();
+	EClass getTecnología();
 
 	/**
-	 * Returns the meta object for the reference '{@link SystemMetamodel.Connection#getTargetSegment <em>Target Segment</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Autenticacion <em>Autenticacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target Segment</em>'.
-	 * @see SystemMetamodel.Connection#getTargetSegment()
-	 * @see #getConnection()
+	 * @return the meta object for class '<em>Autenticacion</em>'.
+	 * @see SystemMetamodel.Autenticacion
 	 * @generated
 	 */
-	EReference getConnection_TargetSegment();
+	EClass getAutenticacion();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Database <em>Database</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Registro <em>Registro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Database</em>'.
-	 * @see SystemMetamodel.Database
+	 * @return the meta object for class '<em>Registro</em>'.
+	 * @see SystemMetamodel.Registro
 	 * @generated
 	 */
-	EClass getDatabase();
+	EClass getRegistro();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Database#getSchemas <em>Schemas</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Usuario <em>Usuario</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Schemas</em>'.
-	 * @see SystemMetamodel.Database#getSchemas()
-	 * @see #getDatabase()
+	 * @return the meta object for class '<em>Usuario</em>'.
+	 * @see SystemMetamodel.Usuario
 	 * @generated
 	 */
-	EReference getDatabase_Schemas();
+	EClass getUsuario();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getName <em>Name</em>}'.
+	 * Returns the meta object for the reference list '{@link SystemMetamodel.Usuario#getIniciarSesion <em>Iniciar Sesion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Database#getName()
-	 * @see #getDatabase()
+	 * @return the meta object for the reference list '<em>Iniciar Sesion</em>'.
+	 * @see SystemMetamodel.Usuario#getIniciarSesion()
+	 * @see #getUsuario()
 	 * @generated
 	 */
-	EAttribute getDatabase_Name();
+	EReference getUsuario_IniciarSesion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getServer <em>Server</em>}'.
+	 * Returns the meta object for the reference list '{@link SystemMetamodel.Usuario#getRegistro <em>Registro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Server</em>'.
-	 * @see SystemMetamodel.Database#getServer()
-	 * @see #getDatabase()
+	 * @return the meta object for the reference list '<em>Registro</em>'.
+	 * @see SystemMetamodel.Usuario#getRegistro()
+	 * @see #getUsuario()
 	 * @generated
 	 */
-	EAttribute getDatabase_Server();
+	EReference getUsuario_Registro();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getPort <em>Port</em>}'.
+	 * Returns the meta object for the reference '{@link SystemMetamodel.Usuario#getAdministra <em>Administra</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Port</em>'.
-	 * @see SystemMetamodel.Database#getPort()
-	 * @see #getDatabase()
+	 * @return the meta object for the reference '<em>Administra</em>'.
+	 * @see SystemMetamodel.Usuario#getAdministra()
+	 * @see #getUsuario()
 	 * @generated
 	 */
-	EAttribute getDatabase_Port();
+	EReference getUsuario_Administra();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Database#getEngine <em>Engine</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Fotos <em>Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Engine</em>'.
-	 * @see SystemMetamodel.Database#getEngine()
-	 * @see #getDatabase()
+	 * @return the meta object for class '<em>Fotos</em>'.
+	 * @see SystemMetamodel.Fotos
 	 * @generated
 	 */
-	EAttribute getDatabase_Engine();
+	EClass getFotos();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.MediaFile <em>Media File</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Fotos#getCategorias <em>Categorias</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Media File</em>'.
-	 * @see SystemMetamodel.MediaFile
+	 * @return the meta object for the containment reference list '<em>Categorias</em>'.
+	 * @see SystemMetamodel.Fotos#getCategorias()
+	 * @see #getFotos()
 	 * @generated
 	 */
-	EClass getMediaFile();
+	EReference getFotos_Categorias();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.CodeFile <em>Code File</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Fotos#getImagenes <em>Imagenes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Code File</em>'.
-	 * @see SystemMetamodel.CodeFile
+	 * @return the meta object for the containment reference list '<em>Imagenes</em>'.
+	 * @see SystemMetamodel.Fotos#getImagenes()
+	 * @see #getFotos()
 	 * @generated
 	 */
-	EClass getCodeFile();
+	EReference getFotos_Imagenes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.CodeFile#getContains <em>Contains</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.manejoPerfil <em>manejo Perfil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains</em>'.
-	 * @see SystemMetamodel.CodeFile#getContains()
-	 * @see #getCodeFile()
+	 * @return the meta object for class '<em>manejo Perfil</em>'.
+	 * @see SystemMetamodel.manejoPerfil
 	 * @generated
 	 */
-	EReference getCodeFile_Contains();
+	EClass getmanejoPerfil();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Schema <em>Schema</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.manejoPerfil#getAcciones <em>Acciones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Schema</em>'.
-	 * @see SystemMetamodel.Schema
+	 * @return the meta object for the containment reference list '<em>Acciones</em>'.
+	 * @see SystemMetamodel.manejoPerfil#getAcciones()
+	 * @see #getmanejoPerfil()
 	 * @generated
 	 */
-	EClass getSchema();
+	EReference getmanejoPerfil_Acciones();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Schema#getTables <em>Tables</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Categoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tables</em>'.
-	 * @see SystemMetamodel.Schema#getTables()
-	 * @see #getSchema()
+	 * @return the meta object for class '<em>Categoria</em>'.
+	 * @see SystemMetamodel.Categoria
 	 * @generated
 	 */
-	EReference getSchema_Tables();
+	EClass getCategoria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Schema#getName <em>Name</em>}'.
+	 * Returns the meta object for the reference list '{@link SystemMetamodel.Categoria#getTienenImagenes <em>Tienen Imagenes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Schema#getName()
-	 * @see #getSchema()
+	 * @return the meta object for the reference list '<em>Tienen Imagenes</em>'.
+	 * @see SystemMetamodel.Categoria#getTienenImagenes()
+	 * @see #getCategoria()
 	 * @generated
 	 */
-	EAttribute getSchema_Name();
+	EReference getCategoria_TienenImagenes();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Annotation <em>Annotation</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Imagen <em>Imagen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Annotation</em>'.
-	 * @see SystemMetamodel.Annotation
+	 * @return the meta object for class '<em>Imagen</em>'.
+	 * @see SystemMetamodel.Imagen
 	 * @generated
 	 */
-	EClass getAnnotation();
+	EClass getImagen();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link SystemMetamodel.Annotation#getElements <em>Elements</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.Acciones <em>Acciones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Elements</em>'.
-	 * @see SystemMetamodel.Annotation#getElements()
-	 * @see #getAnnotation()
+	 * @return the meta object for class '<em>Acciones</em>'.
+	 * @see SystemMetamodel.Acciones
 	 * @generated
 	 */
-	EReference getAnnotation_Elements();
+	EClass getAcciones();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Annotation#getName <em>Name</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.CrearAlbumes <em>Crear Albumes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Annotation#getName()
-	 * @see #getAnnotation()
+	 * @return the meta object for class '<em>Crear Albumes</em>'.
+	 * @see SystemMetamodel.CrearAlbumes
 	 * @generated
 	 */
-	EAttribute getAnnotation_Name();
+	EClass getCrearAlbumes();
 
 	/**
-	 * Returns the meta object for class '{@link SystemMetamodel.Element <em>Element</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.VisualizarAlbumes <em>Visualizar Albumes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element</em>'.
-	 * @see SystemMetamodel.Element
+	 * @return the meta object for class '<em>Visualizar Albumes</em>'.
+	 * @see SystemMetamodel.VisualizarAlbumes
 	 * @generated
 	 */
-	EClass getElement();
+	EClass getVisualizarAlbumes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Element#getName <em>Name</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.CargarFotos <em>Cargar Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see SystemMetamodel.Element#getName()
-	 * @see #getElement()
+	 * @return the meta object for class '<em>Cargar Fotos</em>'.
+	 * @see SystemMetamodel.CargarFotos
 	 * @generated
 	 */
-	EAttribute getElement_Name();
+	EClass getCargarFotos();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SystemMetamodel.Element#getValue <em>Value</em>}'.
+	 * Returns the meta object for class '{@link SystemMetamodel.VisualizarTodasFotos <em>Visualizar Todas Fotos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see SystemMetamodel.Element#getValue()
-	 * @see #getElement()
+	 * @return the meta object for class '<em>Visualizar Todas Fotos</em>'.
+	 * @see SystemMetamodel.VisualizarTodasFotos
 	 * @generated
 	 */
-	EAttribute getElement_Value();
+	EClass getVisualizarTodasFotos();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2424,750 +928,260 @@ public interface SystemMetamodelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.LayeredStyleImpl <em>Layered Style</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.SoftGalleryImpl <em>Soft Gallery</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.LayeredStyleImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getLayeredStyle()
+		 * @see SystemMetamodel.impl.SoftGalleryImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getSoftGallery()
 		 * @generated
 		 */
-		EClass LAYERED_STYLE = eINSTANCE.getLayeredStyle();
+		EClass SOFT_GALLERY = eINSTANCE.getSoftGallery();
 
 		/**
-		 * The meta object literal for the '<em><b>Relations</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Arquitectura</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAYERED_STYLE__RELATIONS = eINSTANCE.getLayeredStyle_Relations();
+		EReference SOFT_GALLERY__ARQUITECTURA = eINSTANCE.getSoftGallery_Arquitectura();
 
 		/**
-		 * The meta object literal for the '<em><b>Layer</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Dominio</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAYERED_STYLE__LAYER = eINSTANCE.getLayeredStyle_Layer();
+		EReference SOFT_GALLERY__DOMINIO = eINSTANCE.getSoftGallery_Dominio();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.LayerImpl <em>Layer</em>}' class.
+		 * The meta object literal for the '<em><b>Tecnologia</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.LayerImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getLayer()
 		 * @generated
 		 */
-		EClass LAYER = eINSTANCE.getLayer();
+		EReference SOFT_GALLERY__TECNOLOGIA = eINSTANCE.getSoftGallery_Tecnologia();
 
 		/**
-		 * The meta object literal for the '<em><b>Layer Segments</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.DominioImpl <em>Dominio</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.DominioImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getDominio()
 		 * @generated
 		 */
-		EReference LAYER__LAYER_SEGMENTS = eINSTANCE.getLayer_LayerSegments();
+		EClass DOMINIO = eINSTANCE.getDominio();
 
 		/**
-		 * The meta object literal for the '<em><b>Connections</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Usuarios</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAYER__CONNECTIONS = eINSTANCE.getLayer_Connections();
+		EReference DOMINIO__USUARIOS = eINSTANCE.getDominio_Usuarios();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Galerias Fotos</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LAYER__NAME = eINSTANCE.getLayer_Name();
+		EReference DOMINIO__GALERIAS_FOTOS = eINSTANCE.getDominio_GaleriasFotos();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.RelationImpl <em>Relation</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.ArquitecturaImpl <em>Arquitectura</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.RelationImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getRelation()
+		 * @see SystemMetamodel.impl.ArquitecturaImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getArquitectura()
 		 * @generated
 		 */
-		EClass RELATION = eINSTANCE.getRelation();
+		EClass ARQUITECTURA = eINSTANCE.getArquitectura();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Layer</b></em>' reference feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.TecnologíaImpl <em>Tecnología</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.TecnologíaImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getTecnología()
 		 * @generated
 		 */
-		EReference RELATION__SOURCE_LAYER = eINSTANCE.getRelation_SourceLayer();
+		EClass TECNOLOGÍA = eINSTANCE.getTecnología();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Layer</b></em>' reference feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.AutenticacionImpl <em>Autenticacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.AutenticacionImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAutenticacion()
 		 * @generated
 		 */
-		EReference RELATION__TARGET_LAYER = eINSTANCE.getRelation_TargetLayer();
+		EClass AUTENTICACION = eINSTANCE.getAutenticacion();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.LayerSegmentImpl <em>Layer Segment</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.RegistroImpl <em>Registro</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.LayerSegmentImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getLayerSegment()
+		 * @see SystemMetamodel.impl.RegistroImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getRegistro()
 		 * @generated
 		 */
-		EClass LAYER_SEGMENT = eINSTANCE.getLayerSegment();
+		EClass REGISTRO = eINSTANCE.getRegistro();
 
 		/**
-		 * The meta object literal for the '<em><b>Folders</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.UsuarioImpl <em>Usuario</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.UsuarioImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getUsuario()
 		 * @generated
 		 */
-		EReference LAYER_SEGMENT__FOLDERS = eINSTANCE.getLayerSegment_Folders();
+		EClass USUARIO = eINSTANCE.getUsuario();
 
 		/**
-		 * The meta object literal for the '<em><b>Files</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Iniciar Sesion</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAYER_SEGMENT__FILES = eINSTANCE.getLayerSegment_Files();
+		EReference USUARIO__INICIAR_SESION = eINSTANCE.getUsuario_IniciarSesion();
 
 		/**
-		 * The meta object literal for the '<em><b>Databases</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Registro</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAYER_SEGMENT__DATABASES = eINSTANCE.getLayerSegment_Databases();
+		EReference USUARIO__REGISTRO = eINSTANCE.getUsuario_Registro();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Administra</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LAYER_SEGMENT__NAME = eINSTANCE.getLayerSegment_Name();
+		EReference USUARIO__ADMINISTRA = eINSTANCE.getUsuario_Administra();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.AllowedToUseImpl <em>Allowed To Use</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.FotosImpl <em>Fotos</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.AllowedToUseImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAllowedToUse()
+		 * @see SystemMetamodel.impl.FotosImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFotos()
 		 * @generated
 		 */
-		EClass ALLOWED_TO_USE = eINSTANCE.getAllowedToUse();
+		EClass FOTOS = eINSTANCE.getFotos();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.AllowedToUseBelowImpl <em>Allowed To Use Below</em>}' class.
+		 * The meta object literal for the '<em><b>Categorias</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.AllowedToUseBelowImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAllowedToUseBelow()
 		 * @generated
 		 */
-		EClass ALLOWED_TO_USE_BELOW = eINSTANCE.getAllowedToUseBelow();
+		EReference FOTOS__CATEGORIAS = eINSTANCE.getFotos_Categorias();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.TableImpl <em>Table</em>}' class.
+		 * The meta object literal for the '<em><b>Imagenes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.TableImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getTable()
 		 * @generated
 		 */
-		EClass TABLE = eINSTANCE.getTable();
+		EReference FOTOS__IMAGENES = eINSTANCE.getFotos_Imagenes();
 
 		/**
-		 * The meta object literal for the '<em><b>Columns</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.manejoPerfilImpl <em>manejo Perfil</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.manejoPerfilImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getmanejoPerfil()
 		 * @generated
 		 */
-		EReference TABLE__COLUMNS = eINSTANCE.getTable_Columns();
+		EClass MANEJO_PERFIL = eINSTANCE.getmanejoPerfil();
 
 		/**
-		 * The meta object literal for the '<em><b>Primary Key</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Acciones</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TABLE__PRIMARY_KEY = eINSTANCE.getTable_PrimaryKey();
+		EReference MANEJO_PERFIL__ACCIONES = eINSTANCE.getmanejoPerfil_Acciones();
 
 		/**
-		 * The meta object literal for the '<em><b>Foreign Keys</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.CategoriaImpl <em>Categoria</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.CategoriaImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCategoria()
 		 * @generated
 		 */
-		EReference TABLE__FOREIGN_KEYS = eINSTANCE.getTable_ForeignKeys();
+		EClass CATEGORIA = eINSTANCE.getCategoria();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Tienen Imagenes</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TABLE__NAME = eINSTANCE.getTable_Name();
+		EReference CATEGORIA__TIENEN_IMAGENES = eINSTANCE.getCategoria_TienenImagenes();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ColumnImpl <em>Column</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.ImagenImpl <em>Imagen</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ColumnImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getColumn()
+		 * @see SystemMetamodel.impl.ImagenImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getImagen()
 		 * @generated
 		 */
-		EClass COLUMN = eINSTANCE.getColumn();
+		EClass IMAGEN = eINSTANCE.getImagen();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.AccionesImpl <em>Acciones</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.AccionesImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAcciones()
 		 * @generated
 		 */
-		EAttribute COLUMN__NAME = eINSTANCE.getColumn_Name();
+		EClass ACCIONES = eINSTANCE.getAcciones();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.CrearAlbumesImpl <em>Crear Albumes</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.CrearAlbumesImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCrearAlbumes()
 		 * @generated
 		 */
-		EAttribute COLUMN__TYPE = eINSTANCE.getColumn_Type();
+		EClass CREAR_ALBUMES = eINSTANCE.getCrearAlbumes();
 
 		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.VisualizarAlbumesImpl <em>Visualizar Albumes</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ForeignKeyImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getForeignKey()
+		 * @see SystemMetamodel.impl.VisualizarAlbumesImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getVisualizarAlbumes()
 		 * @generated
 		 */
-		EClass FOREIGN_KEY = eINSTANCE.getForeignKey();
+		EClass VISUALIZAR_ALBUMES = eINSTANCE.getVisualizarAlbumes();
 
 		/**
-		 * The meta object literal for the '<em><b>Refers To</b></em>' reference feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.CargarFotosImpl <em>Cargar Fotos</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.CargarFotosImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCargarFotos()
 		 * @generated
 		 */
-		EReference FOREIGN_KEY__REFERS_TO = eINSTANCE.getForeignKey_RefersTo();
+		EClass CARGAR_FOTOS = eINSTANCE.getCargarFotos();
 
 		/**
-		 * The meta object literal for the '<em><b>Column</b></em>' reference feature.
+		 * The meta object literal for the '{@link SystemMetamodel.impl.VisualizarTodasFotosImpl <em>Visualizar Todas Fotos</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SystemMetamodel.impl.VisualizarTodasFotosImpl
+		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getVisualizarTodasFotos()
 		 * @generated
 		 */
-		EReference FOREIGN_KEY__COLUMN = eINSTANCE.getForeignKey_Column();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FOREIGN_KEY__NAME = eINSTANCE.getForeignKey_Name();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.EntityImpl <em>Entity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.EntityImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getEntity()
-		 * @generated
-		 */
-		EClass ENTITY = eINSTANCE.getEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY__ANNOTATION = eINSTANCE.getEntity_Annotation();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Access</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY__ACCESS = eINSTANCE.getEntity_Access();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.PrimitiveDataTypeImpl <em>Primitive Data Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.PrimitiveDataTypeImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getPrimitiveDataType()
-		 * @generated
-		 */
-		EClass PRIMITIVE_DATA_TYPE = eINSTANCE.getPrimitiveDataType();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRIMITIVE_DATA_TYPE__IS_STATIC = eINSTANCE.getPrimitiveDataType_IsStatic();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ClassImpl <em>Class</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ClassImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getClass_()
-		 * @generated
-		 */
-		EClass CLASS = eINSTANCE.getClass_();
-
-		/**
-		 * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS__MEMBERS = eINSTANCE.getClass_Members();
-
-		/**
-		 * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS__METHODS = eINSTANCE.getClass_Methods();
-
-		/**
-		 * The meta object literal for the '<em><b>Extends</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS__EXTENDS = eINSTANCE.getClass_Extends();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.AssociationImpl <em>Association</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.AssociationImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAssociation()
-		 * @generated
-		 */
-		EClass ASSOCIATION = eINSTANCE.getAssociation();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION__TARGET = eINSTANCE.getAssociation_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSOCIATION__SOURCE = eINSTANCE.getAssociation_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Composition</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__IS_COMPOSITION = eINSTANCE.getAssociation_IsComposition();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Aggregation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSOCIATION__IS_AGGREGATION = eINSTANCE.getAssociation_IsAggregation();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.AttributeImpl <em>Attribute</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.AttributeImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAttribute()
-		 * @generated
-		 */
-		EClass ATTRIBUTE = eINSTANCE.getAttribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__IS_STATIC = eINSTANCE.getAttribute_IsStatic();
-
-		/**
-		 * The meta object literal for the '<em><b>Access</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__ACCESS = eINSTANCE.getAttribute_Access();
-
-		/**
-		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ATTRIBUTE__ANNOTATION = eINSTANCE.getAttribute_Annotation();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.FunctionImpl <em>Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.FunctionImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFunction()
-		 * @generated
-		 */
-		EClass FUNCTION = eINSTANCE.getFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION__PARAMETERS = eINSTANCE.getFunction_Parameters();
-
-		/**
-		 * The meta object literal for the '<em><b>Return Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION__RETURN_TYPE = eINSTANCE.getFunction_ReturnType();
-
-		/**
-		 * The meta object literal for the '<em><b>Throws</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION__THROWS = eINSTANCE.getFunction_Throws();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTION__IS_STATIC = eINSTANCE.getFunction_IsStatic();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ParameterImpl <em>Parameter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ParameterImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getParameter()
-		 * @generated
-		 */
-		EClass PARAMETER = eINSTANCE.getParameter();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Annotation</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARAMETER__ANNOTATION = eINSTANCE.getParameter_Annotation();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.FolderImpl <em>Folder</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.FolderImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFolder()
-		 * @generated
-		 */
-		EClass FOLDER = eINSTANCE.getFolder();
-
-		/**
-		 * The meta object literal for the '<em><b>Files</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FOLDER__FILES = eINSTANCE.getFolder_Files();
-
-		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FOLDER__CONTAINS = eINSTANCE.getFolder_Contains();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FOLDER__NAME = eINSTANCE.getFolder_Name();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.FileImpl <em>File</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.FileImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getFile()
-		 * @generated
-		 */
-		EClass FILE = eINSTANCE.getFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILE__NAME = eINSTANCE.getFile_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILE__EXTENSION = eINSTANCE.getFile_Extension();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ConnectionImpl <em>Connection</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ConnectionImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getConnection()
-		 * @generated
-		 */
-		EClass CONNECTION = eINSTANCE.getConnection();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Segment</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONNECTION__SOURCE_SEGMENT = eINSTANCE.getConnection_SourceSegment();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Segment</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONNECTION__TARGET_SEGMENT = eINSTANCE.getConnection_TargetSegment();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.DatabaseImpl <em>Database</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.DatabaseImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getDatabase()
-		 * @generated
-		 */
-		EClass DATABASE = eINSTANCE.getDatabase();
-
-		/**
-		 * The meta object literal for the '<em><b>Schemas</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DATABASE__SCHEMAS = eINSTANCE.getDatabase_Schemas();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATABASE__NAME = eINSTANCE.getDatabase_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Server</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATABASE__SERVER = eINSTANCE.getDatabase_Server();
-
-		/**
-		 * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATABASE__PORT = eINSTANCE.getDatabase_Port();
-
-		/**
-		 * The meta object literal for the '<em><b>Engine</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATABASE__ENGINE = eINSTANCE.getDatabase_Engine();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.MediaFileImpl <em>Media File</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.MediaFileImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getMediaFile()
-		 * @generated
-		 */
-		EClass MEDIA_FILE = eINSTANCE.getMediaFile();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.CodeFileImpl <em>Code File</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.CodeFileImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getCodeFile()
-		 * @generated
-		 */
-		EClass CODE_FILE = eINSTANCE.getCodeFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CODE_FILE__CONTAINS = eINSTANCE.getCodeFile_Contains();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.SchemaImpl <em>Schema</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.SchemaImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getSchema()
-		 * @generated
-		 */
-		EClass SCHEMA = eINSTANCE.getSchema();
-
-		/**
-		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEMA__TABLES = eINSTANCE.getSchema_Tables();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEMA__NAME = eINSTANCE.getSchema_Name();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.AnnotationImpl <em>Annotation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.AnnotationImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getAnnotation()
-		 * @generated
-		 */
-		EClass ANNOTATION = eINSTANCE.getAnnotation();
-
-		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ANNOTATION__ELEMENTS = eINSTANCE.getAnnotation_Elements();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANNOTATION__NAME = eINSTANCE.getAnnotation_Name();
-
-		/**
-		 * The meta object literal for the '{@link SystemMetamodel.impl.ElementImpl <em>Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SystemMetamodel.impl.ElementImpl
-		 * @see SystemMetamodel.impl.SystemMetamodelPackageImpl#getElement()
-		 * @generated
-		 */
-		EClass ELEMENT = eINSTANCE.getElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT__NAME = eINSTANCE.getElement_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ELEMENT__VALUE = eINSTANCE.getElement_Value();
+		EClass VISUALIZAR_TODAS_FOTOS = eINSTANCE.getVisualizarTodasFotos();
 
 	}
 

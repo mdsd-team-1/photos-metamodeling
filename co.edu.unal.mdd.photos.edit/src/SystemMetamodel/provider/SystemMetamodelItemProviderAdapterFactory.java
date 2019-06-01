@@ -72,578 +72,371 @@ public class SystemMetamodelItemProviderAdapterFactory extends SystemMetamodelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.LayeredStyle} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.SoftGallery} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LayeredStyleItemProvider layeredStyleItemProvider;
+	protected SoftGalleryItemProvider softGalleryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.LayeredStyle}.
+	 * This creates an adapter for a {@link SystemMetamodel.SoftGallery}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLayeredStyleAdapter() {
-		if (layeredStyleItemProvider == null) {
-			layeredStyleItemProvider = new LayeredStyleItemProvider(this);
+	public Adapter createSoftGalleryAdapter() {
+		if (softGalleryItemProvider == null) {
+			softGalleryItemProvider = new SoftGalleryItemProvider(this);
 		}
 
-		return layeredStyleItemProvider;
+		return softGalleryItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Layer} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Dominio} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LayerItemProvider layerItemProvider;
+	protected DominioItemProvider dominioItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Layer}.
+	 * This creates an adapter for a {@link SystemMetamodel.Dominio}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLayerAdapter() {
-		if (layerItemProvider == null) {
-			layerItemProvider = new LayerItemProvider(this);
+	public Adapter createDominioAdapter() {
+		if (dominioItemProvider == null) {
+			dominioItemProvider = new DominioItemProvider(this);
 		}
 
-		return layerItemProvider;
+		return dominioItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Relation} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Arquitectura} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RelationItemProvider relationItemProvider;
+	protected ArquitecturaItemProvider arquitecturaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Relation}.
+	 * This creates an adapter for a {@link SystemMetamodel.Arquitectura}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRelationAdapter() {
-		if (relationItemProvider == null) {
-			relationItemProvider = new RelationItemProvider(this);
+	public Adapter createArquitecturaAdapter() {
+		if (arquitecturaItemProvider == null) {
+			arquitecturaItemProvider = new ArquitecturaItemProvider(this);
 		}
 
-		return relationItemProvider;
+		return arquitecturaItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.LayerSegment} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Tecnología} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LayerSegmentItemProvider layerSegmentItemProvider;
+	protected TecnologíaItemProvider tecnologíaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.LayerSegment}.
+	 * This creates an adapter for a {@link SystemMetamodel.Tecnología}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLayerSegmentAdapter() {
-		if (layerSegmentItemProvider == null) {
-			layerSegmentItemProvider = new LayerSegmentItemProvider(this);
+	public Adapter createTecnologíaAdapter() {
+		if (tecnologíaItemProvider == null) {
+			tecnologíaItemProvider = new TecnologíaItemProvider(this);
 		}
 
-		return layerSegmentItemProvider;
+		return tecnologíaItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.AllowedToUse} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Autenticacion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AllowedToUseItemProvider allowedToUseItemProvider;
+	protected AutenticacionItemProvider autenticacionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.AllowedToUse}.
+	 * This creates an adapter for a {@link SystemMetamodel.Autenticacion}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAllowedToUseAdapter() {
-		if (allowedToUseItemProvider == null) {
-			allowedToUseItemProvider = new AllowedToUseItemProvider(this);
+	public Adapter createAutenticacionAdapter() {
+		if (autenticacionItemProvider == null) {
+			autenticacionItemProvider = new AutenticacionItemProvider(this);
 		}
 
-		return allowedToUseItemProvider;
+		return autenticacionItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.AllowedToUseBelow} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Registro} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AllowedToUseBelowItemProvider allowedToUseBelowItemProvider;
+	protected RegistroItemProvider registroItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.AllowedToUseBelow}.
+	 * This creates an adapter for a {@link SystemMetamodel.Registro}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAllowedToUseBelowAdapter() {
-		if (allowedToUseBelowItemProvider == null) {
-			allowedToUseBelowItemProvider = new AllowedToUseBelowItemProvider(this);
+	public Adapter createRegistroAdapter() {
+		if (registroItemProvider == null) {
+			registroItemProvider = new RegistroItemProvider(this);
 		}
 
-		return allowedToUseBelowItemProvider;
+		return registroItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Table} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Usuario} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TableItemProvider tableItemProvider;
+	protected UsuarioItemProvider usuarioItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Table}.
+	 * This creates an adapter for a {@link SystemMetamodel.Usuario}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTableAdapter() {
-		if (tableItemProvider == null) {
-			tableItemProvider = new TableItemProvider(this);
+	public Adapter createUsuarioAdapter() {
+		if (usuarioItemProvider == null) {
+			usuarioItemProvider = new UsuarioItemProvider(this);
 		}
 
-		return tableItemProvider;
+		return usuarioItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Column} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Fotos} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ColumnItemProvider columnItemProvider;
+	protected FotosItemProvider fotosItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Column}.
+	 * This creates an adapter for a {@link SystemMetamodel.Fotos}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createColumnAdapter() {
-		if (columnItemProvider == null) {
-			columnItemProvider = new ColumnItemProvider(this);
+	public Adapter createFotosAdapter() {
+		if (fotosItemProvider == null) {
+			fotosItemProvider = new FotosItemProvider(this);
 		}
 
-		return columnItemProvider;
+		return fotosItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.ForeignKey} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.manejoPerfil} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ForeignKeyItemProvider foreignKeyItemProvider;
+	protected manejoPerfilItemProvider manejoPerfilItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.ForeignKey}.
+	 * This creates an adapter for a {@link SystemMetamodel.manejoPerfil}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createForeignKeyAdapter() {
-		if (foreignKeyItemProvider == null) {
-			foreignKeyItemProvider = new ForeignKeyItemProvider(this);
+	public Adapter createmanejoPerfilAdapter() {
+		if (manejoPerfilItemProvider == null) {
+			manejoPerfilItemProvider = new manejoPerfilItemProvider(this);
 		}
 
-		return foreignKeyItemProvider;
+		return manejoPerfilItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Entity} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Categoria} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EntityItemProvider entityItemProvider;
+	protected CategoriaItemProvider categoriaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Entity}.
+	 * This creates an adapter for a {@link SystemMetamodel.Categoria}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEntityAdapter() {
-		if (entityItemProvider == null) {
-			entityItemProvider = new EntityItemProvider(this);
+	public Adapter createCategoriaAdapter() {
+		if (categoriaItemProvider == null) {
+			categoriaItemProvider = new CategoriaItemProvider(this);
 		}
 
-		return entityItemProvider;
+		return categoriaItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.PrimitiveDataType} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Imagen} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrimitiveDataTypeItemProvider primitiveDataTypeItemProvider;
+	protected ImagenItemProvider imagenItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.PrimitiveDataType}.
+	 * This creates an adapter for a {@link SystemMetamodel.Imagen}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPrimitiveDataTypeAdapter() {
-		if (primitiveDataTypeItemProvider == null) {
-			primitiveDataTypeItemProvider = new PrimitiveDataTypeItemProvider(this);
+	public Adapter createImagenAdapter() {
+		if (imagenItemProvider == null) {
+			imagenItemProvider = new ImagenItemProvider(this);
 		}
 
-		return primitiveDataTypeItemProvider;
+		return imagenItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Class} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Acciones} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClassItemProvider classItemProvider;
+	protected AccionesItemProvider accionesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Class}.
+	 * This creates an adapter for a {@link SystemMetamodel.Acciones}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createClassAdapter() {
-		if (classItemProvider == null) {
-			classItemProvider = new ClassItemProvider(this);
+	public Adapter createAccionesAdapter() {
+		if (accionesItemProvider == null) {
+			accionesItemProvider = new AccionesItemProvider(this);
 		}
 
-		return classItemProvider;
+		return accionesItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Association} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.CrearAlbumes} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AssociationItemProvider associationItemProvider;
+	protected CrearAlbumesItemProvider crearAlbumesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Association}.
+	 * This creates an adapter for a {@link SystemMetamodel.CrearAlbumes}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAssociationAdapter() {
-		if (associationItemProvider == null) {
-			associationItemProvider = new AssociationItemProvider(this);
+	public Adapter createCrearAlbumesAdapter() {
+		if (crearAlbumesItemProvider == null) {
+			crearAlbumesItemProvider = new CrearAlbumesItemProvider(this);
 		}
 
-		return associationItemProvider;
+		return crearAlbumesItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Attribute} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.VisualizarAlbumes} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeItemProvider attributeItemProvider;
+	protected VisualizarAlbumesItemProvider visualizarAlbumesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Attribute}.
+	 * This creates an adapter for a {@link SystemMetamodel.VisualizarAlbumes}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeAdapter() {
-		if (attributeItemProvider == null) {
-			attributeItemProvider = new AttributeItemProvider(this);
+	public Adapter createVisualizarAlbumesAdapter() {
+		if (visualizarAlbumesItemProvider == null) {
+			visualizarAlbumesItemProvider = new VisualizarAlbumesItemProvider(this);
 		}
 
-		return attributeItemProvider;
+		return visualizarAlbumesItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Function} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.CargarFotos} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionItemProvider functionItemProvider;
+	protected CargarFotosItemProvider cargarFotosItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Function}.
+	 * This creates an adapter for a {@link SystemMetamodel.CargarFotos}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFunctionAdapter() {
-		if (functionItemProvider == null) {
-			functionItemProvider = new FunctionItemProvider(this);
+	public Adapter createCargarFotosAdapter() {
+		if (cargarFotosItemProvider == null) {
+			cargarFotosItemProvider = new CargarFotosItemProvider(this);
 		}
 
-		return functionItemProvider;
+		return cargarFotosItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Parameter} instances.
+	 * This keeps track of the one adapter used for all {@link SystemMetamodel.VisualizarTodasFotos} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterItemProvider parameterItemProvider;
+	protected VisualizarTodasFotosItemProvider visualizarTodasFotosItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Parameter}.
+	 * This creates an adapter for a {@link SystemMetamodel.VisualizarTodasFotos}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createParameterAdapter() {
-		if (parameterItemProvider == null) {
-			parameterItemProvider = new ParameterItemProvider(this);
+	public Adapter createVisualizarTodasFotosAdapter() {
+		if (visualizarTodasFotosItemProvider == null) {
+			visualizarTodasFotosItemProvider = new VisualizarTodasFotosItemProvider(this);
 		}
 
-		return parameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Folder} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FolderItemProvider folderItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Folder}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFolderAdapter() {
-		if (folderItemProvider == null) {
-			folderItemProvider = new FolderItemProvider(this);
-		}
-
-		return folderItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.File} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FileItemProvider fileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.File}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFileAdapter() {
-		if (fileItemProvider == null) {
-			fileItemProvider = new FileItemProvider(this);
-		}
-
-		return fileItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Connection} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConnectionItemProvider connectionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Connection}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConnectionAdapter() {
-		if (connectionItemProvider == null) {
-			connectionItemProvider = new ConnectionItemProvider(this);
-		}
-
-		return connectionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Database} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DatabaseItemProvider databaseItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Database}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDatabaseAdapter() {
-		if (databaseItemProvider == null) {
-			databaseItemProvider = new DatabaseItemProvider(this);
-		}
-
-		return databaseItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.MediaFile} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MediaFileItemProvider mediaFileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.MediaFile}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMediaFileAdapter() {
-		if (mediaFileItemProvider == null) {
-			mediaFileItemProvider = new MediaFileItemProvider(this);
-		}
-
-		return mediaFileItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.CodeFile} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CodeFileItemProvider codeFileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.CodeFile}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCodeFileAdapter() {
-		if (codeFileItemProvider == null) {
-			codeFileItemProvider = new CodeFileItemProvider(this);
-		}
-
-		return codeFileItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Schema} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SchemaItemProvider schemaItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Schema}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSchemaAdapter() {
-		if (schemaItemProvider == null) {
-			schemaItemProvider = new SchemaItemProvider(this);
-		}
-
-		return schemaItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Annotation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AnnotationItemProvider annotationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Annotation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAnnotationAdapter() {
-		if (annotationItemProvider == null) {
-			annotationItemProvider = new AnnotationItemProvider(this);
-		}
-
-		return annotationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SystemMetamodel.Element} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ElementItemProvider elementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SystemMetamodel.Element}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createElementAdapter() {
-		if (elementItemProvider == null) {
-			elementItemProvider = new ElementItemProvider(this);
-		}
-
-		return elementItemProvider;
+		return visualizarTodasFotosItemProvider;
 	}
 
 	/**
@@ -751,31 +544,22 @@ public class SystemMetamodelItemProviderAdapterFactory extends SystemMetamodelAd
 	 */
 	@Override
 	public void dispose() {
-		if (layeredStyleItemProvider != null) layeredStyleItemProvider.dispose();
-		if (layerItemProvider != null) layerItemProvider.dispose();
-		if (relationItemProvider != null) relationItemProvider.dispose();
-		if (layerSegmentItemProvider != null) layerSegmentItemProvider.dispose();
-		if (allowedToUseItemProvider != null) allowedToUseItemProvider.dispose();
-		if (allowedToUseBelowItemProvider != null) allowedToUseBelowItemProvider.dispose();
-		if (tableItemProvider != null) tableItemProvider.dispose();
-		if (columnItemProvider != null) columnItemProvider.dispose();
-		if (foreignKeyItemProvider != null) foreignKeyItemProvider.dispose();
-		if (entityItemProvider != null) entityItemProvider.dispose();
-		if (primitiveDataTypeItemProvider != null) primitiveDataTypeItemProvider.dispose();
-		if (classItemProvider != null) classItemProvider.dispose();
-		if (associationItemProvider != null) associationItemProvider.dispose();
-		if (attributeItemProvider != null) attributeItemProvider.dispose();
-		if (functionItemProvider != null) functionItemProvider.dispose();
-		if (parameterItemProvider != null) parameterItemProvider.dispose();
-		if (folderItemProvider != null) folderItemProvider.dispose();
-		if (fileItemProvider != null) fileItemProvider.dispose();
-		if (connectionItemProvider != null) connectionItemProvider.dispose();
-		if (databaseItemProvider != null) databaseItemProvider.dispose();
-		if (mediaFileItemProvider != null) mediaFileItemProvider.dispose();
-		if (codeFileItemProvider != null) codeFileItemProvider.dispose();
-		if (schemaItemProvider != null) schemaItemProvider.dispose();
-		if (annotationItemProvider != null) annotationItemProvider.dispose();
-		if (elementItemProvider != null) elementItemProvider.dispose();
+		if (softGalleryItemProvider != null) softGalleryItemProvider.dispose();
+		if (dominioItemProvider != null) dominioItemProvider.dispose();
+		if (arquitecturaItemProvider != null) arquitecturaItemProvider.dispose();
+		if (tecnologíaItemProvider != null) tecnologíaItemProvider.dispose();
+		if (autenticacionItemProvider != null) autenticacionItemProvider.dispose();
+		if (registroItemProvider != null) registroItemProvider.dispose();
+		if (usuarioItemProvider != null) usuarioItemProvider.dispose();
+		if (fotosItemProvider != null) fotosItemProvider.dispose();
+		if (manejoPerfilItemProvider != null) manejoPerfilItemProvider.dispose();
+		if (categoriaItemProvider != null) categoriaItemProvider.dispose();
+		if (imagenItemProvider != null) imagenItemProvider.dispose();
+		if (accionesItemProvider != null) accionesItemProvider.dispose();
+		if (crearAlbumesItemProvider != null) crearAlbumesItemProvider.dispose();
+		if (visualizarAlbumesItemProvider != null) visualizarAlbumesItemProvider.dispose();
+		if (cargarFotosItemProvider != null) cargarFotosItemProvider.dispose();
+		if (visualizarTodasFotosItemProvider != null) visualizarTodasFotosItemProvider.dispose();
 	}
 
 }
