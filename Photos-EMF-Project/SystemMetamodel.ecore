@@ -21,7 +21,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Autenticacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Registro"/>
   <eClassifiers xsi:type="ecore:EClass" name="Usuario">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tieneManejoPerfil" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tieneManejoPerfil" upperBound="-1"
         eType="#//manejoPerfil" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="puedeTener" lowerBound="1"
         eType="#//Registro" containment="true"/>
@@ -29,6 +29,13 @@
         eType="#//Autenticacion" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="poseeUnaGaleria" lowerBound="1"
         eType="#//Fotos"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="first_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="last_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profile_description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fotos">
     <eStructuralFeatures xsi:type="ecore:EReference" name="categorias" lowerBound="1"
@@ -43,32 +50,32 @@
   <eClassifiers xsi:type="ecore:EClass" name="Categoria">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tienenImagenes" upperBound="-1"
         eType="#//Imagen"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Imagen"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Acciones">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="crearAlbumes" lowerBound="1"
-        upperBound="-1" eType="#//CrearAlbumes" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="visualizarAlbumes" upperBound="-1"
-        eType="#//VisualizarAlbumes" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cargarFotos" upperBound="-1"
-        eType="#//CargarFotos" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="visualizarTodasFotos" upperBound="-1"
-        eType="#//VisualizarTodasFotos" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="editarPerfil" lowerBound="1"
-        eType="#//EditarPerfil" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Imagen">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tienenCategoria" lowerBound="1"
+        eType="#//Categoria"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CrearAlbumes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="crearCategoria" lowerBound="1"
-        upperBound="-1" eType="#//Categoria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Acciones"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CrearAlbumes" eSuperTypes="#//Acciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="crearCategoria" upperBound="-1"
+        eType="#//Categoria"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VisualizarAlbumes">
+  <eClassifiers xsi:type="ecore:EClass" name="VisualizarAlbumes" eSuperTypes="#//Acciones">
     <eStructuralFeatures xsi:type="ecore:EReference" name="visualizarCategoria" lowerBound="1"
         upperBound="-1" eType="#//Categoria"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CargarFotos">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cargarfotos" upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="CargarFotos" eSuperTypes="#//Acciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cargarImagen" upperBound="-1"
+        eType="#//Imagen"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VisualizarTodasFotos" eSuperTypes="#//Acciones"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EditarPerfil" eSuperTypes="#//Acciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="editarPerfil" upperBound="-1"
         eType="#//Fotos"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VisualizarTodasFotos"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EditarPerfil"/>
 </ecore:EPackage>

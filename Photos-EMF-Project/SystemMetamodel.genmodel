@@ -24,6 +24,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Usuario/puedeTener"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Usuario/puedeAutenticarse"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Usuario/poseeUnaGaleria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/first_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/last_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/profile_description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Usuario/email"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Fotos">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Fotos/categorias"/>
@@ -34,15 +41,16 @@
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Categoria">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Categoria/tienenImagenes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Categoria/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Categoria/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Categoria/name"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Imagen"/>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Acciones">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Acciones/crearAlbumes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Acciones/visualizarAlbumes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Acciones/cargarFotos"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Acciones/visualizarTodasFotos"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Acciones/editarPerfil"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Imagen">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Imagen/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Imagen/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Imagen/tienenCategoria"/>
     </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Acciones"/>
     <genClasses ecoreClass="SystemMetamodel.ecore#//CrearAlbumes">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//CrearAlbumes/crearCategoria"/>
     </genClasses>
@@ -50,9 +58,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//VisualizarAlbumes/visualizarCategoria"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//CargarFotos">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//CargarFotos/cargarfotos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//CargarFotos/cargarImagen"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//VisualizarTodasFotos"/>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//EditarPerfil"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//EditarPerfil">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//EditarPerfil/editarPerfil"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
