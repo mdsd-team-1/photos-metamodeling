@@ -93,7 +93,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//APIS3/bucketName"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//AllowedToUse"/>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//AllowedToUseBellow"/>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Presentacion">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Presentacion/segmentopresentacion"/>
     </genClasses>

@@ -110,7 +110,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bucketName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse" eSuperTypes="#//Relaciones"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUseBellow" eSuperTypes="#//Relaciones"/>
   <eClassifiers xsi:type="ecore:EClass" name="Presentacion" eSuperTypes="#//Capas">
     <eStructuralFeatures xsi:type="ecore:EReference" name="segmentopresentacion" upperBound="-1"
         eType="#//SegmentoPresentacion" containment="true"/>
