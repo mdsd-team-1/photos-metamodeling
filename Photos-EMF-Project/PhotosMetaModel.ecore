@@ -206,11 +206,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Usuario">
     <eStructuralFeatures xsi:type="ecore:EReference" name="autenticacion" upperBound="-1"
         eType="#//Autenticacion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="registro" upperBound="-1"
-        eType="#//Registro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="manejoperfil" upperBound="-1"
         eType="#//ManejoPerfil" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="foto" eType="#//Foto"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="first_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="last_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profile_description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="registro" upperBound="-1"
+        eType="#//Registro" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Autenticacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Registro"/>
@@ -238,9 +245,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="imagen" upperBound="-1"
         eType="#//Imagen" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Categoria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Categoria">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Imagen">
     <eStructuralFeatures xsi:type="ecore:EReference" name="categoria" eType="#//Categoria"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AmazonS3"/>
 </ecore:EPackage>
