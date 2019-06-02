@@ -27,7 +27,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="springbootapplication"
         eType="#//SpringBootApplication"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="React"/>
+  <eClassifiers xsi:type="ecore:EClass" name="React">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reactdom" eType="#//ReactDOM"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repository"/>
   <eClassifiers xsi:type="ecore:EClass" name="RestController">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requestmapping" upperBound="-1"
@@ -311,4 +313,27 @@
   <eClassifiers xsi:type="ecore:EClass" name="Security_a" eSuperTypes="#//SegmentoLogica"/>
   <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL_a" eSuperTypes="#//SegmentoDatos"/>
   <eClassifiers xsi:type="ecore:EClass" name="AmazonS3Storage" eSuperTypes="#//SegmentoDatos"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReactDOM">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element_r" upperBound="-1"
+        eType="#//Element_r" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componet_r" upperBound="-1"
+        eType="#//Component_r" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component_r">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Component_r" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prop" upperBound="-1" eType="#//Prop"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Prop"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Class_r" eSuperTypes="#//Component_r">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function_r" upperBound="-1"
+        eType="#//Function_r" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Render" eSuperTypes="#//Function_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constructor" eSuperTypes="#//Function_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDidMount" eSuperTypes="#//Function_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentWillUnmount" eSuperTypes="#//Function_r"/>
 </ecore:EPackage>
