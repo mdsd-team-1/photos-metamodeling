@@ -16,7 +16,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="galeriasFotos" upperBound="-1"
         eType="#//Fotos" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Arquitectura"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Arquitectura">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ntier" upperBound="-1"
+        eType="#//Ntier" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Tecnología"/>
   <eClassifiers xsi:type="ecore:EClass" name="Autenticacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Registro"/>
@@ -78,4 +81,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="editarPerfil" upperBound="-1"
         eType="#//Fotos"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ntier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capas" upperBound="-1"
+        eType="#//Capas" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relaciones" upperBound="-1"
+        eType="#//Relaciones" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capas">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conexiones" upperBound="-1"
+        eType="#//Conexiones" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relaciones"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conexiones"/>
 </ecore:EPackage>
