@@ -42,7 +42,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//manejoPerfil/acciones"/>
     </genClasses>
     <genClasses ecoreClass="SystemMetamodel.ecore#//Categoria">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Categoria/tienenImagenes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Categoria/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Categoria/url"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//Categoria/name"/>
@@ -69,11 +68,52 @@
     <genClasses ecoreClass="SystemMetamodel.ecore#//Ntier">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Ntier/capas"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Ntier/relaciones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Ntier/conexiones"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Capas">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Capas/conexiones"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Capas"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Relaciones">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Relaciones/sourceRelation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Relaciones/targetRelation"/>
     </genClasses>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Relaciones"/>
-    <genClasses ecoreClass="SystemMetamodel.ecore#//Conexiones"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Conexiones">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Conexiones/sourceConection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Conexiones/targetConection"/>
+    </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//REST"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//ConexionPostgres">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//ConexionPostgres/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//ConexionPostgres/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//ConexionPostgres/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//ConexionPostgres/password"/>
+    </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//APIS3">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//APIS3/endpointUrl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//APIS3/accessKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//APIS3/secretKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SystemMetamodel.ecore#//APIS3/bucketName"/>
+    </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//AllowedToUse"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//AllowedToUseBellow"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Presentacion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Presentacion/segmentopresentacion"/>
+    </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//LogicaNegocio">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//LogicaNegocio/segmentologica"/>
+    </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Datos">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SystemMetamodel.ecore#//Datos/segmentodatos"/>
+    </genClasses>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//View"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Component"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Action"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Controller"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Model"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Repository"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Security"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//Postgres"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//S3"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//SegmentoPresentacion"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//SegmentoLogica"/>
+    <genClasses ecoreClass="SystemMetamodel.ecore#//SegmentoDatos"/>
   </genPackages>
 </genmodel:GenModel>
