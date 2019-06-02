@@ -10,7 +10,8 @@
       <!-- @generated SystemMetamodel -->
       <package
             uri="http://co/edu/unal/mdd/photos/SystemMetamodel"
-            class="SystemMetamodel.SystemMetamodelPackage"/>
+            class="SystemMetamodel.SystemMetamodelPackage"
+            genModel="SystemMetamodel.genmodel"/>
    </extension>
 
 </plugin>

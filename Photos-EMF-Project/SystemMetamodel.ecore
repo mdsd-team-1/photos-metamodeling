@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SystemMetamodel" nsURI="http://co/edu/unal/mdd/photos/SystemMetamodel"
-    nsPrefix="co.edu.unal.mdd.photos.SystemMetamodel">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PhotosMetaModel" nsURI="http://co/edu/unal/mdd/photos/PhotosMetaModel"
+    nsPrefix="co.edu.unal.mdd.photos.PhotosMetaModel">
   <eClassifiers xsi:type="ecore:EClass" name="SoftGallery">
     <eStructuralFeatures xsi:type="ecore:EReference" name="arquitectura" lowerBound="1"
         eType="#//Arquitectura" containment="true"/>
