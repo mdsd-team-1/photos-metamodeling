@@ -15,6 +15,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Technology">
     <eStructuralFeatures xsi:type="ecore:EReference" name="spring" eType="#//Spring"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="react" eType="#//React"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postgresql" eType="#//PostgreSQL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spring">
     <eStructuralFeatures xsi:type="ecore:EReference" name="springbootapplication"
@@ -104,5 +105,65 @@
   <eClassifiers xsi:type="ecore:EClass" name="EnableWebSecurity"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableGlobalMethodSecurity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Bean"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cluster" eType="#//Cluster"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForeignKey">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="column" eType="#//Column.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Table_PostgreSQL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trigger"/>
+  <eClassifiers xsi:type="ecore:EClass" name="View_PostgreSQL"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Index"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Table_PostgreSQL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="column" upperBound="-1"
+        eType="#//Column.1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="row" upperBound="-1" eType="#//Row"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foreignkey" upperBound="-1"
+        eType="#//ForeignKey" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primaryKey" upperBound="-1"
+        eType="#//Column.1" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StoredProcedure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Database">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="user_postgresql" eType="#//User_PostgreSQL"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scheme" upperBound="-1"
+        eType="#//Scheme" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scheme">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="table_postgresql" upperBound="-1"
+        eType="#//Table_PostgreSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="view_postgresql" upperBound="-1"
+        eType="#//View_PostgreSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="index" upperBound="-1"
+        eType="#//Index" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" upperBound="-1"
+        eType="#//Trigger" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storedprocedure" upperBound="-1"
+        eType="#//StoredProcedure" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User_PostgreSQL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="execute" upperBound="-1"
+        eType="#//Query" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="privilege" upperBound="-1"
+        eType="#//Privilege" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="database" upperBound="-1"
+        eType="#//Database" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Row">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="policy" eType="#//Policy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Column">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Privilege"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Policy"/>
 </ecore:EPackage>
