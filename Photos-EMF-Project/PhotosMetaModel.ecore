@@ -75,7 +75,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Id">
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedvalue" eType="#//GeneratedValue"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Column_p"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Column_p">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeneratedValue"/>
   <eClassifiers xsi:type="ecore:EClass" name="NamedNativeQuery"/>
   <eClassifiers xsi:type="ecore:EClass" name="Specification">
@@ -97,9 +101,9 @@
         eType="#//EnableGlobalMethodSecurity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="order" eType="#//Order"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="order" eType="#//Order_s"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Order"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Order_s"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableAuthorizationServer"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableResourceServer"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableWebSecurity"/>
@@ -130,7 +134,7 @@
         eType="#//Column_p" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inherit" eType="#//Table_p"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StoredProcedure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Function_p"/>
   <eClassifiers xsi:type="ecore:EClass" name="Database">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scheme" upperBound="-1"
         eType="#//Scheme" containment="true"/>
@@ -145,7 +149,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" upperBound="-1"
         eType="#//Trigger" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="storedprocedure" upperBound="-1"
-        eType="#//StoredProcedure" containment="true"/>
+        eType="#//Function_p" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="User_p">
     <eStructuralFeatures xsi:type="ecore:EReference" name="execute" upperBound="-1"
@@ -177,20 +181,34 @@
   <eClassifiers xsi:type="ecore:EClass" name="Lateral" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Where" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="GroupBy" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Having"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Having" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Distnct"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Limit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Offset"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Values"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Alter"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Delete"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Create"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Drop"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Using"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Distnct" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Limit" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Offset" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Values" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Alter" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Drop" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Using" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Index"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Update"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Array"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Into"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Array" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Into" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Column_s"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Order_p" eSuperTypes="#//Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Usuario"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Autenticacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Registro"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Administracion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Accion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CrearAlbum"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VerAlbum"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CargarFoto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VerTodasLasFotos"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EditarPerfil"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Foto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Categoria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Imagen"/>
 </ecore:EPackage>
