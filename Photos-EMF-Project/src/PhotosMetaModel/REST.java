@@ -13,5 +13,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface REST extends Conexion {
+public interface REST extends Connection {
 } // REST

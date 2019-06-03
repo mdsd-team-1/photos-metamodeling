@@ -13,5 +13,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface Security_a extends SegmentoLogica {
+public interface Security_a extends BusinessLogicSegment {
 } // Security_a

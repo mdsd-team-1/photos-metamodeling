@@ -7,14 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated SystemMetamodel -->
-      <package
-            uri="http://co/edu/unal/mdd/photos/PhotosMetaModel"
-            class="PhotosMetaModel.SystemMetamodelPackage"
-            genModel="SystemMetamodel.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated PhotosMetaModel -->
       <package
             uri="http://co/edu/unal/mdd/photos/PhotosMetaModel"

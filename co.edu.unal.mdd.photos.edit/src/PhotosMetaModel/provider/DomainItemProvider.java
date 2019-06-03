@@ -77,8 +77,8 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__USUARIO);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__FOTO);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__USER_D);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__PHOTO);
 		}
 		return childrenFeatures;
 	}
@@ -131,8 +131,8 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case PhotosMetaModelPackage.DOMAIN__USUARIO:
-			case PhotosMetaModelPackage.DOMAIN__FOTO:
+			case PhotosMetaModelPackage.DOMAIN__USER_D:
+			case PhotosMetaModelPackage.DOMAIN__PHOTO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,13 +152,13 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__USUARIO,
-				 PhotosMetaModelFactory.eINSTANCE.createUsuario()));
+				(PhotosMetaModelPackage.Literals.DOMAIN__USER_D,
+				 PhotosMetaModelFactory.eINSTANCE.createUser_d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__FOTO,
-				 PhotosMetaModelFactory.eINSTANCE.createFoto()));
+				(PhotosMetaModelPackage.Literals.DOMAIN__PHOTO,
+				 PhotosMetaModelFactory.eINSTANCE.createPhoto()));
 	}
 
 	/**

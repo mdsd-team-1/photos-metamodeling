@@ -1843,302 +1843,302 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Usuario} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.User_d} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsuarioItemProvider usuarioItemProvider;
+	protected User_dItemProvider user_dItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Usuario}.
+	 * This creates an adapter for a {@link PhotosMetaModel.User_d}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUsuarioAdapter() {
-		if (usuarioItemProvider == null) {
-			usuarioItemProvider = new UsuarioItemProvider(this);
+	public Adapter createUser_dAdapter() {
+		if (user_dItemProvider == null) {
+			user_dItemProvider = new User_dItemProvider(this);
 		}
 
-		return usuarioItemProvider;
+		return user_dItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Autenticacion} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Authentication} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AutenticacionItemProvider autenticacionItemProvider;
+	protected AuthenticationItemProvider authenticationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Autenticacion}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Authentication}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAutenticacionAdapter() {
-		if (autenticacionItemProvider == null) {
-			autenticacionItemProvider = new AutenticacionItemProvider(this);
+	public Adapter createAuthenticationAdapter() {
+		if (authenticationItemProvider == null) {
+			authenticationItemProvider = new AuthenticationItemProvider(this);
 		}
 
-		return autenticacionItemProvider;
+		return authenticationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Registro} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Registration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RegistroItemProvider registroItemProvider;
+	protected RegistrationItemProvider registrationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Registro}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Registration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRegistroAdapter() {
-		if (registroItemProvider == null) {
-			registroItemProvider = new RegistroItemProvider(this);
+	public Adapter createRegistrationAdapter() {
+		if (registrationItemProvider == null) {
+			registrationItemProvider = new RegistrationItemProvider(this);
 		}
 
-		return registroItemProvider;
+		return registrationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ManejoPerfil} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ProfileManagement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ManejoPerfilItemProvider manejoPerfilItemProvider;
+	protected ProfileManagementItemProvider profileManagementItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.ManejoPerfil}.
+	 * This creates an adapter for a {@link PhotosMetaModel.ProfileManagement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createManejoPerfilAdapter() {
-		if (manejoPerfilItemProvider == null) {
-			manejoPerfilItemProvider = new ManejoPerfilItemProvider(this);
+	public Adapter createProfileManagementAdapter() {
+		if (profileManagementItemProvider == null) {
+			profileManagementItemProvider = new ProfileManagementItemProvider(this);
 		}
 
-		return manejoPerfilItemProvider;
+		return profileManagementItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Accion} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Action} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AccionItemProvider accionItemProvider;
+	protected ActionItemProvider actionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Accion}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Action}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAccionAdapter() {
-		if (accionItemProvider == null) {
-			accionItemProvider = new AccionItemProvider(this);
+	public Adapter createActionAdapter() {
+		if (actionItemProvider == null) {
+			actionItemProvider = new ActionItemProvider(this);
 		}
 
-		return accionItemProvider;
+		return actionItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.CrearAlbum} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.CreateAlbum} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CrearAlbumItemProvider crearAlbumItemProvider;
+	protected CreateAlbumItemProvider createAlbumItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.CrearAlbum}.
+	 * This creates an adapter for a {@link PhotosMetaModel.CreateAlbum}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCrearAlbumAdapter() {
-		if (crearAlbumItemProvider == null) {
-			crearAlbumItemProvider = new CrearAlbumItemProvider(this);
+	public Adapter createCreateAlbumAdapter() {
+		if (createAlbumItemProvider == null) {
+			createAlbumItemProvider = new CreateAlbumItemProvider(this);
 		}
 
-		return crearAlbumItemProvider;
+		return createAlbumItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.VerAlbum} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SeeAlbum} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VerAlbumItemProvider verAlbumItemProvider;
+	protected SeeAlbumItemProvider seeAlbumItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.VerAlbum}.
+	 * This creates an adapter for a {@link PhotosMetaModel.SeeAlbum}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVerAlbumAdapter() {
-		if (verAlbumItemProvider == null) {
-			verAlbumItemProvider = new VerAlbumItemProvider(this);
+	public Adapter createSeeAlbumAdapter() {
+		if (seeAlbumItemProvider == null) {
+			seeAlbumItemProvider = new SeeAlbumItemProvider(this);
 		}
 
-		return verAlbumItemProvider;
+		return seeAlbumItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.CargarFoto} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.LoadPhoto} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CargarFotoItemProvider cargarFotoItemProvider;
+	protected LoadPhotoItemProvider loadPhotoItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.CargarFoto}.
+	 * This creates an adapter for a {@link PhotosMetaModel.LoadPhoto}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCargarFotoAdapter() {
-		if (cargarFotoItemProvider == null) {
-			cargarFotoItemProvider = new CargarFotoItemProvider(this);
+	public Adapter createLoadPhotoAdapter() {
+		if (loadPhotoItemProvider == null) {
+			loadPhotoItemProvider = new LoadPhotoItemProvider(this);
 		}
 
-		return cargarFotoItemProvider;
+		return loadPhotoItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.VerTodasLasFotos} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SeeAllPhotos} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VerTodasLasFotosItemProvider verTodasLasFotosItemProvider;
+	protected SeeAllPhotosItemProvider seeAllPhotosItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.VerTodasLasFotos}.
+	 * This creates an adapter for a {@link PhotosMetaModel.SeeAllPhotos}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVerTodasLasFotosAdapter() {
-		if (verTodasLasFotosItemProvider == null) {
-			verTodasLasFotosItemProvider = new VerTodasLasFotosItemProvider(this);
+	public Adapter createSeeAllPhotosAdapter() {
+		if (seeAllPhotosItemProvider == null) {
+			seeAllPhotosItemProvider = new SeeAllPhotosItemProvider(this);
 		}
 
-		return verTodasLasFotosItemProvider;
+		return seeAllPhotosItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.EditarPerfil} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.EditProfile} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EditarPerfilItemProvider editarPerfilItemProvider;
+	protected EditProfileItemProvider editProfileItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.EditarPerfil}.
+	 * This creates an adapter for a {@link PhotosMetaModel.EditProfile}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEditarPerfilAdapter() {
-		if (editarPerfilItemProvider == null) {
-			editarPerfilItemProvider = new EditarPerfilItemProvider(this);
+	public Adapter createEditProfileAdapter() {
+		if (editProfileItemProvider == null) {
+			editProfileItemProvider = new EditProfileItemProvider(this);
 		}
 
-		return editarPerfilItemProvider;
+		return editProfileItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Foto} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Photo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FotoItemProvider fotoItemProvider;
+	protected PhotoItemProvider photoItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Foto}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Photo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFotoAdapter() {
-		if (fotoItemProvider == null) {
-			fotoItemProvider = new FotoItemProvider(this);
+	public Adapter createPhotoAdapter() {
+		if (photoItemProvider == null) {
+			photoItemProvider = new PhotoItemProvider(this);
 		}
 
-		return fotoItemProvider;
+		return photoItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Categoria} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Album} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CategoriaItemProvider categoriaItemProvider;
+	protected AlbumItemProvider albumItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Categoria}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Album}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCategoriaAdapter() {
-		if (categoriaItemProvider == null) {
-			categoriaItemProvider = new CategoriaItemProvider(this);
+	public Adapter createAlbumAdapter() {
+		if (albumItemProvider == null) {
+			albumItemProvider = new AlbumItemProvider(this);
 		}
 
-		return categoriaItemProvider;
+		return albumItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Imagen} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Picture} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ImagenItemProvider imagenItemProvider;
+	protected PictureItemProvider pictureItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Imagen}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Picture}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createImagenAdapter() {
-		if (imagenItemProvider == null) {
-			imagenItemProvider = new ImagenItemProvider(this);
+	public Adapter createPictureAdapter() {
+		if (pictureItemProvider == null) {
+			pictureItemProvider = new PictureItemProvider(this);
 		}
 
-		return imagenItemProvider;
+		return pictureItemProvider;
 	}
 
 	/**
@@ -2188,72 +2188,72 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Capa} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Layer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CapaItemProvider capaItemProvider;
+	protected LayerItemProvider layerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Capa}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Layer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCapaAdapter() {
-		if (capaItemProvider == null) {
-			capaItemProvider = new CapaItemProvider(this);
+	public Adapter createLayerAdapter() {
+		if (layerItemProvider == null) {
+			layerItemProvider = new LayerItemProvider(this);
 		}
 
-		return capaItemProvider;
+		return layerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Conexion} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Connection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConexionItemProvider conexionItemProvider;
+	protected ConnectionItemProvider connectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Conexion}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Connection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConexionAdapter() {
-		if (conexionItemProvider == null) {
-			conexionItemProvider = new ConexionItemProvider(this);
+	public Adapter createConnectionAdapter() {
+		if (connectionItemProvider == null) {
+			connectionItemProvider = new ConnectionItemProvider(this);
 		}
 
-		return conexionItemProvider;
+		return connectionItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Relacion} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Relation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RelacionItemProvider relacionItemProvider;
+	protected RelationItemProvider relationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Relacion}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Relation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRelacionAdapter() {
-		if (relacionItemProvider == null) {
-			relacionItemProvider = new RelacionItemProvider(this);
+	public Adapter createRelationAdapter() {
+		if (relationItemProvider == null) {
+			relationItemProvider = new RelationItemProvider(this);
 		}
 
-		return relacionItemProvider;
+		return relationItemProvider;
 	}
 
 	/**
@@ -2280,26 +2280,26 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ConexionPostgreSQL} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.PostgreSQLConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConexionPostgreSQLItemProvider conexionPostgreSQLItemProvider;
+	protected PostgreSQLConnectionItemProvider postgreSQLConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.ConexionPostgreSQL}.
+	 * This creates an adapter for a {@link PhotosMetaModel.PostgreSQLConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConexionPostgreSQLAdapter() {
-		if (conexionPostgreSQLItemProvider == null) {
-			conexionPostgreSQLItemProvider = new ConexionPostgreSQLItemProvider(this);
+	public Adapter createPostgreSQLConnectionAdapter() {
+		if (postgreSQLConnectionItemProvider == null) {
+			postgreSQLConnectionItemProvider = new PostgreSQLConnectionItemProvider(this);
 		}
 
-		return conexionPostgreSQLItemProvider;
+		return postgreSQLConnectionItemProvider;
 	}
 
 	/**
@@ -2326,72 +2326,72 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Presentacion} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Presentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PresentacionItemProvider presentacionItemProvider;
+	protected PresentationItemProvider presentationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Presentacion}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Presentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPresentacionAdapter() {
-		if (presentacionItemProvider == null) {
-			presentacionItemProvider = new PresentacionItemProvider(this);
+	public Adapter createPresentationAdapter() {
+		if (presentationItemProvider == null) {
+			presentationItemProvider = new PresentationItemProvider(this);
 		}
 
-		return presentacionItemProvider;
+		return presentationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.LogicaDeNegocio} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.BusinessLogic} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LogicaDeNegocioItemProvider logicaDeNegocioItemProvider;
+	protected BusinessLogicItemProvider businessLogicItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.LogicaDeNegocio}.
+	 * This creates an adapter for a {@link PhotosMetaModel.BusinessLogic}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLogicaDeNegocioAdapter() {
-		if (logicaDeNegocioItemProvider == null) {
-			logicaDeNegocioItemProvider = new LogicaDeNegocioItemProvider(this);
+	public Adapter createBusinessLogicAdapter() {
+		if (businessLogicItemProvider == null) {
+			businessLogicItemProvider = new BusinessLogicItemProvider(this);
 		}
 
-		return logicaDeNegocioItemProvider;
+		return businessLogicItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Datos} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Data} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DatosItemProvider datosItemProvider;
+	protected DataItemProvider dataItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Datos}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Data}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDatosAdapter() {
-		if (datosItemProvider == null) {
-			datosItemProvider = new DatosItemProvider(this);
+	public Adapter createDataAdapter() {
+		if (dataItemProvider == null) {
+			dataItemProvider = new DataItemProvider(this);
 		}
 
-		return datosItemProvider;
+		return dataItemProvider;
 	}
 
 	/**
@@ -2418,72 +2418,72 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SegmentoPresentacion} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.PresentationSegment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SegmentoPresentacionItemProvider segmentoPresentacionItemProvider;
+	protected PresentationSegmentItemProvider presentationSegmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.SegmentoPresentacion}.
+	 * This creates an adapter for a {@link PhotosMetaModel.PresentationSegment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSegmentoPresentacionAdapter() {
-		if (segmentoPresentacionItemProvider == null) {
-			segmentoPresentacionItemProvider = new SegmentoPresentacionItemProvider(this);
+	public Adapter createPresentationSegmentAdapter() {
+		if (presentationSegmentItemProvider == null) {
+			presentationSegmentItemProvider = new PresentationSegmentItemProvider(this);
 		}
 
-		return segmentoPresentacionItemProvider;
+		return presentationSegmentItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SegmentoLogica} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.BusinessLogicSegment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SegmentoLogicaItemProvider segmentoLogicaItemProvider;
+	protected BusinessLogicSegmentItemProvider businessLogicSegmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.SegmentoLogica}.
+	 * This creates an adapter for a {@link PhotosMetaModel.BusinessLogicSegment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSegmentoLogicaAdapter() {
-		if (segmentoLogicaItemProvider == null) {
-			segmentoLogicaItemProvider = new SegmentoLogicaItemProvider(this);
+	public Adapter createBusinessLogicSegmentAdapter() {
+		if (businessLogicSegmentItemProvider == null) {
+			businessLogicSegmentItemProvider = new BusinessLogicSegmentItemProvider(this);
 		}
 
-		return segmentoLogicaItemProvider;
+		return businessLogicSegmentItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SegmentoDatos} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.DataSegment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SegmentoDatosItemProvider segmentoDatosItemProvider;
+	protected DataSegmentItemProvider dataSegmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.SegmentoDatos}.
+	 * This creates an adapter for a {@link PhotosMetaModel.DataSegment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSegmentoDatosAdapter() {
-		if (segmentoDatosItemProvider == null) {
-			segmentoDatosItemProvider = new SegmentoDatosItemProvider(this);
+	public Adapter createDataSegmentAdapter() {
+		if (dataSegmentItemProvider == null) {
+			dataSegmentItemProvider = new DataSegmentItemProvider(this);
 		}
 
-		return segmentoDatosItemProvider;
+		return dataSegmentItemProvider;
 	}
 
 	/**
@@ -3450,34 +3450,34 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		if (intoItemProvider != null) intoItemProvider.dispose();
 		if (column_sItemProvider != null) column_sItemProvider.dispose();
 		if (order_pItemProvider != null) order_pItemProvider.dispose();
-		if (usuarioItemProvider != null) usuarioItemProvider.dispose();
-		if (autenticacionItemProvider != null) autenticacionItemProvider.dispose();
-		if (registroItemProvider != null) registroItemProvider.dispose();
-		if (manejoPerfilItemProvider != null) manejoPerfilItemProvider.dispose();
-		if (accionItemProvider != null) accionItemProvider.dispose();
-		if (crearAlbumItemProvider != null) crearAlbumItemProvider.dispose();
-		if (verAlbumItemProvider != null) verAlbumItemProvider.dispose();
-		if (cargarFotoItemProvider != null) cargarFotoItemProvider.dispose();
-		if (verTodasLasFotosItemProvider != null) verTodasLasFotosItemProvider.dispose();
-		if (editarPerfilItemProvider != null) editarPerfilItemProvider.dispose();
-		if (fotoItemProvider != null) fotoItemProvider.dispose();
-		if (categoriaItemProvider != null) categoriaItemProvider.dispose();
-		if (imagenItemProvider != null) imagenItemProvider.dispose();
+		if (user_dItemProvider != null) user_dItemProvider.dispose();
+		if (authenticationItemProvider != null) authenticationItemProvider.dispose();
+		if (registrationItemProvider != null) registrationItemProvider.dispose();
+		if (profileManagementItemProvider != null) profileManagementItemProvider.dispose();
+		if (actionItemProvider != null) actionItemProvider.dispose();
+		if (createAlbumItemProvider != null) createAlbumItemProvider.dispose();
+		if (seeAlbumItemProvider != null) seeAlbumItemProvider.dispose();
+		if (loadPhotoItemProvider != null) loadPhotoItemProvider.dispose();
+		if (seeAllPhotosItemProvider != null) seeAllPhotosItemProvider.dispose();
+		if (editProfileItemProvider != null) editProfileItemProvider.dispose();
+		if (photoItemProvider != null) photoItemProvider.dispose();
+		if (albumItemProvider != null) albumItemProvider.dispose();
+		if (pictureItemProvider != null) pictureItemProvider.dispose();
 		if (amazonWebServicesItemProvider != null) amazonWebServicesItemProvider.dispose();
 		if (nTierItemProvider != null) nTierItemProvider.dispose();
-		if (capaItemProvider != null) capaItemProvider.dispose();
-		if (conexionItemProvider != null) conexionItemProvider.dispose();
-		if (relacionItemProvider != null) relacionItemProvider.dispose();
+		if (layerItemProvider != null) layerItemProvider.dispose();
+		if (connectionItemProvider != null) connectionItemProvider.dispose();
+		if (relationItemProvider != null) relationItemProvider.dispose();
 		if (restItemProvider != null) restItemProvider.dispose();
-		if (conexionPostgreSQLItemProvider != null) conexionPostgreSQLItemProvider.dispose();
+		if (postgreSQLConnectionItemProvider != null) postgreSQLConnectionItemProvider.dispose();
 		if (amazonS3APIItemProvider != null) amazonS3APIItemProvider.dispose();
-		if (presentacionItemProvider != null) presentacionItemProvider.dispose();
-		if (logicaDeNegocioItemProvider != null) logicaDeNegocioItemProvider.dispose();
-		if (datosItemProvider != null) datosItemProvider.dispose();
+		if (presentationItemProvider != null) presentationItemProvider.dispose();
+		if (businessLogicItemProvider != null) businessLogicItemProvider.dispose();
+		if (dataItemProvider != null) dataItemProvider.dispose();
 		if (allowedToUseItemProvider != null) allowedToUseItemProvider.dispose();
-		if (segmentoPresentacionItemProvider != null) segmentoPresentacionItemProvider.dispose();
-		if (segmentoLogicaItemProvider != null) segmentoLogicaItemProvider.dispose();
-		if (segmentoDatosItemProvider != null) segmentoDatosItemProvider.dispose();
+		if (presentationSegmentItemProvider != null) presentationSegmentItemProvider.dispose();
+		if (businessLogicSegmentItemProvider != null) businessLogicSegmentItemProvider.dispose();
+		if (dataSegmentItemProvider != null) dataSegmentItemProvider.dispose();
 		if (view_aItemProvider != null) view_aItemProvider.dispose();
 		if (component_aItemProvider != null) component_aItemProvider.dispose();
 		if (action_aItemProvider != null) action_aItemProvider.dispose();

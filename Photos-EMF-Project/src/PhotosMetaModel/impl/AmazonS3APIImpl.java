@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AmazonS3APIImpl extends ConexionImpl implements AmazonS3API {
+public class AmazonS3APIImpl extends ConnectionImpl implements AmazonS3API {
 	/**
 	 * The default value of the '{@link #getEndpointUrl() <em>Endpoint Url</em>}' attribute.
 	 * <!-- begin-user-doc -->

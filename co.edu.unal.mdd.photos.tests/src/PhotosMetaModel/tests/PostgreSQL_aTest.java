@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PostgreSQL_aTest extends SegmentoDatosTest {
+public class PostgreSQL_aTest extends DataSegmentTest {
 
 	/**
 	 * <!-- begin-user-doc -->

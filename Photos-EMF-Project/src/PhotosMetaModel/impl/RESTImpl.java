@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class RESTImpl extends ConexionImpl implements REST {
+public class RESTImpl extends ConnectionImpl implements REST {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

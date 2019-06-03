@@ -13,5 +13,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface AmazonS3Storage extends SegmentoDatos {
+public interface AmazonS3Storage extends DataSegment {
 } // AmazonS3Storage

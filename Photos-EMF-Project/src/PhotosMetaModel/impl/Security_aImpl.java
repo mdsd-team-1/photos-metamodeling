@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Security_aImpl extends SegmentoLogicaImpl implements Security_a {
+public class Security_aImpl extends BusinessLogicSegmentImpl implements Security_a {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

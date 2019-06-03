@@ -3,8 +3,9 @@
 package PhotosMetaModel.impl;
 
 import PhotosMetaModel.Access;
-import PhotosMetaModel.Accion;
+import PhotosMetaModel.Action;
 import PhotosMetaModel.Action_a;
+import PhotosMetaModel.Album;
 import PhotosMetaModel.AllowedToUse;
 import PhotosMetaModel.Alter;
 import PhotosMetaModel.AmazonAurora;
@@ -17,15 +18,14 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.Architecture;
 import PhotosMetaModel.Array;
-import PhotosMetaModel.Autenticacion;
+import PhotosMetaModel.Authentication;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
 import PhotosMetaModel.Bucket;
 import PhotosMetaModel.BucketObjectsNotPublic;
-import PhotosMetaModel.Capa;
-import PhotosMetaModel.CargarFoto;
-import PhotosMetaModel.Categoria;
+import PhotosMetaModel.BusinessLogic;
+import PhotosMetaModel.BusinessLogicSegment;
 import PhotosMetaModel.Class_r;
 import PhotosMetaModel.Clause;
 import PhotosMetaModel.Cluster;
@@ -37,23 +37,23 @@ import PhotosMetaModel.ComponentDidMount;
 import PhotosMetaModel.ComponentWillUnmount;
 import PhotosMetaModel.Component_a;
 import PhotosMetaModel.Component_r;
-import PhotosMetaModel.Conexion;
-import PhotosMetaModel.ConexionPostgreSQL;
 import PhotosMetaModel.Configuration;
+import PhotosMetaModel.Connection;
 import PhotosMetaModel.Constraint;
 import PhotosMetaModel.Constructor;
 import PhotosMetaModel.Controller_a;
-import PhotosMetaModel.CrearAlbum;
 import PhotosMetaModel.Create;
+import PhotosMetaModel.CreateAlbum;
+import PhotosMetaModel.Data;
+import PhotosMetaModel.DataSegment;
 import PhotosMetaModel.DataType;
 import PhotosMetaModel.Database;
-import PhotosMetaModel.Datos;
 import PhotosMetaModel.Delete;
 import PhotosMetaModel.DeleteMapping;
 import PhotosMetaModel.Distnct;
 import PhotosMetaModel.Domain;
 import PhotosMetaModel.Drop;
-import PhotosMetaModel.EditarPerfil;
+import PhotosMetaModel.EditProfile;
 import PhotosMetaModel.Element_r;
 import PhotosMetaModel.EnableAuthorizationServer;
 import PhotosMetaModel.EnableGlobalMethodSecurity;
@@ -64,7 +64,6 @@ import PhotosMetaModel.ExceptionHandler;
 import PhotosMetaModel.File_a;
 import PhotosMetaModel.Folder_a;
 import PhotosMetaModel.ForeignKey;
-import PhotosMetaModel.Foto;
 import PhotosMetaModel.From;
 import PhotosMetaModel.Function_p;
 import PhotosMetaModel.Function_r;
@@ -73,16 +72,15 @@ import PhotosMetaModel.GetMapping;
 import PhotosMetaModel.GroupBy;
 import PhotosMetaModel.Having;
 import PhotosMetaModel.Id;
-import PhotosMetaModel.Imagen;
 import PhotosMetaModel.Index;
 import PhotosMetaModel.Index_p;
 import PhotosMetaModel.Insert;
 import PhotosMetaModel.Into;
 import PhotosMetaModel.Join;
 import PhotosMetaModel.Lateral;
+import PhotosMetaModel.Layer;
 import PhotosMetaModel.Limit;
-import PhotosMetaModel.LogicaDeNegocio;
-import PhotosMetaModel.ManejoPerfil;
+import PhotosMetaModel.LoadPhoto;
 import PhotosMetaModel.MetaData;
 import PhotosMetaModel.Model_a;
 import PhotosMetaModel.NTier;
@@ -92,15 +90,20 @@ import PhotosMetaModel.Offset;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_p;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.PhotosMetaModelPackage;
+import PhotosMetaModel.Picture;
 import PhotosMetaModel.Policy;
 import PhotosMetaModel.PostMapping;
 import PhotosMetaModel.PostgreSQL;
+import PhotosMetaModel.PostgreSQLConnection;
 import PhotosMetaModel.PostgreSQL_a;
 import PhotosMetaModel.Predicate;
-import PhotosMetaModel.Presentacion;
+import PhotosMetaModel.Presentation;
+import PhotosMetaModel.PresentationSegment;
 import PhotosMetaModel.Privilege;
+import PhotosMetaModel.ProfileManagement;
 import PhotosMetaModel.Prop;
 import PhotosMetaModel.Public;
 import PhotosMetaModel.PutMapping;
@@ -108,8 +111,8 @@ import PhotosMetaModel.Query;
 import PhotosMetaModel.REST;
 import PhotosMetaModel.React;
 import PhotosMetaModel.ReactDOM;
-import PhotosMetaModel.Registro;
-import PhotosMetaModel.Relacion;
+import PhotosMetaModel.Registration;
+import PhotosMetaModel.Relation;
 import PhotosMetaModel.Render;
 import PhotosMetaModel.Repository;
 import PhotosMetaModel.Repository_a;
@@ -120,9 +123,8 @@ import PhotosMetaModel.Row;
 import PhotosMetaModel.Scheme;
 import PhotosMetaModel.SearchCriteria;
 import PhotosMetaModel.Security_a;
-import PhotosMetaModel.SegmentoDatos;
-import PhotosMetaModel.SegmentoLogica;
-import PhotosMetaModel.SegmentoPresentacion;
+import PhotosMetaModel.SeeAlbum;
+import PhotosMetaModel.SeeAllPhotos;
 import PhotosMetaModel.Select;
 import PhotosMetaModel.SoftGallery;
 import PhotosMetaModel.Specification;
@@ -133,12 +135,10 @@ import PhotosMetaModel.Table_s;
 import PhotosMetaModel.Technology;
 import PhotosMetaModel.Trigger;
 import PhotosMetaModel.Update;
+import PhotosMetaModel.User_d;
 import PhotosMetaModel.User_p;
 import PhotosMetaModel.Using;
-import PhotosMetaModel.Usuario;
 import PhotosMetaModel.Values;
-import PhotosMetaModel.VerAlbum;
-import PhotosMetaModel.VerTodasLasFotos;
 import PhotosMetaModel.View;
 import PhotosMetaModel.View_a;
 import PhotosMetaModel.Where;
@@ -272,34 +272,34 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 			case PhotosMetaModelPackage.INTO: return createInto();
 			case PhotosMetaModelPackage.COLUMN_S: return createColumn_s();
 			case PhotosMetaModelPackage.ORDER_P: return createOrder_p();
-			case PhotosMetaModelPackage.USUARIO: return createUsuario();
-			case PhotosMetaModelPackage.AUTENTICACION: return createAutenticacion();
-			case PhotosMetaModelPackage.REGISTRO: return createRegistro();
-			case PhotosMetaModelPackage.MANEJO_PERFIL: return createManejoPerfil();
-			case PhotosMetaModelPackage.ACCION: return createAccion();
-			case PhotosMetaModelPackage.CREAR_ALBUM: return createCrearAlbum();
-			case PhotosMetaModelPackage.VER_ALBUM: return createVerAlbum();
-			case PhotosMetaModelPackage.CARGAR_FOTO: return createCargarFoto();
-			case PhotosMetaModelPackage.VER_TODAS_LAS_FOTOS: return createVerTodasLasFotos();
-			case PhotosMetaModelPackage.EDITAR_PERFIL: return createEditarPerfil();
-			case PhotosMetaModelPackage.FOTO: return createFoto();
-			case PhotosMetaModelPackage.CATEGORIA: return createCategoria();
-			case PhotosMetaModelPackage.IMAGEN: return createImagen();
+			case PhotosMetaModelPackage.USER_D: return createUser_d();
+			case PhotosMetaModelPackage.AUTHENTICATION: return createAuthentication();
+			case PhotosMetaModelPackage.REGISTRATION: return createRegistration();
+			case PhotosMetaModelPackage.PROFILE_MANAGEMENT: return createProfileManagement();
+			case PhotosMetaModelPackage.ACTION: return createAction();
+			case PhotosMetaModelPackage.CREATE_ALBUM: return createCreateAlbum();
+			case PhotosMetaModelPackage.SEE_ALBUM: return createSeeAlbum();
+			case PhotosMetaModelPackage.LOAD_PHOTO: return createLoadPhoto();
+			case PhotosMetaModelPackage.SEE_ALL_PHOTOS: return createSeeAllPhotos();
+			case PhotosMetaModelPackage.EDIT_PROFILE: return createEditProfile();
+			case PhotosMetaModelPackage.PHOTO: return createPhoto();
+			case PhotosMetaModelPackage.ALBUM: return createAlbum();
+			case PhotosMetaModelPackage.PICTURE: return createPicture();
 			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES: return createAmazonWebServices();
 			case PhotosMetaModelPackage.NTIER: return createNTier();
-			case PhotosMetaModelPackage.CAPA: return createCapa();
-			case PhotosMetaModelPackage.CONEXION: return createConexion();
-			case PhotosMetaModelPackage.RELACION: return createRelacion();
+			case PhotosMetaModelPackage.LAYER: return createLayer();
+			case PhotosMetaModelPackage.CONNECTION: return createConnection();
+			case PhotosMetaModelPackage.RELATION: return createRelation();
 			case PhotosMetaModelPackage.REST: return createREST();
-			case PhotosMetaModelPackage.CONEXION_POSTGRE_SQL: return createConexionPostgreSQL();
+			case PhotosMetaModelPackage.POSTGRE_SQL_CONNECTION: return createPostgreSQLConnection();
 			case PhotosMetaModelPackage.AMAZON_S3API: return createAmazonS3API();
-			case PhotosMetaModelPackage.PRESENTACION: return createPresentacion();
-			case PhotosMetaModelPackage.LOGICA_DE_NEGOCIO: return createLogicaDeNegocio();
-			case PhotosMetaModelPackage.DATOS: return createDatos();
+			case PhotosMetaModelPackage.PRESENTATION: return createPresentation();
+			case PhotosMetaModelPackage.BUSINESS_LOGIC: return createBusinessLogic();
+			case PhotosMetaModelPackage.DATA: return createData();
 			case PhotosMetaModelPackage.ALLOWED_TO_USE: return createAllowedToUse();
-			case PhotosMetaModelPackage.SEGMENTO_PRESENTACION: return createSegmentoPresentacion();
-			case PhotosMetaModelPackage.SEGMENTO_LOGICA: return createSegmentoLogica();
-			case PhotosMetaModelPackage.SEGMENTO_DATOS: return createSegmentoDatos();
+			case PhotosMetaModelPackage.PRESENTATION_SEGMENT: return createPresentationSegment();
+			case PhotosMetaModelPackage.BUSINESS_LOGIC_SEGMENT: return createBusinessLogicSegment();
+			case PhotosMetaModelPackage.DATA_SEGMENT: return createDataSegment();
 			case PhotosMetaModelPackage.VIEW_A: return createView_a();
 			case PhotosMetaModelPackage.COMPONENT_A: return createComponent_a();
 			case PhotosMetaModelPackage.ACTION_A: return createAction_a();
@@ -1192,9 +1192,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Usuario createUsuario() {
-		UsuarioImpl usuario = new UsuarioImpl();
-		return usuario;
+	public User_d createUser_d() {
+		User_dImpl user_d = new User_dImpl();
+		return user_d;
 	}
 
 	/**
@@ -1203,9 +1203,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Autenticacion createAutenticacion() {
-		AutenticacionImpl autenticacion = new AutenticacionImpl();
-		return autenticacion;
+	public Authentication createAuthentication() {
+		AuthenticationImpl authentication = new AuthenticationImpl();
+		return authentication;
 	}
 
 	/**
@@ -1214,9 +1214,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Registro createRegistro() {
-		RegistroImpl registro = new RegistroImpl();
-		return registro;
+	public Registration createRegistration() {
+		RegistrationImpl registration = new RegistrationImpl();
+		return registration;
 	}
 
 	/**
@@ -1225,9 +1225,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public ManejoPerfil createManejoPerfil() {
-		ManejoPerfilImpl manejoPerfil = new ManejoPerfilImpl();
-		return manejoPerfil;
+	public ProfileManagement createProfileManagement() {
+		ProfileManagementImpl profileManagement = new ProfileManagementImpl();
+		return profileManagement;
 	}
 
 	/**
@@ -1236,9 +1236,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Accion createAccion() {
-		AccionImpl accion = new AccionImpl();
-		return accion;
+	public Action createAction() {
+		ActionImpl action = new ActionImpl();
+		return action;
 	}
 
 	/**
@@ -1247,9 +1247,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public CrearAlbum createCrearAlbum() {
-		CrearAlbumImpl crearAlbum = new CrearAlbumImpl();
-		return crearAlbum;
+	public CreateAlbum createCreateAlbum() {
+		CreateAlbumImpl createAlbum = new CreateAlbumImpl();
+		return createAlbum;
 	}
 
 	/**
@@ -1258,9 +1258,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public VerAlbum createVerAlbum() {
-		VerAlbumImpl verAlbum = new VerAlbumImpl();
-		return verAlbum;
+	public SeeAlbum createSeeAlbum() {
+		SeeAlbumImpl seeAlbum = new SeeAlbumImpl();
+		return seeAlbum;
 	}
 
 	/**
@@ -1269,9 +1269,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public CargarFoto createCargarFoto() {
-		CargarFotoImpl cargarFoto = new CargarFotoImpl();
-		return cargarFoto;
+	public LoadPhoto createLoadPhoto() {
+		LoadPhotoImpl loadPhoto = new LoadPhotoImpl();
+		return loadPhoto;
 	}
 
 	/**
@@ -1280,9 +1280,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public VerTodasLasFotos createVerTodasLasFotos() {
-		VerTodasLasFotosImpl verTodasLasFotos = new VerTodasLasFotosImpl();
-		return verTodasLasFotos;
+	public SeeAllPhotos createSeeAllPhotos() {
+		SeeAllPhotosImpl seeAllPhotos = new SeeAllPhotosImpl();
+		return seeAllPhotos;
 	}
 
 	/**
@@ -1291,9 +1291,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EditarPerfil createEditarPerfil() {
-		EditarPerfilImpl editarPerfil = new EditarPerfilImpl();
-		return editarPerfil;
+	public EditProfile createEditProfile() {
+		EditProfileImpl editProfile = new EditProfileImpl();
+		return editProfile;
 	}
 
 	/**
@@ -1302,9 +1302,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Foto createFoto() {
-		FotoImpl foto = new FotoImpl();
-		return foto;
+	public Photo createPhoto() {
+		PhotoImpl photo = new PhotoImpl();
+		return photo;
 	}
 
 	/**
@@ -1313,9 +1313,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Categoria createCategoria() {
-		CategoriaImpl categoria = new CategoriaImpl();
-		return categoria;
+	public Album createAlbum() {
+		AlbumImpl album = new AlbumImpl();
+		return album;
 	}
 
 	/**
@@ -1324,9 +1324,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Imagen createImagen() {
-		ImagenImpl imagen = new ImagenImpl();
-		return imagen;
+	public Picture createPicture() {
+		PictureImpl picture = new PictureImpl();
+		return picture;
 	}
 
 	/**
@@ -1357,9 +1357,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Capa createCapa() {
-		CapaImpl capa = new CapaImpl();
-		return capa;
+	public Layer createLayer() {
+		LayerImpl layer = new LayerImpl();
+		return layer;
 	}
 
 	/**
@@ -1368,9 +1368,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Conexion createConexion() {
-		ConexionImpl conexion = new ConexionImpl();
-		return conexion;
+	public Connection createConnection() {
+		ConnectionImpl connection = new ConnectionImpl();
+		return connection;
 	}
 
 	/**
@@ -1379,9 +1379,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Relacion createRelacion() {
-		RelacionImpl relacion = new RelacionImpl();
-		return relacion;
+	public Relation createRelation() {
+		RelationImpl relation = new RelationImpl();
+		return relation;
 	}
 
 	/**
@@ -1401,9 +1401,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public ConexionPostgreSQL createConexionPostgreSQL() {
-		ConexionPostgreSQLImpl conexionPostgreSQL = new ConexionPostgreSQLImpl();
-		return conexionPostgreSQL;
+	public PostgreSQLConnection createPostgreSQLConnection() {
+		PostgreSQLConnectionImpl postgreSQLConnection = new PostgreSQLConnectionImpl();
+		return postgreSQLConnection;
 	}
 
 	/**
@@ -1423,9 +1423,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Presentacion createPresentacion() {
-		PresentacionImpl presentacion = new PresentacionImpl();
-		return presentacion;
+	public Presentation createPresentation() {
+		PresentationImpl presentation = new PresentationImpl();
+		return presentation;
 	}
 
 	/**
@@ -1434,9 +1434,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public LogicaDeNegocio createLogicaDeNegocio() {
-		LogicaDeNegocioImpl logicaDeNegocio = new LogicaDeNegocioImpl();
-		return logicaDeNegocio;
+	public BusinessLogic createBusinessLogic() {
+		BusinessLogicImpl businessLogic = new BusinessLogicImpl();
+		return businessLogic;
 	}
 
 	/**
@@ -1445,9 +1445,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public Datos createDatos() {
-		DatosImpl datos = new DatosImpl();
-		return datos;
+	public Data createData() {
+		DataImpl data = new DataImpl();
+		return data;
 	}
 
 	/**
@@ -1467,9 +1467,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public SegmentoPresentacion createSegmentoPresentacion() {
-		SegmentoPresentacionImpl segmentoPresentacion = new SegmentoPresentacionImpl();
-		return segmentoPresentacion;
+	public PresentationSegment createPresentationSegment() {
+		PresentationSegmentImpl presentationSegment = new PresentationSegmentImpl();
+		return presentationSegment;
 	}
 
 	/**
@@ -1478,9 +1478,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public SegmentoLogica createSegmentoLogica() {
-		SegmentoLogicaImpl segmentoLogica = new SegmentoLogicaImpl();
-		return segmentoLogica;
+	public BusinessLogicSegment createBusinessLogicSegment() {
+		BusinessLogicSegmentImpl businessLogicSegment = new BusinessLogicSegmentImpl();
+		return businessLogicSegment;
 	}
 
 	/**
@@ -1489,9 +1489,9 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public SegmentoDatos createSegmentoDatos() {
-		SegmentoDatosImpl segmentoDatos = new SegmentoDatosImpl();
-		return segmentoDatos;
+	public DataSegment createDataSegment() {
+		DataSegmentImpl dataSegment = new DataSegmentImpl();
+		return dataSegment;
 	}
 
 	/**

@@ -22,7 +22,7 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface AmazonS3API extends Conexion {
+public interface AmazonS3API extends Connection {
 	/**
 	 * Returns the value of the '<em><b>Endpoint Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->

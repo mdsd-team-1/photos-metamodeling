@@ -12,8 +12,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/domain"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Domain">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Domain/usuario"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Domain/foto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Domain/user_d"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Domain/photo"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Architecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Architecture/ntier"/>
@@ -184,51 +184,51 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Column_s/name"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Order_p"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Usuario">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Usuario/autenticacion"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Usuario/manejoperfil"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Usuario/foto"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/first_name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/last_name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/profile_description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/username"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/password"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Usuario/email"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Usuario/registro"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//User_d">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//User_d/authentication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//User_d/profileManagement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//User_d/photo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/first_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/last_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/profile_description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//User_d/email"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//User_d/registration"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Autenticacion"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Registro"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//ManejoPerfil">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//ManejoPerfil/accion"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Authentication"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Registration"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//ProfileManagement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//ProfileManagement/action"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Accion"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//CrearAlbum">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//CrearAlbum/categoria"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Action"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//CreateAlbum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//CreateAlbum/album"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//VerAlbum">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//VerAlbum/categoria"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//SeeAlbum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SeeAlbum/album"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//CargarFoto">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//CargarFoto/imagen"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//LoadPhoto">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//LoadPhoto/picture"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//VerTodasLasFotos"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//EditarPerfil">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//EditarPerfil/foto"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//SeeAllPhotos"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//EditProfile">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//EditProfile/photo"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Foto">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Foto/categoria"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Foto/imagen"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Photo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Photo/album"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Photo/photo"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Categoria">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Categoria/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Categoria/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Categoria/name"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Album">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Album/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Album/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Album/name"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Imagen">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Imagen/categoria"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Imagen/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Imagen/name"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Picture">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Picture/album"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Picture/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Picture/name"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//AmazonWebServices">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//AmazonWebServices/amazonelasticcomputecloud"/>
@@ -238,25 +238,25 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//AmazonWebServices/amazonsagemaker"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//NTier">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//NTier/conexion"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//NTier/capa"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//NTier/relacion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//NTier/connection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//NTier/layer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//NTier/relation"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Capa"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Conexion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Conexion/conexionSource"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Conexion/conexionTarget"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Layer"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Connection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Connection/sourceLayer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Connection/targetLayer"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Relacion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Relacion/relacionSource"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Relacion/relacionTarget"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Relation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Relation/sourceLayer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Relation/targetLayer"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//REST"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//ConexionPostgreSQL">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//ConexionPostgreSQL/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//ConexionPostgreSQL/port"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//ConexionPostgreSQL/username"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//ConexionPostgreSQL/password"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//PostgreSQLConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//PostgreSQLConnection/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//PostgreSQLConnection/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//PostgreSQLConnection/username"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//PostgreSQLConnection/password"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//AmazonS3API">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//AmazonS3API/endpointUrl"/>
@@ -264,19 +264,19 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//AmazonS3API/secretKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//AmazonS3API/bucketName"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Presentacion">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Presentacion/segmentopresentacion"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Presentation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Presentation/presentationLayer"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//LogicaDeNegocio">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//LogicaDeNegocio/segmentologica"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//BusinessLogic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//BusinessLogic/BusinessLogicSegment"/>
     </genClasses>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//Datos">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Datos/segmentodatos"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//Data">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Data/dataSegment"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//AllowedToUse"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//SegmentoPresentacion"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//SegmentoLogica"/>
-    <genClasses ecoreClass="PhotosMetaModel.ecore#//SegmentoDatos"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//PresentationSegment"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//BusinessLogicSegment"/>
+    <genClasses ecoreClass="PhotosMetaModel.ecore#//DataSegment"/>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//View_a"/>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Component_a"/>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Action_a"/>

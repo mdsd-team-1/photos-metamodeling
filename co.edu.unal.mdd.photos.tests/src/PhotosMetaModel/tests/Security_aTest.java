@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Security_aTest extends SegmentoLogicaTest {
+public class Security_aTest extends BusinessLogicSegmentTest {
 
 	/**
 	 * <!-- begin-user-doc -->

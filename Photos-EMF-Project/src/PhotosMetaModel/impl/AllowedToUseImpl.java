@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AllowedToUseImpl extends RelacionImpl implements AllowedToUse {
+public class AllowedToUseImpl extends RelationImpl implements AllowedToUse {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

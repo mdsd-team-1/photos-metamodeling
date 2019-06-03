@@ -715,121 +715,121 @@ public interface PhotosMetaModelFactory extends EFactory {
 	Order_p createOrder_p();
 
 	/**
-	 * Returns a new object of class '<em>Usuario</em>'.
+	 * Returns a new object of class '<em>User d</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Usuario</em>'.
+	 * @return a new object of class '<em>User d</em>'.
 	 * @generated
 	 */
-	Usuario createUsuario();
+	User_d createUser_d();
 
 	/**
-	 * Returns a new object of class '<em>Autenticacion</em>'.
+	 * Returns a new object of class '<em>Authentication</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Autenticacion</em>'.
+	 * @return a new object of class '<em>Authentication</em>'.
 	 * @generated
 	 */
-	Autenticacion createAutenticacion();
+	Authentication createAuthentication();
 
 	/**
-	 * Returns a new object of class '<em>Registro</em>'.
+	 * Returns a new object of class '<em>Registration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Registro</em>'.
+	 * @return a new object of class '<em>Registration</em>'.
 	 * @generated
 	 */
-	Registro createRegistro();
+	Registration createRegistration();
 
 	/**
-	 * Returns a new object of class '<em>Manejo Perfil</em>'.
+	 * Returns a new object of class '<em>Profile Management</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Manejo Perfil</em>'.
+	 * @return a new object of class '<em>Profile Management</em>'.
 	 * @generated
 	 */
-	ManejoPerfil createManejoPerfil();
+	ProfileManagement createProfileManagement();
 
 	/**
-	 * Returns a new object of class '<em>Accion</em>'.
+	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Accion</em>'.
+	 * @return a new object of class '<em>Action</em>'.
 	 * @generated
 	 */
-	Accion createAccion();
+	Action createAction();
 
 	/**
-	 * Returns a new object of class '<em>Crear Album</em>'.
+	 * Returns a new object of class '<em>Create Album</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Crear Album</em>'.
+	 * @return a new object of class '<em>Create Album</em>'.
 	 * @generated
 	 */
-	CrearAlbum createCrearAlbum();
+	CreateAlbum createCreateAlbum();
 
 	/**
-	 * Returns a new object of class '<em>Ver Album</em>'.
+	 * Returns a new object of class '<em>See Album</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ver Album</em>'.
+	 * @return a new object of class '<em>See Album</em>'.
 	 * @generated
 	 */
-	VerAlbum createVerAlbum();
+	SeeAlbum createSeeAlbum();
 
 	/**
-	 * Returns a new object of class '<em>Cargar Foto</em>'.
+	 * Returns a new object of class '<em>Load Photo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cargar Foto</em>'.
+	 * @return a new object of class '<em>Load Photo</em>'.
 	 * @generated
 	 */
-	CargarFoto createCargarFoto();
+	LoadPhoto createLoadPhoto();
 
 	/**
-	 * Returns a new object of class '<em>Ver Todas Las Fotos</em>'.
+	 * Returns a new object of class '<em>See All Photos</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ver Todas Las Fotos</em>'.
+	 * @return a new object of class '<em>See All Photos</em>'.
 	 * @generated
 	 */
-	VerTodasLasFotos createVerTodasLasFotos();
+	SeeAllPhotos createSeeAllPhotos();
 
 	/**
-	 * Returns a new object of class '<em>Editar Perfil</em>'.
+	 * Returns a new object of class '<em>Edit Profile</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Editar Perfil</em>'.
+	 * @return a new object of class '<em>Edit Profile</em>'.
 	 * @generated
 	 */
-	EditarPerfil createEditarPerfil();
+	EditProfile createEditProfile();
 
 	/**
-	 * Returns a new object of class '<em>Foto</em>'.
+	 * Returns a new object of class '<em>Photo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Foto</em>'.
+	 * @return a new object of class '<em>Photo</em>'.
 	 * @generated
 	 */
-	Foto createFoto();
+	Photo createPhoto();
 
 	/**
-	 * Returns a new object of class '<em>Categoria</em>'.
+	 * Returns a new object of class '<em>Album</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Categoria</em>'.
+	 * @return a new object of class '<em>Album</em>'.
 	 * @generated
 	 */
-	Categoria createCategoria();
+	Album createAlbum();
 
 	/**
-	 * Returns a new object of class '<em>Imagen</em>'.
+	 * Returns a new object of class '<em>Picture</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Imagen</em>'.
+	 * @return a new object of class '<em>Picture</em>'.
 	 * @generated
 	 */
-	Imagen createImagen();
+	Picture createPicture();
 
 	/**
 	 * Returns a new object of class '<em>Amazon Web Services</em>'.
@@ -850,31 +850,31 @@ public interface PhotosMetaModelFactory extends EFactory {
 	NTier createNTier();
 
 	/**
-	 * Returns a new object of class '<em>Capa</em>'.
+	 * Returns a new object of class '<em>Layer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Capa</em>'.
+	 * @return a new object of class '<em>Layer</em>'.
 	 * @generated
 	 */
-	Capa createCapa();
+	Layer createLayer();
 
 	/**
-	 * Returns a new object of class '<em>Conexion</em>'.
+	 * Returns a new object of class '<em>Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conexion</em>'.
+	 * @return a new object of class '<em>Connection</em>'.
 	 * @generated
 	 */
-	Conexion createConexion();
+	Connection createConnection();
 
 	/**
-	 * Returns a new object of class '<em>Relacion</em>'.
+	 * Returns a new object of class '<em>Relation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Relacion</em>'.
+	 * @return a new object of class '<em>Relation</em>'.
 	 * @generated
 	 */
-	Relacion createRelacion();
+	Relation createRelation();
 
 	/**
 	 * Returns a new object of class '<em>REST</em>'.
@@ -886,13 +886,13 @@ public interface PhotosMetaModelFactory extends EFactory {
 	REST createREST();
 
 	/**
-	 * Returns a new object of class '<em>Conexion Postgre SQL</em>'.
+	 * Returns a new object of class '<em>Postgre SQL Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conexion Postgre SQL</em>'.
+	 * @return a new object of class '<em>Postgre SQL Connection</em>'.
 	 * @generated
 	 */
-	ConexionPostgreSQL createConexionPostgreSQL();
+	PostgreSQLConnection createPostgreSQLConnection();
 
 	/**
 	 * Returns a new object of class '<em>Amazon S3API</em>'.
@@ -904,31 +904,31 @@ public interface PhotosMetaModelFactory extends EFactory {
 	AmazonS3API createAmazonS3API();
 
 	/**
-	 * Returns a new object of class '<em>Presentacion</em>'.
+	 * Returns a new object of class '<em>Presentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Presentacion</em>'.
+	 * @return a new object of class '<em>Presentation</em>'.
 	 * @generated
 	 */
-	Presentacion createPresentacion();
+	Presentation createPresentation();
 
 	/**
-	 * Returns a new object of class '<em>Logica De Negocio</em>'.
+	 * Returns a new object of class '<em>Business Logic</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Logica De Negocio</em>'.
+	 * @return a new object of class '<em>Business Logic</em>'.
 	 * @generated
 	 */
-	LogicaDeNegocio createLogicaDeNegocio();
+	BusinessLogic createBusinessLogic();
 
 	/**
-	 * Returns a new object of class '<em>Datos</em>'.
+	 * Returns a new object of class '<em>Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Datos</em>'.
+	 * @return a new object of class '<em>Data</em>'.
 	 * @generated
 	 */
-	Datos createDatos();
+	Data createData();
 
 	/**
 	 * Returns a new object of class '<em>Allowed To Use</em>'.
@@ -940,31 +940,31 @@ public interface PhotosMetaModelFactory extends EFactory {
 	AllowedToUse createAllowedToUse();
 
 	/**
-	 * Returns a new object of class '<em>Segmento Presentacion</em>'.
+	 * Returns a new object of class '<em>Presentation Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Segmento Presentacion</em>'.
+	 * @return a new object of class '<em>Presentation Segment</em>'.
 	 * @generated
 	 */
-	SegmentoPresentacion createSegmentoPresentacion();
+	PresentationSegment createPresentationSegment();
 
 	/**
-	 * Returns a new object of class '<em>Segmento Logica</em>'.
+	 * Returns a new object of class '<em>Business Logic Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Segmento Logica</em>'.
+	 * @return a new object of class '<em>Business Logic Segment</em>'.
 	 * @generated
 	 */
-	SegmentoLogica createSegmentoLogica();
+	BusinessLogicSegment createBusinessLogicSegment();
 
 	/**
-	 * Returns a new object of class '<em>Segmento Datos</em>'.
+	 * Returns a new object of class '<em>Data Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Segmento Datos</em>'.
+	 * @return a new object of class '<em>Data Segment</em>'.
 	 * @generated
 	 */
-	SegmentoDatos createSegmentoDatos();
+	DataSegment createDataSegment();
 
 	/**
 	 * Returns a new object of class '<em>View a</em>'.

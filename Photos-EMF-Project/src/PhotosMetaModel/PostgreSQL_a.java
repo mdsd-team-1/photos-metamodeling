@@ -13,5 +13,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface PostgreSQL_a extends SegmentoDatos {
+public interface PostgreSQL_a extends DataSegment {
 } // PostgreSQL_a

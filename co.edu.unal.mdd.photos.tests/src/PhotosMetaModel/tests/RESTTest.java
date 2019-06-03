@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RESTTest extends ConexionTest {
+public class RESTTest extends ConnectionTest {
 
 	/**
 	 * <!-- begin-user-doc -->

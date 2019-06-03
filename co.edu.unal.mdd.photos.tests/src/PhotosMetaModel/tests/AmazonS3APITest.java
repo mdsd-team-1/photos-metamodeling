@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AmazonS3APITest extends ConexionTest {
+public class AmazonS3APITest extends ConnectionTest {
 
 	/**
 	 * <!-- begin-user-doc -->

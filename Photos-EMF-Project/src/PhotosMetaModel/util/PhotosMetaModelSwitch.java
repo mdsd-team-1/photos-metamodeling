@@ -3,8 +3,9 @@
 package PhotosMetaModel.util;
 
 import PhotosMetaModel.Access;
-import PhotosMetaModel.Accion;
+import PhotosMetaModel.Action;
 import PhotosMetaModel.Action_a;
+import PhotosMetaModel.Album;
 import PhotosMetaModel.AllowedToUse;
 import PhotosMetaModel.Alter;
 import PhotosMetaModel.AmazonAurora;
@@ -17,15 +18,14 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.Architecture;
 import PhotosMetaModel.Array;
-import PhotosMetaModel.Autenticacion;
+import PhotosMetaModel.Authentication;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
 import PhotosMetaModel.Bucket;
 import PhotosMetaModel.BucketObjectsNotPublic;
-import PhotosMetaModel.Capa;
-import PhotosMetaModel.CargarFoto;
-import PhotosMetaModel.Categoria;
+import PhotosMetaModel.BusinessLogic;
+import PhotosMetaModel.BusinessLogicSegment;
 import PhotosMetaModel.Class_r;
 import PhotosMetaModel.Clause;
 import PhotosMetaModel.Cluster;
@@ -37,23 +37,23 @@ import PhotosMetaModel.ComponentDidMount;
 import PhotosMetaModel.ComponentWillUnmount;
 import PhotosMetaModel.Component_a;
 import PhotosMetaModel.Component_r;
-import PhotosMetaModel.Conexion;
-import PhotosMetaModel.ConexionPostgreSQL;
 import PhotosMetaModel.Configuration;
+import PhotosMetaModel.Connection;
 import PhotosMetaModel.Constraint;
 import PhotosMetaModel.Constructor;
 import PhotosMetaModel.Controller_a;
-import PhotosMetaModel.CrearAlbum;
 import PhotosMetaModel.Create;
+import PhotosMetaModel.CreateAlbum;
+import PhotosMetaModel.Data;
+import PhotosMetaModel.DataSegment;
 import PhotosMetaModel.DataType;
 import PhotosMetaModel.Database;
-import PhotosMetaModel.Datos;
 import PhotosMetaModel.Delete;
 import PhotosMetaModel.DeleteMapping;
 import PhotosMetaModel.Distnct;
 import PhotosMetaModel.Domain;
 import PhotosMetaModel.Drop;
-import PhotosMetaModel.EditarPerfil;
+import PhotosMetaModel.EditProfile;
 import PhotosMetaModel.Element_r;
 import PhotosMetaModel.EnableAuthorizationServer;
 import PhotosMetaModel.EnableGlobalMethodSecurity;
@@ -64,7 +64,6 @@ import PhotosMetaModel.ExceptionHandler;
 import PhotosMetaModel.File_a;
 import PhotosMetaModel.Folder_a;
 import PhotosMetaModel.ForeignKey;
-import PhotosMetaModel.Foto;
 import PhotosMetaModel.From;
 import PhotosMetaModel.Function_p;
 import PhotosMetaModel.Function_r;
@@ -73,16 +72,15 @@ import PhotosMetaModel.GetMapping;
 import PhotosMetaModel.GroupBy;
 import PhotosMetaModel.Having;
 import PhotosMetaModel.Id;
-import PhotosMetaModel.Imagen;
 import PhotosMetaModel.Index;
 import PhotosMetaModel.Index_p;
 import PhotosMetaModel.Insert;
 import PhotosMetaModel.Into;
 import PhotosMetaModel.Join;
 import PhotosMetaModel.Lateral;
+import PhotosMetaModel.Layer;
 import PhotosMetaModel.Limit;
-import PhotosMetaModel.LogicaDeNegocio;
-import PhotosMetaModel.ManejoPerfil;
+import PhotosMetaModel.LoadPhoto;
 import PhotosMetaModel.MetaData;
 import PhotosMetaModel.Model_a;
 import PhotosMetaModel.NTier;
@@ -92,14 +90,19 @@ import PhotosMetaModel.Offset;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_p;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotosMetaModelPackage;
+import PhotosMetaModel.Picture;
 import PhotosMetaModel.Policy;
 import PhotosMetaModel.PostMapping;
 import PhotosMetaModel.PostgreSQL;
+import PhotosMetaModel.PostgreSQLConnection;
 import PhotosMetaModel.PostgreSQL_a;
 import PhotosMetaModel.Predicate;
-import PhotosMetaModel.Presentacion;
+import PhotosMetaModel.Presentation;
+import PhotosMetaModel.PresentationSegment;
 import PhotosMetaModel.Privilege;
+import PhotosMetaModel.ProfileManagement;
 import PhotosMetaModel.Prop;
 import PhotosMetaModel.Public;
 import PhotosMetaModel.PutMapping;
@@ -107,8 +110,8 @@ import PhotosMetaModel.Query;
 import PhotosMetaModel.REST;
 import PhotosMetaModel.React;
 import PhotosMetaModel.ReactDOM;
-import PhotosMetaModel.Registro;
-import PhotosMetaModel.Relacion;
+import PhotosMetaModel.Registration;
+import PhotosMetaModel.Relation;
 import PhotosMetaModel.Render;
 import PhotosMetaModel.Repository;
 import PhotosMetaModel.Repository_a;
@@ -119,9 +122,8 @@ import PhotosMetaModel.Row;
 import PhotosMetaModel.Scheme;
 import PhotosMetaModel.SearchCriteria;
 import PhotosMetaModel.Security_a;
-import PhotosMetaModel.SegmentoDatos;
-import PhotosMetaModel.SegmentoLogica;
-import PhotosMetaModel.SegmentoPresentacion;
+import PhotosMetaModel.SeeAlbum;
+import PhotosMetaModel.SeeAllPhotos;
 import PhotosMetaModel.Select;
 import PhotosMetaModel.SoftGallery;
 import PhotosMetaModel.Specification;
@@ -132,12 +134,10 @@ import PhotosMetaModel.Table_s;
 import PhotosMetaModel.Technology;
 import PhotosMetaModel.Trigger;
 import PhotosMetaModel.Update;
+import PhotosMetaModel.User_d;
 import PhotosMetaModel.User_p;
 import PhotosMetaModel.Using;
-import PhotosMetaModel.Usuario;
 import PhotosMetaModel.Values;
-import PhotosMetaModel.VerAlbum;
-import PhotosMetaModel.VerTodasLasFotos;
 import PhotosMetaModel.View;
 import PhotosMetaModel.View_a;
 import PhotosMetaModel.Where;
@@ -691,86 +691,86 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.USUARIO: {
-				Usuario usuario = (Usuario)theEObject;
-				T result = caseUsuario(usuario);
+			case PhotosMetaModelPackage.USER_D: {
+				User_d user_d = (User_d)theEObject;
+				T result = caseUser_d(user_d);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.AUTENTICACION: {
-				Autenticacion autenticacion = (Autenticacion)theEObject;
-				T result = caseAutenticacion(autenticacion);
+			case PhotosMetaModelPackage.AUTHENTICATION: {
+				Authentication authentication = (Authentication)theEObject;
+				T result = caseAuthentication(authentication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.REGISTRO: {
-				Registro registro = (Registro)theEObject;
-				T result = caseRegistro(registro);
+			case PhotosMetaModelPackage.REGISTRATION: {
+				Registration registration = (Registration)theEObject;
+				T result = caseRegistration(registration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.MANEJO_PERFIL: {
-				ManejoPerfil manejoPerfil = (ManejoPerfil)theEObject;
-				T result = caseManejoPerfil(manejoPerfil);
+			case PhotosMetaModelPackage.PROFILE_MANAGEMENT: {
+				ProfileManagement profileManagement = (ProfileManagement)theEObject;
+				T result = caseProfileManagement(profileManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.ACCION: {
-				Accion accion = (Accion)theEObject;
-				T result = caseAccion(accion);
+			case PhotosMetaModelPackage.ACTION: {
+				Action action = (Action)theEObject;
+				T result = caseAction(action);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.CREAR_ALBUM: {
-				CrearAlbum crearAlbum = (CrearAlbum)theEObject;
-				T result = caseCrearAlbum(crearAlbum);
-				if (result == null) result = caseAccion(crearAlbum);
+			case PhotosMetaModelPackage.CREATE_ALBUM: {
+				CreateAlbum createAlbum = (CreateAlbum)theEObject;
+				T result = caseCreateAlbum(createAlbum);
+				if (result == null) result = caseAction(createAlbum);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.VER_ALBUM: {
-				VerAlbum verAlbum = (VerAlbum)theEObject;
-				T result = caseVerAlbum(verAlbum);
-				if (result == null) result = caseAccion(verAlbum);
+			case PhotosMetaModelPackage.SEE_ALBUM: {
+				SeeAlbum seeAlbum = (SeeAlbum)theEObject;
+				T result = caseSeeAlbum(seeAlbum);
+				if (result == null) result = caseAction(seeAlbum);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.CARGAR_FOTO: {
-				CargarFoto cargarFoto = (CargarFoto)theEObject;
-				T result = caseCargarFoto(cargarFoto);
-				if (result == null) result = caseAccion(cargarFoto);
+			case PhotosMetaModelPackage.LOAD_PHOTO: {
+				LoadPhoto loadPhoto = (LoadPhoto)theEObject;
+				T result = caseLoadPhoto(loadPhoto);
+				if (result == null) result = caseAction(loadPhoto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.VER_TODAS_LAS_FOTOS: {
-				VerTodasLasFotos verTodasLasFotos = (VerTodasLasFotos)theEObject;
-				T result = caseVerTodasLasFotos(verTodasLasFotos);
-				if (result == null) result = caseAccion(verTodasLasFotos);
+			case PhotosMetaModelPackage.SEE_ALL_PHOTOS: {
+				SeeAllPhotos seeAllPhotos = (SeeAllPhotos)theEObject;
+				T result = caseSeeAllPhotos(seeAllPhotos);
+				if (result == null) result = caseAction(seeAllPhotos);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.EDITAR_PERFIL: {
-				EditarPerfil editarPerfil = (EditarPerfil)theEObject;
-				T result = caseEditarPerfil(editarPerfil);
-				if (result == null) result = caseAccion(editarPerfil);
+			case PhotosMetaModelPackage.EDIT_PROFILE: {
+				EditProfile editProfile = (EditProfile)theEObject;
+				T result = caseEditProfile(editProfile);
+				if (result == null) result = caseAction(editProfile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.FOTO: {
-				Foto foto = (Foto)theEObject;
-				T result = caseFoto(foto);
+			case PhotosMetaModelPackage.PHOTO: {
+				Photo photo = (Photo)theEObject;
+				T result = casePhoto(photo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.CATEGORIA: {
-				Categoria categoria = (Categoria)theEObject;
-				T result = caseCategoria(categoria);
+			case PhotosMetaModelPackage.ALBUM: {
+				Album album = (Album)theEObject;
+				T result = caseAlbum(album);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.IMAGEN: {
-				Imagen imagen = (Imagen)theEObject;
-				T result = caseImagen(imagen);
+			case PhotosMetaModelPackage.PICTURE: {
+				Picture picture = (Picture)theEObject;
+				T result = casePicture(picture);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -786,151 +786,151 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.CAPA: {
-				Capa capa = (Capa)theEObject;
-				T result = caseCapa(capa);
+			case PhotosMetaModelPackage.LAYER: {
+				Layer layer = (Layer)theEObject;
+				T result = caseLayer(layer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.CONEXION: {
-				Conexion conexion = (Conexion)theEObject;
-				T result = caseConexion(conexion);
+			case PhotosMetaModelPackage.CONNECTION: {
+				Connection connection = (Connection)theEObject;
+				T result = caseConnection(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.RELACION: {
-				Relacion relacion = (Relacion)theEObject;
-				T result = caseRelacion(relacion);
+			case PhotosMetaModelPackage.RELATION: {
+				Relation relation = (Relation)theEObject;
+				T result = caseRelation(relation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.REST: {
 				REST rest = (REST)theEObject;
 				T result = caseREST(rest);
-				if (result == null) result = caseConexion(rest);
+				if (result == null) result = caseConnection(rest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.CONEXION_POSTGRE_SQL: {
-				ConexionPostgreSQL conexionPostgreSQL = (ConexionPostgreSQL)theEObject;
-				T result = caseConexionPostgreSQL(conexionPostgreSQL);
-				if (result == null) result = caseConexion(conexionPostgreSQL);
+			case PhotosMetaModelPackage.POSTGRE_SQL_CONNECTION: {
+				PostgreSQLConnection postgreSQLConnection = (PostgreSQLConnection)theEObject;
+				T result = casePostgreSQLConnection(postgreSQLConnection);
+				if (result == null) result = caseConnection(postgreSQLConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.AMAZON_S3API: {
 				AmazonS3API amazonS3API = (AmazonS3API)theEObject;
 				T result = caseAmazonS3API(amazonS3API);
-				if (result == null) result = caseConexion(amazonS3API);
+				if (result == null) result = caseConnection(amazonS3API);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.PRESENTACION: {
-				Presentacion presentacion = (Presentacion)theEObject;
-				T result = casePresentacion(presentacion);
-				if (result == null) result = caseCapa(presentacion);
+			case PhotosMetaModelPackage.PRESENTATION: {
+				Presentation presentation = (Presentation)theEObject;
+				T result = casePresentation(presentation);
+				if (result == null) result = caseLayer(presentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.LOGICA_DE_NEGOCIO: {
-				LogicaDeNegocio logicaDeNegocio = (LogicaDeNegocio)theEObject;
-				T result = caseLogicaDeNegocio(logicaDeNegocio);
-				if (result == null) result = caseCapa(logicaDeNegocio);
+			case PhotosMetaModelPackage.BUSINESS_LOGIC: {
+				BusinessLogic businessLogic = (BusinessLogic)theEObject;
+				T result = caseBusinessLogic(businessLogic);
+				if (result == null) result = caseLayer(businessLogic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.DATOS: {
-				Datos datos = (Datos)theEObject;
-				T result = caseDatos(datos);
-				if (result == null) result = caseCapa(datos);
+			case PhotosMetaModelPackage.DATA: {
+				Data data = (Data)theEObject;
+				T result = caseData(data);
+				if (result == null) result = caseLayer(data);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.ALLOWED_TO_USE: {
 				AllowedToUse allowedToUse = (AllowedToUse)theEObject;
 				T result = caseAllowedToUse(allowedToUse);
-				if (result == null) result = caseRelacion(allowedToUse);
+				if (result == null) result = caseRelation(allowedToUse);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.SEGMENTO_PRESENTACION: {
-				SegmentoPresentacion segmentoPresentacion = (SegmentoPresentacion)theEObject;
-				T result = caseSegmentoPresentacion(segmentoPresentacion);
+			case PhotosMetaModelPackage.PRESENTATION_SEGMENT: {
+				PresentationSegment presentationSegment = (PresentationSegment)theEObject;
+				T result = casePresentationSegment(presentationSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.SEGMENTO_LOGICA: {
-				SegmentoLogica segmentoLogica = (SegmentoLogica)theEObject;
-				T result = caseSegmentoLogica(segmentoLogica);
+			case PhotosMetaModelPackage.BUSINESS_LOGIC_SEGMENT: {
+				BusinessLogicSegment businessLogicSegment = (BusinessLogicSegment)theEObject;
+				T result = caseBusinessLogicSegment(businessLogicSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PhotosMetaModelPackage.SEGMENTO_DATOS: {
-				SegmentoDatos segmentoDatos = (SegmentoDatos)theEObject;
-				T result = caseSegmentoDatos(segmentoDatos);
+			case PhotosMetaModelPackage.DATA_SEGMENT: {
+				DataSegment dataSegment = (DataSegment)theEObject;
+				T result = caseDataSegment(dataSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.VIEW_A: {
 				View_a view_a = (View_a)theEObject;
 				T result = caseView_a(view_a);
-				if (result == null) result = caseSegmentoPresentacion(view_a);
+				if (result == null) result = casePresentationSegment(view_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.COMPONENT_A: {
 				Component_a component_a = (Component_a)theEObject;
 				T result = caseComponent_a(component_a);
-				if (result == null) result = caseSegmentoPresentacion(component_a);
+				if (result == null) result = casePresentationSegment(component_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.ACTION_A: {
 				Action_a action_a = (Action_a)theEObject;
 				T result = caseAction_a(action_a);
-				if (result == null) result = caseSegmentoPresentacion(action_a);
+				if (result == null) result = casePresentationSegment(action_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.CONTROLLER_A: {
 				Controller_a controller_a = (Controller_a)theEObject;
 				T result = caseController_a(controller_a);
-				if (result == null) result = caseSegmentoLogica(controller_a);
+				if (result == null) result = caseBusinessLogicSegment(controller_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.MODEL_A: {
 				Model_a model_a = (Model_a)theEObject;
 				T result = caseModel_a(model_a);
-				if (result == null) result = caseSegmentoLogica(model_a);
+				if (result == null) result = caseBusinessLogicSegment(model_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.REPOSITORY_A: {
 				Repository_a repository_a = (Repository_a)theEObject;
 				T result = caseRepository_a(repository_a);
-				if (result == null) result = caseSegmentoLogica(repository_a);
+				if (result == null) result = caseBusinessLogicSegment(repository_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.SECURITY_A: {
 				Security_a security_a = (Security_a)theEObject;
 				T result = caseSecurity_a(security_a);
-				if (result == null) result = caseSegmentoLogica(security_a);
+				if (result == null) result = caseBusinessLogicSegment(security_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.POSTGRE_SQL_A: {
 				PostgreSQL_a postgreSQL_a = (PostgreSQL_a)theEObject;
 				T result = casePostgreSQL_a(postgreSQL_a);
-				if (result == null) result = caseSegmentoDatos(postgreSQL_a);
+				if (result == null) result = caseDataSegment(postgreSQL_a);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.AMAZON_S3_STORAGE: {
 				AmazonS3Storage amazonS3Storage = (AmazonS3Storage)theEObject;
 				T result = caseAmazonS3Storage(amazonS3Storage);
-				if (result == null) result = caseSegmentoDatos(amazonS3Storage);
+				if (result == null) result = caseDataSegment(amazonS3Storage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -2253,197 +2253,197 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Usuario</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>User d</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Usuario</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>User d</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUsuario(Usuario object) {
+	public T caseUser_d(User_d object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Autenticacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Authentication</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Autenticacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Authentication</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAutenticacion(Autenticacion object) {
+	public T caseAuthentication(Authentication object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Registro</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Registration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Registro</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Registration</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRegistro(Registro object) {
+	public T caseRegistration(Registration object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Manejo Perfil</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Profile Management</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Manejo Perfil</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Profile Management</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseManejoPerfil(ManejoPerfil object) {
+	public T caseProfileManagement(ProfileManagement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Accion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Accion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAccion(Accion object) {
+	public T caseAction(Action object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Crear Album</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Create Album</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Crear Album</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Create Album</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCrearAlbum(CrearAlbum object) {
+	public T caseCreateAlbum(CreateAlbum object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ver Album</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>See Album</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ver Album</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>See Album</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVerAlbum(VerAlbum object) {
+	public T caseSeeAlbum(SeeAlbum object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cargar Foto</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Load Photo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cargar Foto</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Load Photo</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCargarFoto(CargarFoto object) {
+	public T caseLoadPhoto(LoadPhoto object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ver Todas Las Fotos</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>See All Photos</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ver Todas Las Fotos</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>See All Photos</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVerTodasLasFotos(VerTodasLasFotos object) {
+	public T caseSeeAllPhotos(SeeAllPhotos object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Editar Perfil</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Edit Profile</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Editar Perfil</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Edit Profile</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEditarPerfil(EditarPerfil object) {
+	public T caseEditProfile(EditProfile object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Foto</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Photo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Foto</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Photo</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFoto(Foto object) {
+	public T casePhoto(Photo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Categoria</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Album</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Categoria</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Album</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCategoria(Categoria object) {
+	public T caseAlbum(Album object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Imagen</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Picture</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Imagen</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Picture</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseImagen(Imagen object) {
+	public T casePicture(Picture object) {
 		return null;
 	}
 
@@ -2478,47 +2478,47 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Capa</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Layer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Capa</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Layer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCapa(Capa object) {
+	public T caseLayer(Layer object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Conexion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Conexion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConexion(Conexion object) {
+	public T caseConnection(Connection object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Relacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Relation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Relacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Relation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelacion(Relacion object) {
+	public T caseRelation(Relation object) {
 		return null;
 	}
 
@@ -2538,17 +2538,17 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Conexion Postgre SQL</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Postgre SQL Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Conexion Postgre SQL</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Postgre SQL Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConexionPostgreSQL(ConexionPostgreSQL object) {
+	public T casePostgreSQLConnection(PostgreSQLConnection object) {
 		return null;
 	}
 
@@ -2568,47 +2568,47 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Presentacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Presentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Presentacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Presentation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePresentacion(Presentacion object) {
+	public T casePresentation(Presentation object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Logica De Negocio</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Business Logic</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Logica De Negocio</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Business Logic</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLogicaDeNegocio(LogicaDeNegocio object) {
+	public T caseBusinessLogic(BusinessLogic object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Datos</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Datos</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDatos(Datos object) {
+	public T caseData(Data object) {
 		return null;
 	}
 
@@ -2628,47 +2628,47 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Segmento Presentacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Presentation Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Segmento Presentacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Presentation Segment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSegmentoPresentacion(SegmentoPresentacion object) {
+	public T casePresentationSegment(PresentationSegment object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Segmento Logica</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Business Logic Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Segmento Logica</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Business Logic Segment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSegmentoLogica(SegmentoLogica object) {
+	public T caseBusinessLogicSegment(BusinessLogicSegment object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Segmento Datos</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Data Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Segmento Datos</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Data Segment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSegmentoDatos(SegmentoDatos object) {
+	public T caseDataSegment(DataSegment object) {
 		return null;
 	}
 

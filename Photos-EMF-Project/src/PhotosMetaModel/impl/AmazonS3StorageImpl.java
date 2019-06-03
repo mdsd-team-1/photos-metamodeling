@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AmazonS3StorageImpl extends SegmentoDatosImpl implements AmazonS3Storage {
+public class AmazonS3StorageImpl extends DataSegmentImpl implements AmazonS3Storage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Controller_aImpl extends SegmentoLogicaImpl implements Controller_a {
+public class Controller_aImpl extends BusinessLogicSegmentImpl implements Controller_a {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -3,8 +3,9 @@
 package PhotosMetaModel.util;
 
 import PhotosMetaModel.Access;
-import PhotosMetaModel.Accion;
+import PhotosMetaModel.Action;
 import PhotosMetaModel.Action_a;
+import PhotosMetaModel.Album;
 import PhotosMetaModel.AllowedToUse;
 import PhotosMetaModel.Alter;
 import PhotosMetaModel.AmazonAurora;
@@ -17,15 +18,14 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.Architecture;
 import PhotosMetaModel.Array;
-import PhotosMetaModel.Autenticacion;
+import PhotosMetaModel.Authentication;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
 import PhotosMetaModel.Bucket;
 import PhotosMetaModel.BucketObjectsNotPublic;
-import PhotosMetaModel.Capa;
-import PhotosMetaModel.CargarFoto;
-import PhotosMetaModel.Categoria;
+import PhotosMetaModel.BusinessLogic;
+import PhotosMetaModel.BusinessLogicSegment;
 import PhotosMetaModel.Class_r;
 import PhotosMetaModel.Clause;
 import PhotosMetaModel.Cluster;
@@ -37,23 +37,23 @@ import PhotosMetaModel.ComponentDidMount;
 import PhotosMetaModel.ComponentWillUnmount;
 import PhotosMetaModel.Component_a;
 import PhotosMetaModel.Component_r;
-import PhotosMetaModel.Conexion;
-import PhotosMetaModel.ConexionPostgreSQL;
 import PhotosMetaModel.Configuration;
+import PhotosMetaModel.Connection;
 import PhotosMetaModel.Constraint;
 import PhotosMetaModel.Constructor;
 import PhotosMetaModel.Controller_a;
-import PhotosMetaModel.CrearAlbum;
 import PhotosMetaModel.Create;
+import PhotosMetaModel.CreateAlbum;
+import PhotosMetaModel.Data;
+import PhotosMetaModel.DataSegment;
 import PhotosMetaModel.DataType;
 import PhotosMetaModel.Database;
-import PhotosMetaModel.Datos;
 import PhotosMetaModel.Delete;
 import PhotosMetaModel.DeleteMapping;
 import PhotosMetaModel.Distnct;
 import PhotosMetaModel.Domain;
 import PhotosMetaModel.Drop;
-import PhotosMetaModel.EditarPerfil;
+import PhotosMetaModel.EditProfile;
 import PhotosMetaModel.Element_r;
 import PhotosMetaModel.EnableAuthorizationServer;
 import PhotosMetaModel.EnableGlobalMethodSecurity;
@@ -64,7 +64,6 @@ import PhotosMetaModel.ExceptionHandler;
 import PhotosMetaModel.File_a;
 import PhotosMetaModel.Folder_a;
 import PhotosMetaModel.ForeignKey;
-import PhotosMetaModel.Foto;
 import PhotosMetaModel.From;
 import PhotosMetaModel.Function_p;
 import PhotosMetaModel.Function_r;
@@ -73,16 +72,15 @@ import PhotosMetaModel.GetMapping;
 import PhotosMetaModel.GroupBy;
 import PhotosMetaModel.Having;
 import PhotosMetaModel.Id;
-import PhotosMetaModel.Imagen;
 import PhotosMetaModel.Index;
 import PhotosMetaModel.Index_p;
 import PhotosMetaModel.Insert;
 import PhotosMetaModel.Into;
 import PhotosMetaModel.Join;
 import PhotosMetaModel.Lateral;
+import PhotosMetaModel.Layer;
 import PhotosMetaModel.Limit;
-import PhotosMetaModel.LogicaDeNegocio;
-import PhotosMetaModel.ManejoPerfil;
+import PhotosMetaModel.LoadPhoto;
 import PhotosMetaModel.MetaData;
 import PhotosMetaModel.Model_a;
 import PhotosMetaModel.NTier;
@@ -92,14 +90,19 @@ import PhotosMetaModel.Offset;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_p;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotosMetaModelPackage;
+import PhotosMetaModel.Picture;
 import PhotosMetaModel.Policy;
 import PhotosMetaModel.PostMapping;
 import PhotosMetaModel.PostgreSQL;
+import PhotosMetaModel.PostgreSQLConnection;
 import PhotosMetaModel.PostgreSQL_a;
 import PhotosMetaModel.Predicate;
-import PhotosMetaModel.Presentacion;
+import PhotosMetaModel.Presentation;
+import PhotosMetaModel.PresentationSegment;
 import PhotosMetaModel.Privilege;
+import PhotosMetaModel.ProfileManagement;
 import PhotosMetaModel.Prop;
 import PhotosMetaModel.Public;
 import PhotosMetaModel.PutMapping;
@@ -107,8 +110,8 @@ import PhotosMetaModel.Query;
 import PhotosMetaModel.REST;
 import PhotosMetaModel.React;
 import PhotosMetaModel.ReactDOM;
-import PhotosMetaModel.Registro;
-import PhotosMetaModel.Relacion;
+import PhotosMetaModel.Registration;
+import PhotosMetaModel.Relation;
 import PhotosMetaModel.Render;
 import PhotosMetaModel.Repository;
 import PhotosMetaModel.Repository_a;
@@ -119,9 +122,8 @@ import PhotosMetaModel.Row;
 import PhotosMetaModel.Scheme;
 import PhotosMetaModel.SearchCriteria;
 import PhotosMetaModel.Security_a;
-import PhotosMetaModel.SegmentoDatos;
-import PhotosMetaModel.SegmentoLogica;
-import PhotosMetaModel.SegmentoPresentacion;
+import PhotosMetaModel.SeeAlbum;
+import PhotosMetaModel.SeeAllPhotos;
 import PhotosMetaModel.Select;
 import PhotosMetaModel.SoftGallery;
 import PhotosMetaModel.Specification;
@@ -132,12 +134,10 @@ import PhotosMetaModel.Table_s;
 import PhotosMetaModel.Technology;
 import PhotosMetaModel.Trigger;
 import PhotosMetaModel.Update;
+import PhotosMetaModel.User_d;
 import PhotosMetaModel.User_p;
 import PhotosMetaModel.Using;
-import PhotosMetaModel.Usuario;
 import PhotosMetaModel.Values;
-import PhotosMetaModel.VerAlbum;
-import PhotosMetaModel.VerTodasLasFotos;
 import PhotosMetaModel.View;
 import PhotosMetaModel.View_a;
 import PhotosMetaModel.Where;
@@ -514,56 +514,56 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 				return createOrder_pAdapter();
 			}
 			@Override
-			public Adapter caseUsuario(Usuario object) {
-				return createUsuarioAdapter();
+			public Adapter caseUser_d(User_d object) {
+				return createUser_dAdapter();
 			}
 			@Override
-			public Adapter caseAutenticacion(Autenticacion object) {
-				return createAutenticacionAdapter();
+			public Adapter caseAuthentication(Authentication object) {
+				return createAuthenticationAdapter();
 			}
 			@Override
-			public Adapter caseRegistro(Registro object) {
-				return createRegistroAdapter();
+			public Adapter caseRegistration(Registration object) {
+				return createRegistrationAdapter();
 			}
 			@Override
-			public Adapter caseManejoPerfil(ManejoPerfil object) {
-				return createManejoPerfilAdapter();
+			public Adapter caseProfileManagement(ProfileManagement object) {
+				return createProfileManagementAdapter();
 			}
 			@Override
-			public Adapter caseAccion(Accion object) {
-				return createAccionAdapter();
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
 			}
 			@Override
-			public Adapter caseCrearAlbum(CrearAlbum object) {
-				return createCrearAlbumAdapter();
+			public Adapter caseCreateAlbum(CreateAlbum object) {
+				return createCreateAlbumAdapter();
 			}
 			@Override
-			public Adapter caseVerAlbum(VerAlbum object) {
-				return createVerAlbumAdapter();
+			public Adapter caseSeeAlbum(SeeAlbum object) {
+				return createSeeAlbumAdapter();
 			}
 			@Override
-			public Adapter caseCargarFoto(CargarFoto object) {
-				return createCargarFotoAdapter();
+			public Adapter caseLoadPhoto(LoadPhoto object) {
+				return createLoadPhotoAdapter();
 			}
 			@Override
-			public Adapter caseVerTodasLasFotos(VerTodasLasFotos object) {
-				return createVerTodasLasFotosAdapter();
+			public Adapter caseSeeAllPhotos(SeeAllPhotos object) {
+				return createSeeAllPhotosAdapter();
 			}
 			@Override
-			public Adapter caseEditarPerfil(EditarPerfil object) {
-				return createEditarPerfilAdapter();
+			public Adapter caseEditProfile(EditProfile object) {
+				return createEditProfileAdapter();
 			}
 			@Override
-			public Adapter caseFoto(Foto object) {
-				return createFotoAdapter();
+			public Adapter casePhoto(Photo object) {
+				return createPhotoAdapter();
 			}
 			@Override
-			public Adapter caseCategoria(Categoria object) {
-				return createCategoriaAdapter();
+			public Adapter caseAlbum(Album object) {
+				return createAlbumAdapter();
 			}
 			@Override
-			public Adapter caseImagen(Imagen object) {
-				return createImagenAdapter();
+			public Adapter casePicture(Picture object) {
+				return createPictureAdapter();
 			}
 			@Override
 			public Adapter caseAmazonWebServices(AmazonWebServices object) {
@@ -574,56 +574,56 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 				return createNTierAdapter();
 			}
 			@Override
-			public Adapter caseCapa(Capa object) {
-				return createCapaAdapter();
+			public Adapter caseLayer(Layer object) {
+				return createLayerAdapter();
 			}
 			@Override
-			public Adapter caseConexion(Conexion object) {
-				return createConexionAdapter();
+			public Adapter caseConnection(Connection object) {
+				return createConnectionAdapter();
 			}
 			@Override
-			public Adapter caseRelacion(Relacion object) {
-				return createRelacionAdapter();
+			public Adapter caseRelation(Relation object) {
+				return createRelationAdapter();
 			}
 			@Override
 			public Adapter caseREST(REST object) {
 				return createRESTAdapter();
 			}
 			@Override
-			public Adapter caseConexionPostgreSQL(ConexionPostgreSQL object) {
-				return createConexionPostgreSQLAdapter();
+			public Adapter casePostgreSQLConnection(PostgreSQLConnection object) {
+				return createPostgreSQLConnectionAdapter();
 			}
 			@Override
 			public Adapter caseAmazonS3API(AmazonS3API object) {
 				return createAmazonS3APIAdapter();
 			}
 			@Override
-			public Adapter casePresentacion(Presentacion object) {
-				return createPresentacionAdapter();
+			public Adapter casePresentation(Presentation object) {
+				return createPresentationAdapter();
 			}
 			@Override
-			public Adapter caseLogicaDeNegocio(LogicaDeNegocio object) {
-				return createLogicaDeNegocioAdapter();
+			public Adapter caseBusinessLogic(BusinessLogic object) {
+				return createBusinessLogicAdapter();
 			}
 			@Override
-			public Adapter caseDatos(Datos object) {
-				return createDatosAdapter();
+			public Adapter caseData(Data object) {
+				return createDataAdapter();
 			}
 			@Override
 			public Adapter caseAllowedToUse(AllowedToUse object) {
 				return createAllowedToUseAdapter();
 			}
 			@Override
-			public Adapter caseSegmentoPresentacion(SegmentoPresentacion object) {
-				return createSegmentoPresentacionAdapter();
+			public Adapter casePresentationSegment(PresentationSegment object) {
+				return createPresentationSegmentAdapter();
 			}
 			@Override
-			public Adapter caseSegmentoLogica(SegmentoLogica object) {
-				return createSegmentoLogicaAdapter();
+			public Adapter caseBusinessLogicSegment(BusinessLogicSegment object) {
+				return createBusinessLogicSegmentAdapter();
 			}
 			@Override
-			public Adapter caseSegmentoDatos(SegmentoDatos object) {
-				return createSegmentoDatosAdapter();
+			public Adapter caseDataSegment(DataSegment object) {
+				return createDataSegmentAdapter();
 			}
 			@Override
 			public Adapter caseView_a(View_a object) {
@@ -1860,184 +1860,184 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Usuario <em>Usuario</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.User_d <em>User d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Usuario
+	 * @see PhotosMetaModel.User_d
 	 * @generated
 	 */
-	public Adapter createUsuarioAdapter() {
+	public Adapter createUser_dAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Autenticacion <em>Autenticacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Authentication <em>Authentication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Autenticacion
+	 * @see PhotosMetaModel.Authentication
 	 * @generated
 	 */
-	public Adapter createAutenticacionAdapter() {
+	public Adapter createAuthenticationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Registro <em>Registro</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Registration <em>Registration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Registro
+	 * @see PhotosMetaModel.Registration
 	 * @generated
 	 */
-	public Adapter createRegistroAdapter() {
+	public Adapter createRegistrationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.ManejoPerfil <em>Manejo Perfil</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.ProfileManagement <em>Profile Management</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.ManejoPerfil
+	 * @see PhotosMetaModel.ProfileManagement
 	 * @generated
 	 */
-	public Adapter createManejoPerfilAdapter() {
+	public Adapter createProfileManagementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Accion <em>Accion</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Accion
+	 * @see PhotosMetaModel.Action
 	 * @generated
 	 */
-	public Adapter createAccionAdapter() {
+	public Adapter createActionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.CrearAlbum <em>Crear Album</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.CreateAlbum <em>Create Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.CrearAlbum
+	 * @see PhotosMetaModel.CreateAlbum
 	 * @generated
 	 */
-	public Adapter createCrearAlbumAdapter() {
+	public Adapter createCreateAlbumAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.VerAlbum <em>Ver Album</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.SeeAlbum <em>See Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.VerAlbum
+	 * @see PhotosMetaModel.SeeAlbum
 	 * @generated
 	 */
-	public Adapter createVerAlbumAdapter() {
+	public Adapter createSeeAlbumAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.CargarFoto <em>Cargar Foto</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.LoadPhoto <em>Load Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.CargarFoto
+	 * @see PhotosMetaModel.LoadPhoto
 	 * @generated
 	 */
-	public Adapter createCargarFotoAdapter() {
+	public Adapter createLoadPhotoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.VerTodasLasFotos <em>Ver Todas Las Fotos</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.SeeAllPhotos <em>See All Photos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.VerTodasLasFotos
+	 * @see PhotosMetaModel.SeeAllPhotos
 	 * @generated
 	 */
-	public Adapter createVerTodasLasFotosAdapter() {
+	public Adapter createSeeAllPhotosAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.EditarPerfil <em>Editar Perfil</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.EditProfile <em>Edit Profile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.EditarPerfil
+	 * @see PhotosMetaModel.EditProfile
 	 * @generated
 	 */
-	public Adapter createEditarPerfilAdapter() {
+	public Adapter createEditProfileAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Foto <em>Foto</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Photo <em>Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Foto
+	 * @see PhotosMetaModel.Photo
 	 * @generated
 	 */
-	public Adapter createFotoAdapter() {
+	public Adapter createPhotoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Categoria <em>Categoria</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Album <em>Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Categoria
+	 * @see PhotosMetaModel.Album
 	 * @generated
 	 */
-	public Adapter createCategoriaAdapter() {
+	public Adapter createAlbumAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Imagen <em>Imagen</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Picture <em>Picture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Imagen
+	 * @see PhotosMetaModel.Picture
 	 * @generated
 	 */
-	public Adapter createImagenAdapter() {
+	public Adapter createPictureAdapter() {
 		return null;
 	}
 
@@ -2070,44 +2070,44 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Capa <em>Capa</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Layer <em>Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Capa
+	 * @see PhotosMetaModel.Layer
 	 * @generated
 	 */
-	public Adapter createCapaAdapter() {
+	public Adapter createLayerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Conexion <em>Conexion</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Conexion
+	 * @see PhotosMetaModel.Connection
 	 * @generated
 	 */
-	public Adapter createConexionAdapter() {
+	public Adapter createConnectionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Relacion <em>Relacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Relation <em>Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Relacion
+	 * @see PhotosMetaModel.Relation
 	 * @generated
 	 */
-	public Adapter createRelacionAdapter() {
+	public Adapter createRelationAdapter() {
 		return null;
 	}
 
@@ -2126,16 +2126,16 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.ConexionPostgreSQL <em>Conexion Postgre SQL</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.PostgreSQLConnection <em>Postgre SQL Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.ConexionPostgreSQL
+	 * @see PhotosMetaModel.PostgreSQLConnection
 	 * @generated
 	 */
-	public Adapter createConexionPostgreSQLAdapter() {
+	public Adapter createPostgreSQLConnectionAdapter() {
 		return null;
 	}
 
@@ -2154,44 +2154,44 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Presentacion <em>Presentacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Presentation <em>Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Presentacion
+	 * @see PhotosMetaModel.Presentation
 	 * @generated
 	 */
-	public Adapter createPresentacionAdapter() {
+	public Adapter createPresentationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.LogicaDeNegocio <em>Logica De Negocio</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.BusinessLogic <em>Business Logic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.LogicaDeNegocio
+	 * @see PhotosMetaModel.BusinessLogic
 	 * @generated
 	 */
-	public Adapter createLogicaDeNegocioAdapter() {
+	public Adapter createBusinessLogicAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Datos <em>Datos</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Data <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.Datos
+	 * @see PhotosMetaModel.Data
 	 * @generated
 	 */
-	public Adapter createDatosAdapter() {
+	public Adapter createDataAdapter() {
 		return null;
 	}
 
@@ -2210,44 +2210,44 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.SegmentoPresentacion <em>Segmento Presentacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.PresentationSegment <em>Presentation Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.SegmentoPresentacion
+	 * @see PhotosMetaModel.PresentationSegment
 	 * @generated
 	 */
-	public Adapter createSegmentoPresentacionAdapter() {
+	public Adapter createPresentationSegmentAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.SegmentoLogica <em>Segmento Logica</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.BusinessLogicSegment <em>Business Logic Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.SegmentoLogica
+	 * @see PhotosMetaModel.BusinessLogicSegment
 	 * @generated
 	 */
-	public Adapter createSegmentoLogicaAdapter() {
+	public Adapter createBusinessLogicSegmentAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.SegmentoDatos <em>Segmento Datos</em>}'.
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.DataSegment <em>Data Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PhotosMetaModel.SegmentoDatos
+	 * @see PhotosMetaModel.DataSegment
 	 * @generated
 	 */
-	public Adapter createSegmentoDatosAdapter() {
+	public Adapter createDataSegmentAdapter() {
 		return null;
 	}
 

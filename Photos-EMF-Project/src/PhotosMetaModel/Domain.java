@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.Domain#getUsuario <em>Usuario</em>}</li>
- *   <li>{@link PhotosMetaModel.Domain#getFoto <em>Foto</em>}</li>
+ *   <li>{@link PhotosMetaModel.Domain#getUser_d <em>User d</em>}</li>
+ *   <li>{@link PhotosMetaModel.Domain#getPhoto <em>Photo</em>}</li>
  * </ul>
  *
  * @see PhotosMetaModel.PhotosMetaModelPackage#getDomain()
@@ -25,27 +25,27 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Domain extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Usuario</b></em>' containment reference list.
-	 * The list contents are of type {@link PhotosMetaModel.Usuario}.
+	 * Returns the value of the '<em><b>User d</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.User_d}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usuario</em>' containment reference list.
-	 * @see PhotosMetaModel.PhotosMetaModelPackage#getDomain_Usuario()
+	 * @return the value of the '<em>User d</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getDomain_User_d()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Usuario> getUsuario();
+	EList<User_d> getUser_d();
 
 	/**
-	 * Returns the value of the '<em><b>Foto</b></em>' containment reference list.
-	 * The list contents are of type {@link PhotosMetaModel.Foto}.
+	 * Returns the value of the '<em><b>Photo</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Photo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Foto</em>' containment reference list.
-	 * @see PhotosMetaModel.PhotosMetaModelPackage#getDomain_Foto()
+	 * @return the value of the '<em>Photo</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getDomain_Photo()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Foto> getFoto();
+	EList<Photo> getPhoto();
 
 } // Domain

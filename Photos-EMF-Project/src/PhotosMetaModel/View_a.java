@@ -13,5 +13,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface View_a extends SegmentoPresentacion {
+public interface View_a extends PresentationSegment {
 } // View_a

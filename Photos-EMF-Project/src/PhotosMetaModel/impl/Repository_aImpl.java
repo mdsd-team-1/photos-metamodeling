@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Repository_aImpl extends SegmentoLogicaImpl implements Repository_a {
+public class Repository_aImpl extends BusinessLogicSegmentImpl implements Repository_a {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

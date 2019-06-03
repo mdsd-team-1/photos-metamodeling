@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AmazonS3StorageTest extends SegmentoDatosTest {
+public class AmazonS3StorageTest extends DataSegmentTest {
 
 	/**
 	 * <!-- begin-user-doc -->

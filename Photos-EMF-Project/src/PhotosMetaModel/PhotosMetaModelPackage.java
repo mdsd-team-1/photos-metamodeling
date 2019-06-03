@@ -122,22 +122,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int DOMAIN = 1;
 
 	/**
-	 * The feature id for the '<em><b>Usuario</b></em>' containment reference list.
+	 * The feature id for the '<em><b>User d</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__USUARIO = 0;
+	int DOMAIN__USER_D = 0;
 
 	/**
-	 * The feature id for the '<em><b>Foto</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Photo</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__FOTO = 1;
+	int DOMAIN__PHOTO = 1;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -2888,41 +2888,41 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ORDER_P_OPERATION_COUNT = CLAUSE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.UsuarioImpl <em>Usuario</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.User_dImpl <em>User d</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.UsuarioImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getUsuario()
+	 * @see PhotosMetaModel.impl.User_dImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getUser_d()
 	 * @generated
 	 */
-	int USUARIO = 77;
+	int USER_D = 77;
 
 	/**
-	 * The feature id for the '<em><b>Autenticacion</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Authentication</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__AUTENTICACION = 0;
+	int USER_D__AUTHENTICATION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Manejoperfil</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Profile Management</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__MANEJOPERFIL = 1;
+	int USER_D__PROFILE_MANAGEMENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Foto</b></em>' reference.
+	 * The feature id for the '<em><b>Photo</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__FOTO = 2;
+	int USER_D__PHOTO = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2931,7 +2931,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__ID = 3;
+	int USER_D__ID = 3;
 
 	/**
 	 * The feature id for the '<em><b>First name</b></em>' attribute.
@@ -2940,7 +2940,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__FIRST_NAME = 4;
+	int USER_D__FIRST_NAME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Last name</b></em>' attribute.
@@ -2949,7 +2949,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__LAST_NAME = 5;
+	int USER_D__LAST_NAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Profile description</b></em>' attribute.
@@ -2958,7 +2958,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__PROFILE_DESCRIPTION = 6;
+	int USER_D__PROFILE_DESCRIPTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Username</b></em>' attribute.
@@ -2967,7 +2967,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__USERNAME = 7;
+	int USER_D__USERNAME = 7;
 
 	/**
 	 * The feature id for the '<em><b>Password</b></em>' attribute.
@@ -2976,7 +2976,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__PASSWORD = 8;
+	int USER_D__PASSWORD = 8;
 
 	/**
 	 * The feature id for the '<em><b>Email</b></em>' attribute.
@@ -2985,387 +2985,387 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__EMAIL = 9;
+	int USER_D__EMAIL = 9;
 
 	/**
-	 * The feature id for the '<em><b>Registro</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Registration</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO__REGISTRO = 10;
+	int USER_D__REGISTRATION = 10;
 
 	/**
-	 * The number of structural features of the '<em>Usuario</em>' class.
+	 * The number of structural features of the '<em>User d</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO_FEATURE_COUNT = 11;
+	int USER_D_FEATURE_COUNT = 11;
 
 	/**
-	 * The number of operations of the '<em>Usuario</em>' class.
+	 * The number of operations of the '<em>User d</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USUARIO_OPERATION_COUNT = 0;
+	int USER_D_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.AutenticacionImpl <em>Autenticacion</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.AuthenticationImpl <em>Authentication</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.AutenticacionImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAutenticacion()
+	 * @see PhotosMetaModel.impl.AuthenticationImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAuthentication()
 	 * @generated
 	 */
-	int AUTENTICACION = 78;
+	int AUTHENTICATION = 78;
 
 	/**
-	 * The number of structural features of the '<em>Autenticacion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTENTICACION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Autenticacion</em>' class.
+	 * The number of structural features of the '<em>Authentication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTENTICACION_OPERATION_COUNT = 0;
+	int AUTHENTICATION_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.RegistroImpl <em>Registro</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.RegistroImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRegistro()
-	 * @generated
-	 */
-	int REGISTRO = 79;
-
-	/**
-	 * The number of structural features of the '<em>Registro</em>' class.
+	 * The number of operations of the '<em>Authentication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRO_FEATURE_COUNT = 0;
+	int AUTHENTICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Registro</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.RegistrationImpl <em>Registration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.RegistrationImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRegistration()
+	 * @generated
+	 */
+	int REGISTRATION = 79;
+
+	/**
+	 * The number of structural features of the '<em>Registration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRO_OPERATION_COUNT = 0;
+	int REGISTRATION_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.ManejoPerfilImpl <em>Manejo Perfil</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.ManejoPerfilImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getManejoPerfil()
-	 * @generated
-	 */
-	int MANEJO_PERFIL = 80;
-
-	/**
-	 * The feature id for the '<em><b>Accion</b></em>' containment reference list.
+	 * The number of operations of the '<em>Registration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MANEJO_PERFIL__ACCION = 0;
+	int REGISTRATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Manejo Perfil</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.ProfileManagementImpl <em>Profile Management</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.ProfileManagementImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getProfileManagement()
+	 * @generated
+	 */
+	int PROFILE_MANAGEMENT = 80;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MANEJO_PERFIL_FEATURE_COUNT = 1;
+	int PROFILE_MANAGEMENT__ACTION = 0;
 
 	/**
-	 * The number of operations of the '<em>Manejo Perfil</em>' class.
+	 * The number of structural features of the '<em>Profile Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MANEJO_PERFIL_OPERATION_COUNT = 0;
+	int PROFILE_MANAGEMENT_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.AccionImpl <em>Accion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.AccionImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAccion()
-	 * @generated
-	 */
-	int ACCION = 81;
-
-	/**
-	 * The number of structural features of the '<em>Accion</em>' class.
+	 * The number of operations of the '<em>Profile Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCION_FEATURE_COUNT = 0;
+	int PROFILE_MANAGEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Accion</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.ActionImpl <em>Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.ActionImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAction()
+	 * @generated
+	 */
+	int ACTION = 81;
+
+	/**
+	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCION_OPERATION_COUNT = 0;
+	int ACTION_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.CrearAlbumImpl <em>Crear Album</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.CrearAlbumImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCrearAlbum()
-	 * @generated
-	 */
-	int CREAR_ALBUM = 82;
-
-	/**
-	 * The feature id for the '<em><b>Categoria</b></em>' reference.
+	 * The number of operations of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREAR_ALBUM__CATEGORIA = ACCION_FEATURE_COUNT + 0;
+	int ACTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Crear Album</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.CreateAlbumImpl <em>Create Album</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.CreateAlbumImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCreateAlbum()
+	 * @generated
+	 */
+	int CREATE_ALBUM = 82;
+
+	/**
+	 * The feature id for the '<em><b>Album</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREAR_ALBUM_FEATURE_COUNT = ACCION_FEATURE_COUNT + 1;
+	int CREATE_ALBUM__ALBUM = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Crear Album</em>' class.
+	 * The number of structural features of the '<em>Create Album</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREAR_ALBUM_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
+	int CREATE_ALBUM_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.VerAlbumImpl <em>Ver Album</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.VerAlbumImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getVerAlbum()
-	 * @generated
-	 */
-	int VER_ALBUM = 83;
-
-	/**
-	 * The feature id for the '<em><b>Categoria</b></em>' reference.
+	 * The number of operations of the '<em>Create Album</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VER_ALBUM__CATEGORIA = ACCION_FEATURE_COUNT + 0;
+	int CREATE_ALBUM_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Ver Album</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.SeeAlbumImpl <em>See Album</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.SeeAlbumImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSeeAlbum()
+	 * @generated
+	 */
+	int SEE_ALBUM = 83;
+
+	/**
+	 * The feature id for the '<em><b>Album</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VER_ALBUM_FEATURE_COUNT = ACCION_FEATURE_COUNT + 1;
+	int SEE_ALBUM__ALBUM = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Ver Album</em>' class.
+	 * The number of structural features of the '<em>See Album</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VER_ALBUM_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
+	int SEE_ALBUM_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.CargarFotoImpl <em>Cargar Foto</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.CargarFotoImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCargarFoto()
-	 * @generated
-	 */
-	int CARGAR_FOTO = 84;
-
-	/**
-	 * The feature id for the '<em><b>Imagen</b></em>' reference.
+	 * The number of operations of the '<em>See Album</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARGAR_FOTO__IMAGEN = ACCION_FEATURE_COUNT + 0;
+	int SEE_ALBUM_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Cargar Foto</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.LoadPhotoImpl <em>Load Photo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.LoadPhotoImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getLoadPhoto()
+	 * @generated
+	 */
+	int LOAD_PHOTO = 84;
+
+	/**
+	 * The feature id for the '<em><b>Picture</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARGAR_FOTO_FEATURE_COUNT = ACCION_FEATURE_COUNT + 1;
+	int LOAD_PHOTO__PICTURE = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Cargar Foto</em>' class.
+	 * The number of structural features of the '<em>Load Photo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARGAR_FOTO_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
+	int LOAD_PHOTO_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.VerTodasLasFotosImpl <em>Ver Todas Las Fotos</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.VerTodasLasFotosImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getVerTodasLasFotos()
-	 * @generated
-	 */
-	int VER_TODAS_LAS_FOTOS = 85;
-
-	/**
-	 * The number of structural features of the '<em>Ver Todas Las Fotos</em>' class.
+	 * The number of operations of the '<em>Load Photo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VER_TODAS_LAS_FOTOS_FEATURE_COUNT = ACCION_FEATURE_COUNT + 0;
+	int LOAD_PHOTO_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Ver Todas Las Fotos</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.SeeAllPhotosImpl <em>See All Photos</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.SeeAllPhotosImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSeeAllPhotos()
+	 * @generated
+	 */
+	int SEE_ALL_PHOTOS = 85;
+
+	/**
+	 * The number of structural features of the '<em>See All Photos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VER_TODAS_LAS_FOTOS_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
+	int SEE_ALL_PHOTOS_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.EditarPerfilImpl <em>Editar Perfil</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.EditarPerfilImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getEditarPerfil()
-	 * @generated
-	 */
-	int EDITAR_PERFIL = 86;
-
-	/**
-	 * The feature id for the '<em><b>Foto</b></em>' reference.
+	 * The number of operations of the '<em>See All Photos</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDITAR_PERFIL__FOTO = ACCION_FEATURE_COUNT + 0;
+	int SEE_ALL_PHOTOS_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Editar Perfil</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.EditProfileImpl <em>Edit Profile</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.EditProfileImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getEditProfile()
+	 * @generated
+	 */
+	int EDIT_PROFILE = 86;
+
+	/**
+	 * The feature id for the '<em><b>Photo</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDITAR_PERFIL_FEATURE_COUNT = ACCION_FEATURE_COUNT + 1;
+	int EDIT_PROFILE__PHOTO = ACTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Editar Perfil</em>' class.
+	 * The number of structural features of the '<em>Edit Profile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDITAR_PERFIL_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
+	int EDIT_PROFILE_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.FotoImpl <em>Foto</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.FotoImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getFoto()
-	 * @generated
-	 */
-	int FOTO = 87;
-
-	/**
-	 * The feature id for the '<em><b>Categoria</b></em>' containment reference list.
+	 * The number of operations of the '<em>Edit Profile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOTO__CATEGORIA = 0;
+	int EDIT_PROFILE_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Imagen</b></em>' containment reference list.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.PhotoImpl <em>Photo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.PhotoImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPhoto()
+	 * @generated
+	 */
+	int PHOTO = 87;
+
+	/**
+	 * The feature id for the '<em><b>Album</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOTO__IMAGEN = 1;
+	int PHOTO__ALBUM = 0;
 
 	/**
-	 * The number of structural features of the '<em>Foto</em>' class.
+	 * The feature id for the '<em><b>Photo</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOTO_FEATURE_COUNT = 2;
+	int PHOTO__PHOTO = 1;
 
 	/**
-	 * The number of operations of the '<em>Foto</em>' class.
+	 * The number of structural features of the '<em>Photo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOTO_OPERATION_COUNT = 0;
+	int PHOTO_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.CategoriaImpl <em>Categoria</em>}' class.
+	 * The number of operations of the '<em>Photo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.CategoriaImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCategoria()
+	 * @generated
+	 * @ordered
+	 */
+	int PHOTO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link PhotosMetaModel.impl.AlbumImpl <em>Album</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.AlbumImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAlbum()
 	 * @generated
 	 */
-	int CATEGORIA = 88;
+	int ALBUM = 88;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3374,7 +3374,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIA__ID = 0;
+	int ALBUM__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -3383,7 +3383,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIA__URL = 1;
+	int ALBUM__URL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3392,44 +3392,44 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIA__NAME = 2;
+	int ALBUM__NAME = 2;
 
 	/**
-	 * The number of structural features of the '<em>Categoria</em>' class.
+	 * The number of structural features of the '<em>Album</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIA_FEATURE_COUNT = 3;
+	int ALBUM_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Categoria</em>' class.
+	 * The number of operations of the '<em>Album</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIA_OPERATION_COUNT = 0;
+	int ALBUM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.ImagenImpl <em>Imagen</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.PictureImpl <em>Picture</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.ImagenImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getImagen()
+	 * @see PhotosMetaModel.impl.PictureImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPicture()
 	 * @generated
 	 */
-	int IMAGEN = 89;
+	int PICTURE = 89;
 
 	/**
-	 * The feature id for the '<em><b>Categoria</b></em>' reference.
+	 * The feature id for the '<em><b>Album</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGEN__CATEGORIA = 0;
+	int PICTURE__ALBUM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3438,7 +3438,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGEN__ID = 1;
+	int PICTURE__ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3447,25 +3447,25 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGEN__NAME = 2;
+	int PICTURE__NAME = 2;
 
 	/**
-	 * The number of structural features of the '<em>Imagen</em>' class.
+	 * The number of structural features of the '<em>Picture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGEN_FEATURE_COUNT = 3;
+	int PICTURE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Imagen</em>' class.
+	 * The number of operations of the '<em>Picture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGEN_OPERATION_COUNT = 0;
+	int PICTURE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.AmazonWebServicesImpl <em>Amazon Web Services</em>}' class.
@@ -3551,31 +3551,31 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int NTIER = 91;
 
 	/**
-	 * The feature id for the '<em><b>Conexion</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Connection</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NTIER__CONEXION = 0;
+	int NTIER__CONNECTION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Capa</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Layer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NTIER__CAPA = 1;
+	int NTIER__LAYER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Relacion</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Relation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NTIER__RELACION = 2;
+	int NTIER__RELATION = 2;
 
 	/**
 	 * The number of structural features of the '<em>NTier</em>' class.
@@ -3596,124 +3596,124 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int NTIER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.CapaImpl <em>Capa</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.LayerImpl <em>Layer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.CapaImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCapa()
+	 * @see PhotosMetaModel.impl.LayerImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getLayer()
 	 * @generated
 	 */
-	int CAPA = 92;
+	int LAYER = 92;
 
 	/**
-	 * The number of structural features of the '<em>Capa</em>' class.
+	 * The number of structural features of the '<em>Layer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPA_FEATURE_COUNT = 0;
+	int LAYER_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Capa</em>' class.
+	 * The number of operations of the '<em>Layer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPA_OPERATION_COUNT = 0;
+	int LAYER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.ConexionImpl <em>Conexion</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.ConnectionImpl <em>Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.ConexionImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getConexion()
+	 * @see PhotosMetaModel.impl.ConnectionImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONEXION = 93;
+	int CONNECTION = 93;
 
 	/**
-	 * The feature id for the '<em><b>Conexion Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONEXION__CONEXION_SOURCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Conexion Target</b></em>' reference.
+	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION__CONEXION_TARGET = 1;
+	int CONNECTION__SOURCE_LAYER = 0;
 
 	/**
-	 * The number of structural features of the '<em>Conexion</em>' class.
+	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_FEATURE_COUNT = 2;
+	int CONNECTION__TARGET_LAYER = 1;
 
 	/**
-	 * The number of operations of the '<em>Conexion</em>' class.
+	 * The number of structural features of the '<em>Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_OPERATION_COUNT = 0;
+	int CONNECTION_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.RelacionImpl <em>Relacion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.RelacionImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRelacion()
-	 * @generated
-	 */
-	int RELACION = 94;
-
-	/**
-	 * The feature id for the '<em><b>Relacion Source</b></em>' reference.
+	 * The number of operations of the '<em>Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELACION__RELACION_SOURCE = 0;
+	int CONNECTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Relacion Target</b></em>' reference.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.RelationImpl <em>Relation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.RelationImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRelation()
+	 * @generated
+	 */
+	int RELATION = 94;
+
+	/**
+	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELACION__RELACION_TARGET = 1;
+	int RELATION__SOURCE_LAYER = 0;
 
 	/**
-	 * The number of structural features of the '<em>Relacion</em>' class.
+	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELACION_FEATURE_COUNT = 2;
+	int RELATION__TARGET_LAYER = 1;
 
 	/**
-	 * The number of operations of the '<em>Relacion</em>' class.
+	 * The number of structural features of the '<em>Relation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELACION_OPERATION_COUNT = 0;
+	int RELATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.RESTImpl <em>REST</em>}' class.
@@ -3726,22 +3726,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int REST = 95;
 
 	/**
-	 * The feature id for the '<em><b>Conexion Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST__CONEXION_SOURCE = CONEXION__CONEXION_SOURCE;
+	int REST__SOURCE_LAYER = CONNECTION__SOURCE_LAYER;
 
 	/**
-	 * The feature id for the '<em><b>Conexion Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST__CONEXION_TARGET = CONEXION__CONEXION_TARGET;
+	int REST__TARGET_LAYER = CONNECTION__TARGET_LAYER;
 
 	/**
 	 * The number of structural features of the '<em>REST</em>' class.
@@ -3750,7 +3750,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REST_FEATURE_COUNT = CONEXION_FEATURE_COUNT + 0;
+	int REST_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>REST</em>' class.
@@ -3759,35 +3759,35 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REST_OPERATION_COUNT = CONEXION_OPERATION_COUNT + 0;
+	int REST_OPERATION_COUNT = CONNECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.ConexionPostgreSQLImpl <em>Conexion Postgre SQL</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.PostgreSQLConnectionImpl <em>Postgre SQL Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.ConexionPostgreSQLImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getConexionPostgreSQL()
+	 * @see PhotosMetaModel.impl.PostgreSQLConnectionImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPostgreSQLConnection()
 	 * @generated
 	 */
-	int CONEXION_POSTGRE_SQL = 96;
+	int POSTGRE_SQL_CONNECTION = 96;
 
 	/**
-	 * The feature id for the '<em><b>Conexion Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONEXION_POSTGRE_SQL__CONEXION_SOURCE = CONEXION__CONEXION_SOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Conexion Target</b></em>' reference.
+	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL__CONEXION_TARGET = CONEXION__CONEXION_TARGET;
+	int POSTGRE_SQL_CONNECTION__SOURCE_LAYER = CONNECTION__SOURCE_LAYER;
+
+	/**
+	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSTGRE_SQL_CONNECTION__TARGET_LAYER = CONNECTION__TARGET_LAYER;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -3796,7 +3796,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL__URL = CONEXION_FEATURE_COUNT + 0;
+	int POSTGRE_SQL_CONNECTION__URL = CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -3805,7 +3805,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL__PORT = CONEXION_FEATURE_COUNT + 1;
+	int POSTGRE_SQL_CONNECTION__PORT = CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Username</b></em>' attribute.
@@ -3814,7 +3814,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL__USERNAME = CONEXION_FEATURE_COUNT + 2;
+	int POSTGRE_SQL_CONNECTION__USERNAME = CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Password</b></em>' attribute.
@@ -3823,25 +3823,25 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL__PASSWORD = CONEXION_FEATURE_COUNT + 3;
+	int POSTGRE_SQL_CONNECTION__PASSWORD = CONNECTION_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Conexion Postgre SQL</em>' class.
+	 * The number of structural features of the '<em>Postgre SQL Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL_FEATURE_COUNT = CONEXION_FEATURE_COUNT + 4;
+	int POSTGRE_SQL_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of operations of the '<em>Conexion Postgre SQL</em>' class.
+	 * The number of operations of the '<em>Postgre SQL Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONEXION_POSTGRE_SQL_OPERATION_COUNT = CONEXION_OPERATION_COUNT + 0;
+	int POSTGRE_SQL_CONNECTION_OPERATION_COUNT = CONNECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.AmazonS3APIImpl <em>Amazon S3API</em>}' class.
@@ -3854,22 +3854,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int AMAZON_S3API = 97;
 
 	/**
-	 * The feature id for the '<em><b>Conexion Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API__CONEXION_SOURCE = CONEXION__CONEXION_SOURCE;
+	int AMAZON_S3API__SOURCE_LAYER = CONNECTION__SOURCE_LAYER;
 
 	/**
-	 * The feature id for the '<em><b>Conexion Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API__CONEXION_TARGET = CONEXION__CONEXION_TARGET;
+	int AMAZON_S3API__TARGET_LAYER = CONNECTION__TARGET_LAYER;
 
 	/**
 	 * The feature id for the '<em><b>Endpoint Url</b></em>' attribute.
@@ -3878,7 +3878,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API__ENDPOINT_URL = CONEXION_FEATURE_COUNT + 0;
+	int AMAZON_S3API__ENDPOINT_URL = CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Access Key</b></em>' attribute.
@@ -3887,7 +3887,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API__ACCESS_KEY = CONEXION_FEATURE_COUNT + 1;
+	int AMAZON_S3API__ACCESS_KEY = CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Secret Key</b></em>' attribute.
@@ -3896,7 +3896,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API__SECRET_KEY = CONEXION_FEATURE_COUNT + 2;
+	int AMAZON_S3API__SECRET_KEY = CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Bucket Name</b></em>' attribute.
@@ -3905,7 +3905,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API__BUCKET_NAME = CONEXION_FEATURE_COUNT + 3;
+	int AMAZON_S3API__BUCKET_NAME = CONNECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Amazon S3API</em>' class.
@@ -3914,7 +3914,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API_FEATURE_COUNT = CONEXION_FEATURE_COUNT + 4;
+	int AMAZON_S3API_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Amazon S3API</em>' class.
@@ -3923,118 +3923,118 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3API_OPERATION_COUNT = CONEXION_OPERATION_COUNT + 0;
+	int AMAZON_S3API_OPERATION_COUNT = CONNECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.PresentacionImpl <em>Presentacion</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.PresentationImpl <em>Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.PresentacionImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPresentacion()
+	 * @see PhotosMetaModel.impl.PresentationImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPresentation()
 	 * @generated
 	 */
-	int PRESENTACION = 98;
+	int PRESENTATION = 98;
 
 	/**
-	 * The feature id for the '<em><b>Segmentopresentacion</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTACION__SEGMENTOPRESENTACION = CAPA_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Presentacion</em>' class.
+	 * The feature id for the '<em><b>Presentation Layer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESENTACION_FEATURE_COUNT = CAPA_FEATURE_COUNT + 1;
+	int PRESENTATION__PRESENTATION_LAYER = LAYER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Presentacion</em>' class.
+	 * The number of structural features of the '<em>Presentation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESENTACION_OPERATION_COUNT = CAPA_OPERATION_COUNT + 0;
+	int PRESENTATION_FEATURE_COUNT = LAYER_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.LogicaDeNegocioImpl <em>Logica De Negocio</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.LogicaDeNegocioImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getLogicaDeNegocio()
-	 * @generated
-	 */
-	int LOGICA_DE_NEGOCIO = 99;
-
-	/**
-	 * The feature id for the '<em><b>Segmentologica</b></em>' containment reference list.
+	 * The number of operations of the '<em>Presentation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICA_DE_NEGOCIO__SEGMENTOLOGICA = CAPA_FEATURE_COUNT + 0;
+	int PRESENTATION_OPERATION_COUNT = LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Logica De Negocio</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.BusinessLogicImpl <em>Business Logic</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.BusinessLogicImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getBusinessLogic()
+	 * @generated
+	 */
+	int BUSINESS_LOGIC = 99;
+
+	/**
+	 * The feature id for the '<em><b>Business Logic Segment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICA_DE_NEGOCIO_FEATURE_COUNT = CAPA_FEATURE_COUNT + 1;
+	int BUSINESS_LOGIC__BUSINESS_LOGIC_SEGMENT = LAYER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Logica De Negocio</em>' class.
+	 * The number of structural features of the '<em>Business Logic</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICA_DE_NEGOCIO_OPERATION_COUNT = CAPA_OPERATION_COUNT + 0;
+	int BUSINESS_LOGIC_FEATURE_COUNT = LAYER_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.DatosImpl <em>Datos</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.DatosImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getDatos()
-	 * @generated
-	 */
-	int DATOS = 100;
-
-	/**
-	 * The feature id for the '<em><b>Segmentodatos</b></em>' containment reference list.
+	 * The number of operations of the '<em>Business Logic</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATOS__SEGMENTODATOS = CAPA_FEATURE_COUNT + 0;
+	int BUSINESS_LOGIC_OPERATION_COUNT = LAYER_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Datos</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.DataImpl <em>Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.DataImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getData()
+	 * @generated
+	 */
+	int DATA = 100;
+
+	/**
+	 * The feature id for the '<em><b>Data Segment</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATOS_FEATURE_COUNT = CAPA_FEATURE_COUNT + 1;
+	int DATA__DATA_SEGMENT = LAYER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Datos</em>' class.
+	 * The number of structural features of the '<em>Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATOS_OPERATION_COUNT = CAPA_OPERATION_COUNT + 0;
+	int DATA_FEATURE_COUNT = LAYER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OPERATION_COUNT = LAYER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.AllowedToUseImpl <em>Allowed To Use</em>}' class.
@@ -4047,22 +4047,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ALLOWED_TO_USE = 101;
 
 	/**
-	 * The feature id for the '<em><b>Relacion Source</b></em>' reference.
+	 * The feature id for the '<em><b>Source Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOWED_TO_USE__RELACION_SOURCE = RELACION__RELACION_SOURCE;
+	int ALLOWED_TO_USE__SOURCE_LAYER = RELATION__SOURCE_LAYER;
 
 	/**
-	 * The feature id for the '<em><b>Relacion Target</b></em>' reference.
+	 * The feature id for the '<em><b>Target Layer</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOWED_TO_USE__RELACION_TARGET = RELACION__RELACION_TARGET;
+	int ALLOWED_TO_USE__TARGET_LAYER = RELATION__TARGET_LAYER;
 
 	/**
 	 * The number of structural features of the '<em>Allowed To Use</em>' class.
@@ -4071,7 +4071,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOWED_TO_USE_FEATURE_COUNT = RELACION_FEATURE_COUNT + 0;
+	int ALLOWED_TO_USE_FEATURE_COUNT = RELATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Allowed To Use</em>' class.
@@ -4080,91 +4080,91 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOWED_TO_USE_OPERATION_COUNT = RELACION_OPERATION_COUNT + 0;
+	int ALLOWED_TO_USE_OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.SegmentoPresentacionImpl <em>Segmento Presentacion</em>}' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.PresentationSegmentImpl <em>Presentation Segment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.SegmentoPresentacionImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSegmentoPresentacion()
+	 * @see PhotosMetaModel.impl.PresentationSegmentImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPresentationSegment()
 	 * @generated
 	 */
-	int SEGMENTO_PRESENTACION = 102;
+	int PRESENTATION_SEGMENT = 102;
 
 	/**
-	 * The number of structural features of the '<em>Segmento Presentacion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEGMENTO_PRESENTACION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Segmento Presentacion</em>' class.
+	 * The number of structural features of the '<em>Presentation Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENTO_PRESENTACION_OPERATION_COUNT = 0;
+	int PRESENTATION_SEGMENT_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.SegmentoLogicaImpl <em>Segmento Logica</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.SegmentoLogicaImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSegmentoLogica()
-	 * @generated
-	 */
-	int SEGMENTO_LOGICA = 103;
-
-	/**
-	 * The number of structural features of the '<em>Segmento Logica</em>' class.
+	 * The number of operations of the '<em>Presentation Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENTO_LOGICA_FEATURE_COUNT = 0;
+	int PRESENTATION_SEGMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Segmento Logica</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.BusinessLogicSegmentImpl <em>Business Logic Segment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.BusinessLogicSegmentImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getBusinessLogicSegment()
+	 * @generated
+	 */
+	int BUSINESS_LOGIC_SEGMENT = 103;
+
+	/**
+	 * The number of structural features of the '<em>Business Logic Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENTO_LOGICA_OPERATION_COUNT = 0;
+	int BUSINESS_LOGIC_SEGMENT_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PhotosMetaModel.impl.SegmentoDatosImpl <em>Segmento Datos</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see PhotosMetaModel.impl.SegmentoDatosImpl
-	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSegmentoDatos()
-	 * @generated
-	 */
-	int SEGMENTO_DATOS = 104;
-
-	/**
-	 * The number of structural features of the '<em>Segmento Datos</em>' class.
+	 * The number of operations of the '<em>Business Logic Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENTO_DATOS_FEATURE_COUNT = 0;
+	int BUSINESS_LOGIC_SEGMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Segmento Datos</em>' class.
+	 * The meta object id for the '{@link PhotosMetaModel.impl.DataSegmentImpl <em>Data Segment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.DataSegmentImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getDataSegment()
+	 * @generated
+	 */
+	int DATA_SEGMENT = 104;
+
+	/**
+	 * The number of structural features of the '<em>Data Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEGMENTO_DATOS_OPERATION_COUNT = 0;
+	int DATA_SEGMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Data Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SEGMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.View_aImpl <em>View a</em>}' class.
@@ -4183,7 +4183,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_A_FEATURE_COUNT = SEGMENTO_PRESENTACION_FEATURE_COUNT + 0;
+	int VIEW_A_FEATURE_COUNT = PRESENTATION_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>View a</em>' class.
@@ -4192,7 +4192,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_A_OPERATION_COUNT = SEGMENTO_PRESENTACION_OPERATION_COUNT + 0;
+	int VIEW_A_OPERATION_COUNT = PRESENTATION_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.Component_aImpl <em>Component a</em>}' class.
@@ -4211,7 +4211,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_A_FEATURE_COUNT = SEGMENTO_PRESENTACION_FEATURE_COUNT + 0;
+	int COMPONENT_A_FEATURE_COUNT = PRESENTATION_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Component a</em>' class.
@@ -4220,7 +4220,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_A_OPERATION_COUNT = SEGMENTO_PRESENTACION_OPERATION_COUNT + 0;
+	int COMPONENT_A_OPERATION_COUNT = PRESENTATION_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.Action_aImpl <em>Action a</em>}' class.
@@ -4239,7 +4239,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_A_FEATURE_COUNT = SEGMENTO_PRESENTACION_FEATURE_COUNT + 0;
+	int ACTION_A_FEATURE_COUNT = PRESENTATION_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Action a</em>' class.
@@ -4248,7 +4248,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_A_OPERATION_COUNT = SEGMENTO_PRESENTACION_OPERATION_COUNT + 0;
+	int ACTION_A_OPERATION_COUNT = PRESENTATION_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.Controller_aImpl <em>Controller a</em>}' class.
@@ -4267,7 +4267,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_A_FEATURE_COUNT = SEGMENTO_LOGICA_FEATURE_COUNT + 0;
+	int CONTROLLER_A_FEATURE_COUNT = BUSINESS_LOGIC_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Controller a</em>' class.
@@ -4276,7 +4276,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_A_OPERATION_COUNT = SEGMENTO_LOGICA_OPERATION_COUNT + 0;
+	int CONTROLLER_A_OPERATION_COUNT = BUSINESS_LOGIC_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.Model_aImpl <em>Model a</em>}' class.
@@ -4295,7 +4295,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_A_FEATURE_COUNT = SEGMENTO_LOGICA_FEATURE_COUNT + 0;
+	int MODEL_A_FEATURE_COUNT = BUSINESS_LOGIC_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Model a</em>' class.
@@ -4304,7 +4304,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_A_OPERATION_COUNT = SEGMENTO_LOGICA_OPERATION_COUNT + 0;
+	int MODEL_A_OPERATION_COUNT = BUSINESS_LOGIC_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.Repository_aImpl <em>Repository a</em>}' class.
@@ -4323,7 +4323,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_A_FEATURE_COUNT = SEGMENTO_LOGICA_FEATURE_COUNT + 0;
+	int REPOSITORY_A_FEATURE_COUNT = BUSINESS_LOGIC_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Repository a</em>' class.
@@ -4332,7 +4332,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_A_OPERATION_COUNT = SEGMENTO_LOGICA_OPERATION_COUNT + 0;
+	int REPOSITORY_A_OPERATION_COUNT = BUSINESS_LOGIC_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.Security_aImpl <em>Security a</em>}' class.
@@ -4351,7 +4351,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_A_FEATURE_COUNT = SEGMENTO_LOGICA_FEATURE_COUNT + 0;
+	int SECURITY_A_FEATURE_COUNT = BUSINESS_LOGIC_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Security a</em>' class.
@@ -4360,7 +4360,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_A_OPERATION_COUNT = SEGMENTO_LOGICA_OPERATION_COUNT + 0;
+	int SECURITY_A_OPERATION_COUNT = BUSINESS_LOGIC_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.PostgreSQL_aImpl <em>Postgre SQL a</em>}' class.
@@ -4379,7 +4379,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSTGRE_SQL_A_FEATURE_COUNT = SEGMENTO_DATOS_FEATURE_COUNT + 0;
+	int POSTGRE_SQL_A_FEATURE_COUNT = DATA_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Postgre SQL a</em>' class.
@@ -4388,7 +4388,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSTGRE_SQL_A_OPERATION_COUNT = SEGMENTO_DATOS_OPERATION_COUNT + 0;
+	int POSTGRE_SQL_A_OPERATION_COUNT = DATA_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.AmazonS3StorageImpl <em>Amazon S3 Storage</em>}' class.
@@ -4407,7 +4407,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3_STORAGE_FEATURE_COUNT = SEGMENTO_DATOS_FEATURE_COUNT + 0;
+	int AMAZON_S3_STORAGE_FEATURE_COUNT = DATA_SEGMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Amazon S3 Storage</em>' class.
@@ -4416,7 +4416,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_S3_STORAGE_OPERATION_COUNT = SEGMENTO_DATOS_OPERATION_COUNT + 0;
+	int AMAZON_S3_STORAGE_OPERATION_COUNT = DATA_SEGMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.ReactDOMImpl <em>React DOM</em>}' class.
@@ -5416,26 +5416,26 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getDomain();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Domain#getUsuario <em>Usuario</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Domain#getUser_d <em>User d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Usuario</em>'.
-	 * @see PhotosMetaModel.Domain#getUsuario()
+	 * @return the meta object for the containment reference list '<em>User d</em>'.
+	 * @see PhotosMetaModel.Domain#getUser_d()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Usuario();
+	EReference getDomain_User_d();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Domain#getFoto <em>Foto</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Domain#getPhoto <em>Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Foto</em>'.
-	 * @see PhotosMetaModel.Domain#getFoto()
+	 * @return the meta object for the containment reference list '<em>Photo</em>'.
+	 * @see PhotosMetaModel.Domain#getPhoto()
 	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getDomain_Foto();
+	EReference getDomain_Photo();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Architecture <em>Architecture</em>}'.
@@ -6914,398 +6914,398 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getOrder_p();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Usuario <em>Usuario</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.User_d <em>User d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Usuario</em>'.
-	 * @see PhotosMetaModel.Usuario
+	 * @return the meta object for class '<em>User d</em>'.
+	 * @see PhotosMetaModel.User_d
 	 * @generated
 	 */
-	EClass getUsuario();
+	EClass getUser_d();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Usuario#getAutenticacion <em>Autenticacion</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.User_d#getAuthentication <em>Authentication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Autenticacion</em>'.
-	 * @see PhotosMetaModel.Usuario#getAutenticacion()
-	 * @see #getUsuario()
+	 * @return the meta object for the containment reference list '<em>Authentication</em>'.
+	 * @see PhotosMetaModel.User_d#getAuthentication()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EReference getUsuario_Autenticacion();
+	EReference getUser_d_Authentication();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Usuario#getManejoperfil <em>Manejoperfil</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.User_d#getProfileManagement <em>Profile Management</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Manejoperfil</em>'.
-	 * @see PhotosMetaModel.Usuario#getManejoperfil()
-	 * @see #getUsuario()
+	 * @return the meta object for the containment reference list '<em>Profile Management</em>'.
+	 * @see PhotosMetaModel.User_d#getProfileManagement()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EReference getUsuario_Manejoperfil();
+	EReference getUser_d_ProfileManagement();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Usuario#getFoto <em>Foto</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.User_d#getPhoto <em>Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Foto</em>'.
-	 * @see PhotosMetaModel.Usuario#getFoto()
-	 * @see #getUsuario()
+	 * @return the meta object for the reference '<em>Photo</em>'.
+	 * @see PhotosMetaModel.User_d#getPhoto()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EReference getUsuario_Foto();
+	EReference getUser_d_Photo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see PhotosMetaModel.Usuario#getId()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getId()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_Id();
+	EAttribute getUser_d_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getFirst_name <em>First name</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getFirst_name <em>First name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>First name</em>'.
-	 * @see PhotosMetaModel.Usuario#getFirst_name()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getFirst_name()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_First_name();
+	EAttribute getUser_d_First_name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getLast_name <em>Last name</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getLast_name <em>Last name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Last name</em>'.
-	 * @see PhotosMetaModel.Usuario#getLast_name()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getLast_name()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_Last_name();
+	EAttribute getUser_d_Last_name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getProfile_description <em>Profile description</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getProfile_description <em>Profile description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Profile description</em>'.
-	 * @see PhotosMetaModel.Usuario#getProfile_description()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getProfile_description()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_Profile_description();
+	EAttribute getUser_d_Profile_description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getUsername <em>Username</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getUsername <em>Username</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Username</em>'.
-	 * @see PhotosMetaModel.Usuario#getUsername()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getUsername()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_Username();
+	EAttribute getUser_d_Username();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getPassword <em>Password</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getPassword <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Password</em>'.
-	 * @see PhotosMetaModel.Usuario#getPassword()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getPassword()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_Password();
+	EAttribute getUser_d_Password();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Usuario#getEmail <em>Email</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.User_d#getEmail <em>Email</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see PhotosMetaModel.Usuario#getEmail()
-	 * @see #getUsuario()
+	 * @see PhotosMetaModel.User_d#getEmail()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EAttribute getUsuario_Email();
+	EAttribute getUser_d_Email();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Usuario#getRegistro <em>Registro</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.User_d#getRegistration <em>Registration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Registro</em>'.
-	 * @see PhotosMetaModel.Usuario#getRegistro()
-	 * @see #getUsuario()
+	 * @return the meta object for the containment reference list '<em>Registration</em>'.
+	 * @see PhotosMetaModel.User_d#getRegistration()
+	 * @see #getUser_d()
 	 * @generated
 	 */
-	EReference getUsuario_Registro();
+	EReference getUser_d_Registration();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Autenticacion <em>Autenticacion</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Authentication <em>Authentication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Autenticacion</em>'.
-	 * @see PhotosMetaModel.Autenticacion
+	 * @return the meta object for class '<em>Authentication</em>'.
+	 * @see PhotosMetaModel.Authentication
 	 * @generated
 	 */
-	EClass getAutenticacion();
+	EClass getAuthentication();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Registro <em>Registro</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Registration <em>Registration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Registro</em>'.
-	 * @see PhotosMetaModel.Registro
+	 * @return the meta object for class '<em>Registration</em>'.
+	 * @see PhotosMetaModel.Registration
 	 * @generated
 	 */
-	EClass getRegistro();
+	EClass getRegistration();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.ManejoPerfil <em>Manejo Perfil</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.ProfileManagement <em>Profile Management</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Manejo Perfil</em>'.
-	 * @see PhotosMetaModel.ManejoPerfil
+	 * @return the meta object for class '<em>Profile Management</em>'.
+	 * @see PhotosMetaModel.ProfileManagement
 	 * @generated
 	 */
-	EClass getManejoPerfil();
+	EClass getProfileManagement();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.ManejoPerfil#getAccion <em>Accion</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.ProfileManagement#getAction <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Accion</em>'.
-	 * @see PhotosMetaModel.ManejoPerfil#getAccion()
-	 * @see #getManejoPerfil()
+	 * @return the meta object for the containment reference list '<em>Action</em>'.
+	 * @see PhotosMetaModel.ProfileManagement#getAction()
+	 * @see #getProfileManagement()
 	 * @generated
 	 */
-	EReference getManejoPerfil_Accion();
+	EReference getProfileManagement_Action();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Accion <em>Accion</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Accion</em>'.
-	 * @see PhotosMetaModel.Accion
+	 * @return the meta object for class '<em>Action</em>'.
+	 * @see PhotosMetaModel.Action
 	 * @generated
 	 */
-	EClass getAccion();
+	EClass getAction();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.CrearAlbum <em>Crear Album</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.CreateAlbum <em>Create Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Crear Album</em>'.
-	 * @see PhotosMetaModel.CrearAlbum
+	 * @return the meta object for class '<em>Create Album</em>'.
+	 * @see PhotosMetaModel.CreateAlbum
 	 * @generated
 	 */
-	EClass getCrearAlbum();
+	EClass getCreateAlbum();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.CrearAlbum#getCategoria <em>Categoria</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.CreateAlbum#getAlbum <em>Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Categoria</em>'.
-	 * @see PhotosMetaModel.CrearAlbum#getCategoria()
-	 * @see #getCrearAlbum()
+	 * @return the meta object for the reference '<em>Album</em>'.
+	 * @see PhotosMetaModel.CreateAlbum#getAlbum()
+	 * @see #getCreateAlbum()
 	 * @generated
 	 */
-	EReference getCrearAlbum_Categoria();
+	EReference getCreateAlbum_Album();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.VerAlbum <em>Ver Album</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.SeeAlbum <em>See Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ver Album</em>'.
-	 * @see PhotosMetaModel.VerAlbum
+	 * @return the meta object for class '<em>See Album</em>'.
+	 * @see PhotosMetaModel.SeeAlbum
 	 * @generated
 	 */
-	EClass getVerAlbum();
+	EClass getSeeAlbum();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.VerAlbum#getCategoria <em>Categoria</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.SeeAlbum#getAlbum <em>Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Categoria</em>'.
-	 * @see PhotosMetaModel.VerAlbum#getCategoria()
-	 * @see #getVerAlbum()
+	 * @return the meta object for the reference '<em>Album</em>'.
+	 * @see PhotosMetaModel.SeeAlbum#getAlbum()
+	 * @see #getSeeAlbum()
 	 * @generated
 	 */
-	EReference getVerAlbum_Categoria();
+	EReference getSeeAlbum_Album();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.CargarFoto <em>Cargar Foto</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.LoadPhoto <em>Load Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cargar Foto</em>'.
-	 * @see PhotosMetaModel.CargarFoto
+	 * @return the meta object for class '<em>Load Photo</em>'.
+	 * @see PhotosMetaModel.LoadPhoto
 	 * @generated
 	 */
-	EClass getCargarFoto();
+	EClass getLoadPhoto();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.CargarFoto#getImagen <em>Imagen</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.LoadPhoto#getPicture <em>Picture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Imagen</em>'.
-	 * @see PhotosMetaModel.CargarFoto#getImagen()
-	 * @see #getCargarFoto()
+	 * @return the meta object for the reference '<em>Picture</em>'.
+	 * @see PhotosMetaModel.LoadPhoto#getPicture()
+	 * @see #getLoadPhoto()
 	 * @generated
 	 */
-	EReference getCargarFoto_Imagen();
+	EReference getLoadPhoto_Picture();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.VerTodasLasFotos <em>Ver Todas Las Fotos</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.SeeAllPhotos <em>See All Photos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ver Todas Las Fotos</em>'.
-	 * @see PhotosMetaModel.VerTodasLasFotos
+	 * @return the meta object for class '<em>See All Photos</em>'.
+	 * @see PhotosMetaModel.SeeAllPhotos
 	 * @generated
 	 */
-	EClass getVerTodasLasFotos();
+	EClass getSeeAllPhotos();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.EditarPerfil <em>Editar Perfil</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.EditProfile <em>Edit Profile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Editar Perfil</em>'.
-	 * @see PhotosMetaModel.EditarPerfil
+	 * @return the meta object for class '<em>Edit Profile</em>'.
+	 * @see PhotosMetaModel.EditProfile
 	 * @generated
 	 */
-	EClass getEditarPerfil();
+	EClass getEditProfile();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.EditarPerfil#getFoto <em>Foto</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.EditProfile#getPhoto <em>Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Foto</em>'.
-	 * @see PhotosMetaModel.EditarPerfil#getFoto()
-	 * @see #getEditarPerfil()
+	 * @return the meta object for the reference '<em>Photo</em>'.
+	 * @see PhotosMetaModel.EditProfile#getPhoto()
+	 * @see #getEditProfile()
 	 * @generated
 	 */
-	EReference getEditarPerfil_Foto();
+	EReference getEditProfile_Photo();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Foto <em>Foto</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Photo <em>Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Foto</em>'.
-	 * @see PhotosMetaModel.Foto
+	 * @return the meta object for class '<em>Photo</em>'.
+	 * @see PhotosMetaModel.Photo
 	 * @generated
 	 */
-	EClass getFoto();
+	EClass getPhoto();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Foto#getCategoria <em>Categoria</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Photo#getAlbum <em>Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Categoria</em>'.
-	 * @see PhotosMetaModel.Foto#getCategoria()
-	 * @see #getFoto()
+	 * @return the meta object for the containment reference list '<em>Album</em>'.
+	 * @see PhotosMetaModel.Photo#getAlbum()
+	 * @see #getPhoto()
 	 * @generated
 	 */
-	EReference getFoto_Categoria();
+	EReference getPhoto_Album();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Foto#getImagen <em>Imagen</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Photo#getPhoto <em>Photo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Imagen</em>'.
-	 * @see PhotosMetaModel.Foto#getImagen()
-	 * @see #getFoto()
+	 * @return the meta object for the containment reference list '<em>Photo</em>'.
+	 * @see PhotosMetaModel.Photo#getPhoto()
+	 * @see #getPhoto()
 	 * @generated
 	 */
-	EReference getFoto_Imagen();
+	EReference getPhoto_Photo();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Categoria <em>Categoria</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Album <em>Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Categoria</em>'.
-	 * @see PhotosMetaModel.Categoria
+	 * @return the meta object for class '<em>Album</em>'.
+	 * @see PhotosMetaModel.Album
 	 * @generated
 	 */
-	EClass getCategoria();
+	EClass getAlbum();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Categoria#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Album#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see PhotosMetaModel.Categoria#getId()
-	 * @see #getCategoria()
+	 * @see PhotosMetaModel.Album#getId()
+	 * @see #getAlbum()
 	 * @generated
 	 */
-	EAttribute getCategoria_Id();
+	EAttribute getAlbum_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Categoria#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Album#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see PhotosMetaModel.Categoria#getUrl()
-	 * @see #getCategoria()
+	 * @see PhotosMetaModel.Album#getUrl()
+	 * @see #getAlbum()
 	 * @generated
 	 */
-	EAttribute getCategoria_Url();
+	EAttribute getAlbum_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Categoria#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Album#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see PhotosMetaModel.Categoria#getName()
-	 * @see #getCategoria()
+	 * @see PhotosMetaModel.Album#getName()
+	 * @see #getAlbum()
 	 * @generated
 	 */
-	EAttribute getCategoria_Name();
+	EAttribute getAlbum_Name();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Imagen <em>Imagen</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Picture <em>Picture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Imagen</em>'.
-	 * @see PhotosMetaModel.Imagen
+	 * @return the meta object for class '<em>Picture</em>'.
+	 * @see PhotosMetaModel.Picture
 	 * @generated
 	 */
-	EClass getImagen();
+	EClass getPicture();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Imagen#getCategoria <em>Categoria</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Picture#getAlbum <em>Album</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Categoria</em>'.
-	 * @see PhotosMetaModel.Imagen#getCategoria()
-	 * @see #getImagen()
+	 * @return the meta object for the reference '<em>Album</em>'.
+	 * @see PhotosMetaModel.Picture#getAlbum()
+	 * @see #getPicture()
 	 * @generated
 	 */
-	EReference getImagen_Categoria();
+	EReference getPicture_Album();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Imagen#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Picture#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see PhotosMetaModel.Imagen#getId()
-	 * @see #getImagen()
+	 * @see PhotosMetaModel.Picture#getId()
+	 * @see #getPicture()
 	 * @generated
 	 */
-	EAttribute getImagen_Id();
+	EAttribute getPicture_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Imagen#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Picture#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see PhotosMetaModel.Imagen#getName()
-	 * @see #getImagen()
+	 * @see PhotosMetaModel.Picture#getName()
+	 * @see #getPicture()
 	 * @generated
 	 */
-	EAttribute getImagen_Name();
+	EAttribute getPicture_Name();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.AmazonWebServices <em>Amazon Web Services</em>}'.
@@ -7383,111 +7383,111 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getNTier();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.NTier#getConexion <em>Conexion</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.NTier#getConnection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Conexion</em>'.
-	 * @see PhotosMetaModel.NTier#getConexion()
+	 * @return the meta object for the containment reference list '<em>Connection</em>'.
+	 * @see PhotosMetaModel.NTier#getConnection()
 	 * @see #getNTier()
 	 * @generated
 	 */
-	EReference getNTier_Conexion();
+	EReference getNTier_Connection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.NTier#getCapa <em>Capa</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.NTier#getLayer <em>Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Capa</em>'.
-	 * @see PhotosMetaModel.NTier#getCapa()
+	 * @return the meta object for the containment reference list '<em>Layer</em>'.
+	 * @see PhotosMetaModel.NTier#getLayer()
 	 * @see #getNTier()
 	 * @generated
 	 */
-	EReference getNTier_Capa();
+	EReference getNTier_Layer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.NTier#getRelacion <em>Relacion</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.NTier#getRelation <em>Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relacion</em>'.
-	 * @see PhotosMetaModel.NTier#getRelacion()
+	 * @return the meta object for the containment reference list '<em>Relation</em>'.
+	 * @see PhotosMetaModel.NTier#getRelation()
 	 * @see #getNTier()
 	 * @generated
 	 */
-	EReference getNTier_Relacion();
+	EReference getNTier_Relation();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Capa <em>Capa</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Layer <em>Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Capa</em>'.
-	 * @see PhotosMetaModel.Capa
+	 * @return the meta object for class '<em>Layer</em>'.
+	 * @see PhotosMetaModel.Layer
 	 * @generated
 	 */
-	EClass getCapa();
+	EClass getLayer();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Conexion <em>Conexion</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Conexion</em>'.
-	 * @see PhotosMetaModel.Conexion
+	 * @return the meta object for class '<em>Connection</em>'.
+	 * @see PhotosMetaModel.Connection
 	 * @generated
 	 */
-	EClass getConexion();
+	EClass getConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Conexion#getConexionSource <em>Conexion Source</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Connection#getSourceLayer <em>Source Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Conexion Source</em>'.
-	 * @see PhotosMetaModel.Conexion#getConexionSource()
-	 * @see #getConexion()
+	 * @return the meta object for the reference '<em>Source Layer</em>'.
+	 * @see PhotosMetaModel.Connection#getSourceLayer()
+	 * @see #getConnection()
 	 * @generated
 	 */
-	EReference getConexion_ConexionSource();
+	EReference getConnection_SourceLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Conexion#getConexionTarget <em>Conexion Target</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Connection#getTargetLayer <em>Target Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Conexion Target</em>'.
-	 * @see PhotosMetaModel.Conexion#getConexionTarget()
-	 * @see #getConexion()
+	 * @return the meta object for the reference '<em>Target Layer</em>'.
+	 * @see PhotosMetaModel.Connection#getTargetLayer()
+	 * @see #getConnection()
 	 * @generated
 	 */
-	EReference getConexion_ConexionTarget();
+	EReference getConnection_TargetLayer();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Relacion <em>Relacion</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Relation <em>Relation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Relacion</em>'.
-	 * @see PhotosMetaModel.Relacion
+	 * @return the meta object for class '<em>Relation</em>'.
+	 * @see PhotosMetaModel.Relation
 	 * @generated
 	 */
-	EClass getRelacion();
+	EClass getRelation();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Relacion#getRelacionSource <em>Relacion Source</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Relation#getSourceLayer <em>Source Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Relacion Source</em>'.
-	 * @see PhotosMetaModel.Relacion#getRelacionSource()
-	 * @see #getRelacion()
+	 * @return the meta object for the reference '<em>Source Layer</em>'.
+	 * @see PhotosMetaModel.Relation#getSourceLayer()
+	 * @see #getRelation()
 	 * @generated
 	 */
-	EReference getRelacion_RelacionSource();
+	EReference getRelation_SourceLayer();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Relacion#getRelacionTarget <em>Relacion Target</em>}'.
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Relation#getTargetLayer <em>Target Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Relacion Target</em>'.
-	 * @see PhotosMetaModel.Relacion#getRelacionTarget()
-	 * @see #getRelacion()
+	 * @return the meta object for the reference '<em>Target Layer</em>'.
+	 * @see PhotosMetaModel.Relation#getTargetLayer()
+	 * @see #getRelation()
 	 * @generated
 	 */
-	EReference getRelacion_RelacionTarget();
+	EReference getRelation_TargetLayer();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.REST <em>REST</em>}'.
@@ -7500,58 +7500,58 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getREST();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.ConexionPostgreSQL <em>Conexion Postgre SQL</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.PostgreSQLConnection <em>Postgre SQL Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Conexion Postgre SQL</em>'.
-	 * @see PhotosMetaModel.ConexionPostgreSQL
+	 * @return the meta object for class '<em>Postgre SQL Connection</em>'.
+	 * @see PhotosMetaModel.PostgreSQLConnection
 	 * @generated
 	 */
-	EClass getConexionPostgreSQL();
+	EClass getPostgreSQLConnection();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.ConexionPostgreSQL#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.PostgreSQLConnection#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see PhotosMetaModel.ConexionPostgreSQL#getUrl()
-	 * @see #getConexionPostgreSQL()
+	 * @see PhotosMetaModel.PostgreSQLConnection#getUrl()
+	 * @see #getPostgreSQLConnection()
 	 * @generated
 	 */
-	EAttribute getConexionPostgreSQL_Url();
+	EAttribute getPostgreSQLConnection_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.ConexionPostgreSQL#getPort <em>Port</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.PostgreSQLConnection#getPort <em>Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Port</em>'.
-	 * @see PhotosMetaModel.ConexionPostgreSQL#getPort()
-	 * @see #getConexionPostgreSQL()
+	 * @see PhotosMetaModel.PostgreSQLConnection#getPort()
+	 * @see #getPostgreSQLConnection()
 	 * @generated
 	 */
-	EAttribute getConexionPostgreSQL_Port();
+	EAttribute getPostgreSQLConnection_Port();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.ConexionPostgreSQL#getUsername <em>Username</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.PostgreSQLConnection#getUsername <em>Username</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Username</em>'.
-	 * @see PhotosMetaModel.ConexionPostgreSQL#getUsername()
-	 * @see #getConexionPostgreSQL()
+	 * @see PhotosMetaModel.PostgreSQLConnection#getUsername()
+	 * @see #getPostgreSQLConnection()
 	 * @generated
 	 */
-	EAttribute getConexionPostgreSQL_Username();
+	EAttribute getPostgreSQLConnection_Username();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PhotosMetaModel.ConexionPostgreSQL#getPassword <em>Password</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.PostgreSQLConnection#getPassword <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Password</em>'.
-	 * @see PhotosMetaModel.ConexionPostgreSQL#getPassword()
-	 * @see #getConexionPostgreSQL()
+	 * @see PhotosMetaModel.PostgreSQLConnection#getPassword()
+	 * @see #getPostgreSQLConnection()
 	 * @generated
 	 */
-	EAttribute getConexionPostgreSQL_Password();
+	EAttribute getPostgreSQLConnection_Password();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.AmazonS3API <em>Amazon S3API</em>}'.
@@ -7608,67 +7608,67 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EAttribute getAmazonS3API_BucketName();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Presentacion <em>Presentacion</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Presentation <em>Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Presentacion</em>'.
-	 * @see PhotosMetaModel.Presentacion
+	 * @return the meta object for class '<em>Presentation</em>'.
+	 * @see PhotosMetaModel.Presentation
 	 * @generated
 	 */
-	EClass getPresentacion();
+	EClass getPresentation();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Presentacion#getSegmentopresentacion <em>Segmentopresentacion</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Presentation#getPresentationLayer <em>Presentation Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Segmentopresentacion</em>'.
-	 * @see PhotosMetaModel.Presentacion#getSegmentopresentacion()
-	 * @see #getPresentacion()
+	 * @return the meta object for the containment reference list '<em>Presentation Layer</em>'.
+	 * @see PhotosMetaModel.Presentation#getPresentationLayer()
+	 * @see #getPresentation()
 	 * @generated
 	 */
-	EReference getPresentacion_Segmentopresentacion();
+	EReference getPresentation_PresentationLayer();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.LogicaDeNegocio <em>Logica De Negocio</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.BusinessLogic <em>Business Logic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Logica De Negocio</em>'.
-	 * @see PhotosMetaModel.LogicaDeNegocio
+	 * @return the meta object for class '<em>Business Logic</em>'.
+	 * @see PhotosMetaModel.BusinessLogic
 	 * @generated
 	 */
-	EClass getLogicaDeNegocio();
+	EClass getBusinessLogic();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.LogicaDeNegocio#getSegmentologica <em>Segmentologica</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.BusinessLogic#getBusinessLogicSegment <em>Business Logic Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Segmentologica</em>'.
-	 * @see PhotosMetaModel.LogicaDeNegocio#getSegmentologica()
-	 * @see #getLogicaDeNegocio()
+	 * @return the meta object for the containment reference list '<em>Business Logic Segment</em>'.
+	 * @see PhotosMetaModel.BusinessLogic#getBusinessLogicSegment()
+	 * @see #getBusinessLogic()
 	 * @generated
 	 */
-	EReference getLogicaDeNegocio_Segmentologica();
+	EReference getBusinessLogic_BusinessLogicSegment();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.Datos <em>Datos</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.Data <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Datos</em>'.
-	 * @see PhotosMetaModel.Datos
+	 * @return the meta object for class '<em>Data</em>'.
+	 * @see PhotosMetaModel.Data
 	 * @generated
 	 */
-	EClass getDatos();
+	EClass getData();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Datos#getSegmentodatos <em>Segmentodatos</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Data#getDataSegment <em>Data Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Segmentodatos</em>'.
-	 * @see PhotosMetaModel.Datos#getSegmentodatos()
-	 * @see #getDatos()
+	 * @return the meta object for the containment reference list '<em>Data Segment</em>'.
+	 * @see PhotosMetaModel.Data#getDataSegment()
+	 * @see #getData()
 	 * @generated
 	 */
-	EReference getDatos_Segmentodatos();
+	EReference getData_DataSegment();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.AllowedToUse <em>Allowed To Use</em>}'.
@@ -7681,34 +7681,34 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getAllowedToUse();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.SegmentoPresentacion <em>Segmento Presentacion</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.PresentationSegment <em>Presentation Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Segmento Presentacion</em>'.
-	 * @see PhotosMetaModel.SegmentoPresentacion
+	 * @return the meta object for class '<em>Presentation Segment</em>'.
+	 * @see PhotosMetaModel.PresentationSegment
 	 * @generated
 	 */
-	EClass getSegmentoPresentacion();
+	EClass getPresentationSegment();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.SegmentoLogica <em>Segmento Logica</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.BusinessLogicSegment <em>Business Logic Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Segmento Logica</em>'.
-	 * @see PhotosMetaModel.SegmentoLogica
+	 * @return the meta object for class '<em>Business Logic Segment</em>'.
+	 * @see PhotosMetaModel.BusinessLogicSegment
 	 * @generated
 	 */
-	EClass getSegmentoLogica();
+	EClass getBusinessLogicSegment();
 
 	/**
-	 * Returns the meta object for class '{@link PhotosMetaModel.SegmentoDatos <em>Segmento Datos</em>}'.
+	 * Returns the meta object for class '{@link PhotosMetaModel.DataSegment <em>Data Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Segmento Datos</em>'.
-	 * @see PhotosMetaModel.SegmentoDatos
+	 * @return the meta object for class '<em>Data Segment</em>'.
+	 * @see PhotosMetaModel.DataSegment
 	 * @generated
 	 */
-	EClass getSegmentoDatos();
+	EClass getDataSegment();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.View_a <em>View a</em>}'.
@@ -8338,20 +8338,20 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass DOMAIN = eINSTANCE.getDomain();
 
 		/**
-		 * The meta object literal for the '<em><b>Usuario</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>User d</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__USUARIO = eINSTANCE.getDomain_Usuario();
+		EReference DOMAIN__USER_D = eINSTANCE.getDomain_User_d();
 
 		/**
-		 * The meta object literal for the '<em><b>Foto</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Photo</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN__FOTO = eINSTANCE.getDomain_Foto();
+		EReference DOMAIN__PHOTO = eINSTANCE.getDomain_Photo();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.ArchitectureImpl <em>Architecture</em>}' class.
@@ -9632,38 +9632,38 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass ORDER_P = eINSTANCE.getOrder_p();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.UsuarioImpl <em>Usuario</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.User_dImpl <em>User d</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.UsuarioImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getUsuario()
+		 * @see PhotosMetaModel.impl.User_dImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getUser_d()
 		 * @generated
 		 */
-		EClass USUARIO = eINSTANCE.getUsuario();
+		EClass USER_D = eINSTANCE.getUser_d();
 
 		/**
-		 * The meta object literal for the '<em><b>Autenticacion</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Authentication</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USUARIO__AUTENTICACION = eINSTANCE.getUsuario_Autenticacion();
+		EReference USER_D__AUTHENTICATION = eINSTANCE.getUser_d_Authentication();
 
 		/**
-		 * The meta object literal for the '<em><b>Manejoperfil</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Profile Management</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USUARIO__MANEJOPERFIL = eINSTANCE.getUsuario_Manejoperfil();
+		EReference USER_D__PROFILE_MANAGEMENT = eINSTANCE.getUser_d_ProfileManagement();
 
 		/**
-		 * The meta object literal for the '<em><b>Foto</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Photo</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USUARIO__FOTO = eINSTANCE.getUsuario_Foto();
+		EReference USER_D__PHOTO = eINSTANCE.getUser_d_Photo();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -9671,7 +9671,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__ID = eINSTANCE.getUsuario_Id();
+		EAttribute USER_D__ID = eINSTANCE.getUser_d_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>First name</b></em>' attribute feature.
@@ -9679,7 +9679,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__FIRST_NAME = eINSTANCE.getUsuario_First_name();
+		EAttribute USER_D__FIRST_NAME = eINSTANCE.getUser_d_First_name();
 
 		/**
 		 * The meta object literal for the '<em><b>Last name</b></em>' attribute feature.
@@ -9687,7 +9687,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__LAST_NAME = eINSTANCE.getUsuario_Last_name();
+		EAttribute USER_D__LAST_NAME = eINSTANCE.getUser_d_Last_name();
 
 		/**
 		 * The meta object literal for the '<em><b>Profile description</b></em>' attribute feature.
@@ -9695,7 +9695,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__PROFILE_DESCRIPTION = eINSTANCE.getUsuario_Profile_description();
+		EAttribute USER_D__PROFILE_DESCRIPTION = eINSTANCE.getUser_d_Profile_description();
 
 		/**
 		 * The meta object literal for the '<em><b>Username</b></em>' attribute feature.
@@ -9703,7 +9703,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__USERNAME = eINSTANCE.getUsuario_Username();
+		EAttribute USER_D__USERNAME = eINSTANCE.getUser_d_Username();
 
 		/**
 		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
@@ -9711,7 +9711,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__PASSWORD = eINSTANCE.getUsuario_Password();
+		EAttribute USER_D__PASSWORD = eINSTANCE.getUser_d_Password();
 
 		/**
 		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
@@ -9719,181 +9719,181 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USUARIO__EMAIL = eINSTANCE.getUsuario_Email();
+		EAttribute USER_D__EMAIL = eINSTANCE.getUser_d_Email();
 
 		/**
-		 * The meta object literal for the '<em><b>Registro</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Registration</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USUARIO__REGISTRO = eINSTANCE.getUsuario_Registro();
+		EReference USER_D__REGISTRATION = eINSTANCE.getUser_d_Registration();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.AutenticacionImpl <em>Autenticacion</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.AuthenticationImpl <em>Authentication</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.AutenticacionImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAutenticacion()
+		 * @see PhotosMetaModel.impl.AuthenticationImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAuthentication()
 		 * @generated
 		 */
-		EClass AUTENTICACION = eINSTANCE.getAutenticacion();
+		EClass AUTHENTICATION = eINSTANCE.getAuthentication();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.RegistroImpl <em>Registro</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.RegistrationImpl <em>Registration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.RegistroImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRegistro()
+		 * @see PhotosMetaModel.impl.RegistrationImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRegistration()
 		 * @generated
 		 */
-		EClass REGISTRO = eINSTANCE.getRegistro();
+		EClass REGISTRATION = eINSTANCE.getRegistration();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.ManejoPerfilImpl <em>Manejo Perfil</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.ProfileManagementImpl <em>Profile Management</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.ManejoPerfilImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getManejoPerfil()
+		 * @see PhotosMetaModel.impl.ProfileManagementImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getProfileManagement()
 		 * @generated
 		 */
-		EClass MANEJO_PERFIL = eINSTANCE.getManejoPerfil();
+		EClass PROFILE_MANAGEMENT = eINSTANCE.getProfileManagement();
 
 		/**
-		 * The meta object literal for the '<em><b>Accion</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MANEJO_PERFIL__ACCION = eINSTANCE.getManejoPerfil_Accion();
-
-		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.AccionImpl <em>Accion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.AccionImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAccion()
-		 * @generated
-		 */
-		EClass ACCION = eINSTANCE.getAccion();
-
-		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.CrearAlbumImpl <em>Crear Album</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.CrearAlbumImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCrearAlbum()
-		 * @generated
-		 */
-		EClass CREAR_ALBUM = eINSTANCE.getCrearAlbum();
-
-		/**
-		 * The meta object literal for the '<em><b>Categoria</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CREAR_ALBUM__CATEGORIA = eINSTANCE.getCrearAlbum_Categoria();
+		EReference PROFILE_MANAGEMENT__ACTION = eINSTANCE.getProfileManagement_Action();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.VerAlbumImpl <em>Ver Album</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.ActionImpl <em>Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.VerAlbumImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getVerAlbum()
+		 * @see PhotosMetaModel.impl.ActionImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAction()
 		 * @generated
 		 */
-		EClass VER_ALBUM = eINSTANCE.getVerAlbum();
+		EClass ACTION = eINSTANCE.getAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Categoria</b></em>' reference feature.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.CreateAlbumImpl <em>Create Album</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see PhotosMetaModel.impl.CreateAlbumImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCreateAlbum()
 		 * @generated
 		 */
-		EReference VER_ALBUM__CATEGORIA = eINSTANCE.getVerAlbum_Categoria();
+		EClass CREATE_ALBUM = eINSTANCE.getCreateAlbum();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.CargarFotoImpl <em>Cargar Foto</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.CargarFotoImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCargarFoto()
-		 * @generated
-		 */
-		EClass CARGAR_FOTO = eINSTANCE.getCargarFoto();
-
-		/**
-		 * The meta object literal for the '<em><b>Imagen</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Album</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CARGAR_FOTO__IMAGEN = eINSTANCE.getCargarFoto_Imagen();
+		EReference CREATE_ALBUM__ALBUM = eINSTANCE.getCreateAlbum_Album();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.VerTodasLasFotosImpl <em>Ver Todas Las Fotos</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.SeeAlbumImpl <em>See Album</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.VerTodasLasFotosImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getVerTodasLasFotos()
+		 * @see PhotosMetaModel.impl.SeeAlbumImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSeeAlbum()
 		 * @generated
 		 */
-		EClass VER_TODAS_LAS_FOTOS = eINSTANCE.getVerTodasLasFotos();
+		EClass SEE_ALBUM = eINSTANCE.getSeeAlbum();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.EditarPerfilImpl <em>Editar Perfil</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.EditarPerfilImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getEditarPerfil()
-		 * @generated
-		 */
-		EClass EDITAR_PERFIL = eINSTANCE.getEditarPerfil();
-
-		/**
-		 * The meta object literal for the '<em><b>Foto</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Album</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EDITAR_PERFIL__FOTO = eINSTANCE.getEditarPerfil_Foto();
+		EReference SEE_ALBUM__ALBUM = eINSTANCE.getSeeAlbum_Album();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.FotoImpl <em>Foto</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.LoadPhotoImpl <em>Load Photo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.FotoImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getFoto()
+		 * @see PhotosMetaModel.impl.LoadPhotoImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getLoadPhoto()
 		 * @generated
 		 */
-		EClass FOTO = eINSTANCE.getFoto();
+		EClass LOAD_PHOTO = eINSTANCE.getLoadPhoto();
 
 		/**
-		 * The meta object literal for the '<em><b>Categoria</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FOTO__CATEGORIA = eINSTANCE.getFoto_Categoria();
-
-		/**
-		 * The meta object literal for the '<em><b>Imagen</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Picture</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FOTO__IMAGEN = eINSTANCE.getFoto_Imagen();
+		EReference LOAD_PHOTO__PICTURE = eINSTANCE.getLoadPhoto_Picture();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.CategoriaImpl <em>Categoria</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.SeeAllPhotosImpl <em>See All Photos</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.CategoriaImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCategoria()
+		 * @see PhotosMetaModel.impl.SeeAllPhotosImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSeeAllPhotos()
 		 * @generated
 		 */
-		EClass CATEGORIA = eINSTANCE.getCategoria();
+		EClass SEE_ALL_PHOTOS = eINSTANCE.getSeeAllPhotos();
+
+		/**
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.EditProfileImpl <em>Edit Profile</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PhotosMetaModel.impl.EditProfileImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getEditProfile()
+		 * @generated
+		 */
+		EClass EDIT_PROFILE = eINSTANCE.getEditProfile();
+
+		/**
+		 * The meta object literal for the '<em><b>Photo</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EDIT_PROFILE__PHOTO = eINSTANCE.getEditProfile_Photo();
+
+		/**
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.PhotoImpl <em>Photo</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PhotosMetaModel.impl.PhotoImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPhoto()
+		 * @generated
+		 */
+		EClass PHOTO = eINSTANCE.getPhoto();
+
+		/**
+		 * The meta object literal for the '<em><b>Album</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHOTO__ALBUM = eINSTANCE.getPhoto_Album();
+
+		/**
+		 * The meta object literal for the '<em><b>Photo</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHOTO__PHOTO = eINSTANCE.getPhoto_Photo();
+
+		/**
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.AlbumImpl <em>Album</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PhotosMetaModel.impl.AlbumImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAlbum()
+		 * @generated
+		 */
+		EClass ALBUM = eINSTANCE.getAlbum();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -9901,7 +9901,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CATEGORIA__ID = eINSTANCE.getCategoria_Id();
+		EAttribute ALBUM__ID = eINSTANCE.getAlbum_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
@@ -9909,7 +9909,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CATEGORIA__URL = eINSTANCE.getCategoria_Url();
+		EAttribute ALBUM__URL = eINSTANCE.getAlbum_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -9917,25 +9917,25 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CATEGORIA__NAME = eINSTANCE.getCategoria_Name();
+		EAttribute ALBUM__NAME = eINSTANCE.getAlbum_Name();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.ImagenImpl <em>Imagen</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.PictureImpl <em>Picture</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.ImagenImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getImagen()
+		 * @see PhotosMetaModel.impl.PictureImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPicture()
 		 * @generated
 		 */
-		EClass IMAGEN = eINSTANCE.getImagen();
+		EClass PICTURE = eINSTANCE.getPicture();
 
 		/**
-		 * The meta object literal for the '<em><b>Categoria</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Album</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IMAGEN__CATEGORIA = eINSTANCE.getImagen_Categoria();
+		EReference PICTURE__ALBUM = eINSTANCE.getPicture_Album();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -9943,7 +9943,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGEN__ID = eINSTANCE.getImagen_Id();
+		EAttribute PICTURE__ID = eINSTANCE.getPicture_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -9951,7 +9951,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMAGEN__NAME = eINSTANCE.getImagen_Name();
+		EAttribute PICTURE__NAME = eINSTANCE.getPicture_Name();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.AmazonWebServicesImpl <em>Amazon Web Services</em>}' class.
@@ -10014,90 +10014,90 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass NTIER = eINSTANCE.getNTier();
 
 		/**
-		 * The meta object literal for the '<em><b>Conexion</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Connection</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NTIER__CONEXION = eINSTANCE.getNTier_Conexion();
+		EReference NTIER__CONNECTION = eINSTANCE.getNTier_Connection();
 
 		/**
-		 * The meta object literal for the '<em><b>Capa</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Layer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NTIER__CAPA = eINSTANCE.getNTier_Capa();
+		EReference NTIER__LAYER = eINSTANCE.getNTier_Layer();
 
 		/**
-		 * The meta object literal for the '<em><b>Relacion</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Relation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NTIER__RELACION = eINSTANCE.getNTier_Relacion();
+		EReference NTIER__RELATION = eINSTANCE.getNTier_Relation();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.CapaImpl <em>Capa</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.LayerImpl <em>Layer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.CapaImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getCapa()
+		 * @see PhotosMetaModel.impl.LayerImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getLayer()
 		 * @generated
 		 */
-		EClass CAPA = eINSTANCE.getCapa();
+		EClass LAYER = eINSTANCE.getLayer();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.ConexionImpl <em>Conexion</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.ConnectionImpl <em>Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.ConexionImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getConexion()
+		 * @see PhotosMetaModel.impl.ConnectionImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getConnection()
 		 * @generated
 		 */
-		EClass CONEXION = eINSTANCE.getConexion();
+		EClass CONNECTION = eINSTANCE.getConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Conexion Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Source Layer</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONEXION__CONEXION_SOURCE = eINSTANCE.getConexion_ConexionSource();
+		EReference CONNECTION__SOURCE_LAYER = eINSTANCE.getConnection_SourceLayer();
 
 		/**
-		 * The meta object literal for the '<em><b>Conexion Target</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target Layer</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONEXION__CONEXION_TARGET = eINSTANCE.getConexion_ConexionTarget();
+		EReference CONNECTION__TARGET_LAYER = eINSTANCE.getConnection_TargetLayer();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.RelacionImpl <em>Relacion</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.RelationImpl <em>Relation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.RelacionImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRelacion()
+		 * @see PhotosMetaModel.impl.RelationImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getRelation()
 		 * @generated
 		 */
-		EClass RELACION = eINSTANCE.getRelacion();
+		EClass RELATION = eINSTANCE.getRelation();
 
 		/**
-		 * The meta object literal for the '<em><b>Relacion Source</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Source Layer</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RELACION__RELACION_SOURCE = eINSTANCE.getRelacion_RelacionSource();
+		EReference RELATION__SOURCE_LAYER = eINSTANCE.getRelation_SourceLayer();
 
 		/**
-		 * The meta object literal for the '<em><b>Relacion Target</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Target Layer</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RELACION__RELACION_TARGET = eINSTANCE.getRelacion_RelacionTarget();
+		EReference RELATION__TARGET_LAYER = eINSTANCE.getRelation_TargetLayer();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.RESTImpl <em>REST</em>}' class.
@@ -10110,14 +10110,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass REST = eINSTANCE.getREST();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.ConexionPostgreSQLImpl <em>Conexion Postgre SQL</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.PostgreSQLConnectionImpl <em>Postgre SQL Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.ConexionPostgreSQLImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getConexionPostgreSQL()
+		 * @see PhotosMetaModel.impl.PostgreSQLConnectionImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPostgreSQLConnection()
 		 * @generated
 		 */
-		EClass CONEXION_POSTGRE_SQL = eINSTANCE.getConexionPostgreSQL();
+		EClass POSTGRE_SQL_CONNECTION = eINSTANCE.getPostgreSQLConnection();
 
 		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
@@ -10125,7 +10125,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONEXION_POSTGRE_SQL__URL = eINSTANCE.getConexionPostgreSQL_Url();
+		EAttribute POSTGRE_SQL_CONNECTION__URL = eINSTANCE.getPostgreSQLConnection_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
@@ -10133,7 +10133,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONEXION_POSTGRE_SQL__PORT = eINSTANCE.getConexionPostgreSQL_Port();
+		EAttribute POSTGRE_SQL_CONNECTION__PORT = eINSTANCE.getPostgreSQLConnection_Port();
 
 		/**
 		 * The meta object literal for the '<em><b>Username</b></em>' attribute feature.
@@ -10141,7 +10141,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONEXION_POSTGRE_SQL__USERNAME = eINSTANCE.getConexionPostgreSQL_Username();
+		EAttribute POSTGRE_SQL_CONNECTION__USERNAME = eINSTANCE.getPostgreSQLConnection_Username();
 
 		/**
 		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
@@ -10149,7 +10149,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONEXION_POSTGRE_SQL__PASSWORD = eINSTANCE.getConexionPostgreSQL_Password();
+		EAttribute POSTGRE_SQL_CONNECTION__PASSWORD = eINSTANCE.getPostgreSQLConnection_Password();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.AmazonS3APIImpl <em>Amazon S3API</em>}' class.
@@ -10194,58 +10194,58 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EAttribute AMAZON_S3API__BUCKET_NAME = eINSTANCE.getAmazonS3API_BucketName();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.PresentacionImpl <em>Presentacion</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.PresentationImpl <em>Presentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.PresentacionImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPresentacion()
+		 * @see PhotosMetaModel.impl.PresentationImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPresentation()
 		 * @generated
 		 */
-		EClass PRESENTACION = eINSTANCE.getPresentacion();
+		EClass PRESENTATION = eINSTANCE.getPresentation();
 
 		/**
-		 * The meta object literal for the '<em><b>Segmentopresentacion</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Presentation Layer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRESENTACION__SEGMENTOPRESENTACION = eINSTANCE.getPresentacion_Segmentopresentacion();
+		EReference PRESENTATION__PRESENTATION_LAYER = eINSTANCE.getPresentation_PresentationLayer();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.LogicaDeNegocioImpl <em>Logica De Negocio</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.BusinessLogicImpl <em>Business Logic</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.LogicaDeNegocioImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getLogicaDeNegocio()
+		 * @see PhotosMetaModel.impl.BusinessLogicImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getBusinessLogic()
 		 * @generated
 		 */
-		EClass LOGICA_DE_NEGOCIO = eINSTANCE.getLogicaDeNegocio();
+		EClass BUSINESS_LOGIC = eINSTANCE.getBusinessLogic();
 
 		/**
-		 * The meta object literal for the '<em><b>Segmentologica</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Business Logic Segment</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOGICA_DE_NEGOCIO__SEGMENTOLOGICA = eINSTANCE.getLogicaDeNegocio_Segmentologica();
+		EReference BUSINESS_LOGIC__BUSINESS_LOGIC_SEGMENT = eINSTANCE.getBusinessLogic_BusinessLogicSegment();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.DatosImpl <em>Datos</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.DataImpl <em>Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.DatosImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getDatos()
+		 * @see PhotosMetaModel.impl.DataImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getData()
 		 * @generated
 		 */
-		EClass DATOS = eINSTANCE.getDatos();
+		EClass DATA = eINSTANCE.getData();
 
 		/**
-		 * The meta object literal for the '<em><b>Segmentodatos</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Data Segment</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATOS__SEGMENTODATOS = eINSTANCE.getDatos_Segmentodatos();
+		EReference DATA__DATA_SEGMENT = eINSTANCE.getData_DataSegment();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.AllowedToUseImpl <em>Allowed To Use</em>}' class.
@@ -10258,34 +10258,34 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass ALLOWED_TO_USE = eINSTANCE.getAllowedToUse();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.SegmentoPresentacionImpl <em>Segmento Presentacion</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.PresentationSegmentImpl <em>Presentation Segment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.SegmentoPresentacionImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSegmentoPresentacion()
+		 * @see PhotosMetaModel.impl.PresentationSegmentImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPresentationSegment()
 		 * @generated
 		 */
-		EClass SEGMENTO_PRESENTACION = eINSTANCE.getSegmentoPresentacion();
+		EClass PRESENTATION_SEGMENT = eINSTANCE.getPresentationSegment();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.SegmentoLogicaImpl <em>Segmento Logica</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.BusinessLogicSegmentImpl <em>Business Logic Segment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.SegmentoLogicaImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSegmentoLogica()
+		 * @see PhotosMetaModel.impl.BusinessLogicSegmentImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getBusinessLogicSegment()
 		 * @generated
 		 */
-		EClass SEGMENTO_LOGICA = eINSTANCE.getSegmentoLogica();
+		EClass BUSINESS_LOGIC_SEGMENT = eINSTANCE.getBusinessLogicSegment();
 
 		/**
-		 * The meta object literal for the '{@link PhotosMetaModel.impl.SegmentoDatosImpl <em>Segmento Datos</em>}' class.
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.DataSegmentImpl <em>Data Segment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PhotosMetaModel.impl.SegmentoDatosImpl
-		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getSegmentoDatos()
+		 * @see PhotosMetaModel.impl.DataSegmentImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getDataSegment()
 		 * @generated
 		 */
-		EClass SEGMENTO_DATOS = eINSTANCE.getSegmentoDatos();
+		EClass DATA_SEGMENT = eINSTANCE.getDataSegment();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.View_aImpl <em>View a</em>}' class.

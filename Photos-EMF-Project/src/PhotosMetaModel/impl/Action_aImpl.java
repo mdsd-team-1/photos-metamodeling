@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Action_aImpl extends SegmentoPresentacionImpl implements Action_a {
+public class Action_aImpl extends PresentationSegmentImpl implements Action_a {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

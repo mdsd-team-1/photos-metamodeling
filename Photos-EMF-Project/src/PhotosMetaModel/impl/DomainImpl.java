@@ -3,9 +3,9 @@
 package PhotosMetaModel.impl;
 
 import PhotosMetaModel.Domain;
-import PhotosMetaModel.Foto;
+import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotosMetaModelPackage;
-import PhotosMetaModel.Usuario;
+import PhotosMetaModel.User_d;
 
 import java.util.Collection;
 
@@ -29,32 +29,32 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.DomainImpl#getUsuario <em>Usuario</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.DomainImpl#getFoto <em>Foto</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.DomainImpl#getUser_d <em>User d</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.DomainImpl#getPhoto <em>Photo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	/**
-	 * The cached value of the '{@link #getUsuario() <em>Usuario</em>}' containment reference list.
+	 * The cached value of the '{@link #getUser_d() <em>User d</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUsuario()
+	 * @see #getUser_d()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Usuario> usuario;
+	protected EList<User_d> user_d;
 
 	/**
-	 * The cached value of the '{@link #getFoto() <em>Foto</em>}' containment reference list.
+	 * The cached value of the '{@link #getPhoto() <em>Photo</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFoto()
+	 * @see #getPhoto()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Foto> foto;
+	protected EList<Photo> photo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,11 +81,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 */
 	@Override
-	public EList<Usuario> getUsuario() {
-		if (usuario == null) {
-			usuario = new EObjectContainmentEList<Usuario>(Usuario.class, this, PhotosMetaModelPackage.DOMAIN__USUARIO);
+	public EList<User_d> getUser_d() {
+		if (user_d == null) {
+			user_d = new EObjectContainmentEList<User_d>(User_d.class, this, PhotosMetaModelPackage.DOMAIN__USER_D);
 		}
-		return usuario;
+		return user_d;
 	}
 
 	/**
@@ -94,11 +94,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	 * @generated
 	 */
 	@Override
-	public EList<Foto> getFoto() {
-		if (foto == null) {
-			foto = new EObjectContainmentEList<Foto>(Foto.class, this, PhotosMetaModelPackage.DOMAIN__FOTO);
+	public EList<Photo> getPhoto() {
+		if (photo == null) {
+			photo = new EObjectContainmentEList<Photo>(Photo.class, this, PhotosMetaModelPackage.DOMAIN__PHOTO);
 		}
-		return foto;
+		return photo;
 	}
 
 	/**
@@ -109,10 +109,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.DOMAIN__USUARIO:
-				return ((InternalEList<?>)getUsuario()).basicRemove(otherEnd, msgs);
-			case PhotosMetaModelPackage.DOMAIN__FOTO:
-				return ((InternalEList<?>)getFoto()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.DOMAIN__USER_D:
+				return ((InternalEList<?>)getUser_d()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.DOMAIN__PHOTO:
+				return ((InternalEList<?>)getPhoto()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -125,10 +125,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.DOMAIN__USUARIO:
-				return getUsuario();
-			case PhotosMetaModelPackage.DOMAIN__FOTO:
-				return getFoto();
+			case PhotosMetaModelPackage.DOMAIN__USER_D:
+				return getUser_d();
+			case PhotosMetaModelPackage.DOMAIN__PHOTO:
+				return getPhoto();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -142,13 +142,13 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.DOMAIN__USUARIO:
-				getUsuario().clear();
-				getUsuario().addAll((Collection<? extends Usuario>)newValue);
+			case PhotosMetaModelPackage.DOMAIN__USER_D:
+				getUser_d().clear();
+				getUser_d().addAll((Collection<? extends User_d>)newValue);
 				return;
-			case PhotosMetaModelPackage.DOMAIN__FOTO:
-				getFoto().clear();
-				getFoto().addAll((Collection<? extends Foto>)newValue);
+			case PhotosMetaModelPackage.DOMAIN__PHOTO:
+				getPhoto().clear();
+				getPhoto().addAll((Collection<? extends Photo>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,11 +162,11 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.DOMAIN__USUARIO:
-				getUsuario().clear();
+			case PhotosMetaModelPackage.DOMAIN__USER_D:
+				getUser_d().clear();
 				return;
-			case PhotosMetaModelPackage.DOMAIN__FOTO:
-				getFoto().clear();
+			case PhotosMetaModelPackage.DOMAIN__PHOTO:
+				getPhoto().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -180,10 +180,10 @@ public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.DOMAIN__USUARIO:
-				return usuario != null && !usuario.isEmpty();
-			case PhotosMetaModelPackage.DOMAIN__FOTO:
-				return foto != null && !foto.isEmpty();
+			case PhotosMetaModelPackage.DOMAIN__USER_D:
+				return user_d != null && !user_d.isEmpty();
+			case PhotosMetaModelPackage.DOMAIN__PHOTO:
+				return photo != null && !photo.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

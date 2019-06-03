@@ -2,11 +2,11 @@
  */
 package PhotosMetaModel.impl;
 
-import PhotosMetaModel.Capa;
-import PhotosMetaModel.Conexion;
+import PhotosMetaModel.Connection;
+import PhotosMetaModel.Layer;
 import PhotosMetaModel.NTier;
 import PhotosMetaModel.PhotosMetaModelPackage;
-import PhotosMetaModel.Relacion;
+import PhotosMetaModel.Relation;
 
 import java.util.Collection;
 
@@ -30,43 +30,43 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.NTierImpl#getConexion <em>Conexion</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.NTierImpl#getCapa <em>Capa</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.NTierImpl#getRelacion <em>Relacion</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.NTierImpl#getConnection <em>Connection</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.NTierImpl#getLayer <em>Layer</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.NTierImpl#getRelation <em>Relation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	/**
-	 * The cached value of the '{@link #getConexion() <em>Conexion</em>}' containment reference list.
+	 * The cached value of the '{@link #getConnection() <em>Connection</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConexion()
+	 * @see #getConnection()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Conexion> conexion;
+	protected EList<Connection> connection;
 
 	/**
-	 * The cached value of the '{@link #getCapa() <em>Capa</em>}' containment reference list.
+	 * The cached value of the '{@link #getLayer() <em>Layer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCapa()
+	 * @see #getLayer()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Capa> capa;
+	protected EList<Layer> layer;
 
 	/**
-	 * The cached value of the '{@link #getRelacion() <em>Relacion</em>}' containment reference list.
+	 * The cached value of the '{@link #getRelation() <em>Relation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRelacion()
+	 * @see #getRelation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Relacion> relacion;
+	protected EList<Relation> relation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,11 +93,11 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	 * @generated
 	 */
 	@Override
-	public EList<Conexion> getConexion() {
-		if (conexion == null) {
-			conexion = new EObjectContainmentEList<Conexion>(Conexion.class, this, PhotosMetaModelPackage.NTIER__CONEXION);
+	public EList<Connection> getConnection() {
+		if (connection == null) {
+			connection = new EObjectContainmentEList<Connection>(Connection.class, this, PhotosMetaModelPackage.NTIER__CONNECTION);
 		}
-		return conexion;
+		return connection;
 	}
 
 	/**
@@ -106,11 +106,11 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	 * @generated
 	 */
 	@Override
-	public EList<Capa> getCapa() {
-		if (capa == null) {
-			capa = new EObjectContainmentEList<Capa>(Capa.class, this, PhotosMetaModelPackage.NTIER__CAPA);
+	public EList<Layer> getLayer() {
+		if (layer == null) {
+			layer = new EObjectContainmentEList<Layer>(Layer.class, this, PhotosMetaModelPackage.NTIER__LAYER);
 		}
-		return capa;
+		return layer;
 	}
 
 	/**
@@ -119,11 +119,11 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	 * @generated
 	 */
 	@Override
-	public EList<Relacion> getRelacion() {
-		if (relacion == null) {
-			relacion = new EObjectContainmentEList<Relacion>(Relacion.class, this, PhotosMetaModelPackage.NTIER__RELACION);
+	public EList<Relation> getRelation() {
+		if (relation == null) {
+			relation = new EObjectContainmentEList<Relation>(Relation.class, this, PhotosMetaModelPackage.NTIER__RELATION);
 		}
-		return relacion;
+		return relation;
 	}
 
 	/**
@@ -134,12 +134,12 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.NTIER__CONEXION:
-				return ((InternalEList<?>)getConexion()).basicRemove(otherEnd, msgs);
-			case PhotosMetaModelPackage.NTIER__CAPA:
-				return ((InternalEList<?>)getCapa()).basicRemove(otherEnd, msgs);
-			case PhotosMetaModelPackage.NTIER__RELACION:
-				return ((InternalEList<?>)getRelacion()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.NTIER__CONNECTION:
+				return ((InternalEList<?>)getConnection()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.NTIER__LAYER:
+				return ((InternalEList<?>)getLayer()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.NTIER__RELATION:
+				return ((InternalEList<?>)getRelation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -152,12 +152,12 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.NTIER__CONEXION:
-				return getConexion();
-			case PhotosMetaModelPackage.NTIER__CAPA:
-				return getCapa();
-			case PhotosMetaModelPackage.NTIER__RELACION:
-				return getRelacion();
+			case PhotosMetaModelPackage.NTIER__CONNECTION:
+				return getConnection();
+			case PhotosMetaModelPackage.NTIER__LAYER:
+				return getLayer();
+			case PhotosMetaModelPackage.NTIER__RELATION:
+				return getRelation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -171,17 +171,17 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.NTIER__CONEXION:
-				getConexion().clear();
-				getConexion().addAll((Collection<? extends Conexion>)newValue);
+			case PhotosMetaModelPackage.NTIER__CONNECTION:
+				getConnection().clear();
+				getConnection().addAll((Collection<? extends Connection>)newValue);
 				return;
-			case PhotosMetaModelPackage.NTIER__CAPA:
-				getCapa().clear();
-				getCapa().addAll((Collection<? extends Capa>)newValue);
+			case PhotosMetaModelPackage.NTIER__LAYER:
+				getLayer().clear();
+				getLayer().addAll((Collection<? extends Layer>)newValue);
 				return;
-			case PhotosMetaModelPackage.NTIER__RELACION:
-				getRelacion().clear();
-				getRelacion().addAll((Collection<? extends Relacion>)newValue);
+			case PhotosMetaModelPackage.NTIER__RELATION:
+				getRelation().clear();
+				getRelation().addAll((Collection<? extends Relation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,14 +195,14 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.NTIER__CONEXION:
-				getConexion().clear();
+			case PhotosMetaModelPackage.NTIER__CONNECTION:
+				getConnection().clear();
 				return;
-			case PhotosMetaModelPackage.NTIER__CAPA:
-				getCapa().clear();
+			case PhotosMetaModelPackage.NTIER__LAYER:
+				getLayer().clear();
 				return;
-			case PhotosMetaModelPackage.NTIER__RELACION:
-				getRelacion().clear();
+			case PhotosMetaModelPackage.NTIER__RELATION:
+				getRelation().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -216,12 +216,12 @@ public class NTierImpl extends MinimalEObjectImpl.Container implements NTier {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.NTIER__CONEXION:
-				return conexion != null && !conexion.isEmpty();
-			case PhotosMetaModelPackage.NTIER__CAPA:
-				return capa != null && !capa.isEmpty();
-			case PhotosMetaModelPackage.NTIER__RELACION:
-				return relacion != null && !relacion.isEmpty();
+			case PhotosMetaModelPackage.NTIER__CONNECTION:
+				return connection != null && !connection.isEmpty();
+			case PhotosMetaModelPackage.NTIER__LAYER:
+				return layer != null && !layer.isEmpty();
+			case PhotosMetaModelPackage.NTIER__RELATION:
+				return relation != null && !relation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

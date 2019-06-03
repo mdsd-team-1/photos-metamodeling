@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Component_aImpl extends SegmentoPresentacionImpl implements Component_a {
+public class Component_aImpl extends PresentationSegmentImpl implements Component_a {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

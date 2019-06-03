@@ -13,5 +13,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface AllowedToUse extends Relacion {
+public interface AllowedToUse extends Relation {
 } // AllowedToUse

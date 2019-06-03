@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AllowedToUseTest extends RelacionTest {
+public class AllowedToUseTest extends RelationTest {
 
 	/**
 	 * <!-- begin-user-doc -->

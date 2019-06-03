@@ -8,10 +8,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//Domain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usuario" upperBound="-1"
-        eType="#//Usuario" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="foto" upperBound="-1" eType="#//Foto"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="user_d" upperBound="-1"
+        eType="#//User_d" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" upperBound="-1"
+        eType="#//Photo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Architecture">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ntier" upperBound="-1"
@@ -218,12 +218,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Order_p" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Usuario">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="autenticacion" upperBound="-1"
-        eType="#//Autenticacion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="manejoperfil" upperBound="-1"
-        eType="#//ManejoPerfil" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="foto" eType="#//Foto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="User_d">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" upperBound="-1"
+        eType="#//Authentication" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="profileManagement" upperBound="-1"
+        eType="#//ProfileManagement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" eType="#//Photo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="first_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="last_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -231,42 +231,42 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="registro" upperBound="-1"
-        eType="#//Registro" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="registration" upperBound="-1"
+        eType="#//Registration" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Autenticacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Registro"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ManejoPerfil">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="accion" upperBound="-1"
-        eType="#//Accion" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Authentication"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Registration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProfileManagement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+        eType="#//Action" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Accion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CrearAlbum" eSuperTypes="#//Accion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="categoria" eType="#//Categoria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CreateAlbum" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="album" eType="#//Album"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VerAlbum" eSuperTypes="#//Accion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="categoria" eType="#//Categoria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SeeAlbum" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="album" eType="#//Album"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CargarFoto" eSuperTypes="#//Accion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imagen" eType="#//Imagen"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LoadPhoto" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//Picture"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VerTodasLasFotos" eSuperTypes="#//Accion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EditarPerfil" eSuperTypes="#//Accion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="foto" eType="#//Foto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SeeAllPhotos" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EditProfile" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" eType="#//Photo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Foto">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="categoria" upperBound="-1"
-        eType="#//Categoria" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imagen" upperBound="-1"
-        eType="#//Imagen" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Photo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="album" upperBound="-1"
+        eType="#//Album" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" upperBound="-1"
+        eType="#//Picture" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Categoria">
+  <eClassifiers xsi:type="ecore:EClass" name="Album">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Imagen">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="categoria" eType="#//Categoria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Picture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="album" eType="#//Album"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -280,60 +280,60 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsagemaker" eType="#//AmazonSageMaker"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NTier">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conexion" upperBound="-1"
-        eType="#//Conexion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capa" upperBound="-1" eType="#//Capa"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relacion" upperBound="-1"
-        eType="#//Relacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" upperBound="-1"
+        eType="#//Connection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layer" upperBound="-1"
+        eType="#//Layer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relation" upperBound="-1"
+        eType="#//Relation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Capa"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Conexion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conexionSource" eType="#//Capa"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conexionTarget" eType="#//Capa"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Layer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLayer" eType="#//Layer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLayer" eType="#//Layer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Relacion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionSource" eType="#//Capa"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionTarget" eType="#//Capa"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLayer" eType="#//Layer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLayer" eType="#//Layer"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="REST" eSuperTypes="#//Conexion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConexionPostgreSQL" eSuperTypes="#//Conexion">
+  <eClassifiers xsi:type="ecore:EClass" name="REST" eSuperTypes="#//Connection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PostgreSQLConnection" eSuperTypes="#//Connection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonS3API" eSuperTypes="#//Conexion">
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonS3API" eSuperTypes="#//Connection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endpointUrl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="secretKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bucketName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Presentacion" eSuperTypes="#//Capa">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentopresentacion" upperBound="-1"
-        eType="#//SegmentoPresentacion" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Presentation" eSuperTypes="#//Layer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presentationLayer" upperBound="-1"
+        eType="#//PresentationSegment" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LogicaDeNegocio" eSuperTypes="#//Capa">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentologica" upperBound="-1"
-        eType="#//SegmentoLogica" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessLogic" eSuperTypes="#//Layer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BusinessLogicSegment" upperBound="-1"
+        eType="#//BusinessLogicSegment" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Datos" eSuperTypes="#//Capa">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentodatos" upperBound="-1"
-        eType="#//SegmentoDatos" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//Layer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataSegment" upperBound="-1"
+        eType="#//DataSegment" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse" eSuperTypes="#//Relacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SegmentoPresentacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SegmentoLogica"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SegmentoDatos"/>
-  <eClassifiers xsi:type="ecore:EClass" name="View_a" eSuperTypes="#//SegmentoPresentacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Component_a" eSuperTypes="#//SegmentoPresentacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Action_a" eSuperTypes="#//SegmentoPresentacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Controller_a" eSuperTypes="#//SegmentoLogica"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Model_a" eSuperTypes="#//SegmentoLogica"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Repository_a" eSuperTypes="#//SegmentoLogica"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Security_a" eSuperTypes="#//SegmentoLogica"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL_a" eSuperTypes="#//SegmentoDatos"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonS3Storage" eSuperTypes="#//SegmentoDatos"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse" eSuperTypes="#//Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PresentationSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessLogicSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="View_a" eSuperTypes="#//PresentationSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component_a" eSuperTypes="#//PresentationSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action_a" eSuperTypes="#//PresentationSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Controller_a" eSuperTypes="#//BusinessLogicSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Model_a" eSuperTypes="#//BusinessLogicSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository_a" eSuperTypes="#//BusinessLogicSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Security_a" eSuperTypes="#//BusinessLogicSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL_a" eSuperTypes="#//DataSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonS3Storage" eSuperTypes="#//DataSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="ReactDOM">
     <eStructuralFeatures xsi:type="ecore:EReference" name="element_r" upperBound="-1"
         eType="#//Element_r" containment="true"/>

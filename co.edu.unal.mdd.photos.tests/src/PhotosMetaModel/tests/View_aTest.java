@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class View_aTest extends SegmentoPresentacionTest {
+public class View_aTest extends PresentationSegmentTest {
 
 	/**
 	 * <!-- begin-user-doc -->

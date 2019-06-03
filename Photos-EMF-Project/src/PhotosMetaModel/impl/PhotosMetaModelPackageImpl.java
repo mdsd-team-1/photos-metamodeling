@@ -3,8 +3,9 @@
 package PhotosMetaModel.impl;
 
 import PhotosMetaModel.Access;
-import PhotosMetaModel.Accion;
+import PhotosMetaModel.Action;
 import PhotosMetaModel.Action_a;
+import PhotosMetaModel.Album;
 import PhotosMetaModel.AllowedToUse;
 import PhotosMetaModel.Alter;
 import PhotosMetaModel.AmazonAurora;
@@ -17,15 +18,14 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.Architecture;
 import PhotosMetaModel.Array;
-import PhotosMetaModel.Autenticacion;
+import PhotosMetaModel.Authentication;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
 import PhotosMetaModel.Bucket;
 import PhotosMetaModel.BucketObjectsNotPublic;
-import PhotosMetaModel.Capa;
-import PhotosMetaModel.CargarFoto;
-import PhotosMetaModel.Categoria;
+import PhotosMetaModel.BusinessLogic;
+import PhotosMetaModel.BusinessLogicSegment;
 import PhotosMetaModel.Class_r;
 import PhotosMetaModel.Clause;
 import PhotosMetaModel.Cluster;
@@ -37,23 +37,23 @@ import PhotosMetaModel.ComponentDidMount;
 import PhotosMetaModel.ComponentWillUnmount;
 import PhotosMetaModel.Component_a;
 import PhotosMetaModel.Component_r;
-import PhotosMetaModel.Conexion;
-import PhotosMetaModel.ConexionPostgreSQL;
 import PhotosMetaModel.Configuration;
+import PhotosMetaModel.Connection;
 import PhotosMetaModel.Constraint;
 import PhotosMetaModel.Constructor;
 import PhotosMetaModel.Controller_a;
-import PhotosMetaModel.CrearAlbum;
 import PhotosMetaModel.Create;
+import PhotosMetaModel.CreateAlbum;
+import PhotosMetaModel.Data;
+import PhotosMetaModel.DataSegment;
 import PhotosMetaModel.DataType;
 import PhotosMetaModel.Database;
-import PhotosMetaModel.Datos;
 import PhotosMetaModel.Delete;
 import PhotosMetaModel.DeleteMapping;
 import PhotosMetaModel.Distnct;
 import PhotosMetaModel.Domain;
 import PhotosMetaModel.Drop;
-import PhotosMetaModel.EditarPerfil;
+import PhotosMetaModel.EditProfile;
 import PhotosMetaModel.Element_r;
 import PhotosMetaModel.EnableAuthorizationServer;
 import PhotosMetaModel.EnableGlobalMethodSecurity;
@@ -64,7 +64,6 @@ import PhotosMetaModel.ExceptionHandler;
 import PhotosMetaModel.File_a;
 import PhotosMetaModel.Folder_a;
 import PhotosMetaModel.ForeignKey;
-import PhotosMetaModel.Foto;
 import PhotosMetaModel.From;
 import PhotosMetaModel.Function_p;
 import PhotosMetaModel.Function_r;
@@ -73,16 +72,15 @@ import PhotosMetaModel.GetMapping;
 import PhotosMetaModel.GroupBy;
 import PhotosMetaModel.Having;
 import PhotosMetaModel.Id;
-import PhotosMetaModel.Imagen;
 import PhotosMetaModel.Index;
 import PhotosMetaModel.Index_p;
 import PhotosMetaModel.Insert;
 import PhotosMetaModel.Into;
 import PhotosMetaModel.Join;
 import PhotosMetaModel.Lateral;
+import PhotosMetaModel.Layer;
 import PhotosMetaModel.Limit;
-import PhotosMetaModel.LogicaDeNegocio;
-import PhotosMetaModel.ManejoPerfil;
+import PhotosMetaModel.LoadPhoto;
 import PhotosMetaModel.MetaData;
 import PhotosMetaModel.Model_a;
 import PhotosMetaModel.NTier;
@@ -92,23 +90,28 @@ import PhotosMetaModel.Offset;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_p;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.PhotosMetaModelPackage;
+import PhotosMetaModel.Picture;
 import PhotosMetaModel.Policy;
 import PhotosMetaModel.PostMapping;
 import PhotosMetaModel.PostgreSQL;
+import PhotosMetaModel.PostgreSQLConnection;
 import PhotosMetaModel.PostgreSQL_a;
 import PhotosMetaModel.Predicate;
-import PhotosMetaModel.Presentacion;
+import PhotosMetaModel.Presentation;
+import PhotosMetaModel.PresentationSegment;
 import PhotosMetaModel.Privilege;
+import PhotosMetaModel.ProfileManagement;
 import PhotosMetaModel.Prop;
 import PhotosMetaModel.Public;
 import PhotosMetaModel.PutMapping;
 import PhotosMetaModel.Query;
 import PhotosMetaModel.React;
 import PhotosMetaModel.ReactDOM;
-import PhotosMetaModel.Registro;
-import PhotosMetaModel.Relacion;
+import PhotosMetaModel.Registration;
+import PhotosMetaModel.Relation;
 import PhotosMetaModel.Render;
 import PhotosMetaModel.Repository;
 import PhotosMetaModel.Repository_a;
@@ -119,9 +122,8 @@ import PhotosMetaModel.Row;
 import PhotosMetaModel.Scheme;
 import PhotosMetaModel.SearchCriteria;
 import PhotosMetaModel.Security_a;
-import PhotosMetaModel.SegmentoDatos;
-import PhotosMetaModel.SegmentoLogica;
-import PhotosMetaModel.SegmentoPresentacion;
+import PhotosMetaModel.SeeAlbum;
+import PhotosMetaModel.SeeAllPhotos;
 import PhotosMetaModel.Select;
 import PhotosMetaModel.SoftGallery;
 import PhotosMetaModel.Specification;
@@ -132,12 +134,10 @@ import PhotosMetaModel.Table_s;
 import PhotosMetaModel.Technology;
 import PhotosMetaModel.Trigger;
 import PhotosMetaModel.Update;
+import PhotosMetaModel.User_d;
 import PhotosMetaModel.User_p;
 import PhotosMetaModel.Using;
-import PhotosMetaModel.Usuario;
 import PhotosMetaModel.Values;
-import PhotosMetaModel.VerAlbum;
-import PhotosMetaModel.VerTodasLasFotos;
 import PhotosMetaModel.View;
 import PhotosMetaModel.View_a;
 import PhotosMetaModel.Where;
@@ -700,91 +700,91 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass usuarioEClass = null;
+	private EClass user_dEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass autenticacionEClass = null;
+	private EClass authenticationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass registroEClass = null;
+	private EClass registrationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass manejoPerfilEClass = null;
+	private EClass profileManagementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass accionEClass = null;
+	private EClass actionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass crearAlbumEClass = null;
+	private EClass createAlbumEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass verAlbumEClass = null;
+	private EClass seeAlbumEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass cargarFotoEClass = null;
+	private EClass loadPhotoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass verTodasLasFotosEClass = null;
+	private EClass seeAllPhotosEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass editarPerfilEClass = null;
+	private EClass editProfileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fotoEClass = null;
+	private EClass photoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass categoriaEClass = null;
+	private EClass albumEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imagenEClass = null;
+	private EClass pictureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -805,21 +805,21 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass capaEClass = null;
+	private EClass layerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass conexionEClass = null;
+	private EClass connectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass relacionEClass = null;
+	private EClass relationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -833,7 +833,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass conexionPostgreSQLEClass = null;
+	private EClass postgreSQLConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -847,21 +847,21 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass presentacionEClass = null;
+	private EClass presentationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass logicaDeNegocioEClass = null;
+	private EClass businessLogicEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass datosEClass = null;
+	private EClass dataEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -875,21 +875,21 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass segmentoPresentacionEClass = null;
+	private EClass presentationSegmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass segmentoLogicaEClass = null;
+	private EClass businessLogicSegmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass segmentoDatosEClass = null;
+	private EClass dataSegmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1246,7 +1246,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getDomain_Usuario() {
+	public EReference getDomain_User_d() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1256,7 +1256,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getDomain_Foto() {
+	public EReference getDomain_Photo() {
 		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2676,8 +2676,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getUsuario() {
-		return usuarioEClass;
+	public EClass getUser_d() {
+		return user_dEClass;
 	}
 
 	/**
@@ -2686,8 +2686,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getUsuario_Autenticacion() {
-		return (EReference)usuarioEClass.getEStructuralFeatures().get(0);
+	public EReference getUser_d_Authentication() {
+		return (EReference)user_dEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2696,8 +2696,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getUsuario_Manejoperfil() {
-		return (EReference)usuarioEClass.getEStructuralFeatures().get(1);
+	public EReference getUser_d_ProfileManagement() {
+		return (EReference)user_dEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2706,8 +2706,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getUsuario_Foto() {
-		return (EReference)usuarioEClass.getEStructuralFeatures().get(2);
+	public EReference getUser_d_Photo() {
+		return (EReference)user_dEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2716,8 +2716,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_Id() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(3);
+	public EAttribute getUser_d_Id() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2726,8 +2726,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_First_name() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(4);
+	public EAttribute getUser_d_First_name() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2736,8 +2736,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_Last_name() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(5);
+	public EAttribute getUser_d_Last_name() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2746,8 +2746,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_Profile_description() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(6);
+	public EAttribute getUser_d_Profile_description() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2756,8 +2756,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_Username() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(7);
+	public EAttribute getUser_d_Username() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2766,8 +2766,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_Password() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(8);
+	public EAttribute getUser_d_Password() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -2776,8 +2776,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getUsuario_Email() {
-		return (EAttribute)usuarioEClass.getEStructuralFeatures().get(9);
+	public EAttribute getUser_d_Email() {
+		return (EAttribute)user_dEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2786,8 +2786,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getUsuario_Registro() {
-		return (EReference)usuarioEClass.getEStructuralFeatures().get(10);
+	public EReference getUser_d_Registration() {
+		return (EReference)user_dEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -2796,8 +2796,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getAutenticacion() {
-		return autenticacionEClass;
+	public EClass getAuthentication() {
+		return authenticationEClass;
 	}
 
 	/**
@@ -2806,8 +2806,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getRegistro() {
-		return registroEClass;
+	public EClass getRegistration() {
+		return registrationEClass;
 	}
 
 	/**
@@ -2816,8 +2816,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getManejoPerfil() {
-		return manejoPerfilEClass;
+	public EClass getProfileManagement() {
+		return profileManagementEClass;
 	}
 
 	/**
@@ -2826,8 +2826,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getManejoPerfil_Accion() {
-		return (EReference)manejoPerfilEClass.getEStructuralFeatures().get(0);
+	public EReference getProfileManagement_Action() {
+		return (EReference)profileManagementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2836,8 +2836,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getAccion() {
-		return accionEClass;
+	public EClass getAction() {
+		return actionEClass;
 	}
 
 	/**
@@ -2846,8 +2846,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getCrearAlbum() {
-		return crearAlbumEClass;
+	public EClass getCreateAlbum() {
+		return createAlbumEClass;
 	}
 
 	/**
@@ -2856,8 +2856,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getCrearAlbum_Categoria() {
-		return (EReference)crearAlbumEClass.getEStructuralFeatures().get(0);
+	public EReference getCreateAlbum_Album() {
+		return (EReference)createAlbumEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2866,8 +2866,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getVerAlbum() {
-		return verAlbumEClass;
+	public EClass getSeeAlbum() {
+		return seeAlbumEClass;
 	}
 
 	/**
@@ -2876,8 +2876,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getVerAlbum_Categoria() {
-		return (EReference)verAlbumEClass.getEStructuralFeatures().get(0);
+	public EReference getSeeAlbum_Album() {
+		return (EReference)seeAlbumEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2886,8 +2886,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getCargarFoto() {
-		return cargarFotoEClass;
+	public EClass getLoadPhoto() {
+		return loadPhotoEClass;
 	}
 
 	/**
@@ -2896,8 +2896,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getCargarFoto_Imagen() {
-		return (EReference)cargarFotoEClass.getEStructuralFeatures().get(0);
+	public EReference getLoadPhoto_Picture() {
+		return (EReference)loadPhotoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2906,8 +2906,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getVerTodasLasFotos() {
-		return verTodasLasFotosEClass;
+	public EClass getSeeAllPhotos() {
+		return seeAllPhotosEClass;
 	}
 
 	/**
@@ -2916,8 +2916,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getEditarPerfil() {
-		return editarPerfilEClass;
+	public EClass getEditProfile() {
+		return editProfileEClass;
 	}
 
 	/**
@@ -2926,8 +2926,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getEditarPerfil_Foto() {
-		return (EReference)editarPerfilEClass.getEStructuralFeatures().get(0);
+	public EReference getEditProfile_Photo() {
+		return (EReference)editProfileEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2936,8 +2936,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getFoto() {
-		return fotoEClass;
+	public EClass getPhoto() {
+		return photoEClass;
 	}
 
 	/**
@@ -2946,8 +2946,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getFoto_Categoria() {
-		return (EReference)fotoEClass.getEStructuralFeatures().get(0);
+	public EReference getPhoto_Album() {
+		return (EReference)photoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2956,8 +2956,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getFoto_Imagen() {
-		return (EReference)fotoEClass.getEStructuralFeatures().get(1);
+	public EReference getPhoto_Photo() {
+		return (EReference)photoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2966,8 +2966,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getCategoria() {
-		return categoriaEClass;
+	public EClass getAlbum() {
+		return albumEClass;
 	}
 
 	/**
@@ -2976,8 +2976,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCategoria_Id() {
-		return (EAttribute)categoriaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAlbum_Id() {
+		return (EAttribute)albumEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2986,8 +2986,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCategoria_Url() {
-		return (EAttribute)categoriaEClass.getEStructuralFeatures().get(1);
+	public EAttribute getAlbum_Url() {
+		return (EAttribute)albumEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2996,8 +2996,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCategoria_Name() {
-		return (EAttribute)categoriaEClass.getEStructuralFeatures().get(2);
+	public EAttribute getAlbum_Name() {
+		return (EAttribute)albumEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3006,8 +3006,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getImagen() {
-		return imagenEClass;
+	public EClass getPicture() {
+		return pictureEClass;
 	}
 
 	/**
@@ -3016,8 +3016,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getImagen_Categoria() {
-		return (EReference)imagenEClass.getEStructuralFeatures().get(0);
+	public EReference getPicture_Album() {
+		return (EReference)pictureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3026,8 +3026,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getImagen_Id() {
-		return (EAttribute)imagenEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPicture_Id() {
+		return (EAttribute)pictureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3036,8 +3036,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getImagen_Name() {
-		return (EAttribute)imagenEClass.getEStructuralFeatures().get(2);
+	public EAttribute getPicture_Name() {
+		return (EAttribute)pictureEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3116,7 +3116,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getNTier_Conexion() {
+	public EReference getNTier_Connection() {
 		return (EReference)nTierEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3126,7 +3126,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getNTier_Capa() {
+	public EReference getNTier_Layer() {
 		return (EReference)nTierEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3136,7 +3136,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getNTier_Relacion() {
+	public EReference getNTier_Relation() {
 		return (EReference)nTierEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3146,8 +3146,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getCapa() {
-		return capaEClass;
+	public EClass getLayer() {
+		return layerEClass;
 	}
 
 	/**
@@ -3156,8 +3156,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getConexion() {
-		return conexionEClass;
+	public EClass getConnection() {
+		return connectionEClass;
 	}
 
 	/**
@@ -3166,8 +3166,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getConexion_ConexionSource() {
-		return (EReference)conexionEClass.getEStructuralFeatures().get(0);
+	public EReference getConnection_SourceLayer() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3176,8 +3176,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getConexion_ConexionTarget() {
-		return (EReference)conexionEClass.getEStructuralFeatures().get(1);
+	public EReference getConnection_TargetLayer() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3186,8 +3186,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getRelacion() {
-		return relacionEClass;
+	public EClass getRelation() {
+		return relationEClass;
 	}
 
 	/**
@@ -3196,8 +3196,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getRelacion_RelacionSource() {
-		return (EReference)relacionEClass.getEStructuralFeatures().get(0);
+	public EReference getRelation_SourceLayer() {
+		return (EReference)relationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3206,8 +3206,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getRelacion_RelacionTarget() {
-		return (EReference)relacionEClass.getEStructuralFeatures().get(1);
+	public EReference getRelation_TargetLayer() {
+		return (EReference)relationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3226,8 +3226,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getConexionPostgreSQL() {
-		return conexionPostgreSQLEClass;
+	public EClass getPostgreSQLConnection() {
+		return postgreSQLConnectionEClass;
 	}
 
 	/**
@@ -3236,8 +3236,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getConexionPostgreSQL_Url() {
-		return (EAttribute)conexionPostgreSQLEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPostgreSQLConnection_Url() {
+		return (EAttribute)postgreSQLConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3246,8 +3246,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getConexionPostgreSQL_Port() {
-		return (EAttribute)conexionPostgreSQLEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPostgreSQLConnection_Port() {
+		return (EAttribute)postgreSQLConnectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3256,8 +3256,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getConexionPostgreSQL_Username() {
-		return (EAttribute)conexionPostgreSQLEClass.getEStructuralFeatures().get(2);
+	public EAttribute getPostgreSQLConnection_Username() {
+		return (EAttribute)postgreSQLConnectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3266,8 +3266,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EAttribute getConexionPostgreSQL_Password() {
-		return (EAttribute)conexionPostgreSQLEClass.getEStructuralFeatures().get(3);
+	public EAttribute getPostgreSQLConnection_Password() {
+		return (EAttribute)postgreSQLConnectionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3326,8 +3326,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getPresentacion() {
-		return presentacionEClass;
+	public EClass getPresentation() {
+		return presentationEClass;
 	}
 
 	/**
@@ -3336,8 +3336,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getPresentacion_Segmentopresentacion() {
-		return (EReference)presentacionEClass.getEStructuralFeatures().get(0);
+	public EReference getPresentation_PresentationLayer() {
+		return (EReference)presentationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3346,8 +3346,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getLogicaDeNegocio() {
-		return logicaDeNegocioEClass;
+	public EClass getBusinessLogic() {
+		return businessLogicEClass;
 	}
 
 	/**
@@ -3356,8 +3356,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getLogicaDeNegocio_Segmentologica() {
-		return (EReference)logicaDeNegocioEClass.getEStructuralFeatures().get(0);
+	public EReference getBusinessLogic_BusinessLogicSegment() {
+		return (EReference)businessLogicEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3366,8 +3366,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getDatos() {
-		return datosEClass;
+	public EClass getData() {
+		return dataEClass;
 	}
 
 	/**
@@ -3376,8 +3376,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getDatos_Segmentodatos() {
-		return (EReference)datosEClass.getEStructuralFeatures().get(0);
+	public EReference getData_DataSegment() {
+		return (EReference)dataEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3396,8 +3396,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getSegmentoPresentacion() {
-		return segmentoPresentacionEClass;
+	public EClass getPresentationSegment() {
+		return presentationSegmentEClass;
 	}
 
 	/**
@@ -3406,8 +3406,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getSegmentoLogica() {
-		return segmentoLogicaEClass;
+	public EClass getBusinessLogicSegment() {
+		return businessLogicSegmentEClass;
 	}
 
 	/**
@@ -3416,8 +3416,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EClass getSegmentoDatos() {
-		return segmentoDatosEClass;
+	public EClass getDataSegment() {
+		return dataSegmentEClass;
 	}
 
 	/**
@@ -3995,8 +3995,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(softGalleryEClass, SOFT_GALLERY__DOMAIN);
 
 		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__USUARIO);
-		createEReference(domainEClass, DOMAIN__FOTO);
+		createEReference(domainEClass, DOMAIN__USER_D);
+		createEReference(domainEClass, DOMAIN__PHOTO);
 
 		architectureEClass = createEClass(ARCHITECTURE);
 		createEReference(architectureEClass, ARCHITECTURE__NTIER);
@@ -4214,55 +4214,55 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		order_pEClass = createEClass(ORDER_P);
 
-		usuarioEClass = createEClass(USUARIO);
-		createEReference(usuarioEClass, USUARIO__AUTENTICACION);
-		createEReference(usuarioEClass, USUARIO__MANEJOPERFIL);
-		createEReference(usuarioEClass, USUARIO__FOTO);
-		createEAttribute(usuarioEClass, USUARIO__ID);
-		createEAttribute(usuarioEClass, USUARIO__FIRST_NAME);
-		createEAttribute(usuarioEClass, USUARIO__LAST_NAME);
-		createEAttribute(usuarioEClass, USUARIO__PROFILE_DESCRIPTION);
-		createEAttribute(usuarioEClass, USUARIO__USERNAME);
-		createEAttribute(usuarioEClass, USUARIO__PASSWORD);
-		createEAttribute(usuarioEClass, USUARIO__EMAIL);
-		createEReference(usuarioEClass, USUARIO__REGISTRO);
+		user_dEClass = createEClass(USER_D);
+		createEReference(user_dEClass, USER_D__AUTHENTICATION);
+		createEReference(user_dEClass, USER_D__PROFILE_MANAGEMENT);
+		createEReference(user_dEClass, USER_D__PHOTO);
+		createEAttribute(user_dEClass, USER_D__ID);
+		createEAttribute(user_dEClass, USER_D__FIRST_NAME);
+		createEAttribute(user_dEClass, USER_D__LAST_NAME);
+		createEAttribute(user_dEClass, USER_D__PROFILE_DESCRIPTION);
+		createEAttribute(user_dEClass, USER_D__USERNAME);
+		createEAttribute(user_dEClass, USER_D__PASSWORD);
+		createEAttribute(user_dEClass, USER_D__EMAIL);
+		createEReference(user_dEClass, USER_D__REGISTRATION);
 
-		autenticacionEClass = createEClass(AUTENTICACION);
+		authenticationEClass = createEClass(AUTHENTICATION);
 
-		registroEClass = createEClass(REGISTRO);
+		registrationEClass = createEClass(REGISTRATION);
 
-		manejoPerfilEClass = createEClass(MANEJO_PERFIL);
-		createEReference(manejoPerfilEClass, MANEJO_PERFIL__ACCION);
+		profileManagementEClass = createEClass(PROFILE_MANAGEMENT);
+		createEReference(profileManagementEClass, PROFILE_MANAGEMENT__ACTION);
 
-		accionEClass = createEClass(ACCION);
+		actionEClass = createEClass(ACTION);
 
-		crearAlbumEClass = createEClass(CREAR_ALBUM);
-		createEReference(crearAlbumEClass, CREAR_ALBUM__CATEGORIA);
+		createAlbumEClass = createEClass(CREATE_ALBUM);
+		createEReference(createAlbumEClass, CREATE_ALBUM__ALBUM);
 
-		verAlbumEClass = createEClass(VER_ALBUM);
-		createEReference(verAlbumEClass, VER_ALBUM__CATEGORIA);
+		seeAlbumEClass = createEClass(SEE_ALBUM);
+		createEReference(seeAlbumEClass, SEE_ALBUM__ALBUM);
 
-		cargarFotoEClass = createEClass(CARGAR_FOTO);
-		createEReference(cargarFotoEClass, CARGAR_FOTO__IMAGEN);
+		loadPhotoEClass = createEClass(LOAD_PHOTO);
+		createEReference(loadPhotoEClass, LOAD_PHOTO__PICTURE);
 
-		verTodasLasFotosEClass = createEClass(VER_TODAS_LAS_FOTOS);
+		seeAllPhotosEClass = createEClass(SEE_ALL_PHOTOS);
 
-		editarPerfilEClass = createEClass(EDITAR_PERFIL);
-		createEReference(editarPerfilEClass, EDITAR_PERFIL__FOTO);
+		editProfileEClass = createEClass(EDIT_PROFILE);
+		createEReference(editProfileEClass, EDIT_PROFILE__PHOTO);
 
-		fotoEClass = createEClass(FOTO);
-		createEReference(fotoEClass, FOTO__CATEGORIA);
-		createEReference(fotoEClass, FOTO__IMAGEN);
+		photoEClass = createEClass(PHOTO);
+		createEReference(photoEClass, PHOTO__ALBUM);
+		createEReference(photoEClass, PHOTO__PHOTO);
 
-		categoriaEClass = createEClass(CATEGORIA);
-		createEAttribute(categoriaEClass, CATEGORIA__ID);
-		createEAttribute(categoriaEClass, CATEGORIA__URL);
-		createEAttribute(categoriaEClass, CATEGORIA__NAME);
+		albumEClass = createEClass(ALBUM);
+		createEAttribute(albumEClass, ALBUM__ID);
+		createEAttribute(albumEClass, ALBUM__URL);
+		createEAttribute(albumEClass, ALBUM__NAME);
 
-		imagenEClass = createEClass(IMAGEN);
-		createEReference(imagenEClass, IMAGEN__CATEGORIA);
-		createEAttribute(imagenEClass, IMAGEN__ID);
-		createEAttribute(imagenEClass, IMAGEN__NAME);
+		pictureEClass = createEClass(PICTURE);
+		createEReference(pictureEClass, PICTURE__ALBUM);
+		createEAttribute(pictureEClass, PICTURE__ID);
+		createEAttribute(pictureEClass, PICTURE__NAME);
 
 		amazonWebServicesEClass = createEClass(AMAZON_WEB_SERVICES);
 		createEReference(amazonWebServicesEClass, AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD);
@@ -4272,27 +4272,27 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(amazonWebServicesEClass, AMAZON_WEB_SERVICES__AMAZONSAGEMAKER);
 
 		nTierEClass = createEClass(NTIER);
-		createEReference(nTierEClass, NTIER__CONEXION);
-		createEReference(nTierEClass, NTIER__CAPA);
-		createEReference(nTierEClass, NTIER__RELACION);
+		createEReference(nTierEClass, NTIER__CONNECTION);
+		createEReference(nTierEClass, NTIER__LAYER);
+		createEReference(nTierEClass, NTIER__RELATION);
 
-		capaEClass = createEClass(CAPA);
+		layerEClass = createEClass(LAYER);
 
-		conexionEClass = createEClass(CONEXION);
-		createEReference(conexionEClass, CONEXION__CONEXION_SOURCE);
-		createEReference(conexionEClass, CONEXION__CONEXION_TARGET);
+		connectionEClass = createEClass(CONNECTION);
+		createEReference(connectionEClass, CONNECTION__SOURCE_LAYER);
+		createEReference(connectionEClass, CONNECTION__TARGET_LAYER);
 
-		relacionEClass = createEClass(RELACION);
-		createEReference(relacionEClass, RELACION__RELACION_SOURCE);
-		createEReference(relacionEClass, RELACION__RELACION_TARGET);
+		relationEClass = createEClass(RELATION);
+		createEReference(relationEClass, RELATION__SOURCE_LAYER);
+		createEReference(relationEClass, RELATION__TARGET_LAYER);
 
 		restEClass = createEClass(REST);
 
-		conexionPostgreSQLEClass = createEClass(CONEXION_POSTGRE_SQL);
-		createEAttribute(conexionPostgreSQLEClass, CONEXION_POSTGRE_SQL__URL);
-		createEAttribute(conexionPostgreSQLEClass, CONEXION_POSTGRE_SQL__PORT);
-		createEAttribute(conexionPostgreSQLEClass, CONEXION_POSTGRE_SQL__USERNAME);
-		createEAttribute(conexionPostgreSQLEClass, CONEXION_POSTGRE_SQL__PASSWORD);
+		postgreSQLConnectionEClass = createEClass(POSTGRE_SQL_CONNECTION);
+		createEAttribute(postgreSQLConnectionEClass, POSTGRE_SQL_CONNECTION__URL);
+		createEAttribute(postgreSQLConnectionEClass, POSTGRE_SQL_CONNECTION__PORT);
+		createEAttribute(postgreSQLConnectionEClass, POSTGRE_SQL_CONNECTION__USERNAME);
+		createEAttribute(postgreSQLConnectionEClass, POSTGRE_SQL_CONNECTION__PASSWORD);
 
 		amazonS3APIEClass = createEClass(AMAZON_S3API);
 		createEAttribute(amazonS3APIEClass, AMAZON_S3API__ENDPOINT_URL);
@@ -4300,22 +4300,22 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEAttribute(amazonS3APIEClass, AMAZON_S3API__SECRET_KEY);
 		createEAttribute(amazonS3APIEClass, AMAZON_S3API__BUCKET_NAME);
 
-		presentacionEClass = createEClass(PRESENTACION);
-		createEReference(presentacionEClass, PRESENTACION__SEGMENTOPRESENTACION);
+		presentationEClass = createEClass(PRESENTATION);
+		createEReference(presentationEClass, PRESENTATION__PRESENTATION_LAYER);
 
-		logicaDeNegocioEClass = createEClass(LOGICA_DE_NEGOCIO);
-		createEReference(logicaDeNegocioEClass, LOGICA_DE_NEGOCIO__SEGMENTOLOGICA);
+		businessLogicEClass = createEClass(BUSINESS_LOGIC);
+		createEReference(businessLogicEClass, BUSINESS_LOGIC__BUSINESS_LOGIC_SEGMENT);
 
-		datosEClass = createEClass(DATOS);
-		createEReference(datosEClass, DATOS__SEGMENTODATOS);
+		dataEClass = createEClass(DATA);
+		createEReference(dataEClass, DATA__DATA_SEGMENT);
 
 		allowedToUseEClass = createEClass(ALLOWED_TO_USE);
 
-		segmentoPresentacionEClass = createEClass(SEGMENTO_PRESENTACION);
+		presentationSegmentEClass = createEClass(PRESENTATION_SEGMENT);
 
-		segmentoLogicaEClass = createEClass(SEGMENTO_LOGICA);
+		businessLogicSegmentEClass = createEClass(BUSINESS_LOGIC_SEGMENT);
 
-		segmentoDatosEClass = createEClass(SEGMENTO_DATOS);
+		dataSegmentEClass = createEClass(DATA_SEGMENT);
 
 		view_aEClass = createEClass(VIEW_A);
 
@@ -4459,27 +4459,27 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		arrayEClass.getESuperTypes().add(this.getClause());
 		intoEClass.getESuperTypes().add(this.getClause());
 		order_pEClass.getESuperTypes().add(this.getClause());
-		crearAlbumEClass.getESuperTypes().add(this.getAccion());
-		verAlbumEClass.getESuperTypes().add(this.getAccion());
-		cargarFotoEClass.getESuperTypes().add(this.getAccion());
-		verTodasLasFotosEClass.getESuperTypes().add(this.getAccion());
-		editarPerfilEClass.getESuperTypes().add(this.getAccion());
-		restEClass.getESuperTypes().add(this.getConexion());
-		conexionPostgreSQLEClass.getESuperTypes().add(this.getConexion());
-		amazonS3APIEClass.getESuperTypes().add(this.getConexion());
-		presentacionEClass.getESuperTypes().add(this.getCapa());
-		logicaDeNegocioEClass.getESuperTypes().add(this.getCapa());
-		datosEClass.getESuperTypes().add(this.getCapa());
-		allowedToUseEClass.getESuperTypes().add(this.getRelacion());
-		view_aEClass.getESuperTypes().add(this.getSegmentoPresentacion());
-		component_aEClass.getESuperTypes().add(this.getSegmentoPresentacion());
-		action_aEClass.getESuperTypes().add(this.getSegmentoPresentacion());
-		controller_aEClass.getESuperTypes().add(this.getSegmentoLogica());
-		model_aEClass.getESuperTypes().add(this.getSegmentoLogica());
-		repository_aEClass.getESuperTypes().add(this.getSegmentoLogica());
-		security_aEClass.getESuperTypes().add(this.getSegmentoLogica());
-		postgreSQL_aEClass.getESuperTypes().add(this.getSegmentoDatos());
-		amazonS3StorageEClass.getESuperTypes().add(this.getSegmentoDatos());
+		createAlbumEClass.getESuperTypes().add(this.getAction());
+		seeAlbumEClass.getESuperTypes().add(this.getAction());
+		loadPhotoEClass.getESuperTypes().add(this.getAction());
+		seeAllPhotosEClass.getESuperTypes().add(this.getAction());
+		editProfileEClass.getESuperTypes().add(this.getAction());
+		restEClass.getESuperTypes().add(this.getConnection());
+		postgreSQLConnectionEClass.getESuperTypes().add(this.getConnection());
+		amazonS3APIEClass.getESuperTypes().add(this.getConnection());
+		presentationEClass.getESuperTypes().add(this.getLayer());
+		businessLogicEClass.getESuperTypes().add(this.getLayer());
+		dataEClass.getESuperTypes().add(this.getLayer());
+		allowedToUseEClass.getESuperTypes().add(this.getRelation());
+		view_aEClass.getESuperTypes().add(this.getPresentationSegment());
+		component_aEClass.getESuperTypes().add(this.getPresentationSegment());
+		action_aEClass.getESuperTypes().add(this.getPresentationSegment());
+		controller_aEClass.getESuperTypes().add(this.getBusinessLogicSegment());
+		model_aEClass.getESuperTypes().add(this.getBusinessLogicSegment());
+		repository_aEClass.getESuperTypes().add(this.getBusinessLogicSegment());
+		security_aEClass.getESuperTypes().add(this.getBusinessLogicSegment());
+		postgreSQL_aEClass.getESuperTypes().add(this.getDataSegment());
+		amazonS3StorageEClass.getESuperTypes().add(this.getDataSegment());
 		class_rEClass.getESuperTypes().add(this.getComponent_r());
 		renderEClass.getESuperTypes().add(this.getFunction_r());
 		constructorEClass.getESuperTypes().add(this.getFunction_r());
@@ -4497,8 +4497,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getSoftGallery_Domain(), this.getDomain(), null, "domain", null, 0, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_Usuario(), this.getUsuario(), null, "usuario", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomain_Foto(), this.getFoto(), null, "foto", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_User_d(), this.getUser_d(), null, "user_d", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Photo(), this.getPhoto(), null, "photo", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArchitecture_Ntier(), this.getNTier(), null, "ntier", null, 0, -1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4716,55 +4716,55 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		initEClass(order_pEClass, Order_p.class, "Order_p", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(usuarioEClass, Usuario.class, "Usuario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUsuario_Autenticacion(), this.getAutenticacion(), null, "autenticacion", null, 0, -1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUsuario_Manejoperfil(), this.getManejoPerfil(), null, "manejoperfil", null, 0, -1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUsuario_Foto(), this.getFoto(), null, "foto", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Id(), ecorePackage.getEString(), "id", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_First_name(), ecorePackage.getEString(), "first_name", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Last_name(), ecorePackage.getEString(), "last_name", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Profile_description(), ecorePackage.getEString(), "profile_description", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Username(), ecorePackage.getEString(), "username", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Password(), ecorePackage.getEString(), "password", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Email(), ecorePackage.getEString(), "email", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUsuario_Registro(), this.getRegistro(), null, "registro", null, 0, -1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(user_dEClass, User_d.class, "User_d", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUser_d_Authentication(), this.getAuthentication(), null, "authentication", null, 0, -1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_d_ProfileManagement(), this.getProfileManagement(), null, "profileManagement", null, 0, -1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_d_Photo(), this.getPhoto(), null, "photo", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_Id(), ecorePackage.getEString(), "id", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_First_name(), ecorePackage.getEString(), "first_name", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_Last_name(), ecorePackage.getEString(), "last_name", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_Profile_description(), ecorePackage.getEString(), "profile_description", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_Username(), ecorePackage.getEString(), "username", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_Password(), ecorePackage.getEString(), "password", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_d_Email(), ecorePackage.getEString(), "email", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_d_Registration(), this.getRegistration(), null, "registration", null, 0, -1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(autenticacionEClass, Autenticacion.class, "Autenticacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(authenticationEClass, Authentication.class, "Authentication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(registroEClass, Registro.class, "Registro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(registrationEClass, Registration.class, "Registration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(manejoPerfilEClass, ManejoPerfil.class, "ManejoPerfil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getManejoPerfil_Accion(), this.getAccion(), null, "accion", null, 0, -1, ManejoPerfil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(profileManagementEClass, ProfileManagement.class, "ProfileManagement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProfileManagement_Action(), this.getAction(), null, "action", null, 0, -1, ProfileManagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(accionEClass, Accion.class, "Accion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(crearAlbumEClass, CrearAlbum.class, "CrearAlbum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCrearAlbum_Categoria(), this.getCategoria(), null, "categoria", null, 0, 1, CrearAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(createAlbumEClass, CreateAlbum.class, "CreateAlbum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCreateAlbum_Album(), this.getAlbum(), null, "album", null, 0, 1, CreateAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(verAlbumEClass, VerAlbum.class, "VerAlbum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVerAlbum_Categoria(), this.getCategoria(), null, "categoria", null, 0, 1, VerAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(seeAlbumEClass, SeeAlbum.class, "SeeAlbum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSeeAlbum_Album(), this.getAlbum(), null, "album", null, 0, 1, SeeAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(cargarFotoEClass, CargarFoto.class, "CargarFoto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCargarFoto_Imagen(), this.getImagen(), null, "imagen", null, 0, 1, CargarFoto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(loadPhotoEClass, LoadPhoto.class, "LoadPhoto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLoadPhoto_Picture(), this.getPicture(), null, "picture", null, 0, 1, LoadPhoto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(verTodasLasFotosEClass, VerTodasLasFotos.class, "VerTodasLasFotos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(seeAllPhotosEClass, SeeAllPhotos.class, "SeeAllPhotos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(editarPerfilEClass, EditarPerfil.class, "EditarPerfil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEditarPerfil_Foto(), this.getFoto(), null, "foto", null, 0, 1, EditarPerfil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(editProfileEClass, EditProfile.class, "EditProfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEditProfile_Photo(), this.getPhoto(), null, "photo", null, 0, 1, EditProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(fotoEClass, Foto.class, "Foto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFoto_Categoria(), this.getCategoria(), null, "categoria", null, 0, -1, Foto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFoto_Imagen(), this.getImagen(), null, "imagen", null, 0, -1, Foto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(photoEClass, Photo.class, "Photo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPhoto_Album(), this.getAlbum(), null, "album", null, 0, -1, Photo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPhoto_Photo(), this.getPicture(), null, "photo", null, 0, -1, Photo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(categoriaEClass, Categoria.class, "Categoria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCategoria_Id(), ecorePackage.getEString(), "id", null, 0, 1, Categoria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCategoria_Url(), ecorePackage.getEString(), "url", null, 0, 1, Categoria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCategoria_Name(), ecorePackage.getEString(), "name", null, 0, 1, Categoria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(albumEClass, Album.class, "Album", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAlbum_Id(), ecorePackage.getEString(), "id", null, 0, 1, Album.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAlbum_Url(), ecorePackage.getEString(), "url", null, 0, 1, Album.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAlbum_Name(), ecorePackage.getEString(), "name", null, 0, 1, Album.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(imagenEClass, Imagen.class, "Imagen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getImagen_Categoria(), this.getCategoria(), null, "categoria", null, 0, 1, Imagen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImagen_Id(), ecorePackage.getEString(), "id", null, 0, 1, Imagen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImagen_Name(), ecorePackage.getEString(), "name", null, 0, 1, Imagen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(pictureEClass, Picture.class, "Picture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPicture_Album(), this.getAlbum(), null, "album", null, 0, 1, Picture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPicture_Id(), ecorePackage.getEString(), "id", null, 0, 1, Picture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPicture_Name(), ecorePackage.getEString(), "name", null, 0, 1, Picture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(amazonWebServicesEClass, AmazonWebServices.class, "AmazonWebServices", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAmazonWebServices_Amazonelasticcomputecloud(), this.getAmazonElasticComputeCloud(), null, "amazonelasticcomputecloud", null, 0, 1, AmazonWebServices.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4774,27 +4774,27 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getAmazonWebServices_Amazonsagemaker(), this.getAmazonSageMaker(), null, "amazonsagemaker", null, 0, 1, AmazonWebServices.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nTierEClass, NTier.class, "NTier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNTier_Conexion(), this.getConexion(), null, "conexion", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNTier_Capa(), this.getCapa(), null, "capa", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNTier_Relacion(), this.getRelacion(), null, "relacion", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNTier_Connection(), this.getConnection(), null, "connection", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNTier_Layer(), this.getLayer(), null, "layer", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNTier_Relation(), this.getRelation(), null, "relation", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(capaEClass, Capa.class, "Capa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(conexionEClass, Conexion.class, "Conexion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConexion_ConexionSource(), this.getCapa(), null, "conexionSource", null, 0, 1, Conexion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConexion_ConexionTarget(), this.getCapa(), null, "conexionTarget", null, 0, 1, Conexion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnection_SourceLayer(), this.getLayer(), null, "sourceLayer", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_TargetLayer(), this.getLayer(), null, "targetLayer", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(relacionEClass, Relacion.class, "Relacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelacion_RelacionSource(), this.getCapa(), null, "relacionSource", null, 0, 1, Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelacion_RelacionTarget(), this.getCapa(), null, "relacionTarget", null, 0, 1, Relacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRelation_SourceLayer(), this.getLayer(), null, "sourceLayer", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelation_TargetLayer(), this.getLayer(), null, "targetLayer", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restEClass, PhotosMetaModel.REST.class, "REST", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(conexionPostgreSQLEClass, ConexionPostgreSQL.class, "ConexionPostgreSQL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConexionPostgreSQL_Url(), ecorePackage.getEString(), "url", null, 0, 1, ConexionPostgreSQL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConexionPostgreSQL_Port(), ecorePackage.getEInt(), "port", null, 0, 1, ConexionPostgreSQL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConexionPostgreSQL_Username(), ecorePackage.getEString(), "username", null, 0, 1, ConexionPostgreSQL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConexionPostgreSQL_Password(), ecorePackage.getEString(), "password", null, 0, 1, ConexionPostgreSQL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(postgreSQLConnectionEClass, PostgreSQLConnection.class, "PostgreSQLConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPostgreSQLConnection_Url(), ecorePackage.getEString(), "url", null, 0, 1, PostgreSQLConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostgreSQLConnection_Port(), ecorePackage.getEInt(), "port", null, 0, 1, PostgreSQLConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostgreSQLConnection_Username(), ecorePackage.getEString(), "username", null, 0, 1, PostgreSQLConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostgreSQLConnection_Password(), ecorePackage.getEString(), "password", null, 0, 1, PostgreSQLConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(amazonS3APIEClass, AmazonS3API.class, "AmazonS3API", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAmazonS3API_EndpointUrl(), ecorePackage.getEString(), "endpointUrl", null, 0, 1, AmazonS3API.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4802,22 +4802,22 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEAttribute(getAmazonS3API_SecretKey(), ecorePackage.getEString(), "secretKey", null, 0, 1, AmazonS3API.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAmazonS3API_BucketName(), ecorePackage.getEString(), "bucketName", null, 0, 1, AmazonS3API.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(presentacionEClass, Presentacion.class, "Presentacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPresentacion_Segmentopresentacion(), this.getSegmentoPresentacion(), null, "segmentopresentacion", null, 0, -1, Presentacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(presentationEClass, Presentation.class, "Presentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPresentation_PresentationLayer(), this.getPresentationSegment(), null, "presentationLayer", null, 0, -1, Presentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(logicaDeNegocioEClass, LogicaDeNegocio.class, "LogicaDeNegocio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLogicaDeNegocio_Segmentologica(), this.getSegmentoLogica(), null, "segmentologica", null, 0, -1, LogicaDeNegocio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(businessLogicEClass, BusinessLogic.class, "BusinessLogic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBusinessLogic_BusinessLogicSegment(), this.getBusinessLogicSegment(), null, "BusinessLogicSegment", null, 0, -1, BusinessLogic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(datosEClass, Datos.class, "Datos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDatos_Segmentodatos(), this.getSegmentoDatos(), null, "segmentodatos", null, 0, -1, Datos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dataEClass, Data.class, "Data", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getData_DataSegment(), this.getDataSegment(), null, "dataSegment", null, 0, -1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(allowedToUseEClass, AllowedToUse.class, "AllowedToUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(segmentoPresentacionEClass, SegmentoPresentacion.class, "SegmentoPresentacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(presentationSegmentEClass, PresentationSegment.class, "PresentationSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(segmentoLogicaEClass, SegmentoLogica.class, "SegmentoLogica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(businessLogicSegmentEClass, BusinessLogicSegment.class, "BusinessLogicSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(segmentoDatosEClass, SegmentoDatos.class, "SegmentoDatos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(dataSegmentEClass, DataSegment.class, "DataSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(view_aEClass, View_a.class, "View_a", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -77,9 +77,9 @@ public class NTierItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.NTIER__CONEXION);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.NTIER__CAPA);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.NTIER__RELACION);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.NTIER__CONNECTION);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.NTIER__LAYER);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.NTIER__RELATION);
 		}
 		return childrenFeatures;
 	}
@@ -132,9 +132,9 @@ public class NTierItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NTier.class)) {
-			case PhotosMetaModelPackage.NTIER__CONEXION:
-			case PhotosMetaModelPackage.NTIER__CAPA:
-			case PhotosMetaModelPackage.NTIER__RELACION:
+			case PhotosMetaModelPackage.NTIER__CONNECTION:
+			case PhotosMetaModelPackage.NTIER__LAYER:
+			case PhotosMetaModelPackage.NTIER__RELATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -154,52 +154,52 @@ public class NTierItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CONEXION,
-				 PhotosMetaModelFactory.eINSTANCE.createConexion()));
+				(PhotosMetaModelPackage.Literals.NTIER__CONNECTION,
+				 PhotosMetaModelFactory.eINSTANCE.createConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CONEXION,
+				(PhotosMetaModelPackage.Literals.NTIER__CONNECTION,
 				 PhotosMetaModelFactory.eINSTANCE.createREST()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CONEXION,
-				 PhotosMetaModelFactory.eINSTANCE.createConexionPostgreSQL()));
+				(PhotosMetaModelPackage.Literals.NTIER__CONNECTION,
+				 PhotosMetaModelFactory.eINSTANCE.createPostgreSQLConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CONEXION,
+				(PhotosMetaModelPackage.Literals.NTIER__CONNECTION,
 				 PhotosMetaModelFactory.eINSTANCE.createAmazonS3API()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CAPA,
-				 PhotosMetaModelFactory.eINSTANCE.createCapa()));
+				(PhotosMetaModelPackage.Literals.NTIER__LAYER,
+				 PhotosMetaModelFactory.eINSTANCE.createLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CAPA,
-				 PhotosMetaModelFactory.eINSTANCE.createPresentacion()));
+				(PhotosMetaModelPackage.Literals.NTIER__LAYER,
+				 PhotosMetaModelFactory.eINSTANCE.createPresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CAPA,
-				 PhotosMetaModelFactory.eINSTANCE.createLogicaDeNegocio()));
+				(PhotosMetaModelPackage.Literals.NTIER__LAYER,
+				 PhotosMetaModelFactory.eINSTANCE.createBusinessLogic()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__CAPA,
-				 PhotosMetaModelFactory.eINSTANCE.createDatos()));
+				(PhotosMetaModelPackage.Literals.NTIER__LAYER,
+				 PhotosMetaModelFactory.eINSTANCE.createData()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__RELACION,
-				 PhotosMetaModelFactory.eINSTANCE.createRelacion()));
+				(PhotosMetaModelPackage.Literals.NTIER__RELATION,
+				 PhotosMetaModelFactory.eINSTANCE.createRelation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.NTIER__RELACION,
+				(PhotosMetaModelPackage.Literals.NTIER__RELATION,
 				 PhotosMetaModelFactory.eINSTANCE.createAllowedToUse()));
 	}
 

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PostgreSQL_aImpl extends SegmentoDatosImpl implements PostgreSQL_a {
+public class PostgreSQL_aImpl extends DataSegmentImpl implements PostgreSQL_a {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
