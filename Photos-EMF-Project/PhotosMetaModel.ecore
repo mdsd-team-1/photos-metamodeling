@@ -21,7 +21,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="spring" eType="#//Spring"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="react" eType="#//React"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="postgresql" eType="#//PostgreSQL"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazons3" eType="#//AmazonS3"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazons3" eType="#//AmazonWebServices"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spring">
     <eStructuralFeatures xsi:type="ecore:EReference" name="springbootapplication"
@@ -257,7 +257,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonS3"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonWebServices">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonelasticcomputecloud"
+        eType="#//AmazonElasticComputeCloud"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonaurora" eType="#//AmazonAurora"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsimplestorageservice"
+        eType="#//AmazonSimpleStorageService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazondynamodb" eType="#//AmazonDynamoDB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsagemaker" eType="#//AmazonSageMaker"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NTier">
     <eStructuralFeatures xsi:type="ecore:EReference" name="conexion" upperBound="-1"
         eType="#//Conexion" containment="true"/>
@@ -336,4 +344,38 @@
   <eClassifiers xsi:type="ecore:EClass" name="Constructor" eSuperTypes="#//Function_r"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentDidMount" eSuperTypes="#//Function_r"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentWillUnmount" eSuperTypes="#//Function_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonElasticComputeCloud"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonSimpleStorageService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bucket" upperBound="-1"
+        eType="#//Bucket" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="batchoperation" upperBound="-1"
+        eType="#//BatchOperation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonAurora"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonDynamoDB"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonSageMaker"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bucket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="access" eType="#//Access"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="file_a" upperBound="-1"
+        eType="#//File_a" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="folder_a" upperBound="-1"
+        eType="#//Folder_a" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BatchOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Access"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Public" eSuperTypes="#//Access"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectsPublic" eSuperTypes="#//Access"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BucketObjectsNotPublic" eSuperTypes="#//Access"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OnlyAuthorized" eSuperTypes="#//Access"/>
+  <eClassifiers xsi:type="ecore:EClass" name="File_a">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Onwer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ObjectURL" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Folder_a">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="file_a" upperBound="-1"
+        eType="#//File_a" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
