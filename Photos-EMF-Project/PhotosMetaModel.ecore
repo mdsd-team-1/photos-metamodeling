@@ -8,10 +8,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//Domain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="user_d" upperBound="-1"
-        eType="#//User_d" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" upperBound="-1"
-        eType="#//Photo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionalities" upperBound="-1"
+        eType="#//Functionalities" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entities" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Architecture">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ntier" upperBound="-1"
@@ -28,7 +28,7 @@
         eType="#//SpringBootApplication"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="React">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reactdom" eType="#//ReactDOM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" eType="#//Modules"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repository"/>
   <eClassifiers xsi:type="ecore:EClass" name="RestController">
@@ -193,91 +193,39 @@
   <eClassifiers xsi:type="ecore:EClass" name="Privilege"/>
   <eClassifiers xsi:type="ecore:EClass" name="Policy"/>
   <eClassifiers xsi:type="ecore:EClass" name="Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="From" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Join" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Lateral" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Where" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GroupBy" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Having" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Distnct" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Limit" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Offset" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Values" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Alter" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Drop" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Using" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Index"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Array" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Into" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Column_s">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Order_p" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="User_d">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" upperBound="-1"
-        eType="#//Authentication" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="profileManagement" upperBound="-1"
-        eType="#//ProfileManagement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" eType="#//Photo"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="User_d" eSuperTypes="#//Entities">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="first_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="last_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="profile_description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="registration" upperBound="-1"
-        eType="#//Registration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionalities" eType="#//Functionalities"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Authentication"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Registration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ProfileManagement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
-        eType="#//Action" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AppAccess" eSuperTypes="#//Functionalities"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProfileManagement" eSuperTypes="#//Functionalities"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlbumManagement" eSuperTypes="#//Functionalities"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PhotoActions" eSuperTypes="#//Functionalities">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="albummanagement" eType="#//AlbumManagement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Action"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CreateAlbum" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album" eType="#//Album"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Photo" eSuperTypes="#//Entities">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="photoactions" eType="#//PhotoActions"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SeeAlbum" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album" eType="#//Album"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LoadPhoto" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//Picture"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SeeAllPhotos" eSuperTypes="#//Action"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EditProfile" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" eType="#//Photo"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Photo">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album" upperBound="-1"
-        eType="#//Album" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="photo" upperBound="-1"
-        eType="#//Picture" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Album">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Album" eSuperTypes="#//Entities">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Picture">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="album" eType="#//Album"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="albummanagement" eType="#//AlbumManagement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AmazonWebServices">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonelasticcomputecloud"
-        eType="#//AmazonElasticComputeCloud"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonaurora" eType="#//AmazonAurora"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsimplestorageservice"
         eType="#//AmazonSimpleStorageService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazondynamodb" eType="#//AmazonDynamoDB"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsagemaker" eType="#//AmazonSageMaker"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonelasticcomputecloud"
+        eType="#//AmazonElasticComputeCloud"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NTier">
     <eStructuralFeatures xsi:type="ecore:EReference" name="connection" upperBound="-1"
@@ -322,9 +270,15 @@
         eType="#//DataSegment" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllowedToUse" eSuperTypes="#//Relation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentationSegment"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BusinessLogicSegment"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DataSegment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PresentationSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentstructure" eType="#//SegmentStructure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessLogicSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentstructure" eType="#//SegmentStructure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentstructure" eType="#//SegmentStructure"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="View_a" eSuperTypes="#//PresentationSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Component_a" eSuperTypes="#//PresentationSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Action_a" eSuperTypes="#//PresentationSegment"/>
@@ -334,44 +288,26 @@
   <eClassifiers xsi:type="ecore:EClass" name="Security_a" eSuperTypes="#//BusinessLogicSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL_a" eSuperTypes="#//DataSegment"/>
   <eClassifiers xsi:type="ecore:EClass" name="AmazonS3Storage" eSuperTypes="#//DataSegment"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ReactDOM">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element_r" upperBound="-1"
-        eType="#//Element_r" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="componet_r" upperBound="-1"
-        eType="#//Component_r" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element_r"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Component_r">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//Component_r" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prop" upperBound="-1" eType="#//Prop"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Modules">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Prop">
+  <eClassifiers xsi:type="ecore:EClass" name="Components" eSuperTypes="#//Modules">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reactclasses" upperBound="-1"
+        eType="#//ReactClasses" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" eType="#//Modules"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReactFunctions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Class_r" eSuperTypes="#//Component_r">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="function_r" upperBound="-1"
-        eType="#//Function_r" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Function_r">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Render" eSuperTypes="#//Function_r"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Constructor" eSuperTypes="#//Function_r"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentDidMount" eSuperTypes="#//Function_r"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentWillUnmount" eSuperTypes="#//Function_r"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonElasticComputeCloud"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Render" eSuperTypes="#//ReactFunctions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constructor" eSuperTypes="#//ReactFunctions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeCycle" eSuperTypes="#//ReactFunctions"/>
   <eClassifiers xsi:type="ecore:EClass" name="AmazonSimpleStorageService">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bucket" upperBound="-1"
         eType="#//Bucket" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="batchoperation" upperBound="-1"
         eType="#//BatchOperation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonAurora"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonDynamoDB"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AmazonSageMaker"/>
   <eClassifiers xsi:type="ecore:EClass" name="Bucket">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="access" eType="#//Access"/>
@@ -399,4 +335,69 @@
         eType="#//File_a" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaData"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration" eSuperTypes="#//Modules">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Description"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReactDOM" eSuperTypes="#//Configuration.1">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConstant" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStruct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependencies" eSuperTypes="#//Configuration.1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Logic" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UI" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReactClasses">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reactfunctions" upperBound="-1"
+        eType="#//ReactFunctions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="props" upperBound="-1"
+        eType="#//Props" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" upperBound="-1"
+        eType="#//State" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoreFunctions" eSuperTypes="#//ReactFunctions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="corefunctions" eType="#//CoreFunctions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Router" eSuperTypes="#//Logic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//Logic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="View" eSuperTypes="#//UI"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Subcomponents" eSuperTypes="#//UI"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actions" eSuperTypes="#//Modules"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Request" eSuperTypes="#//Actions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Services" eSuperTypes="#//Actions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//Request"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Libraries" eSuperTypes="#//Modules">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Props">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="State">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Information" eSuperTypes="#//Modules">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entities">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Functionalities"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SegmentStructure">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="directories" upperBound="-1"
+        eType="#//Directories" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
+        eType="#//Files" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Directories">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="files" eType="#//Files"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Files">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extension" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AmazonElasticComputeCloud"/>
 </ecore:EPackage>
