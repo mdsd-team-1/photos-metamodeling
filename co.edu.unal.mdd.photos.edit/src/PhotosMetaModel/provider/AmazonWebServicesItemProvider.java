@@ -57,11 +57,8 @@ public class AmazonWebServicesItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAmazonelasticcomputecloudPropertyDescriptor(object);
-			addAmazonauroraPropertyDescriptor(object);
 			addAmazonsimplestorageservicePropertyDescriptor(object);
-			addAmazondynamodbPropertyDescriptor(object);
-			addAmazonsagemakerPropertyDescriptor(object);
+			addAmazonelasticcomputecloudPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,28 +86,6 @@ public class AmazonWebServicesItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Amazonaurora feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAmazonauroraPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AmazonWebServices_amazonaurora_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazonaurora_feature", "_UI_AmazonWebServices_type"),
-				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONAURORA,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Amazonsimplestorageservice feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124,50 +99,6 @@ public class AmazonWebServicesItemProvider
 				 getString("_UI_AmazonWebServices_amazonsimplestorageservice_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazonsimplestorageservice_feature", "_UI_AmazonWebServices_type"),
 				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Amazondynamodb feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAmazondynamodbPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AmazonWebServices_amazondynamodb_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazondynamodb_feature", "_UI_AmazonWebServices_type"),
-				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONDYNAMODB,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Amazonsagemaker feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAmazonsagemakerPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AmazonWebServices_amazonsagemaker_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazonsagemaker_feature", "_UI_AmazonWebServices_type"),
-				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONSAGEMAKER,
 				 true,
 				 false,
 				 true,

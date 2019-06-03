@@ -4,9 +4,6 @@ package PhotosMetaModel.tests;
 
 import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.User_d;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class User_dTest extends TestCase {
-
-	/**
-	 * The fixture for this User d test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected User_d fixture = null;
+public class User_dTest extends EntitiesTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +34,14 @@ public class User_dTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this User d test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(User_d fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this User d test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected User_d getFixture() {
-		return fixture;
+		return (User_d)fixture;
 	}
 
 	/**

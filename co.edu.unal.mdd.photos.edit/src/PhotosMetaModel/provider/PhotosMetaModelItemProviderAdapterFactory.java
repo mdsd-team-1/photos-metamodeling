@@ -1314,397 +1314,6 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Insert} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InsertItemProvider insertItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Insert}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInsertAdapter() {
-		if (insertItemProvider == null) {
-			insertItemProvider = new InsertItemProvider(this);
-		}
-
-		return insertItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.From} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FromItemProvider fromItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.From}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFromAdapter() {
-		if (fromItemProvider == null) {
-			fromItemProvider = new FromItemProvider(this);
-		}
-
-		return fromItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Join} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected JoinItemProvider joinItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Join}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createJoinAdapter() {
-		if (joinItemProvider == null) {
-			joinItemProvider = new JoinItemProvider(this);
-		}
-
-		return joinItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Lateral} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LateralItemProvider lateralItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Lateral}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLateralAdapter() {
-		if (lateralItemProvider == null) {
-			lateralItemProvider = new LateralItemProvider(this);
-		}
-
-		return lateralItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Where} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected WhereItemProvider whereItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Where}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createWhereAdapter() {
-		if (whereItemProvider == null) {
-			whereItemProvider = new WhereItemProvider(this);
-		}
-
-		return whereItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.GroupBy} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GroupByItemProvider groupByItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.GroupBy}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGroupByAdapter() {
-		if (groupByItemProvider == null) {
-			groupByItemProvider = new GroupByItemProvider(this);
-		}
-
-		return groupByItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Having} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HavingItemProvider havingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Having}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createHavingAdapter() {
-		if (havingItemProvider == null) {
-			havingItemProvider = new HavingItemProvider(this);
-		}
-
-		return havingItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Select} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelectItemProvider selectItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Select}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelectAdapter() {
-		if (selectItemProvider == null) {
-			selectItemProvider = new SelectItemProvider(this);
-		}
-
-		return selectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Distnct} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DistnctItemProvider distnctItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Distnct}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDistnctAdapter() {
-		if (distnctItemProvider == null) {
-			distnctItemProvider = new DistnctItemProvider(this);
-		}
-
-		return distnctItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Limit} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LimitItemProvider limitItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Limit}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLimitAdapter() {
-		if (limitItemProvider == null) {
-			limitItemProvider = new LimitItemProvider(this);
-		}
-
-		return limitItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Offset} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OffsetItemProvider offsetItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Offset}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOffsetAdapter() {
-		if (offsetItemProvider == null) {
-			offsetItemProvider = new OffsetItemProvider(this);
-		}
-
-		return offsetItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Values} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ValuesItemProvider valuesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Values}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createValuesAdapter() {
-		if (valuesItemProvider == null) {
-			valuesItemProvider = new ValuesItemProvider(this);
-		}
-
-		return valuesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Alter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AlterItemProvider alterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Alter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAlterAdapter() {
-		if (alterItemProvider == null) {
-			alterItemProvider = new AlterItemProvider(this);
-		}
-
-		return alterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Delete} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DeleteItemProvider deleteItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Delete}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDeleteAdapter() {
-		if (deleteItemProvider == null) {
-			deleteItemProvider = new DeleteItemProvider(this);
-		}
-
-		return deleteItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Create} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CreateItemProvider createItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Create}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCreateAdapter() {
-		if (createItemProvider == null) {
-			createItemProvider = new CreateItemProvider(this);
-		}
-
-		return createItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Drop} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DropItemProvider dropItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Drop}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDropAdapter() {
-		if (dropItemProvider == null) {
-			dropItemProvider = new DropItemProvider(this);
-		}
-
-		return dropItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Using} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UsingItemProvider usingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Using}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUsingAdapter() {
-		if (usingItemProvider == null) {
-			usingItemProvider = new UsingItemProvider(this);
-		}
-
-		return usingItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Index} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1725,75 +1334,6 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		}
 
 		return indexItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Update} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UpdateItemProvider updateItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Update}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUpdateAdapter() {
-		if (updateItemProvider == null) {
-			updateItemProvider = new UpdateItemProvider(this);
-		}
-
-		return updateItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Array} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArrayItemProvider arrayItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Array}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArrayAdapter() {
-		if (arrayItemProvider == null) {
-			arrayItemProvider = new ArrayItemProvider(this);
-		}
-
-		return arrayItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Into} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntoItemProvider intoItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Into}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIntoAdapter() {
-		if (intoItemProvider == null) {
-			intoItemProvider = new IntoItemProvider(this);
-		}
-
-		return intoItemProvider;
 	}
 
 	/**
@@ -1820,29 +1360,6 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Order_p} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Order_pItemProvider order_pItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Order_p}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOrder_pAdapter() {
-		if (order_pItemProvider == null) {
-			order_pItemProvider = new Order_pItemProvider(this);
-		}
-
-		return order_pItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.User_d} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1866,49 +1383,26 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Authentication} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.AppAccess} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthenticationItemProvider authenticationItemProvider;
+	protected AppAccessItemProvider appAccessItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Authentication}.
+	 * This creates an adapter for a {@link PhotosMetaModel.AppAccess}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthenticationAdapter() {
-		if (authenticationItemProvider == null) {
-			authenticationItemProvider = new AuthenticationItemProvider(this);
+	public Adapter createAppAccessAdapter() {
+		if (appAccessItemProvider == null) {
+			appAccessItemProvider = new AppAccessItemProvider(this);
 		}
 
-		return authenticationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Registration} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RegistrationItemProvider registrationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Registration}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRegistrationAdapter() {
-		if (registrationItemProvider == null) {
-			registrationItemProvider = new RegistrationItemProvider(this);
-		}
-
-		return registrationItemProvider;
+		return appAccessItemProvider;
 	}
 
 	/**
@@ -1935,141 +1429,49 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Action} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.AlbumManagement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ActionItemProvider actionItemProvider;
+	protected AlbumManagementItemProvider albumManagementItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Action}.
+	 * This creates an adapter for a {@link PhotosMetaModel.AlbumManagement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createActionAdapter() {
-		if (actionItemProvider == null) {
-			actionItemProvider = new ActionItemProvider(this);
+	public Adapter createAlbumManagementAdapter() {
+		if (albumManagementItemProvider == null) {
+			albumManagementItemProvider = new AlbumManagementItemProvider(this);
 		}
 
-		return actionItemProvider;
+		return albumManagementItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.CreateAlbum} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.PhotoActions} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CreateAlbumItemProvider createAlbumItemProvider;
+	protected PhotoActionsItemProvider photoActionsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.CreateAlbum}.
+	 * This creates an adapter for a {@link PhotosMetaModel.PhotoActions}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCreateAlbumAdapter() {
-		if (createAlbumItemProvider == null) {
-			createAlbumItemProvider = new CreateAlbumItemProvider(this);
+	public Adapter createPhotoActionsAdapter() {
+		if (photoActionsItemProvider == null) {
+			photoActionsItemProvider = new PhotoActionsItemProvider(this);
 		}
 
-		return createAlbumItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SeeAlbum} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SeeAlbumItemProvider seeAlbumItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.SeeAlbum}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSeeAlbumAdapter() {
-		if (seeAlbumItemProvider == null) {
-			seeAlbumItemProvider = new SeeAlbumItemProvider(this);
-		}
-
-		return seeAlbumItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.LoadPhoto} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LoadPhotoItemProvider loadPhotoItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.LoadPhoto}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLoadPhotoAdapter() {
-		if (loadPhotoItemProvider == null) {
-			loadPhotoItemProvider = new LoadPhotoItemProvider(this);
-		}
-
-		return loadPhotoItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SeeAllPhotos} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SeeAllPhotosItemProvider seeAllPhotosItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.SeeAllPhotos}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSeeAllPhotosAdapter() {
-		if (seeAllPhotosItemProvider == null) {
-			seeAllPhotosItemProvider = new SeeAllPhotosItemProvider(this);
-		}
-
-		return seeAllPhotosItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.EditProfile} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EditProfileItemProvider editProfileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.EditProfile}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEditProfileAdapter() {
-		if (editProfileItemProvider == null) {
-			editProfileItemProvider = new EditProfileItemProvider(this);
-		}
-
-		return editProfileItemProvider;
+		return photoActionsItemProvider;
 	}
 
 	/**
@@ -2116,29 +1518,6 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		}
 
 		return albumItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Picture} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PictureItemProvider pictureItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Picture}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPictureAdapter() {
-		if (pictureItemProvider == null) {
-			pictureItemProvider = new PictureItemProvider(this);
-		}
-
-		return pictureItemProvider;
 	}
 
 	/**
@@ -2694,6 +2073,75 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Modules} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModulesItemProvider modulesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Modules}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModulesAdapter() {
+		if (modulesItemProvider == null) {
+			modulesItemProvider = new ModulesItemProvider(this);
+		}
+
+		return modulesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Components} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComponentsItemProvider componentsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Components}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createComponentsAdapter() {
+		if (componentsItemProvider == null) {
+			componentsItemProvider = new ComponentsItemProvider(this);
+		}
+
+		return componentsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ReactFunctions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReactFunctionsItemProvider reactFunctionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.ReactFunctions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReactFunctionsAdapter() {
+		if (reactFunctionsItemProvider == null) {
+			reactFunctionsItemProvider = new ReactFunctionsItemProvider(this);
+		}
+
+		return reactFunctionsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ReactDOM} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2717,118 +2165,486 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Element_r} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Dependencies} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Element_rItemProvider element_rItemProvider;
+	protected DependenciesItemProvider dependenciesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Element_r}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Dependencies}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createElement_rAdapter() {
-		if (element_rItemProvider == null) {
-			element_rItemProvider = new Element_rItemProvider(this);
+	public Adapter createDependenciesAdapter() {
+		if (dependenciesItemProvider == null) {
+			dependenciesItemProvider = new DependenciesItemProvider(this);
 		}
 
-		return element_rItemProvider;
+		return dependenciesItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Component_r} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Logic} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Component_rItemProvider component_rItemProvider;
+	protected LogicItemProvider logicItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Component_r}.
+	 * This creates an adapter for a {@link PhotosMetaModel.Logic}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createComponent_rAdapter() {
-		if (component_rItemProvider == null) {
-			component_rItemProvider = new Component_rItemProvider(this);
+	public Adapter createLogicAdapter() {
+		if (logicItemProvider == null) {
+			logicItemProvider = new LogicItemProvider(this);
 		}
 
-		return component_rItemProvider;
+		return logicItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Prop} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.UI} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PropItemProvider propItemProvider;
+	protected UIItemProvider uiItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Prop}.
+	 * This creates an adapter for a {@link PhotosMetaModel.UI}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPropAdapter() {
-		if (propItemProvider == null) {
-			propItemProvider = new PropItemProvider(this);
+	public Adapter createUIAdapter() {
+		if (uiItemProvider == null) {
+			uiItemProvider = new UIItemProvider(this);
 		}
 
-		return propItemProvider;
+		return uiItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Class_r} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ReactClasses} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Class_rItemProvider class_rItemProvider;
+	protected ReactClassesItemProvider reactClassesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Class_r}.
+	 * This creates an adapter for a {@link PhotosMetaModel.ReactClasses}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createClass_rAdapter() {
-		if (class_rItemProvider == null) {
-			class_rItemProvider = new Class_rItemProvider(this);
+	public Adapter createReactClassesAdapter() {
+		if (reactClassesItemProvider == null) {
+			reactClassesItemProvider = new ReactClassesItemProvider(this);
 		}
 
-		return class_rItemProvider;
+		return reactClassesItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Function_r} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.CoreFunctions} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Function_rItemProvider function_rItemProvider;
+	protected CoreFunctionsItemProvider coreFunctionsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.Function_r}.
+	 * This creates an adapter for a {@link PhotosMetaModel.CoreFunctions}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFunction_rAdapter() {
-		if (function_rItemProvider == null) {
-			function_rItemProvider = new Function_rItemProvider(this);
+	public Adapter createCoreFunctionsAdapter() {
+		if (coreFunctionsItemProvider == null) {
+			coreFunctionsItemProvider = new CoreFunctionsItemProvider(this);
 		}
 
-		return function_rItemProvider;
+		return coreFunctionsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Router} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RouterItemProvider routerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Router}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRouterAdapter() {
+		if (routerItemProvider == null) {
+			routerItemProvider = new RouterItemProvider(this);
+		}
+
+		return routerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Structure} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StructureItemProvider structureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Structure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStructureAdapter() {
+		if (structureItemProvider == null) {
+			structureItemProvider = new StructureItemProvider(this);
+		}
+
+		return structureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ViewComponents} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ViewComponentsItemProvider viewComponentsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.ViewComponents}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createViewComponentsAdapter() {
+		if (viewComponentsItemProvider == null) {
+			viewComponentsItemProvider = new ViewComponentsItemProvider(this);
+		}
+
+		return viewComponentsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Subcomponents} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubcomponentsItemProvider subcomponentsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Subcomponents}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubcomponentsAdapter() {
+		if (subcomponentsItemProvider == null) {
+			subcomponentsItemProvider = new SubcomponentsItemProvider(this);
+		}
+
+		return subcomponentsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Actions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ActionsItemProvider actionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Actions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createActionsAdapter() {
+		if (actionsItemProvider == null) {
+			actionsItemProvider = new ActionsItemProvider(this);
+		}
+
+		return actionsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Request} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequestItemProvider requestItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Request}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequestAdapter() {
+		if (requestItemProvider == null) {
+			requestItemProvider = new RequestItemProvider(this);
+		}
+
+		return requestItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Services} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ServicesItemProvider servicesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Services}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createServicesAdapter() {
+		if (servicesItemProvider == null) {
+			servicesItemProvider = new ServicesItemProvider(this);
+		}
+
+		return servicesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Libraries} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LibrariesItemProvider librariesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Libraries}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLibrariesAdapter() {
+		if (librariesItemProvider == null) {
+			librariesItemProvider = new LibrariesItemProvider(this);
+		}
+
+		return librariesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Props} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PropsItemProvider propsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Props}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPropsAdapter() {
+		if (propsItemProvider == null) {
+			propsItemProvider = new PropsItemProvider(this);
+		}
+
+		return propsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.State} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StateItemProvider stateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.State}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStateAdapter() {
+		if (stateItemProvider == null) {
+			stateItemProvider = new StateItemProvider(this);
+		}
+
+		return stateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Information} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InformationItemProvider informationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Information}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInformationAdapter() {
+		if (informationItemProvider == null) {
+			informationItemProvider = new InformationItemProvider(this);
+		}
+
+		return informationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Entities} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntitiesItemProvider entitiesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Entities}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntitiesAdapter() {
+		if (entitiesItemProvider == null) {
+			entitiesItemProvider = new EntitiesItemProvider(this);
+		}
+
+		return entitiesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Functionalities} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionalitiesItemProvider functionalitiesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Functionalities}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFunctionalitiesAdapter() {
+		if (functionalitiesItemProvider == null) {
+			functionalitiesItemProvider = new FunctionalitiesItemProvider(this);
+		}
+
+		return functionalitiesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.SegmentStructure} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SegmentStructureItemProvider segmentStructureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.SegmentStructure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSegmentStructureAdapter() {
+		if (segmentStructureItemProvider == null) {
+			segmentStructureItemProvider = new SegmentStructureItemProvider(this);
+		}
+
+		return segmentStructureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Directories} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DirectoriesItemProvider directoriesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Directories}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDirectoriesAdapter() {
+		if (directoriesItemProvider == null) {
+			directoriesItemProvider = new DirectoriesItemProvider(this);
+		}
+
+		return directoriesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Files} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FilesItemProvider filesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Files}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFilesAdapter() {
+		if (filesItemProvider == null) {
+			filesItemProvider = new FilesItemProvider(this);
+		}
+
+		return filesItemProvider;
 	}
 
 	/**
@@ -2878,49 +2694,26 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ComponentDidMount} instances.
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.LifeCycle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ComponentDidMountItemProvider componentDidMountItemProvider;
+	protected LifeCycleItemProvider lifeCycleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.ComponentDidMount}.
+	 * This creates an adapter for a {@link PhotosMetaModel.LifeCycle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createComponentDidMountAdapter() {
-		if (componentDidMountItemProvider == null) {
-			componentDidMountItemProvider = new ComponentDidMountItemProvider(this);
+	public Adapter createLifeCycleAdapter() {
+		if (lifeCycleItemProvider == null) {
+			lifeCycleItemProvider = new LifeCycleItemProvider(this);
 		}
 
-		return componentDidMountItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ComponentWillUnmount} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ComponentWillUnmountItemProvider componentWillUnmountItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.ComponentWillUnmount}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createComponentWillUnmountAdapter() {
-		if (componentWillUnmountItemProvider == null) {
-			componentWillUnmountItemProvider = new ComponentWillUnmountItemProvider(this);
-		}
-
-		return componentWillUnmountItemProvider;
+		return lifeCycleItemProvider;
 	}
 
 	/**
@@ -2967,75 +2760,6 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		}
 
 		return amazonSimpleStorageServiceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.AmazonAurora} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AmazonAuroraItemProvider amazonAuroraItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.AmazonAurora}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAmazonAuroraAdapter() {
-		if (amazonAuroraItemProvider == null) {
-			amazonAuroraItemProvider = new AmazonAuroraItemProvider(this);
-		}
-
-		return amazonAuroraItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.AmazonDynamoDB} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AmazonDynamoDBItemProvider amazonDynamoDBItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.AmazonDynamoDB}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAmazonDynamoDBAdapter() {
-		if (amazonDynamoDBItemProvider == null) {
-			amazonDynamoDBItemProvider = new AmazonDynamoDBItemProvider(this);
-		}
-
-		return amazonDynamoDBItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.AmazonSageMaker} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AmazonSageMakerItemProvider amazonSageMakerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link PhotosMetaModel.AmazonSageMaker}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAmazonSageMakerAdapter() {
-		if (amazonSageMakerItemProvider == null) {
-			amazonSageMakerItemProvider = new AmazonSageMakerItemProvider(this);
-		}
-
-		return amazonSageMakerItemProvider;
 	}
 
 	/**
@@ -3269,6 +2993,29 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.ReactConfiguration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReactConfigurationItemProvider reactConfigurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.ReactConfiguration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReactConfigurationAdapter() {
+		if (reactConfigurationItemProvider == null) {
+			reactConfigurationItemProvider = new ReactConfigurationItemProvider(this);
+		}
+
+		return reactConfigurationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3427,42 +3174,15 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		if (privilegeItemProvider != null) privilegeItemProvider.dispose();
 		if (policyItemProvider != null) policyItemProvider.dispose();
 		if (clauseItemProvider != null) clauseItemProvider.dispose();
-		if (insertItemProvider != null) insertItemProvider.dispose();
-		if (fromItemProvider != null) fromItemProvider.dispose();
-		if (joinItemProvider != null) joinItemProvider.dispose();
-		if (lateralItemProvider != null) lateralItemProvider.dispose();
-		if (whereItemProvider != null) whereItemProvider.dispose();
-		if (groupByItemProvider != null) groupByItemProvider.dispose();
-		if (havingItemProvider != null) havingItemProvider.dispose();
-		if (selectItemProvider != null) selectItemProvider.dispose();
-		if (distnctItemProvider != null) distnctItemProvider.dispose();
-		if (limitItemProvider != null) limitItemProvider.dispose();
-		if (offsetItemProvider != null) offsetItemProvider.dispose();
-		if (valuesItemProvider != null) valuesItemProvider.dispose();
-		if (alterItemProvider != null) alterItemProvider.dispose();
-		if (deleteItemProvider != null) deleteItemProvider.dispose();
-		if (createItemProvider != null) createItemProvider.dispose();
-		if (dropItemProvider != null) dropItemProvider.dispose();
-		if (usingItemProvider != null) usingItemProvider.dispose();
 		if (indexItemProvider != null) indexItemProvider.dispose();
-		if (updateItemProvider != null) updateItemProvider.dispose();
-		if (arrayItemProvider != null) arrayItemProvider.dispose();
-		if (intoItemProvider != null) intoItemProvider.dispose();
 		if (column_sItemProvider != null) column_sItemProvider.dispose();
-		if (order_pItemProvider != null) order_pItemProvider.dispose();
 		if (user_dItemProvider != null) user_dItemProvider.dispose();
-		if (authenticationItemProvider != null) authenticationItemProvider.dispose();
-		if (registrationItemProvider != null) registrationItemProvider.dispose();
+		if (appAccessItemProvider != null) appAccessItemProvider.dispose();
 		if (profileManagementItemProvider != null) profileManagementItemProvider.dispose();
-		if (actionItemProvider != null) actionItemProvider.dispose();
-		if (createAlbumItemProvider != null) createAlbumItemProvider.dispose();
-		if (seeAlbumItemProvider != null) seeAlbumItemProvider.dispose();
-		if (loadPhotoItemProvider != null) loadPhotoItemProvider.dispose();
-		if (seeAllPhotosItemProvider != null) seeAllPhotosItemProvider.dispose();
-		if (editProfileItemProvider != null) editProfileItemProvider.dispose();
+		if (albumManagementItemProvider != null) albumManagementItemProvider.dispose();
+		if (photoActionsItemProvider != null) photoActionsItemProvider.dispose();
 		if (photoItemProvider != null) photoItemProvider.dispose();
 		if (albumItemProvider != null) albumItemProvider.dispose();
-		if (pictureItemProvider != null) pictureItemProvider.dispose();
 		if (amazonWebServicesItemProvider != null) amazonWebServicesItemProvider.dispose();
 		if (nTierItemProvider != null) nTierItemProvider.dispose();
 		if (layerItemProvider != null) layerItemProvider.dispose();
@@ -3487,21 +3207,13 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		if (security_aItemProvider != null) security_aItemProvider.dispose();
 		if (postgreSQL_aItemProvider != null) postgreSQL_aItemProvider.dispose();
 		if (amazonS3StorageItemProvider != null) amazonS3StorageItemProvider.dispose();
-		if (reactDOMItemProvider != null) reactDOMItemProvider.dispose();
-		if (element_rItemProvider != null) element_rItemProvider.dispose();
-		if (component_rItemProvider != null) component_rItemProvider.dispose();
-		if (propItemProvider != null) propItemProvider.dispose();
-		if (class_rItemProvider != null) class_rItemProvider.dispose();
-		if (function_rItemProvider != null) function_rItemProvider.dispose();
+		if (modulesItemProvider != null) modulesItemProvider.dispose();
+		if (componentsItemProvider != null) componentsItemProvider.dispose();
+		if (reactFunctionsItemProvider != null) reactFunctionsItemProvider.dispose();
 		if (renderItemProvider != null) renderItemProvider.dispose();
 		if (constructorItemProvider != null) constructorItemProvider.dispose();
-		if (componentDidMountItemProvider != null) componentDidMountItemProvider.dispose();
-		if (componentWillUnmountItemProvider != null) componentWillUnmountItemProvider.dispose();
-		if (amazonElasticComputeCloudItemProvider != null) amazonElasticComputeCloudItemProvider.dispose();
+		if (lifeCycleItemProvider != null) lifeCycleItemProvider.dispose();
 		if (amazonSimpleStorageServiceItemProvider != null) amazonSimpleStorageServiceItemProvider.dispose();
-		if (amazonAuroraItemProvider != null) amazonAuroraItemProvider.dispose();
-		if (amazonDynamoDBItemProvider != null) amazonDynamoDBItemProvider.dispose();
-		if (amazonSageMakerItemProvider != null) amazonSageMakerItemProvider.dispose();
 		if (bucketItemProvider != null) bucketItemProvider.dispose();
 		if (batchOperationItemProvider != null) batchOperationItemProvider.dispose();
 		if (accessItemProvider != null) accessItemProvider.dispose();
@@ -3512,6 +3224,30 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		if (file_aItemProvider != null) file_aItemProvider.dispose();
 		if (folder_aItemProvider != null) folder_aItemProvider.dispose();
 		if (metaDataItemProvider != null) metaDataItemProvider.dispose();
+		if (reactConfigurationItemProvider != null) reactConfigurationItemProvider.dispose();
+		if (reactDOMItemProvider != null) reactDOMItemProvider.dispose();
+		if (dependenciesItemProvider != null) dependenciesItemProvider.dispose();
+		if (logicItemProvider != null) logicItemProvider.dispose();
+		if (uiItemProvider != null) uiItemProvider.dispose();
+		if (reactClassesItemProvider != null) reactClassesItemProvider.dispose();
+		if (coreFunctionsItemProvider != null) coreFunctionsItemProvider.dispose();
+		if (routerItemProvider != null) routerItemProvider.dispose();
+		if (structureItemProvider != null) structureItemProvider.dispose();
+		if (viewComponentsItemProvider != null) viewComponentsItemProvider.dispose();
+		if (subcomponentsItemProvider != null) subcomponentsItemProvider.dispose();
+		if (actionsItemProvider != null) actionsItemProvider.dispose();
+		if (requestItemProvider != null) requestItemProvider.dispose();
+		if (servicesItemProvider != null) servicesItemProvider.dispose();
+		if (librariesItemProvider != null) librariesItemProvider.dispose();
+		if (propsItemProvider != null) propsItemProvider.dispose();
+		if (stateItemProvider != null) stateItemProvider.dispose();
+		if (informationItemProvider != null) informationItemProvider.dispose();
+		if (entitiesItemProvider != null) entitiesItemProvider.dispose();
+		if (functionalitiesItemProvider != null) functionalitiesItemProvider.dispose();
+		if (segmentStructureItemProvider != null) segmentStructureItemProvider.dispose();
+		if (directoriesItemProvider != null) directoriesItemProvider.dispose();
+		if (filesItemProvider != null) filesItemProvider.dispose();
+		if (amazonElasticComputeCloudItemProvider != null) amazonElasticComputeCloudItemProvider.dispose();
 	}
 
 }

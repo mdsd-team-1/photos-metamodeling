@@ -335,17 +335,17 @@
         eType="#//File_a" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaData"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Configuration" eSuperTypes="#//Modules">
+  <eClassifiers xsi:type="ecore:EClass" name="ReactConfiguration" eSuperTypes="#//Modules">
     <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
       <details key="archetype" value="Description"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReactDOM" eSuperTypes="#//Configuration.1">
+  <eClassifiers xsi:type="ecore:EClass" name="ReactDOM" eSuperTypes="#//ReactConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConstant" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStruct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dependencies" eSuperTypes="#//Configuration.1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependencies" eSuperTypes="#//ReactConfiguration"/>
   <eClassifiers xsi:type="ecore:EClass" name="Logic" eSuperTypes="#//Components"/>
   <eClassifiers xsi:type="ecore:EClass" name="UI" eSuperTypes="#//Components"/>
   <eClassifiers xsi:type="ecore:EClass" name="ReactClasses">
@@ -361,7 +361,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Router" eSuperTypes="#//Logic"/>
   <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//Logic"/>
-  <eClassifiers xsi:type="ecore:EClass" name="View" eSuperTypes="#//UI"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewComponents" eSuperTypes="#//UI"/>
   <eClassifiers xsi:type="ecore:EClass" name="Subcomponents" eSuperTypes="#//UI"/>
   <eClassifiers xsi:type="ecore:EClass" name="Actions" eSuperTypes="#//Modules"/>
   <eClassifiers xsi:type="ecore:EClass" name="Request" eSuperTypes="#//Actions"/>

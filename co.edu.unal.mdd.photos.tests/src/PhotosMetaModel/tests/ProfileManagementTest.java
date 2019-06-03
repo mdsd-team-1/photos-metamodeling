@@ -4,9 +4,6 @@ package PhotosMetaModel.tests;
 
 import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.ProfileManagement;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProfileManagementTest extends TestCase {
-
-	/**
-	 * The fixture for this Profile Management test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ProfileManagement fixture = null;
+public class ProfileManagementTest extends FunctionalitiesTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +34,14 @@ public class ProfileManagementTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Profile Management test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ProfileManagement fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Profile Management test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected ProfileManagement getFixture() {
-		return fixture;
+		return (ProfileManagement)fixture;
 	}
 
 	/**

@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConstructorTest extends Function_rTest {
+public class ConstructorTest extends ReactFunctionsTest {
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -77,8 +77,8 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__USER_D);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__PHOTO);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__ENTITIES);
 		}
 		return childrenFeatures;
 	}
@@ -131,8 +131,8 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case PhotosMetaModelPackage.DOMAIN__USER_D:
-			case PhotosMetaModelPackage.DOMAIN__PHOTO:
+			case PhotosMetaModelPackage.DOMAIN__FUNCTIONALITIES:
+			case PhotosMetaModelPackage.DOMAIN__ENTITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,13 +152,48 @@ public class DomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__USER_D,
+				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createFunctionalities()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createAppAccess()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createProfileManagement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createAlbumManagement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createPhotoActions()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__ENTITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createEntities()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__ENTITIES,
 				 PhotosMetaModelFactory.eINSTANCE.createUser_d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__PHOTO,
+				(PhotosMetaModelPackage.Literals.DOMAIN__ENTITIES,
 				 PhotosMetaModelFactory.eINSTANCE.createPhoto()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.DOMAIN__ENTITIES,
+				 PhotosMetaModelFactory.eINSTANCE.createAlbum()));
 	}
 
 	/**

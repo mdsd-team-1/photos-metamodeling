@@ -57,25 +57,25 @@ public class ReactItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addReactdomPropertyDescriptor(object);
+			addModulesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Reactdom feature.
+	 * This adds a property descriptor for the Modules feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReactdomPropertyDescriptor(Object object) {
+	protected void addModulesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_React_reactdom_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_React_reactdom_feature", "_UI_React_type"),
-				 PhotosMetaModelPackage.Literals.REACT__REACTDOM,
+				 getString("_UI_React_modules_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_React_modules_feature", "_UI_React_type"),
+				 PhotosMetaModelPackage.Literals.REACT__MODULES,
 				 true,
 				 false,
 				 true,
