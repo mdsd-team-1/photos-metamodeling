@@ -4,6 +4,7 @@ package PhotosMetaModel.tests;
 
 import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.ReactDOM;
+
 import junit.textui.TestRunner;
 
 /**

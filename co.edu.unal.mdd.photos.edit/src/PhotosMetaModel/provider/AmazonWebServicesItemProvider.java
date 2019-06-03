@@ -64,28 +64,6 @@ public class AmazonWebServicesItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Amazonelasticcomputecloud feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAmazonelasticcomputecloudPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AmazonWebServices_amazonelasticcomputecloud_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazonelasticcomputecloud_feature", "_UI_AmazonWebServices_type"),
-				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Amazonsimplestorageservice feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,6 +77,28 @@ public class AmazonWebServicesItemProvider
 				 getString("_UI_AmazonWebServices_amazonsimplestorageservice_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazonsimplestorageservice_feature", "_UI_AmazonWebServices_type"),
 				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Amazonelasticcomputecloud feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAmazonelasticcomputecloudPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AmazonWebServices_amazonelasticcomputecloud_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AmazonWebServices_amazonelasticcomputecloud_feature", "_UI_AmazonWebServices_type"),
+				 PhotosMetaModelPackage.Literals.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD,
 				 true,
 				 false,
 				 true,

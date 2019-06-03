@@ -4,6 +4,7 @@ package PhotosMetaModel.tests;
 
 import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotosMetaModelFactory;
+
 import junit.textui.TestRunner;
 
 /**

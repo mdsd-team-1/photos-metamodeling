@@ -4,6 +4,7 @@ package PhotosMetaModel.provider;
 
 
 import PhotosMetaModel.PhotosMetaModelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
