@@ -6,13 +6,19 @@ import PhotosMetaModel.Modules;
 import PhotosMetaModel.PhotosMetaModelPackage;
 import PhotosMetaModel.React;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +35,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	/**
-	 * The cached value of the '{@link #getModules() <em>Modules</em>}' reference.
+	 * The cached value of the '{@link #getModules() <em>Modules</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getModules()
 	 * @generated
 	 * @ordered
 	 */
-	protected Modules modules;
+	protected EList<Modules> modules;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,14 +69,9 @@ public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	 * @generated
 	 */
 	@Override
-	public Modules getModules() {
-		if (modules != null && modules.eIsProxy()) {
-			InternalEObject oldModules = (InternalEObject)modules;
-			modules = (Modules)eResolveProxy(oldModules);
-			if (modules != oldModules) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.REACT__MODULES, oldModules, modules));
-			}
+	public EList<Modules> getModules() {
+		if (modules == null) {
+			modules = new EObjectContainmentEList<Modules>(Modules.class, this, PhotosMetaModelPackage.REACT__MODULES);
 		}
 		return modules;
 	}
@@ -80,21 +81,13 @@ public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Modules basicGetModules() {
-		return modules;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setModules(Modules newModules) {
-		Modules oldModules = modules;
-		modules = newModules;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.REACT__MODULES, oldModules, modules));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PhotosMetaModelPackage.REACT__MODULES:
+				return ((InternalEList<?>)getModules()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -106,8 +99,7 @@ public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.REACT__MODULES:
-				if (resolve) return getModules();
-				return basicGetModules();
+				return getModules();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,11 +109,13 @@ public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.REACT__MODULES:
-				setModules((Modules)newValue);
+				getModules().clear();
+				getModules().addAll((Collection<? extends Modules>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,7 +130,7 @@ public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.REACT__MODULES:
-				setModules((Modules)null);
+				getModules().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,7 +145,7 @@ public class ReactImpl extends MinimalEObjectImpl.Container implements React {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.REACT__MODULES:
-				return modules != null;
+				return modules != null && !modules.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

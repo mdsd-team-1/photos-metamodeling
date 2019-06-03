@@ -7,9 +7,9 @@
   <foreignModel>PhotosMetaModel.ecore</foreignModel>
   <genPackages prefix="PhotosMetaModel" disposableProviderFactory="true" ecorePackage="PhotosMetaModel.ecore#/">
     <genClasses ecoreClass="PhotosMetaModel.ecore#//SoftGallery">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/architecture"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/technology"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/architecture"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//SoftGallery/technology"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Domain/functionalities"/>
@@ -19,16 +19,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Architecture/ntier"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Technology">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/spring"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/react"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/postgresql"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/amazons3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/spring"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/postgresql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/react"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Technology/amazonwebservices"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Spring">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Spring/springbootapplication"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//React">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//React/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//React/modules"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Repository"/>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//RestController">

@@ -8,13 +8,19 @@ import PhotosMetaModel.PhotosMetaModelPackage;
 import PhotosMetaModel.SoftGallery;
 import PhotosMetaModel.Technology;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,43 +30,43 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link PhotosMetaModel.impl.SoftGalleryImpl#getDomain <em>Domain</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.SoftGalleryImpl#getArchitecture <em>Architecture</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.SoftGalleryImpl#getTechnology <em>Technology</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.SoftGalleryImpl#getDomain <em>Domain</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements SoftGallery {
 	/**
-	 * The cached value of the '{@link #getArchitecture() <em>Architecture</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArchitecture()
-	 * @generated
-	 * @ordered
-	 */
-	protected Architecture architecture;
-
-	/**
-	 * The cached value of the '{@link #getTechnology() <em>Technology</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected Technology technology;
-
-	/**
-	 * The cached value of the '{@link #getDomain() <em>Domain</em>}' reference.
+	 * The cached value of the '{@link #getDomain() <em>Domain</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDomain()
 	 * @generated
 	 * @ordered
 	 */
-	protected Domain domain;
+	protected EList<Domain> domain;
+
+	/**
+	 * The cached value of the '{@link #getArchitecture() <em>Architecture</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArchitecture()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Architecture> architecture;
+
+	/**
+	 * The cached value of the '{@link #getTechnology() <em>Technology</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTechnology()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Technology> technology;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,94 +93,9 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	 * @generated
 	 */
 	@Override
-	public Architecture getArchitecture() {
-		if (architecture != null && architecture.eIsProxy()) {
-			InternalEObject oldArchitecture = (InternalEObject)architecture;
-			architecture = (Architecture)eResolveProxy(oldArchitecture);
-			if (architecture != oldArchitecture) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE, oldArchitecture, architecture));
-			}
-		}
-		return architecture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Architecture basicGetArchitecture() {
-		return architecture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setArchitecture(Architecture newArchitecture) {
-		Architecture oldArchitecture = architecture;
-		architecture = newArchitecture;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE, oldArchitecture, architecture));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Technology getTechnology() {
-		if (technology != null && technology.eIsProxy()) {
-			InternalEObject oldTechnology = (InternalEObject)technology;
-			technology = (Technology)eResolveProxy(oldTechnology);
-			if (technology != oldTechnology) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY, oldTechnology, technology));
-			}
-		}
-		return technology;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Technology basicGetTechnology() {
-		return technology;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTechnology(Technology newTechnology) {
-		Technology oldTechnology = technology;
-		technology = newTechnology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY, oldTechnology, technology));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Domain getDomain() {
-		if (domain != null && domain.eIsProxy()) {
-			InternalEObject oldDomain = (InternalEObject)domain;
-			domain = (Domain)eResolveProxy(oldDomain);
-			if (domain != oldDomain) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN, oldDomain, domain));
-			}
+	public EList<Domain> getDomain() {
+		if (domain == null) {
+			domain = new EObjectContainmentEList<Domain>(Domain.class, this, PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN);
 		}
 		return domain;
 	}
@@ -184,8 +105,12 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Domain basicGetDomain() {
-		return domain;
+	@Override
+	public EList<Architecture> getArchitecture() {
+		if (architecture == null) {
+			architecture = new EObjectContainmentEList<Architecture>(Architecture.class, this, PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE);
+		}
+		return architecture;
 	}
 
 	/**
@@ -194,11 +119,29 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	 * @generated
 	 */
 	@Override
-	public void setDomain(Domain newDomain) {
-		Domain oldDomain = domain;
-		domain = newDomain;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN, oldDomain, domain));
+	public EList<Technology> getTechnology() {
+		if (technology == null) {
+			technology = new EObjectContainmentEList<Technology>(Technology.class, this, PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY);
+		}
+		return technology;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
+				return ((InternalEList<?>)getDomain()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
+				return ((InternalEList<?>)getArchitecture()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
+				return ((InternalEList<?>)getTechnology()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -209,15 +152,12 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
-				if (resolve) return getArchitecture();
-				return basicGetArchitecture();
-			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
-				if (resolve) return getTechnology();
-				return basicGetTechnology();
 			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
-				if (resolve) return getDomain();
-				return basicGetDomain();
+				return getDomain();
+			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
+				return getArchitecture();
+			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
+				return getTechnology();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -227,17 +167,21 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
+				getDomain().clear();
+				getDomain().addAll((Collection<? extends Domain>)newValue);
+				return;
 			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
-				setArchitecture((Architecture)newValue);
+				getArchitecture().clear();
+				getArchitecture().addAll((Collection<? extends Architecture>)newValue);
 				return;
 			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
-				setTechnology((Technology)newValue);
-				return;
-			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
-				setDomain((Domain)newValue);
+				getTechnology().clear();
+				getTechnology().addAll((Collection<? extends Technology>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -251,14 +195,14 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
+				getDomain().clear();
+				return;
 			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
-				setArchitecture((Architecture)null);
+				getArchitecture().clear();
 				return;
 			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
-				setTechnology((Technology)null);
-				return;
-			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
-				setDomain((Domain)null);
+				getTechnology().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -272,12 +216,12 @@ public class SoftGalleryImpl extends MinimalEObjectImpl.Container implements Sof
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
-				return architecture != null;
-			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
-				return technology != null;
 			case PhotosMetaModelPackage.SOFT_GALLERY__DOMAIN:
-				return domain != null;
+				return domain != null && !domain.isEmpty();
+			case PhotosMetaModelPackage.SOFT_GALLERY__ARCHITECTURE:
+				return architecture != null && !architecture.isEmpty();
+			case PhotosMetaModelPackage.SOFT_GALLERY__TECHNOLOGY:
+				return technology != null && !technology.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

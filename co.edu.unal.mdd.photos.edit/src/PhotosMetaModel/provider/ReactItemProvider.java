@@ -3,8 +3,10 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.PhotosMetaModelPackage;
 
+import PhotosMetaModel.React;
 import java.util.Collection;
 import java.util.List;
 
@@ -13,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -21,6 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link PhotosMetaModel.React} object.
@@ -57,31 +60,38 @@ public class ReactItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addModulesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Modules feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addModulesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_React_modules_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_React_modules_feature", "_UI_React_type"),
-				 PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.REACT__MODULES);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -117,6 +127,12 @@ public class ReactItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(React.class)) {
+			case PhotosMetaModelPackage.REACT__MODULES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -130,6 +146,86 @@ public class ReactItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createModules()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createComponents()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createReactConfiguration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createReactDOM()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createDependencies()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createLogic()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createUI()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createRouter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createStructure()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createViewComponents()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createSubcomponents()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createActions()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createRequest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createServices()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createLibraries()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REACT__MODULES,
+				 PhotosMetaModelFactory.eINSTANCE.createInformation()));
 	}
 
 	/**

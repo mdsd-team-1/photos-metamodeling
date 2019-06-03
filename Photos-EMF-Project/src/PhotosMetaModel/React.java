@@ -2,6 +2,8 @@
  */
 package PhotosMetaModel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,25 +24,15 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface React extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Modules</b></em>' reference.
+	 * Returns the value of the '<em><b>Modules</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Modules}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modules</em>' reference.
-	 * @see #setModules(Modules)
+	 * @return the value of the '<em>Modules</em>' containment reference list.
 	 * @see PhotosMetaModel.PhotosMetaModelPackage#getReact_Modules()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	Modules getModules();
-
-	/**
-	 * Sets the value of the '{@link PhotosMetaModel.React#getModules <em>Modules</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modules</em>' reference.
-	 * @see #getModules()
-	 * @generated
-	 */
-	void setModules(Modules value);
+	EList<Modules> getModules();
 
 } // React

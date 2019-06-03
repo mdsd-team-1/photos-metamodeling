@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<co.edu.unal.mdd.photos.PhotosMetaModel:SoftGallery xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.unal.mdd.photos.PhotosMetaModel="http://co/edu/unal/mdd/photos/PhotosMetaModel">
+  <domain>
+    <functionalities/>
+    <entities/>
+  </domain>
+  <architecture>
+    <ntier>
+      <layer xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:Presentation"/>
+      <layer xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:BusinessLogic"/>
+      <layer xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:Data"/>
+    </ntier>
+  </architecture>
+  <technology>
+    <spring/>
+    <postgresql/>
+    <react/>
+    <amazonwebservices/>
+  </technology>
+</co.edu.unal.mdd.photos.PhotosMetaModel:SoftGallery>

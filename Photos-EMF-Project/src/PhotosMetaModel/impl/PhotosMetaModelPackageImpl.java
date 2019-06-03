@@ -1117,7 +1117,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getSoftGallery_Architecture() {
+	public EReference getSoftGallery_Domain() {
 		return (EReference)softGalleryEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1127,7 +1127,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getSoftGallery_Technology() {
+	public EReference getSoftGallery_Architecture() {
 		return (EReference)softGalleryEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1137,7 +1137,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getSoftGallery_Domain() {
+	public EReference getSoftGallery_Technology() {
 		return (EReference)softGalleryEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1217,7 +1217,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getTechnology_React() {
+	public EReference getTechnology_Postgresql() {
 		return (EReference)technologyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1227,7 +1227,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getTechnology_Postgresql() {
+	public EReference getTechnology_React() {
 		return (EReference)technologyEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1237,7 +1237,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getTechnology_Amazons3() {
+	public EReference getTechnology_Amazonwebservices() {
 		return (EReference)technologyEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3841,9 +3841,9 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		// Create classes and their features
 		softGalleryEClass = createEClass(SOFT_GALLERY);
+		createEReference(softGalleryEClass, SOFT_GALLERY__DOMAIN);
 		createEReference(softGalleryEClass, SOFT_GALLERY__ARCHITECTURE);
 		createEReference(softGalleryEClass, SOFT_GALLERY__TECHNOLOGY);
-		createEReference(softGalleryEClass, SOFT_GALLERY__DOMAIN);
 
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__FUNCTIONALITIES);
@@ -3854,9 +3854,9 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		technologyEClass = createEClass(TECHNOLOGY);
 		createEReference(technologyEClass, TECHNOLOGY__SPRING);
-		createEReference(technologyEClass, TECHNOLOGY__REACT);
 		createEReference(technologyEClass, TECHNOLOGY__POSTGRESQL);
-		createEReference(technologyEClass, TECHNOLOGY__AMAZONS3);
+		createEReference(technologyEClass, TECHNOLOGY__REACT);
+		createEReference(technologyEClass, TECHNOLOGY__AMAZONWEBSERVICES);
 
 		springEClass = createEClass(SPRING);
 		createEReference(springEClass, SPRING__SPRINGBOOTAPPLICATION);
@@ -4321,9 +4321,9 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(softGalleryEClass, SoftGallery.class, "SoftGallery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSoftGallery_Architecture(), this.getArchitecture(), null, "architecture", null, 0, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSoftGallery_Technology(), this.getTechnology(), null, "technology", null, 0, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSoftGallery_Domain(), this.getDomain(), null, "domain", null, 0, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSoftGallery_Domain(), this.getDomain(), null, "domain", null, 0, -1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSoftGallery_Architecture(), this.getArchitecture(), null, "architecture", null, 0, -1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSoftGallery_Technology(), this.getTechnology(), null, "technology", null, 0, -1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_Functionalities(), this.getFunctionalities(), null, "functionalities", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4333,16 +4333,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getArchitecture_Ntier(), this.getNTier(), null, "ntier", null, 0, -1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(technologyEClass, Technology.class, "Technology", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTechnology_Spring(), this.getSpring(), null, "spring", null, 0, 1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTechnology_React(), this.getReact(), null, "react", null, 0, 1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTechnology_Postgresql(), this.getPostgreSQL(), null, "postgresql", null, 0, 1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTechnology_Amazons3(), this.getAmazonWebServices(), null, "amazons3", null, 0, 1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTechnology_Spring(), this.getSpring(), null, "spring", null, 0, -1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTechnology_Postgresql(), this.getPostgreSQL(), null, "postgresql", null, 0, -1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTechnology_React(), this.getReact(), null, "react", null, 0, -1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTechnology_Amazonwebservices(), this.getAmazonWebServices(), null, "amazonwebservices", null, 0, -1, Technology.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(springEClass, Spring.class, "Spring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpring_Springbootapplication(), this.getSpringBootApplication(), null, "springbootapplication", null, 0, 1, Spring.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reactEClass, React.class, "React", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReact_Modules(), this.getModules(), null, "modules", null, 0, 1, React.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReact_Modules(), this.getModules(), null, "modules", null, 0, -1, React.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

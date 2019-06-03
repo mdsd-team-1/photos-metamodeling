@@ -3,9 +3,12 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PhotosMetaModel" nsURI="http://co/edu/unal/mdd/photos/PhotosMetaModel"
     nsPrefix="co.edu.unal.mdd.photos.PhotosMetaModel">
   <eClassifiers xsi:type="ecore:EClass" name="SoftGallery">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="architecture" eType="#//Architecture"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="technology" eType="#//Technology"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//Domain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" upperBound="-1"
+        eType="#//Domain" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architecture" upperBound="-1"
+        eType="#//Architecture" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="technology" upperBound="-1"
+        eType="#//Technology" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functionalities" upperBound="-1"
@@ -18,17 +21,22 @@
         eType="#//NTier" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Technology">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="spring" eType="#//Spring"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="react" eType="#//React"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postgresql" eType="#//PostgreSQL"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazons3" eType="#//AmazonWebServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spring" upperBound="-1"
+        eType="#//Spring" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postgresql" upperBound="-1"
+        eType="#//PostgreSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="react" upperBound="-1"
+        eType="#//React" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonwebservices" upperBound="-1"
+        eType="#//AmazonWebServices" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spring">
     <eStructuralFeatures xsi:type="ecore:EReference" name="springbootapplication"
         eType="#//SpringBootApplication"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="React">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" eType="#//Modules"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="#//Modules" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repository"/>
   <eClassifiers xsi:type="ecore:EClass" name="RestController">
