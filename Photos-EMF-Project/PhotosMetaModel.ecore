@@ -40,6 +40,7 @@
         eType="#//Autowired" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="specification" upperBound="-1"
         eType="#//Specification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpringBootApplication">
     <eStructuralFeatures xsi:type="ecore:EReference" name="repository" upperBound="-1"
@@ -78,6 +79,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//Id"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="column_s" upperBound="-1"
         eType="#//Column_s" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Id">
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedvalue" eType="#//GeneratedValue"/>
@@ -86,6 +88,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
         eType="#//Constraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GeneratedValue"/>
   <eClassifiers xsi:type="ecore:EClass" name="NamedNativeQuery"/>
@@ -140,11 +143,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="primaryKey" upperBound="-1"
         eType="#//Column_p" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inherit" eType="#//Table_p"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function_p"/>
   <eClassifiers xsi:type="ecore:EClass" name="Database">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scheme" upperBound="-1"
         eType="#//Scheme" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Scheme">
     <eStructuralFeatures xsi:type="ecore:EReference" name="table_postgresql" upperBound="-1"
@@ -157,12 +162,15 @@
         eType="#//Trigger" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="storedprocedure" upperBound="-1"
         eType="#//Function_p" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="User_p">
     <eStructuralFeatures xsi:type="ecore:EReference" name="execute" upperBound="-1"
         eType="#//Query" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="privilege" upperBound="-1"
         eType="#//Privilege" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cluster">
     <eStructuralFeatures xsi:type="ecore:EReference" name="database" upperBound="-1"
@@ -171,13 +179,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Row">
     <eStructuralFeatures xsi:type="ecore:EReference" name="policy" eType="#//Policy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
         eType="#//Constraint" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Constraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Privilege"/>
   <eClassifiers xsi:type="ecore:EClass" name="Policy"/>
@@ -203,7 +214,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Array" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Into" eSuperTypes="#//Clause"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Column_s"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Column_s">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Order_p" eSuperTypes="#//Clause"/>
   <eClassifiers xsi:type="ecore:EClass" name="Usuario">
     <eStructuralFeatures xsi:type="ecore:EReference" name="autenticacion" upperBound="-1"
@@ -333,13 +346,18 @@
         eType="#//Component_r" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prop" upperBound="-1" eType="#//Prop"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Prop"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Prop">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class_r" eSuperTypes="#//Component_r">
     <eStructuralFeatures xsi:type="ecore:EReference" name="function_r" upperBound="-1"
         eType="#//Function_r" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Function_r"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Function_r">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Render" eSuperTypes="#//Function_r"/>
   <eClassifiers xsi:type="ecore:EClass" name="Constructor" eSuperTypes="#//Function_r"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentDidMount" eSuperTypes="#//Function_r"/>
@@ -372,10 +390,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Onwer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ObjectURL" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metadata" upperBound="-1"
+        eType="#//MetaData" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Folder_a">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="file_a" upperBound="-1"
         eType="#//File_a" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetaData"/>
 </ecore:EPackage>
