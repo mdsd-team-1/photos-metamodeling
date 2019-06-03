@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see PhotosMetaModel.SystemMetamodelPackage#getAutenticacion()
+ * @see PhotosMetaModel.PhotosMetaModelPackage#getAutenticacion()
  * @model
  * @generated
  */

@@ -3,16 +3,15 @@
 package PhotosMetaModel.impl;
 
 import PhotosMetaModel.EditarPerfil;
-import PhotosMetaModel.Fotos;
-import PhotosMetaModel.SystemMetamodelPackage;
+import PhotosMetaModel.Foto;
+import PhotosMetaModel.PhotosMetaModelPackage;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,21 +21,21 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.EditarPerfilImpl#getEditarPerfil <em>Editar Perfil</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.EditarPerfilImpl#getFoto <em>Foto</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
+public class EditarPerfilImpl extends AccionImpl implements EditarPerfil {
 	/**
-	 * The cached value of the '{@link #getEditarPerfil() <em>Editar Perfil</em>}' reference list.
+	 * The cached value of the '{@link #getFoto() <em>Foto</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEditarPerfil()
+	 * @see #getFoto()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Fotos> editarPerfil;
+	protected Foto foto;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,7 +53,7 @@ public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SystemMetamodelPackage.Literals.EDITAR_PERFIL;
+		return PhotosMetaModelPackage.Literals.EDITAR_PERFIL;
 	}
 
 	/**
@@ -63,11 +62,38 @@ public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
 	 * @generated
 	 */
 	@Override
-	public EList<Fotos> getEditarPerfil() {
-		if (editarPerfil == null) {
-			editarPerfil = new EObjectResolvingEList<Fotos>(Fotos.class, this, SystemMetamodelPackage.EDITAR_PERFIL__EDITAR_PERFIL);
+	public Foto getFoto() {
+		if (foto != null && foto.eIsProxy()) {
+			InternalEObject oldFoto = (InternalEObject)foto;
+			foto = (Foto)eResolveProxy(oldFoto);
+			if (foto != oldFoto) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.EDITAR_PERFIL__FOTO, oldFoto, foto));
+			}
 		}
-		return editarPerfil;
+		return foto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Foto basicGetFoto() {
+		return foto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFoto(Foto newFoto) {
+		Foto oldFoto = foto;
+		foto = newFoto;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.EDITAR_PERFIL__FOTO, oldFoto, foto));
 	}
 
 	/**
@@ -78,8 +104,9 @@ public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.EDITAR_PERFIL__EDITAR_PERFIL:
-				return getEditarPerfil();
+			case PhotosMetaModelPackage.EDITAR_PERFIL__FOTO:
+				if (resolve) return getFoto();
+				return basicGetFoto();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -89,13 +116,11 @@ public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.EDITAR_PERFIL__EDITAR_PERFIL:
-				getEditarPerfil().clear();
-				getEditarPerfil().addAll((Collection<? extends Fotos>)newValue);
+			case PhotosMetaModelPackage.EDITAR_PERFIL__FOTO:
+				setFoto((Foto)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,8 +134,8 @@ public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.EDITAR_PERFIL__EDITAR_PERFIL:
-				getEditarPerfil().clear();
+			case PhotosMetaModelPackage.EDITAR_PERFIL__FOTO:
+				setFoto((Foto)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -124,8 +149,8 @@ public class EditarPerfilImpl extends AccionesImpl implements EditarPerfil {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.EDITAR_PERFIL__EDITAR_PERFIL:
-				return editarPerfil != null && !editarPerfil.isEmpty();
+			case PhotosMetaModelPackage.EDITAR_PERFIL__FOTO:
+				return foto != null;
 		}
 		return super.eIsSet(featureID);
 	}

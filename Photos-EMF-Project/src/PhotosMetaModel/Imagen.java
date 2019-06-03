@@ -13,27 +13,49 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link PhotosMetaModel.Imagen#getCategoria <em>Categoria</em>}</li>
  *   <li>{@link PhotosMetaModel.Imagen#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.Imagen#getName <em>Name</em>}</li>
- *   <li>{@link PhotosMetaModel.Imagen#getTienenCategoria <em>Tienen Categoria</em>}</li>
  * </ul>
  *
- * @see PhotosMetaModel.SystemMetamodelPackage#getImagen()
+ * @see PhotosMetaModel.PhotosMetaModelPackage#getImagen()
  * @model
  * @generated
  */
 public interface Imagen extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Categoria</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Categoria</em>' reference.
+	 * @see #setCategoria(Categoria)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getImagen_Categoria()
+	 * @model
+	 * @generated
+	 */
+	Categoria getCategoria();
+
+	/**
+	 * Sets the value of the '{@link PhotosMetaModel.Imagen#getCategoria <em>Categoria</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Categoria</em>' reference.
+	 * @see #getCategoria()
+	 * @generated
+	 */
+	void setCategoria(Categoria value);
+
+	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getImagen_Id()
+	 * @see #setId(String)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getImagen_Id()
 	 * @model
 	 * @generated
 	 */
-	int getId();
+	String getId();
 
 	/**
 	 * Sets the value of the '{@link PhotosMetaModel.Imagen#getId <em>Id</em>}' attribute.
@@ -43,7 +65,7 @@ public interface Imagen extends EObject {
 	 * @see #getId()
 	 * @generated
 	 */
-	void setId(int value);
+	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -51,7 +73,7 @@ public interface Imagen extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getImagen_Name()
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getImagen_Name()
 	 * @model
 	 * @generated
 	 */
@@ -66,27 +88,5 @@ public interface Imagen extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Tienen Categoria</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tienen Categoria</em>' reference.
-	 * @see #setTienenCategoria(Categoria)
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getImagen_TienenCategoria()
-	 * @model required="true"
-	 * @generated
-	 */
-	Categoria getTienenCategoria();
-
-	/**
-	 * Sets the value of the '{@link PhotosMetaModel.Imagen#getTienenCategoria <em>Tienen Categoria</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tienen Categoria</em>' reference.
-	 * @see #getTienenCategoria()
-	 * @generated
-	 */
-	void setTienenCategoria(Categoria value);
 
 } // Imagen

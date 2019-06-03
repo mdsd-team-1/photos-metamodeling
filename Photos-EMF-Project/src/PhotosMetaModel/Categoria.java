@@ -2,8 +2,6 @@
  */
 package PhotosMetaModel;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,40 +13,27 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.Categoria#getTienenImagenes <em>Tienen Imagenes</em>}</li>
  *   <li>{@link PhotosMetaModel.Categoria#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.Categoria#getUrl <em>Url</em>}</li>
  *   <li>{@link PhotosMetaModel.Categoria#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see PhotosMetaModel.SystemMetamodelPackage#getCategoria()
+ * @see PhotosMetaModel.PhotosMetaModelPackage#getCategoria()
  * @model
  * @generated
  */
 public interface Categoria extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Tienen Imagenes</b></em>' reference list.
-	 * The list contents are of type {@link PhotosMetaModel.Imagen}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tienen Imagenes</em>' reference list.
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getCategoria_TienenImagenes()
-	 * @model
-	 * @generated
-	 */
-	EList<Imagen> getTienenImagenes();
-
-	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getCategoria_Id()
+	 * @see #setId(String)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getCategoria_Id()
 	 * @model
 	 * @generated
 	 */
-	int getId();
+	String getId();
 
 	/**
 	 * Sets the value of the '{@link PhotosMetaModel.Categoria#getId <em>Id</em>}' attribute.
@@ -58,7 +43,7 @@ public interface Categoria extends EObject {
 	 * @see #getId()
 	 * @generated
 	 */
-	void setId(int value);
+	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
@@ -66,7 +51,7 @@ public interface Categoria extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getCategoria_Url()
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getCategoria_Url()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +73,7 @@ public interface Categoria extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getCategoria_Name()
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getCategoria_Name()
 	 * @model
 	 * @generated
 	 */

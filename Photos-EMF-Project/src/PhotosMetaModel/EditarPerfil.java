@@ -2,7 +2,6 @@
  */
 package PhotosMetaModel;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,24 +12,34 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.EditarPerfil#getEditarPerfil <em>Editar Perfil</em>}</li>
+ *   <li>{@link PhotosMetaModel.EditarPerfil#getFoto <em>Foto</em>}</li>
  * </ul>
  *
- * @see PhotosMetaModel.SystemMetamodelPackage#getEditarPerfil()
+ * @see PhotosMetaModel.PhotosMetaModelPackage#getEditarPerfil()
  * @model
  * @generated
  */
-public interface EditarPerfil extends Acciones {
+public interface EditarPerfil extends Accion {
 	/**
-	 * Returns the value of the '<em><b>Editar Perfil</b></em>' reference list.
-	 * The list contents are of type {@link PhotosMetaModel.Fotos}.
+	 * Returns the value of the '<em><b>Foto</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Editar Perfil</em>' reference list.
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getEditarPerfil_EditarPerfil()
+	 * @return the value of the '<em>Foto</em>' reference.
+	 * @see #setFoto(Foto)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getEditarPerfil_Foto()
 	 * @model
 	 * @generated
 	 */
-	EList<Fotos> getEditarPerfil();
+	Foto getFoto();
+
+	/**
+	 * Sets the value of the '{@link PhotosMetaModel.EditarPerfil#getFoto <em>Foto</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Foto</em>' reference.
+	 * @see #getFoto()
+	 * @generated
+	 */
+	void setFoto(Foto value);
 
 } // EditarPerfil

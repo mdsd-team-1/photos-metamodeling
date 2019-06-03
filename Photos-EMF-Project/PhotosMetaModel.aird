@@ -4410,9 +4410,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_VfeEoITmEem68r2U6M2log" name="Index" tooltipText="" incomingEdges="_FMM784VeEem3t7TseS6glA" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="PhotosMetaModel.ecore#//Index"/>
-      <semanticElements xmi:type="ecore:EClass" href="PhotosMetaModel.ecore#//Index"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_VfeEoITmEem68r2U6M2log" name="Index_p" tooltipText="" incomingEdges="_FMM784VeEem3t7TseS6glA" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="PhotosMetaModel.ecore#//Index_p"/>
+      <semanticElements xmi:type="ecore:EClass" href="PhotosMetaModel.ecore#//Index_p"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>

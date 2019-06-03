@@ -132,7 +132,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trigger"/>
   <eClassifiers xsi:type="ecore:EClass" name="View"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Index"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Index_p"/>
   <eClassifiers xsi:type="ecore:EClass" name="Table_p">
     <eStructuralFeatures xsi:type="ecore:EReference" name="column" upperBound="-1"
         eType="#//Column_p" containment="true"/>
@@ -157,7 +157,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="view_postgresql" upperBound="-1"
         eType="#//View" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="index" upperBound="-1"
-        eType="#//Index" containment="true"/>
+        eType="#//Index_p" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trigger" upperBound="-1"
         eType="#//Trigger" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="storedprocedure" upperBound="-1"

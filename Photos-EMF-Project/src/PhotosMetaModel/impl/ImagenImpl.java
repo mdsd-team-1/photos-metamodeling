@@ -4,7 +4,7 @@ package PhotosMetaModel.impl;
 
 import PhotosMetaModel.Categoria;
 import PhotosMetaModel.Imagen;
-import PhotosMetaModel.SystemMetamodelPackage;
+import PhotosMetaModel.PhotosMetaModelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,14 +22,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link PhotosMetaModel.impl.ImagenImpl#getCategoria <em>Categoria</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.ImagenImpl#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.ImagenImpl#getName <em>Name</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.ImagenImpl#getTienenCategoria <em>Tienen Categoria</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
+	/**
+	 * The cached value of the '{@link #getCategoria() <em>Categoria</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategoria()
+	 * @generated
+	 * @ordered
+	 */
+	protected Categoria categoria;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,7 +48,7 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -48,7 +58,7 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -71,16 +81,6 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTienenCategoria() <em>Tienen Categoria</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTienenCategoria()
-	 * @generated
-	 * @ordered
-	 */
-	protected Categoria tienenCategoria;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,7 +96,7 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SystemMetamodelPackage.Literals.IMAGEN;
+		return PhotosMetaModelPackage.Literals.IMAGEN;
 	}
 
 	/**
@@ -105,7 +105,47 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	 * @generated
 	 */
 	@Override
-	public int getId() {
+	public Categoria getCategoria() {
+		if (categoria != null && categoria.eIsProxy()) {
+			InternalEObject oldCategoria = (InternalEObject)categoria;
+			categoria = (Categoria)eResolveProxy(oldCategoria);
+			if (categoria != oldCategoria) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.IMAGEN__CATEGORIA, oldCategoria, categoria));
+			}
+		}
+		return categoria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Categoria basicGetCategoria() {
+		return categoria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCategoria(Categoria newCategoria) {
+		Categoria oldCategoria = categoria;
+		categoria = newCategoria;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.IMAGEN__CATEGORIA, oldCategoria, categoria));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
 		return id;
 	}
 
@@ -115,11 +155,11 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	 * @generated
 	 */
 	@Override
-	public void setId(int newId) {
-		int oldId = id;
+	public void setId(String newId) {
+		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.IMAGEN__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.IMAGEN__ID, oldId, id));
 	}
 
 	/**
@@ -142,47 +182,7 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.IMAGEN__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Categoria getTienenCategoria() {
-		if (tienenCategoria != null && tienenCategoria.eIsProxy()) {
-			InternalEObject oldTienenCategoria = (InternalEObject)tienenCategoria;
-			tienenCategoria = (Categoria)eResolveProxy(oldTienenCategoria);
-			if (tienenCategoria != oldTienenCategoria) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.IMAGEN__TIENEN_CATEGORIA, oldTienenCategoria, tienenCategoria));
-			}
-		}
-		return tienenCategoria;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Categoria basicGetTienenCategoria() {
-		return tienenCategoria;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTienenCategoria(Categoria newTienenCategoria) {
-		Categoria oldTienenCategoria = tienenCategoria;
-		tienenCategoria = newTienenCategoria;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.IMAGEN__TIENEN_CATEGORIA, oldTienenCategoria, tienenCategoria));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.IMAGEN__NAME, oldName, name));
 	}
 
 	/**
@@ -193,13 +193,13 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.IMAGEN__ID:
+			case PhotosMetaModelPackage.IMAGEN__CATEGORIA:
+				if (resolve) return getCategoria();
+				return basicGetCategoria();
+			case PhotosMetaModelPackage.IMAGEN__ID:
 				return getId();
-			case SystemMetamodelPackage.IMAGEN__NAME:
+			case PhotosMetaModelPackage.IMAGEN__NAME:
 				return getName();
-			case SystemMetamodelPackage.IMAGEN__TIENEN_CATEGORIA:
-				if (resolve) return getTienenCategoria();
-				return basicGetTienenCategoria();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,14 +212,14 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.IMAGEN__ID:
-				setId((Integer)newValue);
+			case PhotosMetaModelPackage.IMAGEN__CATEGORIA:
+				setCategoria((Categoria)newValue);
 				return;
-			case SystemMetamodelPackage.IMAGEN__NAME:
+			case PhotosMetaModelPackage.IMAGEN__ID:
+				setId((String)newValue);
+				return;
+			case PhotosMetaModelPackage.IMAGEN__NAME:
 				setName((String)newValue);
-				return;
-			case SystemMetamodelPackage.IMAGEN__TIENEN_CATEGORIA:
-				setTienenCategoria((Categoria)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,14 +233,14 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.IMAGEN__ID:
+			case PhotosMetaModelPackage.IMAGEN__CATEGORIA:
+				setCategoria((Categoria)null);
+				return;
+			case PhotosMetaModelPackage.IMAGEN__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case SystemMetamodelPackage.IMAGEN__NAME:
+			case PhotosMetaModelPackage.IMAGEN__NAME:
 				setName(NAME_EDEFAULT);
-				return;
-			case SystemMetamodelPackage.IMAGEN__TIENEN_CATEGORIA:
-				setTienenCategoria((Categoria)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -254,12 +254,12 @@ public class ImagenImpl extends MinimalEObjectImpl.Container implements Imagen {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.IMAGEN__ID:
-				return id != ID_EDEFAULT;
-			case SystemMetamodelPackage.IMAGEN__NAME:
+			case PhotosMetaModelPackage.IMAGEN__CATEGORIA:
+				return categoria != null;
+			case PhotosMetaModelPackage.IMAGEN__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case PhotosMetaModelPackage.IMAGEN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SystemMetamodelPackage.IMAGEN__TIENEN_CATEGORIA:
-				return tienenCategoria != null;
 		}
 		return super.eIsSet(featureID);
 	}

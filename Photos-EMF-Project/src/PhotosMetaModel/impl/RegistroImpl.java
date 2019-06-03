@@ -2,8 +2,8 @@
  */
 package PhotosMetaModel.impl;
 
+import PhotosMetaModel.PhotosMetaModelPackage;
 import PhotosMetaModel.Registro;
-import PhotosMetaModel.SystemMetamodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -33,7 +33,7 @@ public class RegistroImpl extends MinimalEObjectImpl.Container implements Regist
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SystemMetamodelPackage.Literals.REGISTRO;
+		return PhotosMetaModelPackage.Literals.REGISTRO;
 	}
 
 } //RegistroImpl

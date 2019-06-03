@@ -3,11 +3,11 @@
 package PhotosMetaModel.impl;
 
 import PhotosMetaModel.Autenticacion;
-import PhotosMetaModel.Fotos;
+import PhotosMetaModel.Foto;
+import PhotosMetaModel.ManejoPerfil;
+import PhotosMetaModel.PhotosMetaModelPackage;
 import PhotosMetaModel.Registro;
-import PhotosMetaModel.SystemMetamodelPackage;
 import PhotosMetaModel.Usuario;
-import PhotosMetaModel.manejoPerfil;
 
 import java.util.Collection;
 
@@ -33,61 +33,71 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getTieneManejoPerfil <em>Tiene Manejo Perfil</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getPuedeTener <em>Puede Tener</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getPuedeAutenticarse <em>Puede Autenticarse</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getPoseeUnaGaleria <em>Posee Una Galeria</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getAutenticacion <em>Autenticacion</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getManejoperfil <em>Manejoperfil</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getFoto <em>Foto</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getFirst_name <em>First name</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getLast_name <em>Last name</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getProfile_description <em>Profile description</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getUsername <em>Username</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getPassword <em>Password</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.UsuarioImpl#getRegistro <em>Registro</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario {
 	/**
-	 * The cached value of the '{@link #getTieneManejoPerfil() <em>Tiene Manejo Perfil</em>}' containment reference list.
+	 * The cached value of the '{@link #getAutenticacion() <em>Autenticacion</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTieneManejoPerfil()
+	 * @see #getAutenticacion()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<manejoPerfil> tieneManejoPerfil;
+	protected EList<Autenticacion> autenticacion;
 
 	/**
-	 * The cached value of the '{@link #getPuedeTener() <em>Puede Tener</em>}' containment reference.
+	 * The cached value of the '{@link #getManejoperfil() <em>Manejoperfil</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPuedeTener()
+	 * @see #getManejoperfil()
 	 * @generated
 	 * @ordered
 	 */
-	protected Registro puedeTener;
+	protected EList<ManejoPerfil> manejoperfil;
 
 	/**
-	 * The cached value of the '{@link #getPuedeAutenticarse() <em>Puede Autenticarse</em>}' containment reference list.
+	 * The cached value of the '{@link #getFoto() <em>Foto</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPuedeAutenticarse()
+	 * @see #getFoto()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Autenticacion> puedeAutenticarse;
+	protected Foto foto;
 
 	/**
-	 * The cached value of the '{@link #getPoseeUnaGaleria() <em>Posee Una Galeria</em>}' reference.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPoseeUnaGaleria()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected Fotos poseeUnaGaleria;
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFirst_name() <em>First name</em>}' attribute.
@@ -128,26 +138,6 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * @ordered
 	 */
 	protected String last_name = LAST_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected int id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getProfile_description() <em>Profile description</em>}' attribute.
@@ -230,6 +220,16 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	protected String email = EMAIL_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getRegistro() <em>Registro</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegistro()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Registro> registro;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -245,7 +245,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SystemMetamodelPackage.Literals.USUARIO;
+		return PhotosMetaModelPackage.Literals.USUARIO;
 	}
 
 	/**
@@ -254,11 +254,11 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * @generated
 	 */
 	@Override
-	public EList<manejoPerfil> getTieneManejoPerfil() {
-		if (tieneManejoPerfil == null) {
-			tieneManejoPerfil = new EObjectContainmentEList<manejoPerfil>(manejoPerfil.class, this, SystemMetamodelPackage.USUARIO__TIENE_MANEJO_PERFIL);
+	public EList<Autenticacion> getAutenticacion() {
+		if (autenticacion == null) {
+			autenticacion = new EObjectContainmentEList<Autenticacion>(Autenticacion.class, this, PhotosMetaModelPackage.USUARIO__AUTENTICACION);
 		}
-		return tieneManejoPerfil;
+		return autenticacion;
 	}
 
 	/**
@@ -267,23 +267,11 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * @generated
 	 */
 	@Override
-	public Registro getPuedeTener() {
-		return puedeTener;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPuedeTener(Registro newPuedeTener, NotificationChain msgs) {
-		Registro oldPuedeTener = puedeTener;
-		puedeTener = newPuedeTener;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__PUEDE_TENER, oldPuedeTener, newPuedeTener);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<ManejoPerfil> getManejoperfil() {
+		if (manejoperfil == null) {
+			manejoperfil = new EObjectContainmentEList<ManejoPerfil>(ManejoPerfil.class, this, PhotosMetaModelPackage.USUARIO__MANEJOPERFIL);
 		}
-		return msgs;
+		return manejoperfil;
 	}
 
 	/**
@@ -292,49 +280,16 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * @generated
 	 */
 	@Override
-	public void setPuedeTener(Registro newPuedeTener) {
-		if (newPuedeTener != puedeTener) {
-			NotificationChain msgs = null;
-			if (puedeTener != null)
-				msgs = ((InternalEObject)puedeTener).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SystemMetamodelPackage.USUARIO__PUEDE_TENER, null, msgs);
-			if (newPuedeTener != null)
-				msgs = ((InternalEObject)newPuedeTener).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SystemMetamodelPackage.USUARIO__PUEDE_TENER, null, msgs);
-			msgs = basicSetPuedeTener(newPuedeTener, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__PUEDE_TENER, newPuedeTener, newPuedeTener));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Autenticacion> getPuedeAutenticarse() {
-		if (puedeAutenticarse == null) {
-			puedeAutenticarse = new EObjectContainmentEList<Autenticacion>(Autenticacion.class, this, SystemMetamodelPackage.USUARIO__PUEDE_AUTENTICARSE);
-		}
-		return puedeAutenticarse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Fotos getPoseeUnaGaleria() {
-		if (poseeUnaGaleria != null && poseeUnaGaleria.eIsProxy()) {
-			InternalEObject oldPoseeUnaGaleria = (InternalEObject)poseeUnaGaleria;
-			poseeUnaGaleria = (Fotos)eResolveProxy(oldPoseeUnaGaleria);
-			if (poseeUnaGaleria != oldPoseeUnaGaleria) {
+	public Foto getFoto() {
+		if (foto != null && foto.eIsProxy()) {
+			InternalEObject oldFoto = (InternalEObject)foto;
+			foto = (Foto)eResolveProxy(oldFoto);
+			if (foto != oldFoto) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemMetamodelPackage.USUARIO__POSEE_UNA_GALERIA, oldPoseeUnaGaleria, poseeUnaGaleria));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.USUARIO__FOTO, oldFoto, foto));
 			}
 		}
-		return poseeUnaGaleria;
+		return foto;
 	}
 
 	/**
@@ -342,8 +297,8 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Fotos basicGetPoseeUnaGaleria() {
-		return poseeUnaGaleria;
+	public Foto basicGetFoto() {
+		return foto;
 	}
 
 	/**
@@ -352,11 +307,34 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	 * @generated
 	 */
 	@Override
-	public void setPoseeUnaGaleria(Fotos newPoseeUnaGaleria) {
-		Fotos oldPoseeUnaGaleria = poseeUnaGaleria;
-		poseeUnaGaleria = newPoseeUnaGaleria;
+	public void setFoto(Foto newFoto) {
+		Foto oldFoto = foto;
+		foto = newFoto;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__POSEE_UNA_GALERIA, oldPoseeUnaGaleria, poseeUnaGaleria));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__FOTO, oldFoto, foto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__ID, oldId, id));
 	}
 
 	/**
@@ -379,7 +357,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		String oldFirst_name = first_name;
 		first_name = newFirst_name;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__FIRST_NAME, oldFirst_name, first_name));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__FIRST_NAME, oldFirst_name, first_name));
 	}
 
 	/**
@@ -402,30 +380,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		String oldLast_name = last_name;
 		last_name = newLast_name;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__LAST_NAME, oldLast_name, last_name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setId(int newId) {
-		int oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__LAST_NAME, oldLast_name, last_name));
 	}
 
 	/**
@@ -448,7 +403,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		String oldProfile_description = profile_description;
 		profile_description = newProfile_description;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__PROFILE_DESCRIPTION, oldProfile_description, profile_description));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__PROFILE_DESCRIPTION, oldProfile_description, profile_description));
 	}
 
 	/**
@@ -471,7 +426,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		String oldUsername = username;
 		username = newUsername;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__USERNAME, oldUsername, username));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__USERNAME, oldUsername, username));
 	}
 
 	/**
@@ -494,7 +449,7 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		String oldPassword = password;
 		password = newPassword;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__PASSWORD, oldPassword, password));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__PASSWORD, oldPassword, password));
 	}
 
 	/**
@@ -517,7 +472,20 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		String oldEmail = email;
 		email = newEmail;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SystemMetamodelPackage.USUARIO__EMAIL, oldEmail, email));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USUARIO__EMAIL, oldEmail, email));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Registro> getRegistro() {
+		if (registro == null) {
+			registro = new EObjectContainmentEList<Registro>(Registro.class, this, PhotosMetaModelPackage.USUARIO__REGISTRO);
+		}
+		return registro;
 	}
 
 	/**
@@ -528,12 +496,12 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SystemMetamodelPackage.USUARIO__TIENE_MANEJO_PERFIL:
-				return ((InternalEList<?>)getTieneManejoPerfil()).basicRemove(otherEnd, msgs);
-			case SystemMetamodelPackage.USUARIO__PUEDE_TENER:
-				return basicSetPuedeTener(null, msgs);
-			case SystemMetamodelPackage.USUARIO__PUEDE_AUTENTICARSE:
-				return ((InternalEList<?>)getPuedeAutenticarse()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.USUARIO__AUTENTICACION:
+				return ((InternalEList<?>)getAutenticacion()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.USUARIO__MANEJOPERFIL:
+				return ((InternalEList<?>)getManejoperfil()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.USUARIO__REGISTRO:
+				return ((InternalEList<?>)getRegistro()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -546,29 +514,29 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.USUARIO__TIENE_MANEJO_PERFIL:
-				return getTieneManejoPerfil();
-			case SystemMetamodelPackage.USUARIO__PUEDE_TENER:
-				return getPuedeTener();
-			case SystemMetamodelPackage.USUARIO__PUEDE_AUTENTICARSE:
-				return getPuedeAutenticarse();
-			case SystemMetamodelPackage.USUARIO__POSEE_UNA_GALERIA:
-				if (resolve) return getPoseeUnaGaleria();
-				return basicGetPoseeUnaGaleria();
-			case SystemMetamodelPackage.USUARIO__FIRST_NAME:
-				return getFirst_name();
-			case SystemMetamodelPackage.USUARIO__LAST_NAME:
-				return getLast_name();
-			case SystemMetamodelPackage.USUARIO__ID:
+			case PhotosMetaModelPackage.USUARIO__AUTENTICACION:
+				return getAutenticacion();
+			case PhotosMetaModelPackage.USUARIO__MANEJOPERFIL:
+				return getManejoperfil();
+			case PhotosMetaModelPackage.USUARIO__FOTO:
+				if (resolve) return getFoto();
+				return basicGetFoto();
+			case PhotosMetaModelPackage.USUARIO__ID:
 				return getId();
-			case SystemMetamodelPackage.USUARIO__PROFILE_DESCRIPTION:
+			case PhotosMetaModelPackage.USUARIO__FIRST_NAME:
+				return getFirst_name();
+			case PhotosMetaModelPackage.USUARIO__LAST_NAME:
+				return getLast_name();
+			case PhotosMetaModelPackage.USUARIO__PROFILE_DESCRIPTION:
 				return getProfile_description();
-			case SystemMetamodelPackage.USUARIO__USERNAME:
+			case PhotosMetaModelPackage.USUARIO__USERNAME:
 				return getUsername();
-			case SystemMetamodelPackage.USUARIO__PASSWORD:
+			case PhotosMetaModelPackage.USUARIO__PASSWORD:
 				return getPassword();
-			case SystemMetamodelPackage.USUARIO__EMAIL:
+			case PhotosMetaModelPackage.USUARIO__EMAIL:
 				return getEmail();
+			case PhotosMetaModelPackage.USUARIO__REGISTRO:
+				return getRegistro();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -582,40 +550,41 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.USUARIO__TIENE_MANEJO_PERFIL:
-				getTieneManejoPerfil().clear();
-				getTieneManejoPerfil().addAll((Collection<? extends manejoPerfil>)newValue);
+			case PhotosMetaModelPackage.USUARIO__AUTENTICACION:
+				getAutenticacion().clear();
+				getAutenticacion().addAll((Collection<? extends Autenticacion>)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__PUEDE_TENER:
-				setPuedeTener((Registro)newValue);
+			case PhotosMetaModelPackage.USUARIO__MANEJOPERFIL:
+				getManejoperfil().clear();
+				getManejoperfil().addAll((Collection<? extends ManejoPerfil>)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__PUEDE_AUTENTICARSE:
-				getPuedeAutenticarse().clear();
-				getPuedeAutenticarse().addAll((Collection<? extends Autenticacion>)newValue);
+			case PhotosMetaModelPackage.USUARIO__FOTO:
+				setFoto((Foto)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__POSEE_UNA_GALERIA:
-				setPoseeUnaGaleria((Fotos)newValue);
+			case PhotosMetaModelPackage.USUARIO__ID:
+				setId((String)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__FIRST_NAME:
+			case PhotosMetaModelPackage.USUARIO__FIRST_NAME:
 				setFirst_name((String)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__LAST_NAME:
+			case PhotosMetaModelPackage.USUARIO__LAST_NAME:
 				setLast_name((String)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__ID:
-				setId((Integer)newValue);
-				return;
-			case SystemMetamodelPackage.USUARIO__PROFILE_DESCRIPTION:
+			case PhotosMetaModelPackage.USUARIO__PROFILE_DESCRIPTION:
 				setProfile_description((String)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__USERNAME:
+			case PhotosMetaModelPackage.USUARIO__USERNAME:
 				setUsername((String)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__PASSWORD:
+			case PhotosMetaModelPackage.USUARIO__PASSWORD:
 				setPassword((String)newValue);
 				return;
-			case SystemMetamodelPackage.USUARIO__EMAIL:
+			case PhotosMetaModelPackage.USUARIO__EMAIL:
 				setEmail((String)newValue);
+				return;
+			case PhotosMetaModelPackage.USUARIO__REGISTRO:
+				getRegistro().clear();
+				getRegistro().addAll((Collection<? extends Registro>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -629,38 +598,38 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.USUARIO__TIENE_MANEJO_PERFIL:
-				getTieneManejoPerfil().clear();
+			case PhotosMetaModelPackage.USUARIO__AUTENTICACION:
+				getAutenticacion().clear();
 				return;
-			case SystemMetamodelPackage.USUARIO__PUEDE_TENER:
-				setPuedeTener((Registro)null);
+			case PhotosMetaModelPackage.USUARIO__MANEJOPERFIL:
+				getManejoperfil().clear();
 				return;
-			case SystemMetamodelPackage.USUARIO__PUEDE_AUTENTICARSE:
-				getPuedeAutenticarse().clear();
+			case PhotosMetaModelPackage.USUARIO__FOTO:
+				setFoto((Foto)null);
 				return;
-			case SystemMetamodelPackage.USUARIO__POSEE_UNA_GALERIA:
-				setPoseeUnaGaleria((Fotos)null);
-				return;
-			case SystemMetamodelPackage.USUARIO__FIRST_NAME:
-				setFirst_name(FIRST_NAME_EDEFAULT);
-				return;
-			case SystemMetamodelPackage.USUARIO__LAST_NAME:
-				setLast_name(LAST_NAME_EDEFAULT);
-				return;
-			case SystemMetamodelPackage.USUARIO__ID:
+			case PhotosMetaModelPackage.USUARIO__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case SystemMetamodelPackage.USUARIO__PROFILE_DESCRIPTION:
+			case PhotosMetaModelPackage.USUARIO__FIRST_NAME:
+				setFirst_name(FIRST_NAME_EDEFAULT);
+				return;
+			case PhotosMetaModelPackage.USUARIO__LAST_NAME:
+				setLast_name(LAST_NAME_EDEFAULT);
+				return;
+			case PhotosMetaModelPackage.USUARIO__PROFILE_DESCRIPTION:
 				setProfile_description(PROFILE_DESCRIPTION_EDEFAULT);
 				return;
-			case SystemMetamodelPackage.USUARIO__USERNAME:
+			case PhotosMetaModelPackage.USUARIO__USERNAME:
 				setUsername(USERNAME_EDEFAULT);
 				return;
-			case SystemMetamodelPackage.USUARIO__PASSWORD:
+			case PhotosMetaModelPackage.USUARIO__PASSWORD:
 				setPassword(PASSWORD_EDEFAULT);
 				return;
-			case SystemMetamodelPackage.USUARIO__EMAIL:
+			case PhotosMetaModelPackage.USUARIO__EMAIL:
 				setEmail(EMAIL_EDEFAULT);
+				return;
+			case PhotosMetaModelPackage.USUARIO__REGISTRO:
+				getRegistro().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -674,28 +643,28 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.USUARIO__TIENE_MANEJO_PERFIL:
-				return tieneManejoPerfil != null && !tieneManejoPerfil.isEmpty();
-			case SystemMetamodelPackage.USUARIO__PUEDE_TENER:
-				return puedeTener != null;
-			case SystemMetamodelPackage.USUARIO__PUEDE_AUTENTICARSE:
-				return puedeAutenticarse != null && !puedeAutenticarse.isEmpty();
-			case SystemMetamodelPackage.USUARIO__POSEE_UNA_GALERIA:
-				return poseeUnaGaleria != null;
-			case SystemMetamodelPackage.USUARIO__FIRST_NAME:
+			case PhotosMetaModelPackage.USUARIO__AUTENTICACION:
+				return autenticacion != null && !autenticacion.isEmpty();
+			case PhotosMetaModelPackage.USUARIO__MANEJOPERFIL:
+				return manejoperfil != null && !manejoperfil.isEmpty();
+			case PhotosMetaModelPackage.USUARIO__FOTO:
+				return foto != null;
+			case PhotosMetaModelPackage.USUARIO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case PhotosMetaModelPackage.USUARIO__FIRST_NAME:
 				return FIRST_NAME_EDEFAULT == null ? first_name != null : !FIRST_NAME_EDEFAULT.equals(first_name);
-			case SystemMetamodelPackage.USUARIO__LAST_NAME:
+			case PhotosMetaModelPackage.USUARIO__LAST_NAME:
 				return LAST_NAME_EDEFAULT == null ? last_name != null : !LAST_NAME_EDEFAULT.equals(last_name);
-			case SystemMetamodelPackage.USUARIO__ID:
-				return id != ID_EDEFAULT;
-			case SystemMetamodelPackage.USUARIO__PROFILE_DESCRIPTION:
+			case PhotosMetaModelPackage.USUARIO__PROFILE_DESCRIPTION:
 				return PROFILE_DESCRIPTION_EDEFAULT == null ? profile_description != null : !PROFILE_DESCRIPTION_EDEFAULT.equals(profile_description);
-			case SystemMetamodelPackage.USUARIO__USERNAME:
+			case PhotosMetaModelPackage.USUARIO__USERNAME:
 				return USERNAME_EDEFAULT == null ? username != null : !USERNAME_EDEFAULT.equals(username);
-			case SystemMetamodelPackage.USUARIO__PASSWORD:
+			case PhotosMetaModelPackage.USUARIO__PASSWORD:
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
-			case SystemMetamodelPackage.USUARIO__EMAIL:
+			case PhotosMetaModelPackage.USUARIO__EMAIL:
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
+			case PhotosMetaModelPackage.USUARIO__REGISTRO:
+				return registro != null && !registro.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -710,12 +679,12 @@ public class UsuarioImpl extends MinimalEObjectImpl.Container implements Usuario
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (first_name: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", first_name: ");
 		result.append(first_name);
 		result.append(", last_name: ");
 		result.append(last_name);
-		result.append(", id: ");
-		result.append(id);
 		result.append(", profile_description: ");
 		result.append(profile_description);
 		result.append(", username: ");

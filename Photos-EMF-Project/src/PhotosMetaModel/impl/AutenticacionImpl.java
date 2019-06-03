@@ -3,7 +3,7 @@
 package PhotosMetaModel.impl;
 
 import PhotosMetaModel.Autenticacion;
-import PhotosMetaModel.SystemMetamodelPackage;
+import PhotosMetaModel.PhotosMetaModelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -33,7 +33,7 @@ public class AutenticacionImpl extends MinimalEObjectImpl.Container implements A
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SystemMetamodelPackage.Literals.AUTENTICACION;
+		return PhotosMetaModelPackage.Literals.AUTENTICACION;
 	}
 
 } //AutenticacionImpl

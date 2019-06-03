@@ -8,44 +8,57 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Ntier</b></em>'.
+ * A representation of the model object '<em><b>NTier</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.Ntier#getCapas <em>Capas</em>}</li>
- *   <li>{@link PhotosMetaModel.Ntier#getRelaciones <em>Relaciones</em>}</li>
+ *   <li>{@link PhotosMetaModel.NTier#getConexion <em>Conexion</em>}</li>
+ *   <li>{@link PhotosMetaModel.NTier#getCapa <em>Capa</em>}</li>
+ *   <li>{@link PhotosMetaModel.NTier#getRelacion <em>Relacion</em>}</li>
  * </ul>
  *
- * @see PhotosMetaModel.SystemMetamodelPackage#getNtier()
+ * @see PhotosMetaModel.PhotosMetaModelPackage#getNTier()
  * @model
  * @generated
  */
-public interface Ntier extends EObject {
+public interface NTier extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Capas</b></em>' containment reference list.
-	 * The list contents are of type {@link PhotosMetaModel.Capas}.
+	 * Returns the value of the '<em><b>Conexion</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Conexion}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capas</em>' containment reference list.
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getNtier_Capas()
+	 * @return the value of the '<em>Conexion</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getNTier_Conexion()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Capas> getCapas();
+	EList<Conexion> getConexion();
 
 	/**
-	 * Returns the value of the '<em><b>Relaciones</b></em>' containment reference list.
-	 * The list contents are of type {@link PhotosMetaModel.Relaciones}.
+	 * Returns the value of the '<em><b>Capa</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Capa}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relaciones</em>' containment reference list.
-	 * @see PhotosMetaModel.SystemMetamodelPackage#getNtier_Relaciones()
+	 * @return the value of the '<em>Capa</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getNTier_Capa()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Relaciones> getRelaciones();
+	EList<Capa> getCapa();
 
-} // Ntier
+	/**
+	 * Returns the value of the '<em><b>Relacion</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Relacion}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Relacion</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getNTier_Relacion()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Relacion> getRelacion();
+
+} // NTier

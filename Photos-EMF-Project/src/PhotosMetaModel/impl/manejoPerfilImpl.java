@@ -2,9 +2,9 @@
  */
 package PhotosMetaModel.impl;
 
-import PhotosMetaModel.Acciones;
-import PhotosMetaModel.SystemMetamodelPackage;
-import PhotosMetaModel.manejoPerfil;
+import PhotosMetaModel.Accion;
+import PhotosMetaModel.ManejoPerfil;
+import PhotosMetaModel.PhotosMetaModelPackage;
 
 import java.util.Collection;
 
@@ -22,34 +22,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>manejo Perfil</b></em>'.
+ * An implementation of the model object '<em><b>Manejo Perfil</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.manejoPerfilImpl#getAcciones <em>Acciones</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.ManejoPerfilImpl#getAccion <em>Accion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements manejoPerfil {
+public class ManejoPerfilImpl extends MinimalEObjectImpl.Container implements ManejoPerfil {
 	/**
-	 * The cached value of the '{@link #getAcciones() <em>Acciones</em>}' containment reference list.
+	 * The cached value of the '{@link #getAccion() <em>Accion</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAcciones()
+	 * @see #getAccion()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Acciones> acciones;
+	protected EList<Accion> accion;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected manejoPerfilImpl() {
+	protected ManejoPerfilImpl() {
 		super();
 	}
 
@@ -60,7 +60,7 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SystemMetamodelPackage.Literals.MANEJO_PERFIL;
+		return PhotosMetaModelPackage.Literals.MANEJO_PERFIL;
 	}
 
 	/**
@@ -69,11 +69,11 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	 * @generated
 	 */
 	@Override
-	public EList<Acciones> getAcciones() {
-		if (acciones == null) {
-			acciones = new EObjectContainmentEList<Acciones>(Acciones.class, this, SystemMetamodelPackage.MANEJO_PERFIL__ACCIONES);
+	public EList<Accion> getAccion() {
+		if (accion == null) {
+			accion = new EObjectContainmentEList<Accion>(Accion.class, this, PhotosMetaModelPackage.MANEJO_PERFIL__ACCION);
 		}
-		return acciones;
+		return accion;
 	}
 
 	/**
@@ -84,8 +84,8 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SystemMetamodelPackage.MANEJO_PERFIL__ACCIONES:
-				return ((InternalEList<?>)getAcciones()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.MANEJO_PERFIL__ACCION:
+				return ((InternalEList<?>)getAccion()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -98,8 +98,8 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SystemMetamodelPackage.MANEJO_PERFIL__ACCIONES:
-				return getAcciones();
+			case PhotosMetaModelPackage.MANEJO_PERFIL__ACCION:
+				return getAccion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,9 +113,9 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SystemMetamodelPackage.MANEJO_PERFIL__ACCIONES:
-				getAcciones().clear();
-				getAcciones().addAll((Collection<? extends Acciones>)newValue);
+			case PhotosMetaModelPackage.MANEJO_PERFIL__ACCION:
+				getAccion().clear();
+				getAccion().addAll((Collection<? extends Accion>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,8 +129,8 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.MANEJO_PERFIL__ACCIONES:
-				getAcciones().clear();
+			case PhotosMetaModelPackage.MANEJO_PERFIL__ACCION:
+				getAccion().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -144,10 +144,10 @@ public class manejoPerfilImpl extends MinimalEObjectImpl.Container implements ma
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SystemMetamodelPackage.MANEJO_PERFIL__ACCIONES:
-				return acciones != null && !acciones.isEmpty();
+			case PhotosMetaModelPackage.MANEJO_PERFIL__ACCION:
+				return accion != null && !accion.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //manejoPerfilImpl
+} //ManejoPerfilImpl
