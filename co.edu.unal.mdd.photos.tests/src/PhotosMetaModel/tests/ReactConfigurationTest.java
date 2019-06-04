@@ -5,6 +5,8 @@ package PhotosMetaModel.tests;
 import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.ReactConfiguration;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ReactConfigurationTest extends ModulesTest {
+public class ReactConfigurationTest extends TestCase {
+
+	/**
+	 * The fixture for this React Configuration test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReactConfiguration fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class ReactConfigurationTest extends ModulesTest {
 	}
 
 	/**
+	 * Sets the fixture for this React Configuration test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(ReactConfiguration fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this React Configuration test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected ReactConfiguration getFixture() {
-		return (ReactConfiguration)fixture;
+		return fixture;
 	}
 
 	/**

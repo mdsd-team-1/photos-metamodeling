@@ -114,7 +114,7 @@ public class BatchOperationItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

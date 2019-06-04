@@ -114,7 +114,7 @@ public class LayerItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

@@ -15,6 +15,7 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.AppAccess;
 import PhotosMetaModel.Architecture;
+import PhotosMetaModel.Association;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
@@ -751,7 +752,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 			case PhotosMetaModelPackage.COMPONENTS: {
 				Components components = (Components)theEObject;
 				T result = caseComponents(components);
-				if (result == null) result = caseModules(components);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -855,7 +855,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 			case PhotosMetaModelPackage.REACT_CONFIGURATION: {
 				ReactConfiguration reactConfiguration = (ReactConfiguration)theEObject;
 				T result = caseReactConfiguration(reactConfiguration);
-				if (result == null) result = caseModules(reactConfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -863,7 +862,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				ReactDOM reactDOM = (ReactDOM)theEObject;
 				T result = caseReactDOM(reactDOM);
 				if (result == null) result = caseReactConfiguration(reactDOM);
-				if (result == null) result = caseModules(reactDOM);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -871,7 +869,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				Dependencies dependencies = (Dependencies)theEObject;
 				T result = caseDependencies(dependencies);
 				if (result == null) result = caseReactConfiguration(dependencies);
-				if (result == null) result = caseModules(dependencies);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -879,7 +876,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				Logic logic = (Logic)theEObject;
 				T result = caseLogic(logic);
 				if (result == null) result = caseComponents(logic);
-				if (result == null) result = caseModules(logic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -887,7 +883,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				UI ui = (UI)theEObject;
 				T result = caseUI(ui);
 				if (result == null) result = caseComponents(ui);
-				if (result == null) result = caseModules(ui);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -909,7 +904,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				T result = caseRouter(router);
 				if (result == null) result = caseLogic(router);
 				if (result == null) result = caseComponents(router);
-				if (result == null) result = caseModules(router);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -918,7 +912,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				T result = caseStructure(structure);
 				if (result == null) result = caseLogic(structure);
 				if (result == null) result = caseComponents(structure);
-				if (result == null) result = caseModules(structure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -927,7 +920,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				T result = caseViewComponents(viewComponents);
 				if (result == null) result = caseUI(viewComponents);
 				if (result == null) result = caseComponents(viewComponents);
-				if (result == null) result = caseModules(viewComponents);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -936,14 +928,12 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				T result = caseSubcomponents(subcomponents);
 				if (result == null) result = caseUI(subcomponents);
 				if (result == null) result = caseComponents(subcomponents);
-				if (result == null) result = caseModules(subcomponents);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.ACTIONS: {
 				Actions actions = (Actions)theEObject;
 				T result = caseActions(actions);
-				if (result == null) result = caseModules(actions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -951,7 +941,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				Request request = (Request)theEObject;
 				T result = caseRequest(request);
 				if (result == null) result = caseActions(request);
-				if (result == null) result = caseModules(request);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -959,14 +948,12 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 				Services services = (Services)theEObject;
 				T result = caseServices(services);
 				if (result == null) result = caseActions(services);
-				if (result == null) result = caseModules(services);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case PhotosMetaModelPackage.LIBRARIES: {
 				Libraries libraries = (Libraries)theEObject;
 				T result = caseLibraries(libraries);
-				if (result == null) result = caseModules(libraries);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -985,7 +972,6 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 			case PhotosMetaModelPackage.INFORMATION: {
 				Information information = (Information)theEObject;
 				T result = caseInformation(information);
-				if (result == null) result = caseModules(information);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1022,6 +1008,12 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 			case PhotosMetaModelPackage.AMAZON_ELASTIC_COMPUTE_CLOUD: {
 				AmazonElasticComputeCloud amazonElasticComputeCloud = (AmazonElasticComputeCloud)theEObject;
 				T result = caseAmazonElasticComputeCloud(amazonElasticComputeCloud);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PhotosMetaModelPackage.ASSOCIATION: {
+				Association association = (Association)theEObject;
+				T result = caseAssociation(association);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -2946,6 +2938,21 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAmazonElasticComputeCloud(AmazonElasticComputeCloud object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Association</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAssociation(Association object) {
 		return null;
 	}
 

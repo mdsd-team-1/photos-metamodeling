@@ -15,6 +15,7 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.AppAccess;
 import PhotosMetaModel.Architecture;
+import PhotosMetaModel.Association;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
@@ -705,6 +706,10 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAmazonElasticComputeCloud(AmazonElasticComputeCloud object) {
 				return createAmazonElasticComputeCloudAdapter();
+			}
+			@Override
+			public Adapter caseAssociation(Association object) {
+				return createAssociationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -2515,6 +2520,20 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAmazonElasticComputeCloudAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.Association <em>Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see PhotosMetaModel.Association
+	 * @generated
+	 */
+	public Adapter createAssociationAdapter() {
 		return null;
 	}
 

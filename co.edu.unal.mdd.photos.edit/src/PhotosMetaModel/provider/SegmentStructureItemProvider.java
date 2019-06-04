@@ -200,7 +200,7 @@ public class SegmentStructureItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

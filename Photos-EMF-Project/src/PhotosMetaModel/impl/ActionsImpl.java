@@ -7,6 +7,8 @@ import PhotosMetaModel.PhotosMetaModelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Actions</b></em>'.
@@ -14,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ActionsImpl extends ModulesImpl implements Actions {
+public class ActionsImpl extends MinimalEObjectImpl.Container implements Actions {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

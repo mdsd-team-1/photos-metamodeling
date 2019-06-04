@@ -7,6 +7,8 @@ import PhotosMetaModel.ReactConfiguration;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>React Configuration</b></em>'.
@@ -14,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ReactConfigurationImpl extends ModulesImpl implements ReactConfiguration {
+public class ReactConfigurationImpl extends MinimalEObjectImpl.Container implements ReactConfiguration {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

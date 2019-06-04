@@ -114,7 +114,7 @@ public class Function_pItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

@@ -64,7 +64,6 @@ public class Table_sItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,28 +91,6 @@ public class Table_sItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Table_s_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Table_s_id_feature", "_UI_Table_s_type"),
-				 PhotosMetaModelPackage.Literals.TABLE_S__ID,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -126,6 +103,7 @@ public class Table_sItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.TABLE_S__COLUMN_S);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.TABLE_S__ID);
 		}
 		return childrenFeatures;
 	}
@@ -185,6 +163,7 @@ public class Table_sItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PhotosMetaModelPackage.TABLE_S__COLUMN_S:
+			case PhotosMetaModelPackage.TABLE_S__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -206,6 +185,11 @@ public class Table_sItemProvider
 			(createChildParameter
 				(PhotosMetaModelPackage.Literals.TABLE_S__COLUMN_S,
 				 PhotosMetaModelFactory.eINSTANCE.createColumn_s()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.TABLE_S__ID,
+				 PhotosMetaModelFactory.eINSTANCE.createId()));
 	}
 
 	/**
@@ -216,7 +200,7 @@ public class Table_sItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

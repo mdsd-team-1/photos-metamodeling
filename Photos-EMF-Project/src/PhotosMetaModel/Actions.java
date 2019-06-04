@@ -2,6 +2,7 @@
  */
 package PhotosMetaModel;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +14,5 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface Actions extends Modules {
+public interface Actions extends EObject {
 } // Actions

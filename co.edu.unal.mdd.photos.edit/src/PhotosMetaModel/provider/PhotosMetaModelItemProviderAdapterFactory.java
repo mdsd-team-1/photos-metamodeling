@@ -3016,6 +3016,29 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.Association} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AssociationItemProvider associationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.Association}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAssociationAdapter() {
+		if (associationItemProvider == null) {
+			associationItemProvider = new AssociationItemProvider(this);
+		}
+
+		return associationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3248,6 +3271,7 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		if (directoriesItemProvider != null) directoriesItemProvider.dispose();
 		if (filesItemProvider != null) filesItemProvider.dispose();
 		if (amazonElasticComputeCloudItemProvider != null) amazonElasticComputeCloudItemProvider.dispose();
+		if (associationItemProvider != null) associationItemProvider.dispose();
 	}
 
 }

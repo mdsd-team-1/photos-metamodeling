@@ -3,8 +3,6 @@
 package PhotosMetaModel.provider;
 
 
-import PhotosMetaModel.Request;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -64,10 +62,7 @@ public class RequestItemProvider extends ActionsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Request)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Request_type") :
-			getString("_UI_Request_type") + " " + label;
+		return getString("_UI_Request_type");
 	}
 
 

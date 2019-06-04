@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated PhotosMetaModel -->
+      <!-- @generated NewModel -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
@@ -23,7 +23,7 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated PhotosMetaModel -->
+      <!-- @generated NewModel -->
       <editor
             id="PhotosMetaModel.presentation.PhotosMetaModelEditorID"
             name="%_UI_PhotosMetaModelEditor_label"

@@ -6,12 +6,20 @@ import PhotosMetaModel.Functionalities;
 import PhotosMetaModel.PhotosMetaModelPackage;
 import PhotosMetaModel.User_d;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -154,14 +162,14 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 	protected String email = EMAIL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFunctionalities() <em>Functionalities</em>}' reference.
+	 * The cached value of the '{@link #getFunctionalities() <em>Functionalities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFunctionalities()
 	 * @generated
 	 * @ordered
 	 */
-	protected Functionalities functionalities;
+	protected EList<Functionalities> functionalities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -326,14 +334,9 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 	 * @generated
 	 */
 	@Override
-	public Functionalities getFunctionalities() {
-		if (functionalities != null && functionalities.eIsProxy()) {
-			InternalEObject oldFunctionalities = (InternalEObject)functionalities;
-			functionalities = (Functionalities)eResolveProxy(oldFunctionalities);
-			if (functionalities != oldFunctionalities) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.USER_D__FUNCTIONALITIES, oldFunctionalities, functionalities));
-			}
+	public EList<Functionalities> getFunctionalities() {
+		if (functionalities == null) {
+			functionalities = new EObjectContainmentEList<Functionalities>(Functionalities.class, this, PhotosMetaModelPackage.USER_D__FUNCTIONALITIES);
 		}
 		return functionalities;
 	}
@@ -343,21 +346,13 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Functionalities basicGetFunctionalities() {
-		return functionalities;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setFunctionalities(Functionalities newFunctionalities) {
-		Functionalities oldFunctionalities = functionalities;
-		functionalities = newFunctionalities;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.USER_D__FUNCTIONALITIES, oldFunctionalities, functionalities));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PhotosMetaModelPackage.USER_D__FUNCTIONALITIES:
+				return ((InternalEList<?>)getFunctionalities()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -381,8 +376,7 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 			case PhotosMetaModelPackage.USER_D__EMAIL:
 				return getEmail();
 			case PhotosMetaModelPackage.USER_D__FUNCTIONALITIES:
-				if (resolve) return getFunctionalities();
-				return basicGetFunctionalities();
+				return getFunctionalities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -392,6 +386,7 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -414,7 +409,8 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 				setEmail((String)newValue);
 				return;
 			case PhotosMetaModelPackage.USER_D__FUNCTIONALITIES:
-				setFunctionalities((Functionalities)newValue);
+				getFunctionalities().clear();
+				getFunctionalities().addAll((Collection<? extends Functionalities>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -447,7 +443,7 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 				setEmail(EMAIL_EDEFAULT);
 				return;
 			case PhotosMetaModelPackage.USER_D__FUNCTIONALITIES:
-				setFunctionalities((Functionalities)null);
+				getFunctionalities().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -474,7 +470,7 @@ public class User_dImpl extends EntitiesImpl implements User_d {
 			case PhotosMetaModelPackage.USER_D__EMAIL:
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
 			case PhotosMetaModelPackage.USER_D__FUNCTIONALITIES:
-				return functionalities != null;
+				return functionalities != null && !functionalities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

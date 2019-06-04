@@ -2,6 +2,7 @@
  */
 package PhotosMetaModel;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +20,7 @@ package PhotosMetaModel;
  * @model
  * @generated
  */
-public interface Libraries extends Modules {
+public interface Libraries extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->

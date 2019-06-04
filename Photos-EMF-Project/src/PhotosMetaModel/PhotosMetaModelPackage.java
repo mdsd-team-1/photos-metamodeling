@@ -122,22 +122,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int DOMAIN = 1;
 
 	/**
-	 * The feature id for the '<em><b>Functionalities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN__FUNCTIONALITIES = 0;
-
-	/**
 	 * The feature id for the '<em><b>Entities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__ENTITIES = 1;
+	int DOMAIN__ENTITIES = 0;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -146,7 +137,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_FEATURE_COUNT = 2;
+	int DOMAIN_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -2410,7 +2401,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int USER_D__EMAIL = ENTITIES_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Functionalities</b></em>' reference.
+	 * The feature id for the '<em><b>Functionalities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2447,13 +2438,31 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int FUNCTIONALITIES = 123;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONALITIES__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONALITIES__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Functionalities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONALITIES_FEATURE_COUNT = 0;
+	int FUNCTIONALITIES_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Functionalities</em>' class.
@@ -2473,6 +2482,24 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int APP_ACCESS = 57;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APP_ACCESS__ID = FUNCTIONALITIES__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APP_ACCESS__NAME = FUNCTIONALITIES__NAME;
 
 	/**
 	 * The number of structural features of the '<em>App Access</em>' class.
@@ -2503,6 +2530,24 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int PROFILE_MANAGEMENT = 58;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE_MANAGEMENT__ID = FUNCTIONALITIES__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE_MANAGEMENT__NAME = FUNCTIONALITIES__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Profile Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2531,6 +2576,24 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ALBUM_MANAGEMENT = 59;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALBUM_MANAGEMENT__ID = FUNCTIONALITIES__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALBUM_MANAGEMENT__NAME = FUNCTIONALITIES__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Album Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2557,6 +2620,24 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int PHOTO_ACTIONS = 60;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHOTO_ACTIONS__ID = FUNCTIONALITIES__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHOTO_ACTIONS__NAME = FUNCTIONALITIES__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Albummanagement</b></em>' reference.
@@ -3756,13 +3837,58 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int MODULES__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Reactconfiguration</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULES__REACTCONFIGURATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULES__COMPONENTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULES__ACTIONS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Libraries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULES__LIBRARIES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Information</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULES__INFORMATION = 5;
+
+	/**
 	 * The number of structural features of the '<em>Modules</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULES_FEATURE_COUNT = 1;
+	int MODULES_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Modules</em>' class.
@@ -3784,22 +3910,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int COMPONENTS = 88;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENTS__NAME = MODULES__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTS__REACTCLASSES = MODULES_FEATURE_COUNT + 0;
+	int COMPONENTS__REACTCLASSES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference.
@@ -3808,7 +3925,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTS__MODULES = MODULES_FEATURE_COUNT + 1;
+	int COMPONENTS__MODULES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Components</em>' class.
@@ -3817,7 +3934,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTS_FEATURE_COUNT = MODULES_FEATURE_COUNT + 2;
+	int COMPONENTS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Components</em>' class.
@@ -3826,7 +3943,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENTS_OPERATION_COUNT = MODULES_OPERATION_COUNT + 0;
+	int COMPONENTS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.ReactFunctionsImpl <em>React Functions</em>}' class.
@@ -4403,22 +4520,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int REACT_CONFIGURATION = 104;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REACT_CONFIGURATION__NAME = MODULES__NAME;
-
-	/**
 	 * The number of structural features of the '<em>React Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REACT_CONFIGURATION_FEATURE_COUNT = MODULES_FEATURE_COUNT + 0;
+	int REACT_CONFIGURATION_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>React Configuration</em>' class.
@@ -4427,7 +4535,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REACT_CONFIGURATION_OPERATION_COUNT = MODULES_OPERATION_COUNT + 0;
+	int REACT_CONFIGURATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.ReactDOMImpl <em>React DOM</em>}' class.
@@ -4438,15 +4546,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int REACT_DOM = 105;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REACT_DOM__NAME = REACT_CONFIGURATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Is Route</b></em>' attribute.
@@ -4504,15 +4603,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int DEPENDENCIES = 106;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEPENDENCIES__NAME = REACT_CONFIGURATION__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Dependencies</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4539,15 +4629,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int LOGIC = 107;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIC__NAME = COMPONENTS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
@@ -4594,15 +4675,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int UI = 108;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UI__NAME = COMPONENTS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
@@ -4752,15 +4824,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ROUTER = 111;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROUTER__NAME = LOGIC__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4805,15 +4868,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int STRUCTURE = 112;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE__NAME = LOGIC__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
@@ -4862,15 +4916,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int VIEW_COMPONENTS = 113;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_COMPONENTS__NAME = UI__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4915,15 +4960,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int SUBCOMPONENTS = 114;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBCOMPONENTS__NAME = UI__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Reactclasses</b></em>' containment reference list.
@@ -4972,22 +5008,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ACTIONS = 115;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIONS__NAME = MODULES__NAME;
-
-	/**
 	 * The number of structural features of the '<em>Actions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIONS_FEATURE_COUNT = MODULES_FEATURE_COUNT + 0;
+	int ACTIONS_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Actions</em>' class.
@@ -4996,7 +5023,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIONS_OPERATION_COUNT = MODULES_OPERATION_COUNT + 0;
+	int ACTIONS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.RequestImpl <em>Request</em>}' class.
@@ -5007,15 +5034,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int REQUEST = 116;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST__NAME = ACTIONS__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Request</em>' class.
@@ -5044,15 +5062,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	int SERVICES = 117;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICES__NAME = ACTIONS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Request</b></em>' reference.
@@ -5092,22 +5101,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int LIBRARIES = 118;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARIES__NAME = MODULES__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARIES__TYPE = MODULES_FEATURE_COUNT + 0;
+	int LIBRARIES__TYPE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Libraries</em>' class.
@@ -5116,7 +5116,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARIES_FEATURE_COUNT = MODULES_FEATURE_COUNT + 1;
+	int LIBRARIES_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Libraries</em>' class.
@@ -5125,7 +5125,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARIES_OPERATION_COUNT = MODULES_OPERATION_COUNT + 0;
+	int LIBRARIES_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.PropsImpl <em>Props</em>}' class.
@@ -5221,22 +5221,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int INFORMATION = 121;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__NAME = MODULES__NAME;
-
-	/**
 	 * The feature id for the '<em><b>File Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__FILE_TYPE = MODULES_FEATURE_COUNT + 0;
+	int INFORMATION__FILE_TYPE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Information</em>' class.
@@ -5245,7 +5236,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FEATURE_COUNT = MODULES_FEATURE_COUNT + 1;
+	int INFORMATION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Information</em>' class.
@@ -5254,7 +5245,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_OPERATION_COUNT = MODULES_OPERATION_COUNT + 0;
+	int INFORMATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PhotosMetaModel.impl.SegmentStructureImpl <em>Segment Structure</em>}' class.
@@ -5422,6 +5413,52 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 */
 	int AMAZON_ELASTIC_COMPUTE_CLOUD_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link PhotosMetaModel.impl.AssociationImpl <em>Association</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.AssociationImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAssociation()
+	 * @generated
+	 */
+	int ASSOCIATION = 128;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__SOURCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Association</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.SoftGallery <em>Soft Gallery</em>}'.
@@ -5475,17 +5512,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDomain();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Domain#getFunctionalities <em>Functionalities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Functionalities</em>'.
-	 * @see PhotosMetaModel.Domain#getFunctionalities()
-	 * @see #getDomain()
-	 * @generated
-	 */
-	EReference getDomain_Functionalities();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Domain#getEntities <em>Entities</em>}'.
@@ -6841,10 +6867,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EAttribute getUser_d_Email();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.User_d#getFunctionalities <em>Functionalities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.User_d#getFunctionalities <em>Functionalities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Functionalities</em>'.
+	 * @return the meta object for the containment reference list '<em>Functionalities</em>'.
 	 * @see PhotosMetaModel.User_d#getFunctionalities()
 	 * @see #getUser_d()
 	 * @generated
@@ -7490,6 +7516,61 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModules_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Modules#getReactconfiguration <em>Reactconfiguration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Reactconfiguration</em>'.
+	 * @see PhotosMetaModel.Modules#getReactconfiguration()
+	 * @see #getModules()
+	 * @generated
+	 */
+	EReference getModules_Reactconfiguration();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Modules#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see PhotosMetaModel.Modules#getComponents()
+	 * @see #getModules()
+	 * @generated
+	 */
+	EReference getModules_Components();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Modules#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see PhotosMetaModel.Modules#getActions()
+	 * @see #getModules()
+	 * @generated
+	 */
+	EReference getModules_Actions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Modules#getLibraries <em>Libraries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Libraries</em>'.
+	 * @see PhotosMetaModel.Modules#getLibraries()
+	 * @see #getModules()
+	 * @generated
+	 */
+	EReference getModules_Libraries();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Modules#getInformation <em>Information</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Information</em>'.
+	 * @see PhotosMetaModel.Modules#getInformation()
+	 * @see #getModules()
+	 * @generated
+	 */
+	EReference getModules_Information();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Components <em>Components</em>}'.
@@ -8171,6 +8252,28 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getFunctionalities();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Functionalities#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see PhotosMetaModel.Functionalities#getId()
+	 * @see #getFunctionalities()
+	 * @generated
+	 */
+	EAttribute getFunctionalities_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Functionalities#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Functionalities#getName()
+	 * @see #getFunctionalities()
+	 * @generated
+	 */
+	EAttribute getFunctionalities_Name();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.SegmentStructure <em>Segment Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8277,6 +8380,38 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getAmazonElasticComputeCloud();
 
 	/**
+	 * Returns the meta object for class '{@link PhotosMetaModel.Association <em>Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Association</em>'.
+	 * @see PhotosMetaModel.Association
+	 * @generated
+	 */
+	EClass getAssociation();
+
+	/**
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Association#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see PhotosMetaModel.Association#getSource()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EReference getAssociation_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link PhotosMetaModel.Association#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see PhotosMetaModel.Association#getTarget()
+	 * @see #getAssociation()
+	 * @generated
+	 */
+	EReference getAssociation_Target();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8342,14 +8477,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DOMAIN = eINSTANCE.getDomain();
-
-		/**
-		 * The meta object literal for the '<em><b>Functionalities</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN__FUNCTIONALITIES = eINSTANCE.getDomain_Functionalities();
 
 		/**
 		 * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
@@ -9486,7 +9613,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EAttribute USER_D__EMAIL = eINSTANCE.getUser_d_Email();
 
 		/**
-		 * The meta object literal for the '<em><b>Functionalities</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Functionalities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -10042,6 +10169,46 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULES__NAME = eINSTANCE.getModules_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Reactconfiguration</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULES__REACTCONFIGURATION = eINSTANCE.getModules_Reactconfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULES__COMPONENTS = eINSTANCE.getModules_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULES__ACTIONS = eINSTANCE.getModules_Actions();
+
+		/**
+		 * The meta object literal for the '<em><b>Libraries</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULES__LIBRARIES = eINSTANCE.getModules_Libraries();
+
+		/**
+		 * The meta object literal for the '<em><b>Information</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULES__INFORMATION = eINSTANCE.getModules_Information();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.ComponentsImpl <em>Components</em>}' class.
@@ -10636,6 +10803,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass FUNCTIONALITIES = eINSTANCE.getFunctionalities();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTIONALITIES__ID = eINSTANCE.getFunctionalities_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTIONALITIES__NAME = eINSTANCE.getFunctionalities_Name();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.SegmentStructureImpl <em>Segment Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10722,6 +10905,32 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass AMAZON_ELASTIC_COMPUTE_CLOUD = eINSTANCE.getAmazonElasticComputeCloud();
+
+		/**
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.AssociationImpl <em>Association</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PhotosMetaModel.impl.AssociationImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getAssociation()
+		 * @generated
+		 */
+		EClass ASSOCIATION = eINSTANCE.getAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION__SOURCE = eINSTANCE.getAssociation_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSOCIATION__TARGET = eINSTANCE.getAssociation_Target();
 
 	}
 

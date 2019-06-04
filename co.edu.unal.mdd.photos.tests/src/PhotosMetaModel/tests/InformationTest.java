@@ -5,6 +5,8 @@ package PhotosMetaModel.tests;
 import PhotosMetaModel.Information;
 import PhotosMetaModel.PhotosMetaModelFactory;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InformationTest extends ModulesTest {
+public class InformationTest extends TestCase {
+
+	/**
+	 * The fixture for this Information test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Information fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class InformationTest extends ModulesTest {
 	}
 
 	/**
+	 * Sets the fixture for this Information test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Information fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Information test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Information getFixture() {
-		return (Information)fixture;
+		return fixture;
 	}
 
 	/**

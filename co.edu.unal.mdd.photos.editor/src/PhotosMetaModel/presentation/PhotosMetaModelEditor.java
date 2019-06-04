@@ -541,7 +541,7 @@ public class PhotosMetaModelEditor
 					}
 				}
 				catch (CoreException exception) {
-					PhotosMetaModelEditorPlugin.INSTANCE.log(exception);
+					NewModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -658,7 +658,7 @@ public class PhotosMetaModelEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					PhotosMetaModelEditorPlugin.INSTANCE.log(exception);
+					NewModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -667,7 +667,7 @@ public class PhotosMetaModelEditor
 					markerHelper.updateMarkers(diagnostic);
 				}
 				catch (CoreException exception) {
-					PhotosMetaModelEditorPlugin.INSTANCE.log(exception);
+					NewModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -1546,7 +1546,7 @@ public class PhotosMetaModelEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			PhotosMetaModelEditorPlugin.INSTANCE.log(exception);
+			NewModelEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1755,7 +1755,7 @@ public class PhotosMetaModelEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return PhotosMetaModelEditorPlugin.INSTANCE.getString(key);
+		return NewModelEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1765,7 +1765,7 @@ public class PhotosMetaModelEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return PhotosMetaModelEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return NewModelEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

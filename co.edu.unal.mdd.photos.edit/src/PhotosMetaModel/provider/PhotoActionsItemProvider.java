@@ -3,6 +3,7 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.PhotoActions;
 import PhotosMetaModel.PhotosMetaModelPackage;
 
 import java.util.Collection;
@@ -88,7 +89,10 @@ public class PhotoActionsItemProvider extends FunctionalitiesItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PhotoActions_type");
+		String label = ((PhotoActions)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PhotoActions_type") :
+			getString("_UI_PhotoActions_type") + " " + label;
 	}
 
 

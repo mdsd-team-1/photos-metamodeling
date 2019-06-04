@@ -9,11 +9,11 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>PhotosMetaModel</b></em>' model.
+ * A test suite for the '<em><b>NewModel</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public class PhotosMetaModelAllTests extends TestSuite {
+public class NewModelAllTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ public class PhotosMetaModelAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new PhotosMetaModelAllTests("PhotosMetaModel Tests");
+		TestSuite suite = new NewModelAllTests("NewModel Tests");
 		return suite;
 	}
 
@@ -39,8 +39,8 @@ public class PhotosMetaModelAllTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PhotosMetaModelAllTests(String name) {
+	public NewModelAllTests(String name) {
 		super(name);
 	}
 
-} //PhotosMetaModelAllTests
+} //NewModelAllTests

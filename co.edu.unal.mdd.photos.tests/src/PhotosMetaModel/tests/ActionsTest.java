@@ -5,6 +5,8 @@ package PhotosMetaModel.tests;
 import PhotosMetaModel.Actions;
 import PhotosMetaModel.PhotosMetaModelFactory;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ActionsTest extends ModulesTest {
+public class ActionsTest extends TestCase {
+
+	/**
+	 * The fixture for this Actions test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Actions fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class ActionsTest extends ModulesTest {
 	}
 
 	/**
+	 * Sets the fixture for this Actions test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Actions fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Actions test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Actions getFixture() {
-		return (Actions)fixture;
+		return fixture;
 	}
 
 	/**

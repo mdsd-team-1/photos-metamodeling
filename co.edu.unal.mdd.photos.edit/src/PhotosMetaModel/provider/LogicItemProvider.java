@@ -3,8 +3,6 @@
 package PhotosMetaModel.provider;
 
 
-import PhotosMetaModel.Logic;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -64,10 +62,7 @@ public class LogicItemProvider extends ComponentsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Logic)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Logic_type") :
-			getString("_UI_Logic_type") + " " + label;
+		return getString("_UI_Logic_type");
 	}
 
 

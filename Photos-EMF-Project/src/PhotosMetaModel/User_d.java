@@ -2,6 +2,7 @@
  */
 package PhotosMetaModel;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -159,25 +160,15 @@ public interface User_d extends Entities {
 	void setEmail(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Functionalities</b></em>' reference.
+	 * Returns the value of the '<em><b>Functionalities</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Functionalities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Functionalities</em>' reference.
-	 * @see #setFunctionalities(Functionalities)
+	 * @return the value of the '<em>Functionalities</em>' containment reference list.
 	 * @see PhotosMetaModel.PhotosMetaModelPackage#getUser_d_Functionalities()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	Functionalities getFunctionalities();
-
-	/**
-	 * Sets the value of the '{@link PhotosMetaModel.User_d#getFunctionalities <em>Functionalities</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Functionalities</em>' reference.
-	 * @see #getFunctionalities()
-	 * @generated
-	 */
-	void setFunctionalities(Functionalities value);
+	EList<Functionalities> getFunctionalities();
 
 } // User_d

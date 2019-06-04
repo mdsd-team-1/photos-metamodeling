@@ -77,7 +77,6 @@ public class DomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.DOMAIN__ENTITIES);
 		}
 		return childrenFeatures;
@@ -131,7 +130,6 @@ public class DomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Domain.class)) {
-			case PhotosMetaModelPackage.DOMAIN__FUNCTIONALITIES:
 			case PhotosMetaModelPackage.DOMAIN__ENTITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -149,31 +147,6 @@ public class DomainItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
-				 PhotosMetaModelFactory.eINSTANCE.createFunctionalities()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
-				 PhotosMetaModelFactory.eINSTANCE.createAppAccess()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
-				 PhotosMetaModelFactory.eINSTANCE.createProfileManagement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
-				 PhotosMetaModelFactory.eINSTANCE.createAlbumManagement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.DOMAIN__FUNCTIONALITIES,
-				 PhotosMetaModelFactory.eINSTANCE.createPhotoActions()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -204,7 +177,7 @@ public class DomainItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

@@ -4,6 +4,8 @@ package PhotosMetaModel;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Components</b></em>'.
@@ -21,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Components extends Modules {
+public interface Components extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Reactclasses</b></em>' containment reference list.
 	 * The list contents are of type {@link PhotosMetaModel.ReactClasses}.

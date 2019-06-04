@@ -2,6 +2,7 @@
  */
 package PhotosMetaModel;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,5 +14,5 @@ package PhotosMetaModel;
  * @model annotation="http://www.obeo.fr/dsl/dnc/archetype archetype='Description'"
  * @generated
  */
-public interface ReactConfiguration extends Modules {
+public interface ReactConfiguration extends EObject {
 } // ReactConfiguration

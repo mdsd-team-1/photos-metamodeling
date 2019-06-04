@@ -3,8 +3,6 @@
 package PhotosMetaModel.provider;
 
 
-import PhotosMetaModel.ViewComponents;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -64,10 +62,7 @@ public class ViewComponentsItemProvider extends UIItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ViewComponents)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ViewComponents_type") :
-			getString("_UI_ViewComponents_type") + " " + label;
+		return getString("_UI_ViewComponents_type");
 	}
 
 

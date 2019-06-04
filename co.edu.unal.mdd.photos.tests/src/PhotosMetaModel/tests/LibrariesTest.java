@@ -5,6 +5,8 @@ package PhotosMetaModel.tests;
 import PhotosMetaModel.Libraries;
 import PhotosMetaModel.PhotosMetaModelFactory;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LibrariesTest extends ModulesTest {
+public class LibrariesTest extends TestCase {
+
+	/**
+	 * The fixture for this Libraries test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Libraries fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class LibrariesTest extends ModulesTest {
 	}
 
 	/**
+	 * Sets the fixture for this Libraries test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Libraries fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Libraries test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Libraries getFixture() {
-		return (Libraries)fixture;
+		return fixture;
 	}
 
 	/**

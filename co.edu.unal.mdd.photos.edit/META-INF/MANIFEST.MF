@@ -5,7 +5,7 @@ Bundle-SymbolicName: co.edu.unal.mdd.photos.edit;singleton:=true
 Automatic-Module-Name: co.edu.unal.mdd.photos.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: PhotosMetaModel.provider.PhotosMetaModelEditPlugin$Implementation
+Bundle-Activator: PhotosMetaModel.provider.NewModelEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

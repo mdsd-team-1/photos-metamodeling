@@ -4,7 +4,6 @@ package PhotosMetaModel.provider;
 
 
 import PhotosMetaModel.PhotosMetaModelPackage;
-import PhotosMetaModel.Services;
 
 import java.util.Collection;
 import java.util.List;
@@ -89,10 +88,7 @@ public class ServicesItemProvider extends ActionsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Services)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Services_type") :
-			getString("_UI_Services_type") + " " + label;
+		return getString("_UI_Services_type");
 	}
 
 

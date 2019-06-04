@@ -3,8 +3,6 @@
 package PhotosMetaModel.provider;
 
 
-import PhotosMetaModel.Dependencies;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -64,10 +62,7 @@ public class DependenciesItemProvider extends ReactConfigurationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Dependencies)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Dependencies_type") :
-			getString("_UI_Dependencies_type") + " " + label;
+		return getString("_UI_Dependencies_type");
 	}
 
 

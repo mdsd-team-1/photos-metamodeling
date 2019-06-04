@@ -3,6 +3,8 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.ProfileManagement;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +64,10 @@ public class ProfileManagementItemProvider extends FunctionalitiesItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProfileManagement_type");
+		String label = ((ProfileManagement)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ProfileManagement_type") :
+			getString("_UI_ProfileManagement_type") + " " + label;
 	}
 
 

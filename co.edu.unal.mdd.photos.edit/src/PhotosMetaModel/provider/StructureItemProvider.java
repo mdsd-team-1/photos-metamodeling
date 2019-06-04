@@ -3,8 +3,6 @@
 package PhotosMetaModel.provider;
 
 
-import PhotosMetaModel.Structure;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -64,10 +62,7 @@ public class StructureItemProvider extends LogicItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Structure)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Structure_type") :
-			getString("_UI_Structure_type") + " " + label;
+		return getString("_UI_Structure_type");
 	}
 
 

@@ -152,81 +152,6 @@ public class ReactItemProvider
 			(createChildParameter
 				(PhotosMetaModelPackage.Literals.REACT__MODULES,
 				 PhotosMetaModelFactory.eINSTANCE.createModules()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createComponents()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createReactConfiguration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createReactDOM()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createDependencies()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createLogic()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createUI()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createRouter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createStructure()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createViewComponents()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createSubcomponents()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createActions()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createRequest()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createServices()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createLibraries()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PhotosMetaModelPackage.Literals.REACT__MODULES,
-				 PhotosMetaModelFactory.eINSTANCE.createInformation()));
 	}
 
 	/**
@@ -237,7 +162,7 @@ public class ReactItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

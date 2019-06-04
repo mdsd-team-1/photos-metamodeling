@@ -9,19 +9,19 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the PhotosMetaModel editor plugin.
+ * This is the central singleton for the NewModel editor plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class PhotosMetaModelEditorPlugin extends EMFPlugin {
+public final class NewModelEditorPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final PhotosMetaModelEditorPlugin INSTANCE = new PhotosMetaModelEditorPlugin();
+	public static final NewModelEditorPlugin INSTANCE = new NewModelEditorPlugin();
 	
 	/**
 	 * Keep track of the singleton.
@@ -37,7 +37,7 @@ public final class PhotosMetaModelEditorPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PhotosMetaModelEditorPlugin() {
+	public NewModelEditorPlugin() {
 		super
 			(new ResourceLocator [] {
 			});

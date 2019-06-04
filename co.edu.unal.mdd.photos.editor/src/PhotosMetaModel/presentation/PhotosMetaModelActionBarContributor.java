@@ -71,14 +71,14 @@ public class PhotosMetaModelActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(NewModelEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					PhotosMetaModelEditorPlugin.INSTANCE.log(exception);
+					NewModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -91,7 +91,7 @@ public class PhotosMetaModelActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(NewModelEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -179,7 +179,7 @@ public class PhotosMetaModelActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_PhotosMetaModelEditor_menu"), "PhotosMetaModelMenuID");
+		IMenuManager submenuManager = new MenuManager(NewModelEditorPlugin.INSTANCE.getString("_UI_PhotosMetaModelEditor_menu"), "PhotosMetaModelMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -188,12 +188,12 @@ public class PhotosMetaModelActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(NewModelEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(NewModelEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Force an update because Eclipse hides empty menus now.
@@ -386,11 +386,11 @@ public class PhotosMetaModelActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(NewModelEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(PhotosMetaModelEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(NewModelEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 	}

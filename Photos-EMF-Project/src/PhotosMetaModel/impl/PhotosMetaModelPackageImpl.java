@@ -15,6 +15,7 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.AppAccess;
 import PhotosMetaModel.Architecture;
+import PhotosMetaModel.Association;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
@@ -1041,6 +1042,13 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	private EClass amazonElasticComputeCloudEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass associationEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1157,18 +1165,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getDomain_Functionalities() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getDomain_Entities() {
-		return (EReference)domainEClass.getEStructuralFeatures().get(1);
+		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3067,6 +3065,56 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EReference getModules_Reactconfiguration() {
+		return (EReference)modulesEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getModules_Components() {
+		return (EReference)modulesEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getModules_Actions() {
+		return (EReference)modulesEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getModules_Libraries() {
+		return (EReference)modulesEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getModules_Information() {
+		return (EReference)modulesEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getComponents() {
 		return componentsEClass;
 	}
@@ -3717,6 +3765,26 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFunctionalities_Id() {
+		return (EAttribute)functionalitiesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFunctionalities_Name() {
+		return (EAttribute)functionalitiesEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSegmentStructure() {
 		return segmentStructureEClass;
 	}
@@ -3817,6 +3885,36 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EClass getAssociation() {
+		return associationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAssociation_Source() {
+		return (EReference)associationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAssociation_Target() {
+		return (EReference)associationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public PhotosMetaModelFactory getPhotosMetaModelFactory() {
 		return (PhotosMetaModelFactory)getEFactoryInstance();
 	}
@@ -3846,7 +3944,6 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(softGalleryEClass, SOFT_GALLERY__TECHNOLOGY);
 
 		domainEClass = createEClass(DOMAIN);
-		createEReference(domainEClass, DOMAIN__FUNCTIONALITIES);
 		createEReference(domainEClass, DOMAIN__ENTITIES);
 
 		architectureEClass = createEClass(ARCHITECTURE);
@@ -4123,6 +4220,11 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		modulesEClass = createEClass(MODULES);
 		createEAttribute(modulesEClass, MODULES__NAME);
+		createEReference(modulesEClass, MODULES__REACTCONFIGURATION);
+		createEReference(modulesEClass, MODULES__COMPONENTS);
+		createEReference(modulesEClass, MODULES__ACTIONS);
+		createEReference(modulesEClass, MODULES__LIBRARIES);
+		createEReference(modulesEClass, MODULES__INFORMATION);
 
 		componentsEClass = createEClass(COMPONENTS);
 		createEReference(componentsEClass, COMPONENTS__REACTCLASSES);
@@ -4224,6 +4326,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEAttribute(entitiesEClass, ENTITIES__ID);
 
 		functionalitiesEClass = createEClass(FUNCTIONALITIES);
+		createEAttribute(functionalitiesEClass, FUNCTIONALITIES__ID);
+		createEAttribute(functionalitiesEClass, FUNCTIONALITIES__NAME);
 
 		segmentStructureEClass = createEClass(SEGMENT_STRUCTURE);
 		createEReference(segmentStructureEClass, SEGMENT_STRUCTURE__DIRECTORIES);
@@ -4238,6 +4342,10 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEAttribute(filesEClass, FILES__EXTENSION);
 
 		amazonElasticComputeCloudEClass = createEClass(AMAZON_ELASTIC_COMPUTE_CLOUD);
+
+		associationEClass = createEClass(ASSOCIATION);
+		createEReference(associationEClass, ASSOCIATION__SOURCE);
+		createEReference(associationEClass, ASSOCIATION__TARGET);
 	}
 
 	/**
@@ -4295,7 +4403,6 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		security_aEClass.getESuperTypes().add(this.getBusinessLogicSegment());
 		postgreSQL_aEClass.getESuperTypes().add(this.getDataSegment());
 		amazonS3StorageEClass.getESuperTypes().add(this.getDataSegment());
-		componentsEClass.getESuperTypes().add(this.getModules());
 		renderEClass.getESuperTypes().add(this.getReactFunctions());
 		constructorEClass.getESuperTypes().add(this.getReactFunctions());
 		lifeCycleEClass.getESuperTypes().add(this.getReactFunctions());
@@ -4303,7 +4410,6 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		objectsPublicEClass.getESuperTypes().add(this.getAccess());
 		bucketObjectsNotPublicEClass.getESuperTypes().add(this.getAccess());
 		onlyAuthorizedEClass.getESuperTypes().add(this.getAccess());
-		reactConfigurationEClass.getESuperTypes().add(this.getModules());
 		reactDOMEClass.getESuperTypes().add(this.getReactConfiguration());
 		dependenciesEClass.getESuperTypes().add(this.getReactConfiguration());
 		logicEClass.getESuperTypes().add(this.getComponents());
@@ -4313,11 +4419,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		structureEClass.getESuperTypes().add(this.getLogic());
 		viewComponentsEClass.getESuperTypes().add(this.getUI());
 		subcomponentsEClass.getESuperTypes().add(this.getUI());
-		actionsEClass.getESuperTypes().add(this.getModules());
 		requestEClass.getESuperTypes().add(this.getActions());
 		servicesEClass.getESuperTypes().add(this.getActions());
-		librariesEClass.getESuperTypes().add(this.getModules());
-		informationEClass.getESuperTypes().add(this.getModules());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(softGalleryEClass, SoftGallery.class, "SoftGallery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4326,7 +4429,6 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getSoftGallery_Technology(), this.getTechnology(), null, "technology", null, 0, 1, SoftGallery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_Functionalities(), this.getFunctionalities(), null, "functionalities", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_Entities(), this.getEntities(), null, "entities", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4510,7 +4612,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEAttribute(getUser_d_Username(), ecorePackage.getEString(), "username", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUser_d_Password(), ecorePackage.getEString(), "password", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUser_d_Email(), ecorePackage.getEString(), "email", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUser_d_Functionalities(), this.getFunctionalities(), null, "functionalities", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_d_Functionalities(), this.getFunctionalities(), null, "functionalities", null, 0, -1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(appAccessEClass, AppAccess.class, "AppAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4603,6 +4705,11 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		initEClass(modulesEClass, Modules.class, "Modules", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModules_Name(), ecorePackage.getEString(), "name", null, 0, 1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModules_Reactconfiguration(), this.getReactConfiguration(), null, "reactconfiguration", null, 0, -1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModules_Components(), this.getComponents(), null, "components", null, 0, -1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModules_Actions(), this.getActions(), null, "actions", null, 0, -1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModules_Libraries(), this.getLibraries(), null, "libraries", null, 0, -1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModules_Information(), this.getInformation(), null, "information", null, 0, -1, Modules.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentsEClass, Components.class, "Components", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponents_Reactclasses(), this.getReactClasses(), null, "reactclasses", null, 0, -1, Components.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4704,6 +4811,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEAttribute(getEntities_Id(), ecorePackage.getEString(), "id", null, 0, 1, Entities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionalitiesEClass, Functionalities.class, "Functionalities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionalities_Id(), ecorePackage.getEString(), "id", null, 0, 1, Functionalities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFunctionalities_Name(), ecorePackage.getEString(), "name", null, 0, 1, Functionalities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(segmentStructureEClass, SegmentStructure.class, "SegmentStructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSegmentStructure_Directories(), this.getDirectories(), null, "directories", null, 0, -1, SegmentStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4718,6 +4827,10 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEAttribute(getFiles_Extension(), ecorePackage.getEString(), "extension", null, 0, 1, Files.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(amazonElasticComputeCloudEClass, AmazonElasticComputeCloud.class, "AmazonElasticComputeCloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAssociation_Source(), this.getFunctionalities(), null, "source", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociation_Target(), this.getFunctionalities(), null, "target", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

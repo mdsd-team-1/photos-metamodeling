@@ -3,6 +3,9 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.Functionalities;
+import PhotosMetaModel.PhotosMetaModelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -11,13 +14,16 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link PhotosMetaModel.Functionalities} object.
@@ -54,8 +60,54 @@ public class FunctionalitiesItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionalities_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionalities_id_feature", "_UI_Functionalities_type"),
+				 PhotosMetaModelPackage.Literals.FUNCTIONALITIES__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Functionalities_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Functionalities_name_feature", "_UI_Functionalities_type"),
+				 PhotosMetaModelPackage.Literals.FUNCTIONALITIES__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -77,7 +129,10 @@ public class FunctionalitiesItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Functionalities_type");
+		String label = ((Functionalities)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Functionalities_type") :
+			getString("_UI_Functionalities_type") + " " + label;
 	}
 
 
@@ -91,6 +146,13 @@ public class FunctionalitiesItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Functionalities.class)) {
+			case PhotosMetaModelPackage.FUNCTIONALITIES__ID:
+			case PhotosMetaModelPackage.FUNCTIONALITIES__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -114,7 +176,7 @@ public class FunctionalitiesItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

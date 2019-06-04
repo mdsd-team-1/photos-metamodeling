@@ -4,6 +4,7 @@ package PhotosMetaModel.provider;
 
 
 import PhotosMetaModel.Modules;
+import PhotosMetaModel.PhotosMetaModelFactory;
 import PhotosMetaModel.PhotosMetaModelPackage;
 
 import java.util.Collection;
@@ -13,6 +14,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -88,6 +91,40 @@ public class ModulesItemProvider
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.MODULES__REACTCONFIGURATION);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.MODULES__ACTIONS);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.MODULES__LIBRARIES);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.MODULES__INFORMATION);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns Modules.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,6 +165,13 @@ public class ModulesItemProvider
 			case PhotosMetaModelPackage.MODULES__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case PhotosMetaModelPackage.MODULES__REACTCONFIGURATION:
+			case PhotosMetaModelPackage.MODULES__COMPONENTS:
+			case PhotosMetaModelPackage.MODULES__ACTIONS:
+			case PhotosMetaModelPackage.MODULES__LIBRARIES:
+			case PhotosMetaModelPackage.MODULES__INFORMATION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -142,6 +186,81 @@ public class ModulesItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__REACTCONFIGURATION,
+				 PhotosMetaModelFactory.eINSTANCE.createReactConfiguration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__REACTCONFIGURATION,
+				 PhotosMetaModelFactory.eINSTANCE.createReactDOM()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__REACTCONFIGURATION,
+				 PhotosMetaModelFactory.eINSTANCE.createDependencies()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createComponents()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createLogic()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createUI()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createRouter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createStructure()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createViewComponents()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__COMPONENTS,
+				 PhotosMetaModelFactory.eINSTANCE.createSubcomponents()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__ACTIONS,
+				 PhotosMetaModelFactory.eINSTANCE.createActions()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__ACTIONS,
+				 PhotosMetaModelFactory.eINSTANCE.createRequest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__ACTIONS,
+				 PhotosMetaModelFactory.eINSTANCE.createServices()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__LIBRARIES,
+				 PhotosMetaModelFactory.eINSTANCE.createLibraries()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.MODULES__INFORMATION,
+				 PhotosMetaModelFactory.eINSTANCE.createInformation()));
 	}
 
 	/**
@@ -152,7 +271,7 @@ public class ModulesItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PhotosMetaModelEditPlugin.INSTANCE;
+		return NewModelEditPlugin.INSTANCE;
 	}
 
 }

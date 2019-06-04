@@ -15,6 +15,7 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.AppAccess;
 import PhotosMetaModel.Architecture;
+import PhotosMetaModel.Association;
 import PhotosMetaModel.Autowired;
 import PhotosMetaModel.BatchOperation;
 import PhotosMetaModel.Bean;
@@ -312,6 +313,7 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 			case PhotosMetaModelPackage.DIRECTORIES: return createDirectories();
 			case PhotosMetaModelPackage.FILES: return createFiles();
 			case PhotosMetaModelPackage.AMAZON_ELASTIC_COMPUTE_CLOUD: return createAmazonElasticComputeCloud();
+			case PhotosMetaModelPackage.ASSOCIATION: return createAssociation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1723,6 +1725,17 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	public AmazonElasticComputeCloud createAmazonElasticComputeCloud() {
 		AmazonElasticComputeCloudImpl amazonElasticComputeCloud = new AmazonElasticComputeCloudImpl();
 		return amazonElasticComputeCloud;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Association createAssociation() {
+		AssociationImpl association = new AssociationImpl();
+		return association;
 	}
 
 	/**
