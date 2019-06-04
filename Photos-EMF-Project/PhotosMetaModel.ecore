@@ -270,10 +270,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="albummanagement" eType="#//AlbumManagement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AmazonWebServices">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsimplestorageservice"
-        eType="#//AmazonSimpleStorageService"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="amazonelasticcomputecloud"
-        eType="#//AmazonElasticComputeCloud"/>
+        upperBound="-1" eType="#//AmazonElasticComputeCloud" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="amazonsimplestorageservice"
+        upperBound="-1" eType="#//AmazonSimpleStorageService" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NTier">
     <eStructuralFeatures xsi:type="ecore:EReference" name="connection" upperBound="-1"
@@ -368,11 +368,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bucket">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="access" eType="#//Access"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="file_a" upperBound="-1"
         eType="#//File_a" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="folder_a" upperBound="-1"
         eType="#//Folder_a" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="access" eType="#//Access"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BatchOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Access"/>

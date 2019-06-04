@@ -9,11 +9,11 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>NewModel</b></em>' model.
+ * A test suite for the '<em><b>New</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public class NewModelAllTests extends TestSuite {
+public class NewAllTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ public class NewModelAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new NewModelAllTests("NewModel Tests");
+		TestSuite suite = new NewAllTests("New Tests");
 		return suite;
 	}
 
@@ -39,8 +39,8 @@ public class NewModelAllTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewModelAllTests(String name) {
+	public NewAllTests(String name) {
 		super(name);
 	}
 
-} //NewModelAllTests
+} //NewAllTests

@@ -64,7 +64,6 @@ public class BucketItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addAccessPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,28 +91,6 @@ public class BucketItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Access feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAccessPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Bucket_access_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Bucket_access_feature", "_UI_Bucket_type"),
-				 PhotosMetaModelPackage.Literals.BUCKET__ACCESS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -127,6 +104,7 @@ public class BucketItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.BUCKET__FILE_A);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.BUCKET__FOLDER_A);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.BUCKET__ACCESS);
 		}
 		return childrenFeatures;
 	}
@@ -187,6 +165,7 @@ public class BucketItemProvider
 				return;
 			case PhotosMetaModelPackage.BUCKET__FILE_A:
 			case PhotosMetaModelPackage.BUCKET__FOLDER_A:
+			case PhotosMetaModelPackage.BUCKET__ACCESS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -213,6 +192,31 @@ public class BucketItemProvider
 			(createChildParameter
 				(PhotosMetaModelPackage.Literals.BUCKET__FOLDER_A,
 				 PhotosMetaModelFactory.eINSTANCE.createFolder_a()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.BUCKET__ACCESS,
+				 PhotosMetaModelFactory.eINSTANCE.createAccess()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.BUCKET__ACCESS,
+				 PhotosMetaModelFactory.eINSTANCE.createPublic()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.BUCKET__ACCESS,
+				 PhotosMetaModelFactory.eINSTANCE.createObjectsPublic()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.BUCKET__ACCESS,
+				 PhotosMetaModelFactory.eINSTANCE.createBucketObjectsNotPublic()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.BUCKET__ACCESS,
+				 PhotosMetaModelFactory.eINSTANCE.createOnlyAuthorized()));
 	}
 
 	/**
@@ -223,7 +227,7 @@ public class BucketItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return NewModelEditPlugin.INSTANCE;
+		return NewEditPlugin.INSTANCE;
 	}
 
 }

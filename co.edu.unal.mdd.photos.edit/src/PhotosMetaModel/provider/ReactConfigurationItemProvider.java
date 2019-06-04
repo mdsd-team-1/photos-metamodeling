@@ -114,7 +114,7 @@ public class ReactConfigurationItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return NewModelEditPlugin.INSTANCE;
+		return NewEditPlugin.INSTANCE;
 	}
 
 }

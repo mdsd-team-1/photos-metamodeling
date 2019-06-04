@@ -153,7 +153,7 @@ public class StateItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return NewModelEditPlugin.INSTANCE;
+		return NewEditPlugin.INSTANCE;
 	}
 
 }

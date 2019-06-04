@@ -221,7 +221,7 @@ public class SchemeItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return NewModelEditPlugin.INSTANCE;
+		return NewEditPlugin.INSTANCE;
 	}
 
 }

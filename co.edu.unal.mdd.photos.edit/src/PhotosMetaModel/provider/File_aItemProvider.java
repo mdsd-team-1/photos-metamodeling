@@ -241,7 +241,7 @@ public class File_aItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return NewModelEditPlugin.INSTANCE;
+		return NewEditPlugin.INSTANCE;
 	}
 
 }

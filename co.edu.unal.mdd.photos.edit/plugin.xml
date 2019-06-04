@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated NewModel -->
+      <!-- @generated New -->
       <factory
             uri="http://co/edu/unal/mdd/photos/PhotosMetaModel"
             class="PhotosMetaModel.provider.PhotosMetaModelItemProviderAdapterFactory"

@@ -64,10 +64,6 @@ public class ConfigurationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addEnablewebsecurityPropertyDescriptor(object);
-			addEnableresourceserverPropertyDescriptor(object);
-			addEnableauthorizationserverPropertyDescriptor(object);
-			addEnableglobalmethodsecurityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,94 +91,6 @@ public class ConfigurationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Enablewebsecurity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEnablewebsecurityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Configuration_enablewebsecurity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_enablewebsecurity_feature", "_UI_Configuration_type"),
-				 PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEWEBSECURITY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Enableresourceserver feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEnableresourceserverPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Configuration_enableresourceserver_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_enableresourceserver_feature", "_UI_Configuration_type"),
-				 PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLERESOURCESERVER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Enableauthorizationserver feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEnableauthorizationserverPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Configuration_enableauthorizationserver_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_enableauthorizationserver_feature", "_UI_Configuration_type"),
-				 PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEAUTHORIZATIONSERVER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Enableglobalmethodsecurity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEnableglobalmethodsecurityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Configuration_enableglobalmethodsecurity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_enableglobalmethodsecurity_feature", "_UI_Configuration_type"),
-				 PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEGLOBALMETHODSECURITY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -195,6 +103,10 @@ public class ConfigurationItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.CONFIGURATION__BEAN);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEWEBSECURITY);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLERESOURCESERVER);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEAUTHORIZATIONSERVER);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEGLOBALMETHODSECURITY);
 		}
 		return childrenFeatures;
 	}
@@ -254,6 +166,10 @@ public class ConfigurationItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PhotosMetaModelPackage.CONFIGURATION__BEAN:
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY:
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER:
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER:
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -275,6 +191,26 @@ public class ConfigurationItemProvider
 			(createChildParameter
 				(PhotosMetaModelPackage.Literals.CONFIGURATION__BEAN,
 				 PhotosMetaModelFactory.eINSTANCE.createBean()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEWEBSECURITY,
+				 PhotosMetaModelFactory.eINSTANCE.createEnableWebSecurity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLERESOURCESERVER,
+				 PhotosMetaModelFactory.eINSTANCE.createEnableResourceServer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEAUTHORIZATIONSERVER,
+				 PhotosMetaModelFactory.eINSTANCE.createEnableAuthorizationServer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.CONFIGURATION__ENABLEGLOBALMETHODSECURITY,
+				 PhotosMetaModelFactory.eINSTANCE.createEnableGlobalMethodSecurity()));
 	}
 
 	/**
@@ -285,7 +221,7 @@ public class ConfigurationItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return NewModelEditPlugin.INSTANCE;
+		return NewEditPlugin.INSTANCE;
 	}
 
 }

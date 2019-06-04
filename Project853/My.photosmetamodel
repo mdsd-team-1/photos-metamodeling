@@ -88,6 +88,13 @@
       </cluster>
     </postgresql>
     <react/>
-    <amazonwebservices/>
+    <amazonwebservices>
+      <amazonelasticcomputecloud/>
+      <amazonsimplestorageservice>
+        <bucket name="co.edu.unal.photosappback.photos-storag">
+          <access xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:ObjectsPublic"/>
+        </bucket>
+      </amazonsimplestorageservice>
+    </amazonwebservices>
   </technology>
 </co.edu.unal.mdd.photos.PhotosMetaModel:SoftGallery>

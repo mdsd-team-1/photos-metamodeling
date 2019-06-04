@@ -3147,22 +3147,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int AMAZON_WEB_SERVICES = 63;
 
 	/**
-	 * The feature id for the '<em><b>Amazonsimplestorageservice</b></em>' reference.
+	 * The feature id for the '<em><b>Amazonelasticcomputecloud</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE = 0;
+	int AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Amazonelasticcomputecloud</b></em>' reference.
+	 * The feature id for the '<em><b>Amazonsimplestorageservice</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD = 1;
+	int AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Amazon Web Services</em>' class.
@@ -4510,22 +4510,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int BUCKET__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Access</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUCKET__ACCESS = 1;
-
-	/**
 	 * The feature id for the '<em><b>File a</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUCKET__FILE_A = 2;
+	int BUCKET__FILE_A = 1;
 
 	/**
 	 * The feature id for the '<em><b>Folder a</b></em>' containment reference list.
@@ -4534,7 +4525,16 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUCKET__FOLDER_A = 3;
+	int BUCKET__FOLDER_A = 2;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUCKET__ACCESS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Bucket</em>' class.
@@ -7664,26 +7664,26 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getAmazonWebServices();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.AmazonWebServices#getAmazonsimplestorageservice <em>Amazonsimplestorageservice</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.AmazonWebServices#getAmazonelasticcomputecloud <em>Amazonelasticcomputecloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Amazonsimplestorageservice</em>'.
-	 * @see PhotosMetaModel.AmazonWebServices#getAmazonsimplestorageservice()
-	 * @see #getAmazonWebServices()
-	 * @generated
-	 */
-	EReference getAmazonWebServices_Amazonsimplestorageservice();
-
-	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.AmazonWebServices#getAmazonelasticcomputecloud <em>Amazonelasticcomputecloud</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Amazonelasticcomputecloud</em>'.
+	 * @return the meta object for the containment reference list '<em>Amazonelasticcomputecloud</em>'.
 	 * @see PhotosMetaModel.AmazonWebServices#getAmazonelasticcomputecloud()
 	 * @see #getAmazonWebServices()
 	 * @generated
 	 */
 	EReference getAmazonWebServices_Amazonelasticcomputecloud();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.AmazonWebServices#getAmazonsimplestorageservice <em>Amazonsimplestorageservice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Amazonsimplestorageservice</em>'.
+	 * @see PhotosMetaModel.AmazonWebServices#getAmazonsimplestorageservice()
+	 * @see #getAmazonWebServices()
+	 * @generated
+	 */
+	EReference getAmazonWebServices_Amazonsimplestorageservice();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.NTier <em>NTier</em>}'.
@@ -8359,17 +8359,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EAttribute getBucket_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Bucket#getAccess <em>Access</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Access</em>'.
-	 * @see PhotosMetaModel.Bucket#getAccess()
-	 * @see #getBucket()
-	 * @generated
-	 */
-	EReference getBucket_Access();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Bucket#getFile_a <em>File a</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8390,6 +8379,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBucket_Folder_a();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Bucket#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access</em>'.
+	 * @see PhotosMetaModel.Bucket#getAccess()
+	 * @see #getBucket()
+	 * @generated
+	 */
+	EReference getBucket_Access();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.BatchOperation <em>Batch Operation</em>}'.
@@ -10605,20 +10605,20 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass AMAZON_WEB_SERVICES = eINSTANCE.getAmazonWebServices();
 
 		/**
-		 * The meta object literal for the '<em><b>Amazonsimplestorageservice</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE = eINSTANCE.getAmazonWebServices_Amazonsimplestorageservice();
-
-		/**
-		 * The meta object literal for the '<em><b>Amazonelasticcomputecloud</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Amazonelasticcomputecloud</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD = eINSTANCE.getAmazonWebServices_Amazonelasticcomputecloud();
+
+		/**
+		 * The meta object literal for the '<em><b>Amazonsimplestorageservice</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE = eINSTANCE.getAmazonWebServices_Amazonsimplestorageservice();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.NTierImpl <em>NTier</em>}' class.
@@ -11195,14 +11195,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EAttribute BUCKET__NAME = eINSTANCE.getBucket_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Access</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BUCKET__ACCESS = eINSTANCE.getBucket_Access();
-
-		/**
 		 * The meta object literal for the '<em><b>File a</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11217,6 +11209,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BUCKET__FOLDER_A = eINSTANCE.getBucket_Folder_a();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUCKET__ACCESS = eINSTANCE.getBucket_Access();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.BatchOperationImpl <em>Batch Operation</em>}' class.

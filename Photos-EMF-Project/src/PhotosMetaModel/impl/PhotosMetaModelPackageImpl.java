@@ -2823,7 +2823,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getAmazonWebServices_Amazonsimplestorageservice() {
+	public EReference getAmazonWebServices_Amazonelasticcomputecloud() {
 		return (EReference)amazonWebServicesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2833,7 +2833,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getAmazonWebServices_Amazonelasticcomputecloud() {
+	public EReference getAmazonWebServices_Amazonsimplestorageservice() {
 		return (EReference)amazonWebServicesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3483,7 +3483,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getBucket_Access() {
+	public EReference getBucket_File_a() {
 		return (EReference)bucketEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3493,7 +3493,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getBucket_File_a() {
+	public EReference getBucket_Folder_a() {
 		return (EReference)bucketEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3503,7 +3503,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getBucket_Folder_a() {
+	public EReference getBucket_Access() {
 		return (EReference)bucketEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -4439,8 +4439,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(albumEClass, ALBUM__ALBUMMANAGEMENT);
 
 		amazonWebServicesEClass = createEClass(AMAZON_WEB_SERVICES);
-		createEReference(amazonWebServicesEClass, AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE);
 		createEReference(amazonWebServicesEClass, AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD);
+		createEReference(amazonWebServicesEClass, AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE);
 
 		nTierEClass = createEClass(NTIER);
 		createEReference(nTierEClass, NTIER__CONNECTION);
@@ -4536,9 +4536,9 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		bucketEClass = createEClass(BUCKET);
 		createEAttribute(bucketEClass, BUCKET__NAME);
-		createEReference(bucketEClass, BUCKET__ACCESS);
 		createEReference(bucketEClass, BUCKET__FILE_A);
 		createEReference(bucketEClass, BUCKET__FOLDER_A);
+		createEReference(bucketEClass, BUCKET__ACCESS);
 
 		batchOperationEClass = createEClass(BATCH_OPERATION);
 
@@ -4951,8 +4951,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getAlbum_Albummanagement(), this.getAlbumManagement(), null, "albummanagement", null, 0, 1, Album.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(amazonWebServicesEClass, AmazonWebServices.class, "AmazonWebServices", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAmazonWebServices_Amazonsimplestorageservice(), this.getAmazonSimpleStorageService(), null, "amazonsimplestorageservice", null, 0, 1, AmazonWebServices.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAmazonWebServices_Amazonelasticcomputecloud(), this.getAmazonElasticComputeCloud(), null, "amazonelasticcomputecloud", null, 0, 1, AmazonWebServices.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAmazonWebServices_Amazonelasticcomputecloud(), this.getAmazonElasticComputeCloud(), null, "amazonelasticcomputecloud", null, 0, -1, AmazonWebServices.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAmazonWebServices_Amazonsimplestorageservice(), this.getAmazonSimpleStorageService(), null, "amazonsimplestorageservice", null, 0, -1, AmazonWebServices.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nTierEClass, NTier.class, "NTier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNTier_Connection(), this.getConnection(), null, "connection", null, 0, -1, NTier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5048,9 +5048,9 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		initEClass(bucketEClass, Bucket.class, "Bucket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBucket_Name(), ecorePackage.getEString(), "name", null, 0, 1, Bucket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBucket_Access(), this.getAccess(), null, "access", null, 0, 1, Bucket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBucket_File_a(), this.getFile_a(), null, "file_a", null, 0, -1, Bucket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBucket_Folder_a(), this.getFolder_a(), null, "folder_a", null, 0, -1, Bucket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBucket_Access(), this.getAccess(), null, "access", null, 0, 1, Bucket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(batchOperationEClass, BatchOperation.class, "BatchOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -7,13 +7,19 @@ import PhotosMetaModel.AmazonSimpleStorageService;
 import PhotosMetaModel.AmazonWebServices;
 import PhotosMetaModel.PhotosMetaModelPackage;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,32 +29,32 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.AmazonWebServicesImpl#getAmazonsimplestorageservice <em>Amazonsimplestorageservice</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.AmazonWebServicesImpl#getAmazonelasticcomputecloud <em>Amazonelasticcomputecloud</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.AmazonWebServicesImpl#getAmazonsimplestorageservice <em>Amazonsimplestorageservice</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implements AmazonWebServices {
 	/**
-	 * The cached value of the '{@link #getAmazonsimplestorageservice() <em>Amazonsimplestorageservice</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAmazonsimplestorageservice()
-	 * @generated
-	 * @ordered
-	 */
-	protected AmazonSimpleStorageService amazonsimplestorageservice;
-
-	/**
-	 * The cached value of the '{@link #getAmazonelasticcomputecloud() <em>Amazonelasticcomputecloud</em>}' reference.
+	 * The cached value of the '{@link #getAmazonelasticcomputecloud() <em>Amazonelasticcomputecloud</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAmazonelasticcomputecloud()
 	 * @generated
 	 * @ordered
 	 */
-	protected AmazonElasticComputeCloud amazonelasticcomputecloud;
+	protected EList<AmazonElasticComputeCloud> amazonelasticcomputecloud;
+
+	/**
+	 * The cached value of the '{@link #getAmazonsimplestorageservice() <em>Amazonsimplestorageservice</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAmazonsimplestorageservice()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AmazonSimpleStorageService> amazonsimplestorageservice;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,54 +81,9 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public AmazonSimpleStorageService getAmazonsimplestorageservice() {
-		if (amazonsimplestorageservice != null && amazonsimplestorageservice.eIsProxy()) {
-			InternalEObject oldAmazonsimplestorageservice = (InternalEObject)amazonsimplestorageservice;
-			amazonsimplestorageservice = (AmazonSimpleStorageService)eResolveProxy(oldAmazonsimplestorageservice);
-			if (amazonsimplestorageservice != oldAmazonsimplestorageservice) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE, oldAmazonsimplestorageservice, amazonsimplestorageservice));
-			}
-		}
-		return amazonsimplestorageservice;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AmazonSimpleStorageService basicGetAmazonsimplestorageservice() {
-		return amazonsimplestorageservice;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAmazonsimplestorageservice(AmazonSimpleStorageService newAmazonsimplestorageservice) {
-		AmazonSimpleStorageService oldAmazonsimplestorageservice = amazonsimplestorageservice;
-		amazonsimplestorageservice = newAmazonsimplestorageservice;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE, oldAmazonsimplestorageservice, amazonsimplestorageservice));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AmazonElasticComputeCloud getAmazonelasticcomputecloud() {
-		if (amazonelasticcomputecloud != null && amazonelasticcomputecloud.eIsProxy()) {
-			InternalEObject oldAmazonelasticcomputecloud = (InternalEObject)amazonelasticcomputecloud;
-			amazonelasticcomputecloud = (AmazonElasticComputeCloud)eResolveProxy(oldAmazonelasticcomputecloud);
-			if (amazonelasticcomputecloud != oldAmazonelasticcomputecloud) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD, oldAmazonelasticcomputecloud, amazonelasticcomputecloud));
-			}
+	public EList<AmazonElasticComputeCloud> getAmazonelasticcomputecloud() {
+		if (amazonelasticcomputecloud == null) {
+			amazonelasticcomputecloud = new EObjectContainmentEList<AmazonElasticComputeCloud>(AmazonElasticComputeCloud.class, this, PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD);
 		}
 		return amazonelasticcomputecloud;
 	}
@@ -132,8 +93,12 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AmazonElasticComputeCloud basicGetAmazonelasticcomputecloud() {
-		return amazonelasticcomputecloud;
+	@Override
+	public EList<AmazonSimpleStorageService> getAmazonsimplestorageservice() {
+		if (amazonsimplestorageservice == null) {
+			amazonsimplestorageservice = new EObjectContainmentEList<AmazonSimpleStorageService>(AmazonSimpleStorageService.class, this, PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE);
+		}
+		return amazonsimplestorageservice;
 	}
 
 	/**
@@ -142,11 +107,14 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void setAmazonelasticcomputecloud(AmazonElasticComputeCloud newAmazonelasticcomputecloud) {
-		AmazonElasticComputeCloud oldAmazonelasticcomputecloud = amazonelasticcomputecloud;
-		amazonelasticcomputecloud = newAmazonelasticcomputecloud;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD, oldAmazonelasticcomputecloud, amazonelasticcomputecloud));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD:
+				return ((InternalEList<?>)getAmazonelasticcomputecloud()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
+				return ((InternalEList<?>)getAmazonsimplestorageservice()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -157,12 +125,10 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
-				if (resolve) return getAmazonsimplestorageservice();
-				return basicGetAmazonsimplestorageservice();
 			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD:
-				if (resolve) return getAmazonelasticcomputecloud();
-				return basicGetAmazonelasticcomputecloud();
+				return getAmazonelasticcomputecloud();
+			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
+				return getAmazonsimplestorageservice();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,14 +138,17 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
-				setAmazonsimplestorageservice((AmazonSimpleStorageService)newValue);
-				return;
 			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD:
-				setAmazonelasticcomputecloud((AmazonElasticComputeCloud)newValue);
+				getAmazonelasticcomputecloud().clear();
+				getAmazonelasticcomputecloud().addAll((Collection<? extends AmazonElasticComputeCloud>)newValue);
+				return;
+			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
+				getAmazonsimplestorageservice().clear();
+				getAmazonsimplestorageservice().addAll((Collection<? extends AmazonSimpleStorageService>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,11 +162,11 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
-				setAmazonsimplestorageservice((AmazonSimpleStorageService)null);
-				return;
 			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD:
-				setAmazonelasticcomputecloud((AmazonElasticComputeCloud)null);
+				getAmazonelasticcomputecloud().clear();
+				return;
+			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
+				getAmazonsimplestorageservice().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -211,10 +180,10 @@ public class AmazonWebServicesImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
-				return amazonsimplestorageservice != null;
 			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONELASTICCOMPUTECLOUD:
-				return amazonelasticcomputecloud != null;
+				return amazonelasticcomputecloud != null && !amazonelasticcomputecloud.isEmpty();
+			case PhotosMetaModelPackage.AMAZON_WEB_SERVICES__AMAZONSIMPLESTORAGESERVICE:
+				return amazonsimplestorageservice != null && !amazonsimplestorageservice.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

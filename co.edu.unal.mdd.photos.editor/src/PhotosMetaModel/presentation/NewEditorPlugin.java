@@ -9,19 +9,19 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the NewModel editor plugin.
+ * This is the central singleton for the New editor plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class NewModelEditorPlugin extends EMFPlugin {
+public final class NewEditorPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final NewModelEditorPlugin INSTANCE = new NewModelEditorPlugin();
+	public static final NewEditorPlugin INSTANCE = new NewEditorPlugin();
 	
 	/**
 	 * Keep track of the singleton.
@@ -37,7 +37,7 @@ public final class NewModelEditorPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NewModelEditorPlugin() {
+	public NewEditorPlugin() {
 		super
 			(new ResourceLocator [] {
 			});

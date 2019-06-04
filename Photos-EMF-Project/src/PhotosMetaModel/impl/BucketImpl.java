@@ -33,9 +33,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link PhotosMetaModel.impl.BucketImpl#getName <em>Name</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.BucketImpl#getAccess <em>Access</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.BucketImpl#getFile_a <em>File a</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.BucketImpl#getFolder_a <em>Folder a</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.BucketImpl#getAccess <em>Access</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,16 +62,6 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAccess() <em>Access</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccess()
-	 * @generated
-	 * @ordered
-	 */
-	protected Access access;
-
-	/**
 	 * The cached value of the '{@link #getFile_a() <em>File a</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,6 +80,16 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 	 * @ordered
 	 */
 	protected EList<Folder_a> folder_a;
+
+	/**
+	 * The cached value of the '{@link #getAccess() <em>Access</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccess()
+	 * @generated
+	 * @ordered
+	 */
+	protected Access access;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,46 +139,6 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 	 * @generated
 	 */
 	@Override
-	public Access getAccess() {
-		if (access != null && access.eIsProxy()) {
-			InternalEObject oldAccess = (InternalEObject)access;
-			access = (Access)eResolveProxy(oldAccess);
-			if (access != oldAccess) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.BUCKET__ACCESS, oldAccess, access));
-			}
-		}
-		return access;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Access basicGetAccess() {
-		return access;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAccess(Access newAccess) {
-		Access oldAccess = access;
-		access = newAccess;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.BUCKET__ACCESS, oldAccess, access));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EList<File_a> getFile_a() {
 		if (file_a == null) {
 			file_a = new EObjectContainmentEList<File_a>(File_a.class, this, PhotosMetaModelPackage.BUCKET__FILE_A);
@@ -205,12 +165,59 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 	 * @generated
 	 */
 	@Override
+	public Access getAccess() {
+		return access;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAccess(Access newAccess, NotificationChain msgs) {
+		Access oldAccess = access;
+		access = newAccess;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.BUCKET__ACCESS, oldAccess, newAccess);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAccess(Access newAccess) {
+		if (newAccess != access) {
+			NotificationChain msgs = null;
+			if (access != null)
+				msgs = ((InternalEObject)access).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.BUCKET__ACCESS, null, msgs);
+			if (newAccess != null)
+				msgs = ((InternalEObject)newAccess).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.BUCKET__ACCESS, null, msgs);
+			msgs = basicSetAccess(newAccess, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.BUCKET__ACCESS, newAccess, newAccess));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.BUCKET__FILE_A:
 				return ((InternalEList<?>)getFile_a()).basicRemove(otherEnd, msgs);
 			case PhotosMetaModelPackage.BUCKET__FOLDER_A:
 				return ((InternalEList<?>)getFolder_a()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.BUCKET__ACCESS:
+				return basicSetAccess(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,13 +232,12 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 		switch (featureID) {
 			case PhotosMetaModelPackage.BUCKET__NAME:
 				return getName();
-			case PhotosMetaModelPackage.BUCKET__ACCESS:
-				if (resolve) return getAccess();
-				return basicGetAccess();
 			case PhotosMetaModelPackage.BUCKET__FILE_A:
 				return getFile_a();
 			case PhotosMetaModelPackage.BUCKET__FOLDER_A:
 				return getFolder_a();
+			case PhotosMetaModelPackage.BUCKET__ACCESS:
+				return getAccess();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -248,9 +254,6 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 			case PhotosMetaModelPackage.BUCKET__NAME:
 				setName((String)newValue);
 				return;
-			case PhotosMetaModelPackage.BUCKET__ACCESS:
-				setAccess((Access)newValue);
-				return;
 			case PhotosMetaModelPackage.BUCKET__FILE_A:
 				getFile_a().clear();
 				getFile_a().addAll((Collection<? extends File_a>)newValue);
@@ -258,6 +261,9 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 			case PhotosMetaModelPackage.BUCKET__FOLDER_A:
 				getFolder_a().clear();
 				getFolder_a().addAll((Collection<? extends Folder_a>)newValue);
+				return;
+			case PhotosMetaModelPackage.BUCKET__ACCESS:
+				setAccess((Access)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -274,14 +280,14 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 			case PhotosMetaModelPackage.BUCKET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PhotosMetaModelPackage.BUCKET__ACCESS:
-				setAccess((Access)null);
-				return;
 			case PhotosMetaModelPackage.BUCKET__FILE_A:
 				getFile_a().clear();
 				return;
 			case PhotosMetaModelPackage.BUCKET__FOLDER_A:
 				getFolder_a().clear();
+				return;
+			case PhotosMetaModelPackage.BUCKET__ACCESS:
+				setAccess((Access)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -297,12 +303,12 @@ public class BucketImpl extends MinimalEObjectImpl.Container implements Bucket {
 		switch (featureID) {
 			case PhotosMetaModelPackage.BUCKET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PhotosMetaModelPackage.BUCKET__ACCESS:
-				return access != null;
 			case PhotosMetaModelPackage.BUCKET__FILE_A:
 				return file_a != null && !file_a.isEmpty();
 			case PhotosMetaModelPackage.BUCKET__FOLDER_A:
 				return folder_a != null && !folder_a.isEmpty();
+			case PhotosMetaModelPackage.BUCKET__ACCESS:
+				return access != null;
 		}
 		return super.eIsSet(featureID);
 	}
