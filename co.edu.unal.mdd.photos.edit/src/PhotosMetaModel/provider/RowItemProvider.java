@@ -60,32 +60,10 @@ public class RowItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPolicyPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addPolicyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Policy feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPolicyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Row_policy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Row_policy_feature", "_UI_Row_type"),
-				 PhotosMetaModelPackage.Literals.ROW__POLICY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -106,6 +84,28 @@ public class RowItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Policy feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPolicyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Row_policy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Row_policy_feature", "_UI_Row_type"),
+				 PhotosMetaModelPackage.Literals.ROW__POLICY,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

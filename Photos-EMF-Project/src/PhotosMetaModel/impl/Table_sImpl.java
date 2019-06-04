@@ -31,24 +31,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.Table_sImpl#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.Table_sImpl#getColumn_s <em>Column s</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.Table_sImpl#getName <em>Name</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.Table_sImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s {
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected Id id;
-
 	/**
 	 * The cached value of the '{@link #getColumn_s() <em>Column s</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -80,6 +70,16 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected Id id;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,46 +96,6 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	@Override
 	protected EClass eStaticClass() {
 		return PhotosMetaModelPackage.Literals.TABLE_S;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Id getId() {
-		if (id != null && id.eIsProxy()) {
-			InternalEObject oldId = (InternalEObject)id;
-			id = (Id)eResolveProxy(oldId);
-			if (id != oldId) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.TABLE_S__ID, oldId, id));
-			}
-		}
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Id basicGetId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setId(Id newId) {
-		Id oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TABLE_S__ID, oldId, id));
 	}
 
 	/**
@@ -180,10 +140,57 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	 * @generated
 	 */
 	@Override
+	public Id getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetId(Id newId, NotificationChain msgs) {
+		Id oldId = id;
+		id = newId;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TABLE_S__ID, oldId, newId);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(Id newId) {
+		if (newId != id) {
+			NotificationChain msgs = null;
+			if (id != null)
+				msgs = ((InternalEObject)id).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TABLE_S__ID, null, msgs);
+			if (newId != null)
+				msgs = ((InternalEObject)newId).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TABLE_S__ID, null, msgs);
+			msgs = basicSetId(newId, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TABLE_S__ID, newId, newId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.TABLE_S__COLUMN_S:
 				return ((InternalEList<?>)getColumn_s()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.TABLE_S__ID:
+				return basicSetId(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,13 +203,12 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.TABLE_S__ID:
-				if (resolve) return getId();
-				return basicGetId();
 			case PhotosMetaModelPackage.TABLE_S__COLUMN_S:
 				return getColumn_s();
 			case PhotosMetaModelPackage.TABLE_S__NAME:
 				return getName();
+			case PhotosMetaModelPackage.TABLE_S__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -216,15 +222,15 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.TABLE_S__ID:
-				setId((Id)newValue);
-				return;
 			case PhotosMetaModelPackage.TABLE_S__COLUMN_S:
 				getColumn_s().clear();
 				getColumn_s().addAll((Collection<? extends Column_s>)newValue);
 				return;
 			case PhotosMetaModelPackage.TABLE_S__NAME:
 				setName((String)newValue);
+				return;
+			case PhotosMetaModelPackage.TABLE_S__ID:
+				setId((Id)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -238,14 +244,14 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.TABLE_S__ID:
-				setId((Id)null);
-				return;
 			case PhotosMetaModelPackage.TABLE_S__COLUMN_S:
 				getColumn_s().clear();
 				return;
 			case PhotosMetaModelPackage.TABLE_S__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case PhotosMetaModelPackage.TABLE_S__ID:
+				setId((Id)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -259,12 +265,12 @@ public class Table_sImpl extends MinimalEObjectImpl.Container implements Table_s
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.TABLE_S__ID:
-				return id != null;
 			case PhotosMetaModelPackage.TABLE_S__COLUMN_S:
 				return column_s != null && !column_s.isEmpty();
 			case PhotosMetaModelPackage.TABLE_S__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PhotosMetaModelPackage.TABLE_S__ID:
+				return id != null;
 		}
 		return super.eIsSet(featureID);
 	}

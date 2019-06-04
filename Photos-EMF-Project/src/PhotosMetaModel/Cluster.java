@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link PhotosMetaModel.Cluster#getDatabase <em>Database</em>}</li>
- *   <li>{@link PhotosMetaModel.Cluster#getUser_postgresql <em>User postgresql</em>}</li>
+ *   <li>{@link PhotosMetaModel.Cluster#getUser_p <em>User p</em>}</li>
  * </ul>
  *
  * @see PhotosMetaModel.PhotosMetaModelPackage#getCluster()
@@ -37,25 +37,15 @@ public interface Cluster extends EObject {
 	EList<Database> getDatabase();
 
 	/**
-	 * Returns the value of the '<em><b>User postgresql</b></em>' reference.
+	 * Returns the value of the '<em><b>User p</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.User_p}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User postgresql</em>' reference.
-	 * @see #setUser_postgresql(User_p)
-	 * @see PhotosMetaModel.PhotosMetaModelPackage#getCluster_User_postgresql()
-	 * @model
+	 * @return the value of the '<em>User p</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getCluster_User_p()
+	 * @model containment="true"
 	 * @generated
 	 */
-	User_p getUser_postgresql();
-
-	/**
-	 * Sets the value of the '{@link PhotosMetaModel.Cluster#getUser_postgresql <em>User postgresql</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User postgresql</em>' reference.
-	 * @see #getUser_postgresql()
-	 * @generated
-	 */
-	void setUser_postgresql(User_p value);
+	EList<User_p> getUser_p();
 
 } // Cluster

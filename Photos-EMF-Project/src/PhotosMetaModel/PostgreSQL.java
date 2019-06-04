@@ -22,22 +22,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PostgreSQL extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Cluster</b></em>' reference.
+	 * Returns the value of the '<em><b>Cluster</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cluster</em>' reference.
+	 * @return the value of the '<em>Cluster</em>' containment reference.
 	 * @see #setCluster(Cluster)
 	 * @see PhotosMetaModel.PhotosMetaModelPackage#getPostgreSQL_Cluster()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Cluster getCluster();
 
 	/**
-	 * Sets the value of the '{@link PhotosMetaModel.PostgreSQL#getCluster <em>Cluster</em>}' reference.
+	 * Sets the value of the '{@link PhotosMetaModel.PostgreSQL#getCluster <em>Cluster</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cluster</em>' reference.
+	 * @param value the new value of the '<em>Cluster</em>' containment reference.
 	 * @see #getCluster()
 	 * @generated
 	 */

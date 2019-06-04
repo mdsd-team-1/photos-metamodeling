@@ -2,6 +2,8 @@
  */
 package PhotosMetaModel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.Row#getPolicy <em>Policy</em>}</li>
  *   <li>{@link PhotosMetaModel.Row#getName <em>Name</em>}</li>
+ *   <li>{@link PhotosMetaModel.Row#getPolicy <em>Policy</em>}</li>
  * </ul>
  *
  * @see PhotosMetaModel.PhotosMetaModelPackage#getRow()
@@ -22,28 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Row extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Policy</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Policy</em>' reference.
-	 * @see #setPolicy(Policy)
-	 * @see PhotosMetaModel.PhotosMetaModelPackage#getRow_Policy()
-	 * @model
-	 * @generated
-	 */
-	Policy getPolicy();
-
-	/**
-	 * Sets the value of the '{@link PhotosMetaModel.Row#getPolicy <em>Policy</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Policy</em>' reference.
-	 * @see #getPolicy()
-	 * @generated
-	 */
-	void setPolicy(Policy value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,5 +45,17 @@ public interface Row extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Policy</b></em>' containment reference list.
+	 * The list contents are of type {@link PhotosMetaModel.Policy}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Policy</em>' containment reference list.
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getRow_Policy()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Policy> getPolicy();
 
 } // Row

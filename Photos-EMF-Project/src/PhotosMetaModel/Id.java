@@ -22,22 +22,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Id extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Generatedvalue</b></em>' reference.
+	 * Returns the value of the '<em><b>Generatedvalue</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generatedvalue</em>' reference.
+	 * @return the value of the '<em>Generatedvalue</em>' containment reference.
 	 * @see #setGeneratedvalue(GeneratedValue)
 	 * @see PhotosMetaModel.PhotosMetaModelPackage#getId_Generatedvalue()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	GeneratedValue getGeneratedvalue();
 
 	/**
-	 * Sets the value of the '{@link PhotosMetaModel.Id#getGeneratedvalue <em>Generatedvalue</em>}' reference.
+	 * Sets the value of the '{@link PhotosMetaModel.Id#getGeneratedvalue <em>Generatedvalue</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Generatedvalue</em>' reference.
+	 * @param value the new value of the '<em>Generatedvalue</em>' containment reference.
 	 * @see #getGeneratedvalue()
 	 * @generated
 	 */

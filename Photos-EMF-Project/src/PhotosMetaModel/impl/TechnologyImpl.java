@@ -9,19 +9,14 @@ import PhotosMetaModel.React;
 import PhotosMetaModel.Spring;
 import PhotosMetaModel.Technology;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,44 +36,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TechnologyImpl extends MinimalEObjectImpl.Container implements Technology {
 	/**
-	 * The cached value of the '{@link #getSpring() <em>Spring</em>}' containment reference list.
+	 * The cached value of the '{@link #getSpring() <em>Spring</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSpring()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Spring> spring;
+	protected Spring spring;
 
 	/**
-	 * The cached value of the '{@link #getPostgresql() <em>Postgresql</em>}' containment reference list.
+	 * The cached value of the '{@link #getPostgresql() <em>Postgresql</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPostgresql()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PostgreSQL> postgresql;
+	protected PostgreSQL postgresql;
 
 	/**
-	 * The cached value of the '{@link #getReact() <em>React</em>}' containment reference list.
+	 * The cached value of the '{@link #getReact() <em>React</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReact()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<React> react;
+	protected React react;
 
 	/**
-	 * The cached value of the '{@link #getAmazonwebservices() <em>Amazonwebservices</em>}' containment reference list.
+	 * The cached value of the '{@link #getAmazonwebservices() <em>Amazonwebservices</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAmazonwebservices()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AmazonWebServices> amazonwebservices;
+	protected AmazonWebServices amazonwebservices;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,10 +100,7 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	 * @generated
 	 */
 	@Override
-	public EList<Spring> getSpring() {
-		if (spring == null) {
-			spring = new EObjectContainmentEList<Spring>(Spring.class, this, PhotosMetaModelPackage.TECHNOLOGY__SPRING);
-		}
+	public Spring getSpring() {
 		return spring;
 	}
 
@@ -117,11 +109,43 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<PostgreSQL> getPostgresql() {
-		if (postgresql == null) {
-			postgresql = new EObjectContainmentEList<PostgreSQL>(PostgreSQL.class, this, PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL);
+	public NotificationChain basicSetSpring(Spring newSpring, NotificationChain msgs) {
+		Spring oldSpring = spring;
+		spring = newSpring;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__SPRING, oldSpring, newSpring);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSpring(Spring newSpring) {
+		if (newSpring != spring) {
+			NotificationChain msgs = null;
+			if (spring != null)
+				msgs = ((InternalEObject)spring).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__SPRING, null, msgs);
+			if (newSpring != null)
+				msgs = ((InternalEObject)newSpring).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__SPRING, null, msgs);
+			msgs = basicSetSpring(newSpring, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__SPRING, newSpring, newSpring));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PostgreSQL getPostgresql() {
 		return postgresql;
 	}
 
@@ -130,12 +154,14 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<React> getReact() {
-		if (react == null) {
-			react = new EObjectContainmentEList<React>(React.class, this, PhotosMetaModelPackage.TECHNOLOGY__REACT);
+	public NotificationChain basicSetPostgresql(PostgreSQL newPostgresql, NotificationChain msgs) {
+		PostgreSQL oldPostgresql = postgresql;
+		postgresql = newPostgresql;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL, oldPostgresql, newPostgresql);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return react;
+		return msgs;
 	}
 
 	/**
@@ -144,11 +170,108 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	 * @generated
 	 */
 	@Override
-	public EList<AmazonWebServices> getAmazonwebservices() {
-		if (amazonwebservices == null) {
-			amazonwebservices = new EObjectContainmentEList<AmazonWebServices>(AmazonWebServices.class, this, PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES);
+	public void setPostgresql(PostgreSQL newPostgresql) {
+		if (newPostgresql != postgresql) {
+			NotificationChain msgs = null;
+			if (postgresql != null)
+				msgs = ((InternalEObject)postgresql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL, null, msgs);
+			if (newPostgresql != null)
+				msgs = ((InternalEObject)newPostgresql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL, null, msgs);
+			msgs = basicSetPostgresql(newPostgresql, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL, newPostgresql, newPostgresql));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public React getReact() {
+		return react;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReact(React newReact, NotificationChain msgs) {
+		React oldReact = react;
+		react = newReact;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__REACT, oldReact, newReact);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReact(React newReact) {
+		if (newReact != react) {
+			NotificationChain msgs = null;
+			if (react != null)
+				msgs = ((InternalEObject)react).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__REACT, null, msgs);
+			if (newReact != null)
+				msgs = ((InternalEObject)newReact).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__REACT, null, msgs);
+			msgs = basicSetReact(newReact, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__REACT, newReact, newReact));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AmazonWebServices getAmazonwebservices() {
 		return amazonwebservices;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAmazonwebservices(AmazonWebServices newAmazonwebservices, NotificationChain msgs) {
+		AmazonWebServices oldAmazonwebservices = amazonwebservices;
+		amazonwebservices = newAmazonwebservices;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES, oldAmazonwebservices, newAmazonwebservices);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAmazonwebservices(AmazonWebServices newAmazonwebservices) {
+		if (newAmazonwebservices != amazonwebservices) {
+			NotificationChain msgs = null;
+			if (amazonwebservices != null)
+				msgs = ((InternalEObject)amazonwebservices).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES, null, msgs);
+			if (newAmazonwebservices != null)
+				msgs = ((InternalEObject)newAmazonwebservices).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES, null, msgs);
+			msgs = basicSetAmazonwebservices(newAmazonwebservices, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES, newAmazonwebservices, newAmazonwebservices));
 	}
 
 	/**
@@ -160,13 +283,13 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.TECHNOLOGY__SPRING:
-				return ((InternalEList<?>)getSpring()).basicRemove(otherEnd, msgs);
+				return basicSetSpring(null, msgs);
 			case PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL:
-				return ((InternalEList<?>)getPostgresql()).basicRemove(otherEnd, msgs);
+				return basicSetPostgresql(null, msgs);
 			case PhotosMetaModelPackage.TECHNOLOGY__REACT:
-				return ((InternalEList<?>)getReact()).basicRemove(otherEnd, msgs);
+				return basicSetReact(null, msgs);
 			case PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES:
-				return ((InternalEList<?>)getAmazonwebservices()).basicRemove(otherEnd, msgs);
+				return basicSetAmazonwebservices(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,25 +319,20 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.TECHNOLOGY__SPRING:
-				getSpring().clear();
-				getSpring().addAll((Collection<? extends Spring>)newValue);
+				setSpring((Spring)newValue);
 				return;
 			case PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL:
-				getPostgresql().clear();
-				getPostgresql().addAll((Collection<? extends PostgreSQL>)newValue);
+				setPostgresql((PostgreSQL)newValue);
 				return;
 			case PhotosMetaModelPackage.TECHNOLOGY__REACT:
-				getReact().clear();
-				getReact().addAll((Collection<? extends React>)newValue);
+				setReact((React)newValue);
 				return;
 			case PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES:
-				getAmazonwebservices().clear();
-				getAmazonwebservices().addAll((Collection<? extends AmazonWebServices>)newValue);
+				setAmazonwebservices((AmazonWebServices)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,16 +347,16 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.TECHNOLOGY__SPRING:
-				getSpring().clear();
+				setSpring((Spring)null);
 				return;
 			case PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL:
-				getPostgresql().clear();
+				setPostgresql((PostgreSQL)null);
 				return;
 			case PhotosMetaModelPackage.TECHNOLOGY__REACT:
-				getReact().clear();
+				setReact((React)null);
 				return;
 			case PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES:
-				getAmazonwebservices().clear();
+				setAmazonwebservices((AmazonWebServices)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -253,13 +371,13 @@ public class TechnologyImpl extends MinimalEObjectImpl.Container implements Tech
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.TECHNOLOGY__SPRING:
-				return spring != null && !spring.isEmpty();
+				return spring != null;
 			case PhotosMetaModelPackage.TECHNOLOGY__POSTGRESQL:
-				return postgresql != null && !postgresql.isEmpty();
+				return postgresql != null;
 			case PhotosMetaModelPackage.TECHNOLOGY__REACT:
-				return react != null && !react.isEmpty();
+				return react != null;
 			case PhotosMetaModelPackage.TECHNOLOGY__AMAZONWEBSERVICES:
-				return amazonwebservices != null && !amazonwebservices.isEmpty();
+				return amazonwebservices != null;
 		}
 		return super.eIsSet(featureID);
 	}

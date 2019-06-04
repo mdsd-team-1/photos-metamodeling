@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.Table_s#getId <em>Id</em>}</li>
  *   <li>{@link PhotosMetaModel.Table_s#getColumn_s <em>Column s</em>}</li>
  *   <li>{@link PhotosMetaModel.Table_s#getName <em>Name</em>}</li>
+ *   <li>{@link PhotosMetaModel.Table_s#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see PhotosMetaModel.PhotosMetaModelPackage#getTable_s()
@@ -25,28 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Table_s extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' reference.
-	 * @see #setId(Id)
-	 * @see PhotosMetaModel.PhotosMetaModelPackage#getTable_s_Id()
-	 * @model
-	 * @generated
-	 */
-	Id getId();
-
-	/**
-	 * Sets the value of the '{@link PhotosMetaModel.Table_s#getId <em>Id</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' reference.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(Id value);
-
 	/**
 	 * Returns the value of the '<em><b>Column s</b></em>' containment reference list.
 	 * The list contents are of type {@link PhotosMetaModel.Column_s}.
@@ -80,5 +58,27 @@ public interface Table_s extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' containment reference.
+	 * @see #setId(Id)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getTable_s_Id()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Id getId();
+
+	/**
+	 * Sets the value of the '{@link PhotosMetaModel.Table_s#getId <em>Id</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' containment reference.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(Id value);
 
 } // Table_s

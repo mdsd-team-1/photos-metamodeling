@@ -9,7 +9,6 @@ import PhotosMetaModel.User_p;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -17,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -32,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link PhotosMetaModel.impl.ClusterImpl#getDatabase <em>Database</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.ClusterImpl#getUser_postgresql <em>User postgresql</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.ClusterImpl#getUser_p <em>User p</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,14 +47,14 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 	protected EList<Database> database;
 
 	/**
-	 * The cached value of the '{@link #getUser_postgresql() <em>User postgresql</em>}' reference.
+	 * The cached value of the '{@link #getUser_p() <em>User p</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUser_postgresql()
+	 * @see #getUser_p()
 	 * @generated
 	 * @ordered
 	 */
-	protected User_p user_postgresql;
+	protected EList<User_p> user_p;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,38 +94,11 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 	 * @generated
 	 */
 	@Override
-	public User_p getUser_postgresql() {
-		if (user_postgresql != null && user_postgresql.eIsProxy()) {
-			InternalEObject oldUser_postgresql = (InternalEObject)user_postgresql;
-			user_postgresql = (User_p)eResolveProxy(oldUser_postgresql);
-			if (user_postgresql != oldUser_postgresql) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.CLUSTER__USER_POSTGRESQL, oldUser_postgresql, user_postgresql));
-			}
+	public EList<User_p> getUser_p() {
+		if (user_p == null) {
+			user_p = new EObjectContainmentEList<User_p>(User_p.class, this, PhotosMetaModelPackage.CLUSTER__USER_P);
 		}
-		return user_postgresql;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public User_p basicGetUser_postgresql() {
-		return user_postgresql;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUser_postgresql(User_p newUser_postgresql) {
-		User_p oldUser_postgresql = user_postgresql;
-		user_postgresql = newUser_postgresql;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CLUSTER__USER_POSTGRESQL, oldUser_postgresql, user_postgresql));
+		return user_p;
 	}
 
 	/**
@@ -140,6 +111,8 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 		switch (featureID) {
 			case PhotosMetaModelPackage.CLUSTER__DATABASE:
 				return ((InternalEList<?>)getDatabase()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.CLUSTER__USER_P:
+				return ((InternalEList<?>)getUser_p()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -154,9 +127,8 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 		switch (featureID) {
 			case PhotosMetaModelPackage.CLUSTER__DATABASE:
 				return getDatabase();
-			case PhotosMetaModelPackage.CLUSTER__USER_POSTGRESQL:
-				if (resolve) return getUser_postgresql();
-				return basicGetUser_postgresql();
+			case PhotosMetaModelPackage.CLUSTER__USER_P:
+				return getUser_p();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -174,8 +146,9 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 				getDatabase().clear();
 				getDatabase().addAll((Collection<? extends Database>)newValue);
 				return;
-			case PhotosMetaModelPackage.CLUSTER__USER_POSTGRESQL:
-				setUser_postgresql((User_p)newValue);
+			case PhotosMetaModelPackage.CLUSTER__USER_P:
+				getUser_p().clear();
+				getUser_p().addAll((Collection<? extends User_p>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,8 +165,8 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 			case PhotosMetaModelPackage.CLUSTER__DATABASE:
 				getDatabase().clear();
 				return;
-			case PhotosMetaModelPackage.CLUSTER__USER_POSTGRESQL:
-				setUser_postgresql((User_p)null);
+			case PhotosMetaModelPackage.CLUSTER__USER_P:
+				getUser_p().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -209,8 +182,8 @@ public class ClusterImpl extends MinimalEObjectImpl.Container implements Cluster
 		switch (featureID) {
 			case PhotosMetaModelPackage.CLUSTER__DATABASE:
 				return database != null && !database.isEmpty();
-			case PhotosMetaModelPackage.CLUSTER__USER_POSTGRESQL:
-				return user_postgresql != null;
+			case PhotosMetaModelPackage.CLUSTER__USER_P:
+				return user_p != null && !user_p.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

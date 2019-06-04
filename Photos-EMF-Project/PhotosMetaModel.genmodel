@@ -63,9 +63,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Entity/namednativequery"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Table_s">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Table_s/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Table_s/column_s"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Table_s/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Table_s/id"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Id">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Id/generatedvalue"/>
@@ -142,11 +142,11 @@
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Cluster">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Cluster/database"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Cluster/user_postgresql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Cluster/user_p"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Row">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Row/policy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PhotosMetaModel.ecore#//Row/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Row/policy"/>
     </genClasses>
     <genClasses ecoreClass="PhotosMetaModel.ecore#//Column">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PhotosMetaModel.ecore#//Column/datatype"/>

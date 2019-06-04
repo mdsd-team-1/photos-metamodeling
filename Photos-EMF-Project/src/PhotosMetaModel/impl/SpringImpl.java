@@ -6,13 +6,19 @@ import PhotosMetaModel.PhotosMetaModelPackage;
 import PhotosMetaModel.Spring;
 import PhotosMetaModel.SpringBootApplication;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +35,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	/**
-	 * The cached value of the '{@link #getSpringbootapplication() <em>Springbootapplication</em>}' reference.
+	 * The cached value of the '{@link #getSpringbootapplication() <em>Springbootapplication</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSpringbootapplication()
 	 * @generated
 	 * @ordered
 	 */
-	protected SpringBootApplication springbootapplication;
+	protected EList<SpringBootApplication> springbootapplication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,14 +69,9 @@ public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	 * @generated
 	 */
 	@Override
-	public SpringBootApplication getSpringbootapplication() {
-		if (springbootapplication != null && springbootapplication.eIsProxy()) {
-			InternalEObject oldSpringbootapplication = (InternalEObject)springbootapplication;
-			springbootapplication = (SpringBootApplication)eResolveProxy(oldSpringbootapplication);
-			if (springbootapplication != oldSpringbootapplication) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION, oldSpringbootapplication, springbootapplication));
-			}
+	public EList<SpringBootApplication> getSpringbootapplication() {
+		if (springbootapplication == null) {
+			springbootapplication = new EObjectContainmentEList<SpringBootApplication>(SpringBootApplication.class, this, PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION);
 		}
 		return springbootapplication;
 	}
@@ -80,21 +81,13 @@ public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SpringBootApplication basicGetSpringbootapplication() {
-		return springbootapplication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setSpringbootapplication(SpringBootApplication newSpringbootapplication) {
-		SpringBootApplication oldSpringbootapplication = springbootapplication;
-		springbootapplication = newSpringbootapplication;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION, oldSpringbootapplication, springbootapplication));
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION:
+				return ((InternalEList<?>)getSpringbootapplication()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -106,8 +99,7 @@ public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION:
-				if (resolve) return getSpringbootapplication();
-				return basicGetSpringbootapplication();
+				return getSpringbootapplication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,11 +109,13 @@ public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION:
-				setSpringbootapplication((SpringBootApplication)newValue);
+				getSpringbootapplication().clear();
+				getSpringbootapplication().addAll((Collection<? extends SpringBootApplication>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,7 +130,7 @@ public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION:
-				setSpringbootapplication((SpringBootApplication)null);
+				getSpringbootapplication().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,7 +145,7 @@ public class SpringImpl extends MinimalEObjectImpl.Container implements Spring {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.SPRING__SPRINGBOOTAPPLICATION:
-				return springbootapplication != null;
+				return springbootapplication != null && !springbootapplication.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

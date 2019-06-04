@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -62,31 +61,8 @@ public class ClusterItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUser_postgresqlPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the User postgresql feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUser_postgresqlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Cluster_user_postgresql_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Cluster_user_postgresql_feature", "_UI_Cluster_type"),
-				 PhotosMetaModelPackage.Literals.CLUSTER__USER_POSTGRESQL,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -102,6 +78,7 @@ public class ClusterItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.CLUSTER__DATABASE);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.CLUSTER__USER_P);
 		}
 		return childrenFeatures;
 	}
@@ -155,6 +132,7 @@ public class ClusterItemProvider
 
 		switch (notification.getFeatureID(Cluster.class)) {
 			case PhotosMetaModelPackage.CLUSTER__DATABASE:
+			case PhotosMetaModelPackage.CLUSTER__USER_P:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -176,6 +154,11 @@ public class ClusterItemProvider
 			(createChildParameter
 				(PhotosMetaModelPackage.Literals.CLUSTER__DATABASE,
 				 PhotosMetaModelFactory.eINSTANCE.createDatabase()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.CLUSTER__USER_P,
+				 PhotosMetaModelFactory.eINSTANCE.createUser_p()));
 	}
 
 	/**

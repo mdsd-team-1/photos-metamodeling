@@ -67,7 +67,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int SOFT_GALLERY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Domain</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Domain</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -76,7 +76,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int SOFT_GALLERY__DOMAIN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Architecture</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Architecture</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -85,7 +85,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int SOFT_GALLERY__ARCHITECTURE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Technology</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Technology</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,7 +205,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int TECHNOLOGY = 3;
 
 	/**
-	 * The feature id for the '<em><b>Spring</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Spring</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,7 +214,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int TECHNOLOGY__SPRING = 0;
 
 	/**
-	 * The feature id for the '<em><b>Postgresql</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Postgresql</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,7 +223,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int TECHNOLOGY__POSTGRESQL = 1;
 
 	/**
-	 * The feature id for the '<em><b>React</b></em>' containment reference list.
+	 * The feature id for the '<em><b>React</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,7 +232,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int TECHNOLOGY__REACT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Amazonwebservices</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Amazonwebservices</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -269,7 +269,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int SPRING = 4;
 
 	/**
-	 * The feature id for the '<em><b>Springbootapplication</b></em>' reference.
+	 * The feature id for the '<em><b>Springbootapplication</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -869,22 +869,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int TABLE_S = 19;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_S__ID = 0;
-
-	/**
 	 * The feature id for the '<em><b>Column s</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_S__COLUMN_S = 1;
+	int TABLE_S__COLUMN_S = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -893,7 +884,16 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_S__NAME = 2;
+	int TABLE_S__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_S__ID = 2;
 
 	/**
 	 * The number of structural features of the '<em>Table s</em>' class.
@@ -924,7 +924,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ID = 20;
 
 	/**
-	 * The feature id for the '<em><b>Generatedvalue</b></em>' reference.
+	 * The feature id for the '<em><b>Generatedvalue</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1452,7 +1452,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int POSTGRE_SQL = 35;
 
 	/**
-	 * The feature id for the '<em><b>Cluster</b></em>' reference.
+	 * The feature id for the '<em><b>Cluster</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1967,13 +1967,13 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int CLUSTER__DATABASE = 0;
 
 	/**
-	 * The feature id for the '<em><b>User postgresql</b></em>' reference.
+	 * The feature id for the '<em><b>User p</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__USER_POSTGRESQL = 1;
+	int CLUSTER__USER_P = 1;
 
 	/**
 	 * The number of structural features of the '<em>Cluster</em>' class.
@@ -2004,22 +2004,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ROW = 47;
 
 	/**
-	 * The feature id for the '<em><b>Policy</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROW__POLICY = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROW__NAME = 1;
+	int ROW__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Policy</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROW__POLICY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Row</em>' class.
@@ -5434,10 +5434,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getSoftGallery();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.SoftGallery#getDomain <em>Domain</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.SoftGallery#getDomain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Domain</em>'.
+	 * @return the meta object for the containment reference '<em>Domain</em>'.
 	 * @see PhotosMetaModel.SoftGallery#getDomain()
 	 * @see #getSoftGallery()
 	 * @generated
@@ -5445,10 +5445,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getSoftGallery_Domain();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.SoftGallery#getArchitecture <em>Architecture</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.SoftGallery#getArchitecture <em>Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Architecture</em>'.
+	 * @return the meta object for the containment reference '<em>Architecture</em>'.
 	 * @see PhotosMetaModel.SoftGallery#getArchitecture()
 	 * @see #getSoftGallery()
 	 * @generated
@@ -5456,10 +5456,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getSoftGallery_Architecture();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.SoftGallery#getTechnology <em>Technology</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.SoftGallery#getTechnology <em>Technology</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Technology</em>'.
+	 * @return the meta object for the containment reference '<em>Technology</em>'.
 	 * @see PhotosMetaModel.SoftGallery#getTechnology()
 	 * @see #getSoftGallery()
 	 * @generated
@@ -5530,10 +5530,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getTechnology();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Technology#getSpring <em>Spring</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Technology#getSpring <em>Spring</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Spring</em>'.
+	 * @return the meta object for the containment reference '<em>Spring</em>'.
 	 * @see PhotosMetaModel.Technology#getSpring()
 	 * @see #getTechnology()
 	 * @generated
@@ -5541,10 +5541,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getTechnology_Spring();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Technology#getPostgresql <em>Postgresql</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Technology#getPostgresql <em>Postgresql</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Postgresql</em>'.
+	 * @return the meta object for the containment reference '<em>Postgresql</em>'.
 	 * @see PhotosMetaModel.Technology#getPostgresql()
 	 * @see #getTechnology()
 	 * @generated
@@ -5552,10 +5552,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getTechnology_Postgresql();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Technology#getReact <em>React</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Technology#getReact <em>React</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>React</em>'.
+	 * @return the meta object for the containment reference '<em>React</em>'.
 	 * @see PhotosMetaModel.Technology#getReact()
 	 * @see #getTechnology()
 	 * @generated
@@ -5563,10 +5563,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getTechnology_React();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Technology#getAmazonwebservices <em>Amazonwebservices</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Technology#getAmazonwebservices <em>Amazonwebservices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Amazonwebservices</em>'.
+	 * @return the meta object for the containment reference '<em>Amazonwebservices</em>'.
 	 * @see PhotosMetaModel.Technology#getAmazonwebservices()
 	 * @see #getTechnology()
 	 * @generated
@@ -5584,10 +5584,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getSpring();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Spring#getSpringbootapplication <em>Springbootapplication</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Spring#getSpringbootapplication <em>Springbootapplication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Springbootapplication</em>'.
+	 * @return the meta object for the containment reference list '<em>Springbootapplication</em>'.
 	 * @see PhotosMetaModel.Spring#getSpringbootapplication()
 	 * @see #getSpring()
 	 * @generated
@@ -5910,17 +5910,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getTable_s();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Table_s#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Id</em>'.
-	 * @see PhotosMetaModel.Table_s#getId()
-	 * @see #getTable_s()
-	 * @generated
-	 */
-	EReference getTable_s_Id();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Table_s#getColumn_s <em>Column s</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5943,6 +5932,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EAttribute getTable_s_Name();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Table_s#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Id</em>'.
+	 * @see PhotosMetaModel.Table_s#getId()
+	 * @see #getTable_s()
+	 * @generated
+	 */
+	EReference getTable_s_Id();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Id <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5953,10 +5953,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getId();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Id#getGeneratedvalue <em>Generatedvalue</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Id#getGeneratedvalue <em>Generatedvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Generatedvalue</em>'.
+	 * @return the meta object for the containment reference '<em>Generatedvalue</em>'.
 	 * @see PhotosMetaModel.Id#getGeneratedvalue()
 	 * @see #getId()
 	 * @generated
@@ -6235,10 +6235,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getPostgreSQL();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.PostgreSQL#getCluster <em>Cluster</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.PostgreSQL#getCluster <em>Cluster</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Cluster</em>'.
+	 * @return the meta object for the containment reference '<em>Cluster</em>'.
 	 * @see PhotosMetaModel.PostgreSQL#getCluster()
 	 * @see #getPostgreSQL()
 	 * @generated
@@ -6598,15 +6598,15 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getCluster_Database();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Cluster#getUser_postgresql <em>User postgresql</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Cluster#getUser_p <em>User p</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>User postgresql</em>'.
-	 * @see PhotosMetaModel.Cluster#getUser_postgresql()
+	 * @return the meta object for the containment reference list '<em>User p</em>'.
+	 * @see PhotosMetaModel.Cluster#getUser_p()
 	 * @see #getCluster()
 	 * @generated
 	 */
-	EReference getCluster_User_postgresql();
+	EReference getCluster_User_p();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Row <em>Row</em>}'.
@@ -6619,17 +6619,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getRow();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Row#getPolicy <em>Policy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Policy</em>'.
-	 * @see PhotosMetaModel.Row#getPolicy()
-	 * @see #getRow()
-	 * @generated
-	 */
-	EReference getRow_Policy();
-
-	/**
 	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Row#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6639,6 +6628,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRow_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.Row#getPolicy <em>Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Policy</em>'.
+	 * @see PhotosMetaModel.Row#getPolicy()
+	 * @see #getRow()
+	 * @generated
+	 */
+	EReference getRow_Policy();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Column <em>Column</em>}'.
@@ -8310,7 +8310,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass SOFT_GALLERY = eINSTANCE.getSoftGallery();
 
 		/**
-		 * The meta object literal for the '<em><b>Domain</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Domain</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8318,7 +8318,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference SOFT_GALLERY__DOMAIN = eINSTANCE.getSoftGallery_Domain();
 
 		/**
-		 * The meta object literal for the '<em><b>Architecture</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Architecture</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8326,7 +8326,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference SOFT_GALLERY__ARCHITECTURE = eINSTANCE.getSoftGallery_Architecture();
 
 		/**
-		 * The meta object literal for the '<em><b>Technology</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Technology</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8388,7 +8388,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass TECHNOLOGY = eINSTANCE.getTechnology();
 
 		/**
-		 * The meta object literal for the '<em><b>Spring</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Spring</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8396,7 +8396,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference TECHNOLOGY__SPRING = eINSTANCE.getTechnology_Spring();
 
 		/**
-		 * The meta object literal for the '<em><b>Postgresql</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Postgresql</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8404,7 +8404,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference TECHNOLOGY__POSTGRESQL = eINSTANCE.getTechnology_Postgresql();
 
 		/**
-		 * The meta object literal for the '<em><b>React</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>React</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8412,7 +8412,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference TECHNOLOGY__REACT = eINSTANCE.getTechnology_React();
 
 		/**
-		 * The meta object literal for the '<em><b>Amazonwebservices</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Amazonwebservices</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8430,7 +8430,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass SPRING = eINSTANCE.getSpring();
 
 		/**
-		 * The meta object literal for the '<em><b>Springbootapplication</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Springbootapplication</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8708,14 +8708,6 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass TABLE_S = eINSTANCE.getTable_s();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TABLE_S__ID = eINSTANCE.getTable_s_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Column s</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8732,6 +8724,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EAttribute TABLE_S__NAME = eINSTANCE.getTable_s_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_S__ID = eINSTANCE.getTable_s_Id();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.IdImpl <em>Id</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8742,7 +8742,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass ID = eINSTANCE.getId();
 
 		/**
-		 * The meta object literal for the '<em><b>Generatedvalue</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Generatedvalue</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -8988,7 +8988,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass POSTGRE_SQL = eINSTANCE.getPostgreSQL();
 
 		/**
-		 * The meta object literal for the '<em><b>Cluster</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Cluster</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -9282,12 +9282,12 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference CLUSTER__DATABASE = eINSTANCE.getCluster_Database();
 
 		/**
-		 * The meta object literal for the '<em><b>User postgresql</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>User p</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLUSTER__USER_POSTGRESQL = eINSTANCE.getCluster_User_postgresql();
+		EReference CLUSTER__USER_P = eINSTANCE.getCluster_User_p();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.RowImpl <em>Row</em>}' class.
@@ -9300,20 +9300,20 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass ROW = eINSTANCE.getRow();
 
 		/**
-		 * The meta object literal for the '<em><b>Policy</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROW__POLICY = eINSTANCE.getRow_Policy();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ROW__NAME = eINSTANCE.getRow_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Policy</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROW__POLICY = eINSTANCE.getRow_Policy();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.ColumnImpl <em>Column</em>}' class.
