@@ -334,13 +334,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int REPOSITORY = 6;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Repository</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_COUNT = 0;
+	int REPOSITORY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Repository</em>' class.
@@ -480,13 +489,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int SPRING_BOOT_APPLICATION__CONFIGURATION = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPRING_BOOT_APPLICATION__NAME = 5;
+
+	/**
 	 * The number of structural features of the '<em>Spring Boot Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPRING_BOOT_APPLICATION_FEATURE_COUNT = 5;
+	int SPRING_BOOT_APPLICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Spring Boot Application</em>' class.
@@ -517,13 +535,49 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int REQUEST_MAPPING__REQUESTPART = 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_MAPPING__VALUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_MAPPING__METHOD = 2;
+
+	/**
+	 * The feature id for the '<em><b>Produces</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_MAPPING__PRODUCES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Path Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_MAPPING__PATH_VARIABLE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Request Mapping</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_MAPPING_FEATURE_COUNT = 1;
+	int REQUEST_MAPPING_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Request Mapping</em>' class.
@@ -552,6 +606,42 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int POST_MAPPING__REQUESTPART = REQUEST_MAPPING__REQUESTPART;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_MAPPING__VALUE = REQUEST_MAPPING__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_MAPPING__METHOD = REQUEST_MAPPING__METHOD;
+
+	/**
+	 * The feature id for the '<em><b>Produces</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_MAPPING__PRODUCES = REQUEST_MAPPING__PRODUCES;
+
+	/**
+	 * The feature id for the '<em><b>Path Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_MAPPING__PATH_VARIABLE = REQUEST_MAPPING__PATH_VARIABLE;
 
 	/**
 	 * The number of structural features of the '<em>Post Mapping</em>' class.
@@ -591,6 +681,42 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int GET_MAPPING__REQUESTPART = REQUEST_MAPPING__REQUESTPART;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_MAPPING__VALUE = REQUEST_MAPPING__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_MAPPING__METHOD = REQUEST_MAPPING__METHOD;
+
+	/**
+	 * The feature id for the '<em><b>Produces</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_MAPPING__PRODUCES = REQUEST_MAPPING__PRODUCES;
+
+	/**
+	 * The feature id for the '<em><b>Path Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_MAPPING__PATH_VARIABLE = REQUEST_MAPPING__PATH_VARIABLE;
+
+	/**
 	 * The number of structural features of the '<em>Get Mapping</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -626,6 +752,42 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PUT_MAPPING__REQUESTPART = REQUEST_MAPPING__REQUESTPART;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT_MAPPING__VALUE = REQUEST_MAPPING__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT_MAPPING__METHOD = REQUEST_MAPPING__METHOD;
+
+	/**
+	 * The feature id for the '<em><b>Produces</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT_MAPPING__PRODUCES = REQUEST_MAPPING__PRODUCES;
+
+	/**
+	 * The feature id for the '<em><b>Path Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT_MAPPING__PATH_VARIABLE = REQUEST_MAPPING__PATH_VARIABLE;
 
 	/**
 	 * The number of structural features of the '<em>Put Mapping</em>' class.
@@ -665,13 +827,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int EXCEPTION_HANDLER__EXCEPTION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_HANDLER__VALUE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Exception Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXCEPTION_HANDLER_FEATURE_COUNT = 1;
+	int EXCEPTION_HANDLER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Exception Handler</em>' class.
@@ -702,6 +873,42 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int DELETE_MAPPING__REQUESTPART = REQUEST_MAPPING__REQUESTPART;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MAPPING__VALUE = REQUEST_MAPPING__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MAPPING__METHOD = REQUEST_MAPPING__METHOD;
+
+	/**
+	 * The feature id for the '<em><b>Produces</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MAPPING__PRODUCES = REQUEST_MAPPING__PRODUCES;
+
+	/**
+	 * The feature id for the '<em><b>Path Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MAPPING__PATH_VARIABLE = REQUEST_MAPPING__PATH_VARIABLE;
+
+	/**
 	 * The number of structural features of the '<em>Delete Mapping</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -730,13 +937,31 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int REQUEST_PART = 15;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_PART__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_PART__REQUIRED = 1;
+
+	/**
 	 * The number of structural features of the '<em>Request Part</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_PART_FEATURE_COUNT = 0;
+	int REQUEST_PART_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Request Part</em>' class.
@@ -786,13 +1011,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int EXCEPTION = 17;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Exception</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXCEPTION_FEATURE_COUNT = 0;
+	int EXCEPTION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Exception</em>' class.
@@ -1007,13 +1241,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int GENERATED_VALUE = 22;
 
 	/**
+	 * The feature id for the '<em><b>Strategy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERATED_VALUE__STRATEGY = 0;
+
+	/**
 	 * The number of structural features of the '<em>Generated Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERATED_VALUE_FEATURE_COUNT = 0;
+	int GENERATED_VALUE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Generated Value</em>' class.
@@ -1035,13 +1278,40 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int NAMED_NATIVE_QUERY = 23;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_NATIVE_QUERY__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_NATIVE_QUERY__QUERY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Result Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_NATIVE_QUERY__RESULT_CLASS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Named Native Query</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_NATIVE_QUERY_FEATURE_COUNT = 0;
+	int NAMED_NATIVE_QUERY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Named Native Query</em>' class.
@@ -1174,40 +1444,49 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int CONFIGURATION__BEAN = 0;
 
 	/**
-	 * The feature id for the '<em><b>Enablewebsecurity</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION__ENABLEWEBSECURITY = 1;
+	int CONFIGURATION__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Enableresourceserver</b></em>' reference.
+	 * The feature id for the '<em><b>Enablewebsecurity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION__ENABLERESOURCESERVER = 2;
+	int CONFIGURATION__ENABLEWEBSECURITY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Enableauthorizationserver</b></em>' reference.
+	 * The feature id for the '<em><b>Enableresourceserver</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION__ENABLEAUTHORIZATIONSERVER = 3;
+	int CONFIGURATION__ENABLERESOURCESERVER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Enableglobalmethodsecurity</b></em>' reference.
+	 * The feature id for the '<em><b>Enableauthorizationserver</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION__ENABLEGLOBALMETHODSECURITY = 4;
+	int CONFIGURATION__ENABLEAUTHORIZATIONSERVER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Enableglobalmethodsecurity</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION__ENABLEGLOBALMETHODSECURITY = 5;
 
 	/**
 	 * The number of structural features of the '<em>Configuration</em>' class.
@@ -1216,7 +1495,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION_FEATURE_COUNT = 5;
+	int CONFIGURATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Configuration</em>' class.
@@ -1247,13 +1526,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int COMPONENT__ORDER = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 1;
+	int COMPONENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -1387,13 +1675,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int ENABLE_GLOBAL_METHOD_SECURITY = 33;
 
 	/**
+	 * The feature id for the '<em><b>Pre Post Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENABLE_GLOBAL_METHOD_SECURITY__PRE_POST_ENABLED = 0;
+
+	/**
 	 * The number of structural features of the '<em>Enable Global Method Security</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENABLE_GLOBAL_METHOD_SECURITY_FEATURE_COUNT = 0;
+	int ENABLE_GLOBAL_METHOD_SECURITY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Enable Global Method Security</em>' class.
@@ -1563,13 +1860,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int TRIGGER = 38;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRIGGER__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER_FEATURE_COUNT = 0;
+	int TRIGGER_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Trigger</em>' class.
@@ -1591,13 +1897,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int VIEW = 39;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_FEATURE_COUNT = 0;
+	int VIEW_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>View</em>' class.
@@ -1619,13 +1934,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int INDEX_P = 40;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_P__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Index p</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_P_FEATURE_COUNT = 0;
+	int INDEX_P_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Index p</em>' class.
@@ -1729,13 +2053,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int FUNCTION_P = 42;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_P__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Function p</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_P_FEATURE_COUNT = 0;
+	int FUNCTION_P_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Function p</em>' class.
@@ -2208,13 +2541,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int CLAUSE = 53;
 
 	/**
+	 * The feature id for the '<em><b>Keyword</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLAUSE__KEYWORD = 0;
+
+	/**
 	 * The number of structural features of the '<em>Clause</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLAUSE_FEATURE_COUNT = 0;
+	int CLAUSE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Clause</em>' class.
@@ -2273,13 +2615,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 	int COLUMN_S__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Nullable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLUMN_S__NULLABLE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Column s</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLUMN_S_FEATURE_COUNT = 1;
+	int COLUMN_S_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Column s</em>' class.
@@ -5459,6 +5810,52 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 */
 	int ASSOCIATION_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link PhotosMetaModel.impl.PathVariableImpl <em>Path Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PhotosMetaModel.impl.PathVariableImpl
+	 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPathVariable()
+	 * @generated
+	 */
+	int PATH_VARIABLE = 129;
+
+	/**
+	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE__DATA_TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Path Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Path Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_VARIABLE_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.SoftGallery <em>Soft Gallery</em>}'.
@@ -5652,6 +6049,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getRepository();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Repository#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Repository#getName()
+	 * @see #getRepository()
+	 * @generated
+	 */
+	EAttribute getRepository_Name();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.RestController <em>Rest Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5782,6 +6190,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getSpringBootApplication_Configuration();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.SpringBootApplication#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.SpringBootApplication#getName()
+	 * @see #getSpringBootApplication()
+	 * @generated
+	 */
+	EAttribute getSpringBootApplication_Name();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.RequestMapping <em>Request Mapping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5801,6 +6220,50 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRequestMapping_Requestpart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.RequestMapping#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see PhotosMetaModel.RequestMapping#getValue()
+	 * @see #getRequestMapping()
+	 * @generated
+	 */
+	EAttribute getRequestMapping_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.RequestMapping#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see PhotosMetaModel.RequestMapping#getMethod()
+	 * @see #getRequestMapping()
+	 * @generated
+	 */
+	EAttribute getRequestMapping_Method();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.RequestMapping#getProduces <em>Produces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Produces</em>'.
+	 * @see PhotosMetaModel.RequestMapping#getProduces()
+	 * @see #getRequestMapping()
+	 * @generated
+	 */
+	EAttribute getRequestMapping_Produces();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PhotosMetaModel.RequestMapping#getPathVariable <em>Path Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Path Variable</em>'.
+	 * @see PhotosMetaModel.RequestMapping#getPathVariable()
+	 * @see #getRequestMapping()
+	 * @generated
+	 */
+	EReference getRequestMapping_PathVariable();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.PostMapping <em>Post Mapping</em>}'.
@@ -5854,6 +6317,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getExceptionHandler_Exception();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.ExceptionHandler#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see PhotosMetaModel.ExceptionHandler#getValue()
+	 * @see #getExceptionHandler()
+	 * @generated
+	 */
+	EAttribute getExceptionHandler_Value();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.DeleteMapping <em>Delete Mapping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5874,6 +6348,28 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getRequestPart();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.RequestPart#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see PhotosMetaModel.RequestPart#getValue()
+	 * @see #getRequestPart()
+	 * @generated
+	 */
+	EAttribute getRequestPart_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.RequestPart#isRequired <em>Required</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Required</em>'.
+	 * @see PhotosMetaModel.RequestPart#isRequired()
+	 * @see #getRequestPart()
+	 * @generated
+	 */
+	EAttribute getRequestPart_Required();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Autowired <em>Autowired</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5892,6 +6388,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getException();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Exception#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Exception#getName()
+	 * @see #getException()
+	 * @generated
+	 */
+	EAttribute getException_Name();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Entity <em>Entity</em>}'.
@@ -6043,6 +6550,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getGeneratedValue();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.GeneratedValue#getStrategy <em>Strategy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Strategy</em>'.
+	 * @see PhotosMetaModel.GeneratedValue#getStrategy()
+	 * @see #getGeneratedValue()
+	 * @generated
+	 */
+	EAttribute getGeneratedValue_Strategy();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.NamedNativeQuery <em>Named Native Query</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6051,6 +6569,39 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNamedNativeQuery();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.NamedNativeQuery#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.NamedNativeQuery#getName()
+	 * @see #getNamedNativeQuery()
+	 * @generated
+	 */
+	EAttribute getNamedNativeQuery_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.NamedNativeQuery#getQuery <em>Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Query</em>'.
+	 * @see PhotosMetaModel.NamedNativeQuery#getQuery()
+	 * @see #getNamedNativeQuery()
+	 * @generated
+	 */
+	EAttribute getNamedNativeQuery_Query();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.NamedNativeQuery#getResultClass <em>Result Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Class</em>'.
+	 * @see PhotosMetaModel.NamedNativeQuery#getResultClass()
+	 * @see #getNamedNativeQuery()
+	 * @generated
+	 */
+	EAttribute getNamedNativeQuery_ResultClass();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Specification <em>Specification</em>}'.
@@ -6126,10 +6677,21 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getConfiguration_Bean();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Configuration#getEnablewebsecurity <em>Enablewebsecurity</em>}'.
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Configuration#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Enablewebsecurity</em>'.
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Configuration#getName()
+	 * @see #getConfiguration()
+	 * @generated
+	 */
+	EAttribute getConfiguration_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Configuration#getEnablewebsecurity <em>Enablewebsecurity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Enablewebsecurity</em>'.
 	 * @see PhotosMetaModel.Configuration#getEnablewebsecurity()
 	 * @see #getConfiguration()
 	 * @generated
@@ -6137,10 +6699,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getConfiguration_Enablewebsecurity();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Configuration#getEnableresourceserver <em>Enableresourceserver</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Configuration#getEnableresourceserver <em>Enableresourceserver</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Enableresourceserver</em>'.
+	 * @return the meta object for the containment reference '<em>Enableresourceserver</em>'.
 	 * @see PhotosMetaModel.Configuration#getEnableresourceserver()
 	 * @see #getConfiguration()
 	 * @generated
@@ -6148,10 +6710,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getConfiguration_Enableresourceserver();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Configuration#getEnableauthorizationserver <em>Enableauthorizationserver</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Configuration#getEnableauthorizationserver <em>Enableauthorizationserver</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Enableauthorizationserver</em>'.
+	 * @return the meta object for the containment reference '<em>Enableauthorizationserver</em>'.
 	 * @see PhotosMetaModel.Configuration#getEnableauthorizationserver()
 	 * @see #getConfiguration()
 	 * @generated
@@ -6159,10 +6721,10 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getConfiguration_Enableauthorizationserver();
 
 	/**
-	 * Returns the meta object for the reference '{@link PhotosMetaModel.Configuration#getEnableglobalmethodsecurity <em>Enableglobalmethodsecurity</em>}'.
+	 * Returns the meta object for the containment reference '{@link PhotosMetaModel.Configuration#getEnableglobalmethodsecurity <em>Enableglobalmethodsecurity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Enableglobalmethodsecurity</em>'.
+	 * @return the meta object for the containment reference '<em>Enableglobalmethodsecurity</em>'.
 	 * @see PhotosMetaModel.Configuration#getEnableglobalmethodsecurity()
 	 * @see #getConfiguration()
 	 * @generated
@@ -6189,6 +6751,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_Order();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Component#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Component#getName()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_Name();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Order_s <em>Order s</em>}'.
@@ -6239,6 +6812,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEnableGlobalMethodSecurity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.EnableGlobalMethodSecurity#isPrePostEnabled <em>Pre Post Enabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pre Post Enabled</em>'.
+	 * @see PhotosMetaModel.EnableGlobalMethodSecurity#isPrePostEnabled()
+	 * @see #getEnableGlobalMethodSecurity()
+	 * @generated
+	 */
+	EAttribute getEnableGlobalMethodSecurity_PrePostEnabled();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Bean <em>Bean</em>}'.
@@ -6335,6 +6919,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getTrigger();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Trigger#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Trigger#getName()
+	 * @see #getTrigger()
+	 * @generated
+	 */
+	EAttribute getTrigger_Name();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.View <em>View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6345,6 +6940,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getView();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.View#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.View#getName()
+	 * @see #getView()
+	 * @generated
+	 */
+	EAttribute getView_Name();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Index_p <em>Index p</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6353,6 +6959,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIndex_p();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Index_p#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Index_p#getName()
+	 * @see #getIndex_p()
+	 * @generated
+	 */
+	EAttribute getIndex_p_Name();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Table_p <em>Table p</em>}'.
@@ -6439,6 +7056,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFunction_p();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Function_p#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PhotosMetaModel.Function_p#getName()
+	 * @see #getFunction_p()
+	 * @generated
+	 */
+	EAttribute getFunction_p_Name();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Database <em>Database</em>}'.
@@ -6760,6 +7388,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EClass getClause();
 
 	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Clause#getKeyword <em>Keyword</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Keyword</em>'.
+	 * @see PhotosMetaModel.Clause#getKeyword()
+	 * @see #getClause()
+	 * @generated
+	 */
+	EAttribute getClause_Keyword();
+
+	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.Index <em>Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6789,6 +7428,17 @@ public interface PhotosMetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getColumn_s_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.Column_s#isNullable <em>Nullable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nullable</em>'.
+	 * @see PhotosMetaModel.Column_s#isNullable()
+	 * @see #getColumn_s()
+	 * @generated
+	 */
+	EAttribute getColumn_s_Nullable();
 
 	/**
 	 * Returns the meta object for class '{@link PhotosMetaModel.User_d <em>User d</em>}'.
@@ -8412,6 +9062,38 @@ public interface PhotosMetaModelPackage extends EPackage {
 	EReference getAssociation_Target();
 
 	/**
+	 * Returns the meta object for class '{@link PhotosMetaModel.PathVariable <em>Path Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Variable</em>'.
+	 * @see PhotosMetaModel.PathVariable
+	 * @generated
+	 */
+	EClass getPathVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.PathVariable#getDataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Data Type</em>'.
+	 * @see PhotosMetaModel.PathVariable#getDataType()
+	 * @see #getPathVariable()
+	 * @generated
+	 */
+	EAttribute getPathVariable_DataType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PhotosMetaModel.PathVariable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see PhotosMetaModel.PathVariable#getValue()
+	 * @see #getPathVariable()
+	 * @generated
+	 */
+	EAttribute getPathVariable_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8593,6 +9275,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass REPOSITORY = eINSTANCE.getRepository();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPOSITORY__NAME = eINSTANCE.getRepository_Name();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.RestControllerImpl <em>Rest Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8693,6 +9383,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference SPRING_BOOT_APPLICATION__CONFIGURATION = eINSTANCE.getSpringBootApplication_Configuration();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPRING_BOOT_APPLICATION__NAME = eINSTANCE.getSpringBootApplication_Name();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.RequestMappingImpl <em>Request Mapping</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8709,6 +9407,38 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REQUEST_MAPPING__REQUESTPART = eINSTANCE.getRequestMapping_Requestpart();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUEST_MAPPING__VALUE = eINSTANCE.getRequestMapping_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUEST_MAPPING__METHOD = eINSTANCE.getRequestMapping_Method();
+
+		/**
+		 * The meta object literal for the '<em><b>Produces</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUEST_MAPPING__PRODUCES = eINSTANCE.getRequestMapping_Produces();
+
+		/**
+		 * The meta object literal for the '<em><b>Path Variable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST_MAPPING__PATH_VARIABLE = eINSTANCE.getRequestMapping_PathVariable();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.PostMappingImpl <em>Post Mapping</em>}' class.
@@ -8759,6 +9489,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference EXCEPTION_HANDLER__EXCEPTION = eINSTANCE.getExceptionHandler_Exception();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXCEPTION_HANDLER__VALUE = eINSTANCE.getExceptionHandler_Value();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.DeleteMappingImpl <em>Delete Mapping</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8779,6 +9517,22 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass REQUEST_PART = eINSTANCE.getRequestPart();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUEST_PART__VALUE = eINSTANCE.getRequestPart_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Required</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUEST_PART__REQUIRED = eINSTANCE.getRequestPart_Required();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.AutowiredImpl <em>Autowired</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8797,6 +9551,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EXCEPTION = eINSTANCE.getException();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXCEPTION__NAME = eINSTANCE.getException_Name();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.EntityImpl <em>Entity</em>}' class.
@@ -8921,6 +9683,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass GENERATED_VALUE = eINSTANCE.getGeneratedValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Strategy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERATED_VALUE__STRATEGY = eINSTANCE.getGeneratedValue_Strategy();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.NamedNativeQueryImpl <em>Named Native Query</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8929,6 +9699,30 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NAMED_NATIVE_QUERY = eINSTANCE.getNamedNativeQuery();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_NATIVE_QUERY__NAME = eINSTANCE.getNamedNativeQuery_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Query</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_NATIVE_QUERY__QUERY = eINSTANCE.getNamedNativeQuery_Query();
+
+		/**
+		 * The meta object literal for the '<em><b>Result Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_NATIVE_QUERY__RESULT_CLASS = eINSTANCE.getNamedNativeQuery_ResultClass();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.SpecificationImpl <em>Specification</em>}' class.
@@ -8995,7 +9789,15 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference CONFIGURATION__BEAN = eINSTANCE.getConfiguration_Bean();
 
 		/**
-		 * The meta object literal for the '<em><b>Enablewebsecurity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONFIGURATION__NAME = eINSTANCE.getConfiguration_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Enablewebsecurity</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -9003,7 +9805,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference CONFIGURATION__ENABLEWEBSECURITY = eINSTANCE.getConfiguration_Enablewebsecurity();
 
 		/**
-		 * The meta object literal for the '<em><b>Enableresourceserver</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Enableresourceserver</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -9011,7 +9813,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference CONFIGURATION__ENABLERESOURCESERVER = eINSTANCE.getConfiguration_Enableresourceserver();
 
 		/**
-		 * The meta object literal for the '<em><b>Enableauthorizationserver</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Enableauthorizationserver</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -9019,7 +9821,7 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EReference CONFIGURATION__ENABLEAUTHORIZATIONSERVER = eINSTANCE.getConfiguration_Enableauthorizationserver();
 
 		/**
-		 * The meta object literal for the '<em><b>Enableglobalmethodsecurity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Enableglobalmethodsecurity</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -9043,6 +9845,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT__ORDER = eINSTANCE.getComponent_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__NAME = eINSTANCE.getComponent_Name();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.Order_sImpl <em>Order s</em>}' class.
@@ -9093,6 +9903,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ENABLE_GLOBAL_METHOD_SECURITY = eINSTANCE.getEnableGlobalMethodSecurity();
+
+		/**
+		 * The meta object literal for the '<em><b>Pre Post Enabled</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENABLE_GLOBAL_METHOD_SECURITY__PRE_POST_ENABLED = eINSTANCE.getEnableGlobalMethodSecurity_PrePostEnabled();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.BeanImpl <em>Bean</em>}' class.
@@ -9177,6 +9995,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass TRIGGER = eINSTANCE.getTrigger();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRIGGER__NAME = eINSTANCE.getTrigger_Name();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.ViewImpl <em>View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9187,6 +10013,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass VIEW = eINSTANCE.getView();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VIEW__NAME = eINSTANCE.getView_Name();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.Index_pImpl <em>Index p</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9195,6 +10029,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INDEX_P = eINSTANCE.getIndex_p();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INDEX_P__NAME = eINSTANCE.getIndex_p_Name();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.Table_pImpl <em>Table p</em>}' class.
@@ -9263,6 +10105,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FUNCTION_P = eINSTANCE.getFunction_p();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_P__NAME = eINSTANCE.getFunction_p_Name();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.DatabaseImpl <em>Database</em>}' class.
@@ -9527,6 +10377,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		EClass CLAUSE = eINSTANCE.getClause();
 
 		/**
+		 * The meta object literal for the '<em><b>Keyword</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLAUSE__KEYWORD = eINSTANCE.getClause_Keyword();
+
+		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.IndexImpl <em>Index</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9553,6 +10411,14 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLUMN_S__NAME = eINSTANCE.getColumn_s_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Nullable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLUMN_S__NULLABLE = eINSTANCE.getColumn_s_Nullable();
 
 		/**
 		 * The meta object literal for the '{@link PhotosMetaModel.impl.User_dImpl <em>User d</em>}' class.
@@ -10931,6 +11797,32 @@ public interface PhotosMetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSOCIATION__TARGET = eINSTANCE.getAssociation_Target();
+
+		/**
+		 * The meta object literal for the '{@link PhotosMetaModel.impl.PathVariableImpl <em>Path Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PhotosMetaModel.impl.PathVariableImpl
+		 * @see PhotosMetaModel.impl.PhotosMetaModelPackageImpl#getPathVariable()
+		 * @generated
+		 */
+		EClass PATH_VARIABLE = eINSTANCE.getPathVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH_VARIABLE__DATA_TYPE = eINSTANCE.getPathVariable_DataType();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH_VARIABLE__VALUE = eINSTANCE.getPathVariable_Value();
 
 	}
 

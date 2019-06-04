@@ -2,8 +2,8 @@
  */
 package PhotosMetaModel.impl;
 
+import PhotosMetaModel.PathVariable;
 import PhotosMetaModel.PhotosMetaModelPackage;
-import PhotosMetaModel.RequestPart;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,19 +14,39 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Request Part</b></em>'.
+ * An implementation of the model object '<em><b>Path Variable</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PhotosMetaModel.impl.RequestPartImpl#getValue <em>Value</em>}</li>
- *   <li>{@link PhotosMetaModel.impl.RequestPartImpl#isRequired <em>Required</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.PathVariableImpl#getDataType <em>Data Type</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.PathVariableImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RequestPartImpl extends MinimalEObjectImpl.Container implements RequestPart {
+public class PathVariableImpl extends MinimalEObjectImpl.Container implements PathVariable {
+	/**
+	 * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DATA_TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String dataType = DATA_TYPE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,31 +68,11 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isRequired() <em>Required</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isRequired()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean REQUIRED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isRequired() <em>Required</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isRequired()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean required = REQUIRED_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RequestPartImpl() {
+	protected PathVariableImpl() {
 		super();
 	}
 
@@ -83,7 +83,30 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PhotosMetaModelPackage.Literals.REQUEST_PART;
+		return PhotosMetaModelPackage.Literals.PATH_VARIABLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDataType() {
+		return dataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDataType(String newDataType) {
+		String oldDataType = dataType;
+		dataType = newDataType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.PATH_VARIABLE__DATA_TYPE, oldDataType, dataType));
 	}
 
 	/**
@@ -106,30 +129,7 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.REQUEST_PART__VALUE, oldValue, value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isRequired() {
-		return required;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRequired(boolean newRequired) {
-		boolean oldRequired = required;
-		required = newRequired;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.REQUEST_PART__REQUIRED, oldRequired, required));
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.PATH_VARIABLE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -140,10 +140,10 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.REQUEST_PART__VALUE:
+			case PhotosMetaModelPackage.PATH_VARIABLE__DATA_TYPE:
+				return getDataType();
+			case PhotosMetaModelPackage.PATH_VARIABLE__VALUE:
 				return getValue();
-			case PhotosMetaModelPackage.REQUEST_PART__REQUIRED:
-				return isRequired();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,11 +156,11 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.REQUEST_PART__VALUE:
-				setValue((String)newValue);
+			case PhotosMetaModelPackage.PATH_VARIABLE__DATA_TYPE:
+				setDataType((String)newValue);
 				return;
-			case PhotosMetaModelPackage.REQUEST_PART__REQUIRED:
-				setRequired((Boolean)newValue);
+			case PhotosMetaModelPackage.PATH_VARIABLE__VALUE:
+				setValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,11 +174,11 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.REQUEST_PART__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case PhotosMetaModelPackage.PATH_VARIABLE__DATA_TYPE:
+				setDataType(DATA_TYPE_EDEFAULT);
 				return;
-			case PhotosMetaModelPackage.REQUEST_PART__REQUIRED:
-				setRequired(REQUIRED_EDEFAULT);
+			case PhotosMetaModelPackage.PATH_VARIABLE__VALUE:
+				setValue(VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -192,10 +192,10 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PhotosMetaModelPackage.REQUEST_PART__VALUE:
+			case PhotosMetaModelPackage.PATH_VARIABLE__DATA_TYPE:
+				return DATA_TYPE_EDEFAULT == null ? dataType != null : !DATA_TYPE_EDEFAULT.equals(dataType);
+			case PhotosMetaModelPackage.PATH_VARIABLE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case PhotosMetaModelPackage.REQUEST_PART__REQUIRED:
-				return required != REQUIRED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,12 +210,12 @@ public class RequestPartImpl extends MinimalEObjectImpl.Container implements Req
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
+		result.append(" (dataType: ");
+		result.append(dataType);
+		result.append(", value: ");
 		result.append(value);
-		result.append(", required: ");
-		result.append(required);
 		result.append(')');
 		return result.toString();
 	}
 
-} //RequestPartImpl
+} //PathVariableImpl

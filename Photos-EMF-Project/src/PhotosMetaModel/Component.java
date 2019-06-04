@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link PhotosMetaModel.Component#getOrder <em>Order</em>}</li>
+ *   <li>{@link PhotosMetaModel.Component#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see PhotosMetaModel.PhotosMetaModelPackage#getComponent()
@@ -42,5 +43,27 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	void setOrder(Order_s value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getComponent_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link PhotosMetaModel.Component#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Component

@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link PhotosMetaModel.impl.ConfigurationImpl#getBean <em>Bean</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.ConfigurationImpl#getName <em>Name</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.ConfigurationImpl#getEnablewebsecurity <em>Enablewebsecurity</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.ConfigurationImpl#getEnableresourceserver <em>Enableresourceserver</em>}</li>
  *   <li>{@link PhotosMetaModel.impl.ConfigurationImpl#getEnableauthorizationserver <em>Enableauthorizationserver</em>}</li>
@@ -55,7 +56,27 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	protected EList<Bean> bean;
 
 	/**
-	 * The cached value of the '{@link #getEnablewebsecurity() <em>Enablewebsecurity</em>}' reference.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEnablewebsecurity() <em>Enablewebsecurity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEnablewebsecurity()
@@ -65,7 +86,7 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	protected EnableWebSecurity enablewebsecurity;
 
 	/**
-	 * The cached value of the '{@link #getEnableresourceserver() <em>Enableresourceserver</em>}' reference.
+	 * The cached value of the '{@link #getEnableresourceserver() <em>Enableresourceserver</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEnableresourceserver()
@@ -75,7 +96,7 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	protected EnableResourceServer enableresourceserver;
 
 	/**
-	 * The cached value of the '{@link #getEnableauthorizationserver() <em>Enableauthorizationserver</em>}' reference.
+	 * The cached value of the '{@link #getEnableauthorizationserver() <em>Enableauthorizationserver</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEnableauthorizationserver()
@@ -85,7 +106,7 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	protected EnableAuthorizationServer enableauthorizationserver;
 
 	/**
-	 * The cached value of the '{@link #getEnableglobalmethodsecurity() <em>Enableglobalmethodsecurity</em>}' reference.
+	 * The cached value of the '{@link #getEnableglobalmethodsecurity() <em>Enableglobalmethodsecurity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEnableglobalmethodsecurity()
@@ -132,15 +153,30 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EnableWebSecurity getEnablewebsecurity() {
-		if (enablewebsecurity != null && enablewebsecurity.eIsProxy()) {
-			InternalEObject oldEnablewebsecurity = (InternalEObject)enablewebsecurity;
-			enablewebsecurity = (EnableWebSecurity)eResolveProxy(oldEnablewebsecurity);
-			if (enablewebsecurity != oldEnablewebsecurity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY, oldEnablewebsecurity, enablewebsecurity));
-			}
-		}
 		return enablewebsecurity;
 	}
 
@@ -149,8 +185,14 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnableWebSecurity basicGetEnablewebsecurity() {
-		return enablewebsecurity;
+	public NotificationChain basicSetEnablewebsecurity(EnableWebSecurity newEnablewebsecurity, NotificationChain msgs) {
+		EnableWebSecurity oldEnablewebsecurity = enablewebsecurity;
+		enablewebsecurity = newEnablewebsecurity;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY, oldEnablewebsecurity, newEnablewebsecurity);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -160,10 +202,17 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public void setEnablewebsecurity(EnableWebSecurity newEnablewebsecurity) {
-		EnableWebSecurity oldEnablewebsecurity = enablewebsecurity;
-		enablewebsecurity = newEnablewebsecurity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY, oldEnablewebsecurity, enablewebsecurity));
+		if (newEnablewebsecurity != enablewebsecurity) {
+			NotificationChain msgs = null;
+			if (enablewebsecurity != null)
+				msgs = ((InternalEObject)enablewebsecurity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY, null, msgs);
+			if (newEnablewebsecurity != null)
+				msgs = ((InternalEObject)newEnablewebsecurity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY, null, msgs);
+			msgs = basicSetEnablewebsecurity(newEnablewebsecurity, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY, newEnablewebsecurity, newEnablewebsecurity));
 	}
 
 	/**
@@ -173,14 +222,6 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public EnableResourceServer getEnableresourceserver() {
-		if (enableresourceserver != null && enableresourceserver.eIsProxy()) {
-			InternalEObject oldEnableresourceserver = (InternalEObject)enableresourceserver;
-			enableresourceserver = (EnableResourceServer)eResolveProxy(oldEnableresourceserver);
-			if (enableresourceserver != oldEnableresourceserver) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER, oldEnableresourceserver, enableresourceserver));
-			}
-		}
 		return enableresourceserver;
 	}
 
@@ -189,8 +230,14 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnableResourceServer basicGetEnableresourceserver() {
-		return enableresourceserver;
+	public NotificationChain basicSetEnableresourceserver(EnableResourceServer newEnableresourceserver, NotificationChain msgs) {
+		EnableResourceServer oldEnableresourceserver = enableresourceserver;
+		enableresourceserver = newEnableresourceserver;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER, oldEnableresourceserver, newEnableresourceserver);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -200,10 +247,17 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public void setEnableresourceserver(EnableResourceServer newEnableresourceserver) {
-		EnableResourceServer oldEnableresourceserver = enableresourceserver;
-		enableresourceserver = newEnableresourceserver;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER, oldEnableresourceserver, enableresourceserver));
+		if (newEnableresourceserver != enableresourceserver) {
+			NotificationChain msgs = null;
+			if (enableresourceserver != null)
+				msgs = ((InternalEObject)enableresourceserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER, null, msgs);
+			if (newEnableresourceserver != null)
+				msgs = ((InternalEObject)newEnableresourceserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER, null, msgs);
+			msgs = basicSetEnableresourceserver(newEnableresourceserver, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER, newEnableresourceserver, newEnableresourceserver));
 	}
 
 	/**
@@ -213,14 +267,6 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public EnableAuthorizationServer getEnableauthorizationserver() {
-		if (enableauthorizationserver != null && enableauthorizationserver.eIsProxy()) {
-			InternalEObject oldEnableauthorizationserver = (InternalEObject)enableauthorizationserver;
-			enableauthorizationserver = (EnableAuthorizationServer)eResolveProxy(oldEnableauthorizationserver);
-			if (enableauthorizationserver != oldEnableauthorizationserver) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER, oldEnableauthorizationserver, enableauthorizationserver));
-			}
-		}
 		return enableauthorizationserver;
 	}
 
@@ -229,8 +275,14 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnableAuthorizationServer basicGetEnableauthorizationserver() {
-		return enableauthorizationserver;
+	public NotificationChain basicSetEnableauthorizationserver(EnableAuthorizationServer newEnableauthorizationserver, NotificationChain msgs) {
+		EnableAuthorizationServer oldEnableauthorizationserver = enableauthorizationserver;
+		enableauthorizationserver = newEnableauthorizationserver;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER, oldEnableauthorizationserver, newEnableauthorizationserver);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -240,10 +292,17 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public void setEnableauthorizationserver(EnableAuthorizationServer newEnableauthorizationserver) {
-		EnableAuthorizationServer oldEnableauthorizationserver = enableauthorizationserver;
-		enableauthorizationserver = newEnableauthorizationserver;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER, oldEnableauthorizationserver, enableauthorizationserver));
+		if (newEnableauthorizationserver != enableauthorizationserver) {
+			NotificationChain msgs = null;
+			if (enableauthorizationserver != null)
+				msgs = ((InternalEObject)enableauthorizationserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER, null, msgs);
+			if (newEnableauthorizationserver != null)
+				msgs = ((InternalEObject)newEnableauthorizationserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER, null, msgs);
+			msgs = basicSetEnableauthorizationserver(newEnableauthorizationserver, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER, newEnableauthorizationserver, newEnableauthorizationserver));
 	}
 
 	/**
@@ -253,14 +312,6 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public EnableGlobalMethodSecurity getEnableglobalmethodsecurity() {
-		if (enableglobalmethodsecurity != null && enableglobalmethodsecurity.eIsProxy()) {
-			InternalEObject oldEnableglobalmethodsecurity = (InternalEObject)enableglobalmethodsecurity;
-			enableglobalmethodsecurity = (EnableGlobalMethodSecurity)eResolveProxy(oldEnableglobalmethodsecurity);
-			if (enableglobalmethodsecurity != oldEnableglobalmethodsecurity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY, oldEnableglobalmethodsecurity, enableglobalmethodsecurity));
-			}
-		}
 		return enableglobalmethodsecurity;
 	}
 
@@ -269,8 +320,14 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnableGlobalMethodSecurity basicGetEnableglobalmethodsecurity() {
-		return enableglobalmethodsecurity;
+	public NotificationChain basicSetEnableglobalmethodsecurity(EnableGlobalMethodSecurity newEnableglobalmethodsecurity, NotificationChain msgs) {
+		EnableGlobalMethodSecurity oldEnableglobalmethodsecurity = enableglobalmethodsecurity;
+		enableglobalmethodsecurity = newEnableglobalmethodsecurity;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY, oldEnableglobalmethodsecurity, newEnableglobalmethodsecurity);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -280,10 +337,17 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	public void setEnableglobalmethodsecurity(EnableGlobalMethodSecurity newEnableglobalmethodsecurity) {
-		EnableGlobalMethodSecurity oldEnableglobalmethodsecurity = enableglobalmethodsecurity;
-		enableglobalmethodsecurity = newEnableglobalmethodsecurity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY, oldEnableglobalmethodsecurity, enableglobalmethodsecurity));
+		if (newEnableglobalmethodsecurity != enableglobalmethodsecurity) {
+			NotificationChain msgs = null;
+			if (enableglobalmethodsecurity != null)
+				msgs = ((InternalEObject)enableglobalmethodsecurity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY, null, msgs);
+			if (newEnableglobalmethodsecurity != null)
+				msgs = ((InternalEObject)newEnableglobalmethodsecurity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY, null, msgs);
+			msgs = basicSetEnableglobalmethodsecurity(newEnableglobalmethodsecurity, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY, newEnableglobalmethodsecurity, newEnableglobalmethodsecurity));
 	}
 
 	/**
@@ -296,6 +360,14 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		switch (featureID) {
 			case PhotosMetaModelPackage.CONFIGURATION__BEAN:
 				return ((InternalEList<?>)getBean()).basicRemove(otherEnd, msgs);
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY:
+				return basicSetEnablewebsecurity(null, msgs);
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER:
+				return basicSetEnableresourceserver(null, msgs);
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER:
+				return basicSetEnableauthorizationserver(null, msgs);
+			case PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY:
+				return basicSetEnableglobalmethodsecurity(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -310,18 +382,16 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		switch (featureID) {
 			case PhotosMetaModelPackage.CONFIGURATION__BEAN:
 				return getBean();
+			case PhotosMetaModelPackage.CONFIGURATION__NAME:
+				return getName();
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY:
-				if (resolve) return getEnablewebsecurity();
-				return basicGetEnablewebsecurity();
+				return getEnablewebsecurity();
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER:
-				if (resolve) return getEnableresourceserver();
-				return basicGetEnableresourceserver();
+				return getEnableresourceserver();
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLEAUTHORIZATIONSERVER:
-				if (resolve) return getEnableauthorizationserver();
-				return basicGetEnableauthorizationserver();
+				return getEnableauthorizationserver();
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLEGLOBALMETHODSECURITY:
-				if (resolve) return getEnableglobalmethodsecurity();
-				return basicGetEnableglobalmethodsecurity();
+				return getEnableglobalmethodsecurity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -338,6 +408,9 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 			case PhotosMetaModelPackage.CONFIGURATION__BEAN:
 				getBean().clear();
 				getBean().addAll((Collection<? extends Bean>)newValue);
+				return;
+			case PhotosMetaModelPackage.CONFIGURATION__NAME:
+				setName((String)newValue);
 				return;
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY:
 				setEnablewebsecurity((EnableWebSecurity)newValue);
@@ -366,6 +439,9 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 			case PhotosMetaModelPackage.CONFIGURATION__BEAN:
 				getBean().clear();
 				return;
+			case PhotosMetaModelPackage.CONFIGURATION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY:
 				setEnablewebsecurity((EnableWebSecurity)null);
 				return;
@@ -392,6 +468,8 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 		switch (featureID) {
 			case PhotosMetaModelPackage.CONFIGURATION__BEAN:
 				return bean != null && !bean.isEmpty();
+			case PhotosMetaModelPackage.CONFIGURATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLEWEBSECURITY:
 				return enablewebsecurity != null;
 			case PhotosMetaModelPackage.CONFIGURATION__ENABLERESOURCESERVER:
@@ -402,6 +480,22 @@ public class ConfigurationImpl extends MinimalEObjectImpl.Container implements C
 				return enableglobalmethodsecurity != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ConfigurationImpl

@@ -3,6 +3,9 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.EnableGlobalMethodSecurity;
+import PhotosMetaModel.PhotosMetaModelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -11,13 +14,16 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link PhotosMetaModel.EnableGlobalMethodSecurity} object.
@@ -54,8 +60,31 @@ public class EnableGlobalMethodSecurityItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPrePostEnabledPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Pre Post Enabled feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPrePostEnabledPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EnableGlobalMethodSecurity_prePostEnabled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EnableGlobalMethodSecurity_prePostEnabled_feature", "_UI_EnableGlobalMethodSecurity_type"),
+				 PhotosMetaModelPackage.Literals.ENABLE_GLOBAL_METHOD_SECURITY__PRE_POST_ENABLED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -77,7 +106,8 @@ public class EnableGlobalMethodSecurityItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_EnableGlobalMethodSecurity_type");
+		EnableGlobalMethodSecurity enableGlobalMethodSecurity = (EnableGlobalMethodSecurity)object;
+		return getString("_UI_EnableGlobalMethodSecurity_type") + " " + enableGlobalMethodSecurity.isPrePostEnabled();
 	}
 
 
@@ -91,6 +121,12 @@ public class EnableGlobalMethodSecurityItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(EnableGlobalMethodSecurity.class)) {
+			case PhotosMetaModelPackage.ENABLE_GLOBAL_METHOD_SECURITY__PRE_POST_ENABLED:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

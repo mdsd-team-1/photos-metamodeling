@@ -3,6 +3,8 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.PostMapping;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +64,10 @@ public class PostMappingItemProvider extends RequestMappingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PostMapping_type");
+		String label = ((PostMapping)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PostMapping_type") :
+			getString("_UI_PostMapping_type") + " " + label;
 	}
 
 

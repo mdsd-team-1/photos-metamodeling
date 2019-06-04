@@ -3,6 +3,8 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.DeleteMapping;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +64,10 @@ public class DeleteMappingItemProvider extends RequestMappingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_DeleteMapping_type");
+		String label = ((DeleteMapping)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DeleteMapping_type") :
+			getString("_UI_DeleteMapping_type") + " " + label;
 	}
 
 

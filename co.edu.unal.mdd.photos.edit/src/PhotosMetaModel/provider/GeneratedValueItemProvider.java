@@ -3,6 +3,9 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.GeneratedValue;
+import PhotosMetaModel.PhotosMetaModelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -11,13 +14,16 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link PhotosMetaModel.GeneratedValue} object.
@@ -54,8 +60,31 @@ public class GeneratedValueItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addStrategyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Strategy feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStrategyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GeneratedValue_strategy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GeneratedValue_strategy_feature", "_UI_GeneratedValue_type"),
+				 PhotosMetaModelPackage.Literals.GENERATED_VALUE__STRATEGY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -77,7 +106,10 @@ public class GeneratedValueItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_GeneratedValue_type");
+		String label = ((GeneratedValue)object).getStrategy();
+		return label == null || label.length() == 0 ?
+			getString("_UI_GeneratedValue_type") :
+			getString("_UI_GeneratedValue_type") + " " + label;
 	}
 
 
@@ -91,6 +123,12 @@ public class GeneratedValueItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(GeneratedValue.class)) {
+			case PhotosMetaModelPackage.GENERATED_VALUE__STRATEGY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -7,6 +7,7 @@ import PhotosMetaModel.PhotosMetaModelPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -14,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -28,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link PhotosMetaModel.impl.ExceptionHandlerImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link PhotosMetaModel.impl.ExceptionHandlerImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,6 +45,26 @@ public class ExceptionHandlerImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected EList<PhotosMetaModel.Exception> exception;
+
+	/**
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,6 +104,29 @@ public class ExceptionHandlerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setValue(String newValue) {
+		String oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotosMetaModelPackage.EXCEPTION_HANDLER__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PhotosMetaModelPackage.EXCEPTION_HANDLER__EXCEPTION:
@@ -99,6 +145,8 @@ public class ExceptionHandlerImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case PhotosMetaModelPackage.EXCEPTION_HANDLER__EXCEPTION:
 				return getException();
+			case PhotosMetaModelPackage.EXCEPTION_HANDLER__VALUE:
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +164,9 @@ public class ExceptionHandlerImpl extends MinimalEObjectImpl.Container implement
 				getException().clear();
 				getException().addAll((Collection<? extends PhotosMetaModel.Exception>)newValue);
 				return;
+			case PhotosMetaModelPackage.EXCEPTION_HANDLER__VALUE:
+				setValue((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +182,9 @@ public class ExceptionHandlerImpl extends MinimalEObjectImpl.Container implement
 			case PhotosMetaModelPackage.EXCEPTION_HANDLER__EXCEPTION:
 				getException().clear();
 				return;
+			case PhotosMetaModelPackage.EXCEPTION_HANDLER__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,8 +199,26 @@ public class ExceptionHandlerImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case PhotosMetaModelPackage.EXCEPTION_HANDLER__EXCEPTION:
 				return exception != null && !exception.isEmpty();
+			case PhotosMetaModelPackage.EXCEPTION_HANDLER__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (value: ");
+		result.append(value);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ExceptionHandlerImpl

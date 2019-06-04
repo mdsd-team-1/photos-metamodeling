@@ -36,7 +36,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
         eType="#//Modules" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Repository"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RestController">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requestmapping" upperBound="-1"
         eType="#//RequestMapping" containment="true"/>
@@ -59,10 +61,16 @@
         eType="#//Component" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" upperBound="-1"
         eType="#//Configuration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequestMapping">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requestpart" upperBound="-1"
         eType="#//RequestPart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="produces" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathVariable" upperBound="-1"
+        eType="#//PathVariable" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PostMapping" eSuperTypes="#//RequestMapping"/>
   <eClassifiers xsi:type="ecore:EClass" name="GetMapping" eSuperTypes="#//RequestMapping"/>
@@ -70,11 +78,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="ExceptionHandler">
     <eStructuralFeatures xsi:type="ecore:EReference" name="exception" upperBound="-1"
         eType="#//Exception" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeleteMapping" eSuperTypes="#//RequestMapping"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RequestPart"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestPart">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Autowired"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Exception"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exception">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="table" upperBound="-1"
         eType="#//Table_s" containment="true"/>
@@ -97,8 +111,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatype" eType="#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GeneratedValue"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NamedNativeQuery"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneratedValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="strategy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedNativeQuery">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Specification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="searchcriteria" upperBound="-1"
         eType="#//SearchCriteria" containment="true"/>
@@ -110,21 +130,27 @@
   <eClassifiers xsi:type="ecore:EClass" name="Configuration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bean" upperBound="-1" eType="#//Bean"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="enablewebsecurity" eType="#//EnableWebSecurity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="enableresourceserver" eType="#//EnableResourceServer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enablewebsecurity" eType="#//EnableWebSecurity"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enableresourceserver" eType="#//EnableResourceServer"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enableauthorizationserver"
-        eType="#//EnableAuthorizationServer"/>
+        eType="#//EnableAuthorizationServer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enableglobalmethodsecurity"
-        eType="#//EnableGlobalMethodSecurity"/>
+        eType="#//EnableGlobalMethodSecurity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="order" eType="#//Order_s"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Order_s"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableAuthorizationServer"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableResourceServer"/>
   <eClassifiers xsi:type="ecore:EClass" name="EnableWebSecurity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EnableGlobalMethodSecurity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnableGlobalMethodSecurity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prePostEnabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bean"/>
   <eClassifiers xsi:type="ecore:EClass" name="PostgreSQL">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cluster" eType="#//Cluster"
@@ -138,9 +164,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="column" eType="#//Column_p"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Table_p"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Trigger"/>
-  <eClassifiers xsi:type="ecore:EClass" name="View"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Index_p"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Trigger">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="View">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Index_p">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table_p">
     <eStructuralFeatures xsi:type="ecore:EReference" name="column" upperBound="-1"
         eType="#//Column_p" containment="true"/>
@@ -153,7 +185,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inherit" eType="#//Table_p"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Function_p"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Function_p">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Database">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scheme" upperBound="-1"
         eType="#//Scheme" containment="true"/>
@@ -202,10 +236,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Constraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Privilege"/>
   <eClassifiers xsi:type="ecore:EClass" name="Policy"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Clause">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Index"/>
   <eClassifiers xsi:type="ecore:EClass" name="Column_s">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nullable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="User_d" eSuperTypes="#//Entities">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="first_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -427,5 +464,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Association">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Functionalities"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Functionalities"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathVariable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

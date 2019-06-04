@@ -3,8 +3,8 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.PathVariable;
 import PhotosMetaModel.PhotosMetaModelPackage;
-import PhotosMetaModel.Repository;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link PhotosMetaModel.Repository} object.
+ * This is the item provider adapter for a {@link PhotosMetaModel.PathVariable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RepositoryItemProvider 
+public class PathVariableItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class RepositoryItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryItemProvider(AdapterFactory adapterFactory) {
+	public PathVariableItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,25 +60,26 @@ public class RepositoryItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addDataTypePropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Data Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addDataTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Repository_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Repository_name_feature", "_UI_Repository_type"),
-				 PhotosMetaModelPackage.Literals.REPOSITORY__NAME,
+				 getString("_UI_PathVariable_dataType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PathVariable_dataType_feature", "_UI_PathVariable_type"),
+				 PhotosMetaModelPackage.Literals.PATH_VARIABLE__DATA_TYPE,
 				 true,
 				 false,
 				 false,
@@ -88,14 +89,36 @@ public class RepositoryItemProvider
 	}
 
 	/**
-	 * This returns Repository.gif.
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PathVariable_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PathVariable_value_feature", "_UI_PathVariable_type"),
+				 PhotosMetaModelPackage.Literals.PATH_VARIABLE__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns PathVariable.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Repository"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PathVariable"));
 	}
 
 	/**
@@ -106,10 +129,10 @@ public class RepositoryItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Repository)object).getName();
+		String label = ((PathVariable)object).getDataType();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Repository_type") :
-			getString("_UI_Repository_type") + " " + label;
+			getString("_UI_PathVariable_type") :
+			getString("_UI_PathVariable_type") + " " + label;
 	}
 
 
@@ -124,8 +147,9 @@ public class RepositoryItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Repository.class)) {
-			case PhotosMetaModelPackage.REPOSITORY__NAME:
+		switch (notification.getFeatureID(PathVariable.class)) {
+			case PhotosMetaModelPackage.PATH_VARIABLE__DATA_TYPE:
+			case PhotosMetaModelPackage.PATH_VARIABLE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

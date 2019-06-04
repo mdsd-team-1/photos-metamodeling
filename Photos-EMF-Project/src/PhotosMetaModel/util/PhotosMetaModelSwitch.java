@@ -76,6 +76,7 @@ import PhotosMetaModel.NamedNativeQuery;
 import PhotosMetaModel.ObjectsPublic;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.PathVariable;
 import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotoActions;
 import PhotosMetaModel.PhotosMetaModelPackage;
@@ -1014,6 +1015,12 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 			case PhotosMetaModelPackage.ASSOCIATION: {
 				Association association = (Association)theEObject;
 				T result = caseAssociation(association);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PhotosMetaModelPackage.PATH_VARIABLE: {
+				PathVariable pathVariable = (PathVariable)theEObject;
+				T result = casePathVariable(pathVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -2953,6 +2960,21 @@ public class PhotosMetaModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAssociation(Association object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathVariable(PathVariable object) {
 		return null;
 	}
 

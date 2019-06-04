@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<co.edu.unal.mdd.photos.PhotosMetaModel:SoftGallery xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:co.edu.unal.mdd.photos.PhotosMetaModel="http://co/edu/unal/mdd/photos/PhotosMetaModel">
+<co.edu.unal.mdd.photos.PhotosMetaModel:SoftGallery xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.unal.mdd.photos.PhotosMetaModel="http://co/edu/unal/mdd/photos/PhotosMetaModel">
   <domain/>
   <architecture/>
   <technology>
+    <spring>
+      <springbootapplication name="SoftGallery">
+        <repository name="AlbumRepository"/>
+        <repository name="PhotoRepository"/>
+        <repository name="UserRespository"/>
+        <restcontroller name="AlbumController">
+          <requestmapping value="/album"/>
+          <requestmapping value="/id/{id}" method="RequestMethod.GET" produces="application/json"/>
+          <requestmapping value="/{id}/photos" method="RequestMethod.GET" produces="application/json"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:PostMapping" value="/create"/>
+          <exceptionhandler value="Exception.class">
+            <exception/>
+          </exceptionhandler>
+        </restcontroller>
+        <restcontroller name="HomeController">
+          <requestmapping value="/"/>
+          <exceptionhandler value="Exception.class"/>
+        </restcontroller>
+        <restcontroller name="PhotoController">
+          <requestmapping value="/photo"/>
+          <requestmapping value="/id/{id}" method="RequestMethod.GET" produces="application/json"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:PostMapping" value="/upload"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:DeleteMapping" value="/delete"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:GetMapping" value="/all"/>
+          <exceptionhandler value="Exception.class"/>
+        </restcontroller>
+        <restcontroller name="UserController">
+          <requestmapping value="/user"/>
+          <requestmapping value="/id/{id}" method="RequestMethod.GET" produces="application/json"/>
+          <requestmapping value="/{id}/albums" method="RequestMethod.GET" produces="application/json"/>
+          <requestmapping value="/{id}/photos" method="RequestMethod.GET" produces="application/json"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:PostMapping" value="/login"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:PostMapping" value="/create"/>
+          <requestmapping xsi:type="co.edu.unal.mdd.photos.PhotosMetaModel:PutMapping" value="/{id}/edit"/>
+          <exceptionhandler value="Exception.class"/>
+        </restcontroller>
+        <entity>
+          <table name="Album"/>
+        </entity>
+        <entity>
+          <table name="Photo"/>
+        </entity>
+        <entity>
+          <table name="User"/>
+          <namednativequery name="findLoginUser" query="SELECT id FROM users WHERE email = ?0 AND password = ?1" resultClass="User.class"/>
+        </entity>
+        <component name="CORSFilter"/>
+        <configuration name="AuthorizationServerConfig"/>
+        <configuration name="AuthorizationServerConfig"/>
+        <configuration name="ResourceServerConfig"/>
+        <configuration name="SecurityConfig"/>
+      </springbootapplication>
+    </spring>
     <postgresql>
       <cluster/>
     </postgresql>
     <react/>
+    <amazonwebservices/>
   </technology>
 </co.edu.unal.mdd.photos.PhotosMetaModel:SoftGallery>

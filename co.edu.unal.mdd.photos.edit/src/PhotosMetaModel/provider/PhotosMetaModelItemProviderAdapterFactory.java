@@ -3039,6 +3039,29 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link PhotosMetaModel.PathVariable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PathVariableItemProvider pathVariableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link PhotosMetaModel.PathVariable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPathVariableAdapter() {
+		if (pathVariableItemProvider == null) {
+			pathVariableItemProvider = new PathVariableItemProvider(this);
+		}
+
+		return pathVariableItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3272,6 +3295,7 @@ public class PhotosMetaModelItemProviderAdapterFactory extends PhotosMetaModelAd
 		if (filesItemProvider != null) filesItemProvider.dispose();
 		if (amazonElasticComputeCloudItemProvider != null) amazonElasticComputeCloudItemProvider.dispose();
 		if (associationItemProvider != null) associationItemProvider.dispose();
+		if (pathVariableItemProvider != null) pathVariableItemProvider.dispose();
 	}
 
 }

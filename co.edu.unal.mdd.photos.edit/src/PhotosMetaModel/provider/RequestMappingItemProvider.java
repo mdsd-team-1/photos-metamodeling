@@ -17,12 +17,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -61,8 +63,77 @@ public class RequestMappingItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addValuePropertyDescriptor(object);
+			addMethodPropertyDescriptor(object);
+			addProducesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RequestMapping_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RequestMapping_value_feature", "_UI_RequestMapping_type"),
+				 PhotosMetaModelPackage.Literals.REQUEST_MAPPING__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Method feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMethodPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RequestMapping_method_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RequestMapping_method_feature", "_UI_RequestMapping_type"),
+				 PhotosMetaModelPackage.Literals.REQUEST_MAPPING__METHOD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Produces feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProducesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RequestMapping_produces_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RequestMapping_produces_feature", "_UI_RequestMapping_type"),
+				 PhotosMetaModelPackage.Literals.REQUEST_MAPPING__PRODUCES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -78,6 +149,7 @@ public class RequestMappingItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PhotosMetaModelPackage.Literals.REQUEST_MAPPING__REQUESTPART);
+			childrenFeatures.add(PhotosMetaModelPackage.Literals.REQUEST_MAPPING__PATH_VARIABLE);
 		}
 		return childrenFeatures;
 	}
@@ -114,7 +186,10 @@ public class RequestMappingItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RequestMapping_type");
+		String label = ((RequestMapping)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RequestMapping_type") :
+			getString("_UI_RequestMapping_type") + " " + label;
 	}
 
 
@@ -130,7 +205,13 @@ public class RequestMappingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RequestMapping.class)) {
+			case PhotosMetaModelPackage.REQUEST_MAPPING__VALUE:
+			case PhotosMetaModelPackage.REQUEST_MAPPING__METHOD:
+			case PhotosMetaModelPackage.REQUEST_MAPPING__PRODUCES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case PhotosMetaModelPackage.REQUEST_MAPPING__REQUESTPART:
+			case PhotosMetaModelPackage.REQUEST_MAPPING__PATH_VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,6 +233,11 @@ public class RequestMappingItemProvider
 			(createChildParameter
 				(PhotosMetaModelPackage.Literals.REQUEST_MAPPING__REQUESTPART,
 				 PhotosMetaModelFactory.eINSTANCE.createRequestPart()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PhotosMetaModelPackage.Literals.REQUEST_MAPPING__PATH_VARIABLE,
+				 PhotosMetaModelFactory.eINSTANCE.createPathVariable()));
 	}
 
 	/**

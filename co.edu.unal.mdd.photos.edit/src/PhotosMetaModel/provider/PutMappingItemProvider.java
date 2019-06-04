@@ -3,6 +3,8 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.PutMapping;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +64,10 @@ public class PutMappingItemProvider extends RequestMappingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PutMapping_type");
+		String label = ((PutMapping)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PutMapping_type") :
+			getString("_UI_PutMapping_type") + " " + label;
 	}
 
 

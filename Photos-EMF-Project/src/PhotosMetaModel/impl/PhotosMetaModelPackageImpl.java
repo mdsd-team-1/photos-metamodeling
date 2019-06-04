@@ -76,6 +76,7 @@ import PhotosMetaModel.NamedNativeQuery;
 import PhotosMetaModel.ObjectsPublic;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.PathVariable;
 import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotoActions;
 import PhotosMetaModel.PhotosMetaModelFactory;
@@ -1049,6 +1050,13 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	private EClass associationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathVariableEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1295,6 +1303,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRepository_Name() {
+		return (EAttribute)repositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRestController() {
 		return restControllerEClass;
 	}
@@ -1415,6 +1433,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getSpringBootApplication_Name() {
+		return (EAttribute)springBootApplicationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRequestMapping() {
 		return requestMappingEClass;
 	}
@@ -1427,6 +1455,46 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	@Override
 	public EReference getRequestMapping_Requestpart() {
 		return (EReference)requestMappingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRequestMapping_Value() {
+		return (EAttribute)requestMappingEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRequestMapping_Method() {
+		return (EAttribute)requestMappingEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRequestMapping_Produces() {
+		return (EAttribute)requestMappingEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequestMapping_PathVariable() {
+		return (EReference)requestMappingEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1485,6 +1553,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getExceptionHandler_Value() {
+		return (EAttribute)exceptionHandlerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDeleteMapping() {
 		return deleteMappingEClass;
 	}
@@ -1505,6 +1583,26 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRequestPart_Value() {
+		return (EAttribute)requestPartEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRequestPart_Required() {
+		return (EAttribute)requestPartEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAutowired() {
 		return autowiredEClass;
 	}
@@ -1517,6 +1615,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	@Override
 	public EClass getException() {
 		return exceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getException_Name() {
+		return (EAttribute)exceptionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1665,8 +1773,48 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getGeneratedValue_Strategy() {
+		return (EAttribute)generatedValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNamedNativeQuery() {
 		return namedNativeQueryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNamedNativeQuery_Name() {
+		return (EAttribute)namedNativeQueryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNamedNativeQuery_Query() {
+		return (EAttribute)namedNativeQueryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNamedNativeQuery_ResultClass() {
+		return (EAttribute)namedNativeQueryEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1745,8 +1893,8 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getConfiguration_Enablewebsecurity() {
-		return (EReference)configurationEClass.getEStructuralFeatures().get(1);
+	public EAttribute getConfiguration_Name() {
+		return (EAttribute)configurationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1755,7 +1903,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getConfiguration_Enableresourceserver() {
+	public EReference getConfiguration_Enablewebsecurity() {
 		return (EReference)configurationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1765,7 +1913,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getConfiguration_Enableauthorizationserver() {
+	public EReference getConfiguration_Enableresourceserver() {
 		return (EReference)configurationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1775,8 +1923,18 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
-	public EReference getConfiguration_Enableglobalmethodsecurity() {
+	public EReference getConfiguration_Enableauthorizationserver() {
 		return (EReference)configurationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConfiguration_Enableglobalmethodsecurity() {
+		return (EReference)configurationEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1797,6 +1955,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	@Override
 	public EReference getComponent_Order() {
 		return (EReference)componentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getComponent_Name() {
+		return (EAttribute)componentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1847,6 +2015,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	@Override
 	public EClass getEnableGlobalMethodSecurity() {
 		return enableGlobalMethodSecurityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEnableGlobalMethodSecurity_PrePostEnabled() {
+		return (EAttribute)enableGlobalMethodSecurityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1945,6 +2123,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTrigger_Name() {
+		return (EAttribute)triggerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getView() {
 		return viewEClass;
 	}
@@ -1955,8 +2143,28 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getView_Name() {
+		return (EAttribute)viewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getIndex_p() {
 		return index_pEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIndex_p_Name() {
+		return (EAttribute)index_pEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2037,6 +2245,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	@Override
 	public EClass getFunction_p() {
 		return function_pEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFunction_p_Name() {
+		return (EAttribute)function_pEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2345,6 +2563,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EAttribute getClause_Keyword() {
+		return (EAttribute)clauseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getIndex() {
 		return indexEClass;
 	}
@@ -2367,6 +2595,16 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	@Override
 	public EAttribute getColumn_s_Name() {
 		return (EAttribute)column_sEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getColumn_s_Nullable() {
+		return (EAttribute)column_sEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3915,6 +4153,36 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 	 * @generated
 	 */
 	@Override
+	public EClass getPathVariable() {
+		return pathVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPathVariable_DataType() {
+		return (EAttribute)pathVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPathVariable_Value() {
+		return (EAttribute)pathVariableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public PhotosMetaModelFactory getPhotosMetaModelFactory() {
 		return (PhotosMetaModelFactory)getEFactoryInstance();
 	}
@@ -3962,6 +4230,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(reactEClass, REACT__MODULES);
 
 		repositoryEClass = createEClass(REPOSITORY);
+		createEAttribute(repositoryEClass, REPOSITORY__NAME);
 
 		restControllerEClass = createEClass(REST_CONTROLLER);
 		createEReference(restControllerEClass, REST_CONTROLLER__REQUESTMAPPING);
@@ -3976,9 +4245,14 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(springBootApplicationEClass, SPRING_BOOT_APPLICATION__ENTITY);
 		createEReference(springBootApplicationEClass, SPRING_BOOT_APPLICATION__COMPONENT);
 		createEReference(springBootApplicationEClass, SPRING_BOOT_APPLICATION__CONFIGURATION);
+		createEAttribute(springBootApplicationEClass, SPRING_BOOT_APPLICATION__NAME);
 
 		requestMappingEClass = createEClass(REQUEST_MAPPING);
 		createEReference(requestMappingEClass, REQUEST_MAPPING__REQUESTPART);
+		createEAttribute(requestMappingEClass, REQUEST_MAPPING__VALUE);
+		createEAttribute(requestMappingEClass, REQUEST_MAPPING__METHOD);
+		createEAttribute(requestMappingEClass, REQUEST_MAPPING__PRODUCES);
+		createEReference(requestMappingEClass, REQUEST_MAPPING__PATH_VARIABLE);
 
 		postMappingEClass = createEClass(POST_MAPPING);
 
@@ -3988,14 +4262,18 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		exceptionHandlerEClass = createEClass(EXCEPTION_HANDLER);
 		createEReference(exceptionHandlerEClass, EXCEPTION_HANDLER__EXCEPTION);
+		createEAttribute(exceptionHandlerEClass, EXCEPTION_HANDLER__VALUE);
 
 		deleteMappingEClass = createEClass(DELETE_MAPPING);
 
 		requestPartEClass = createEClass(REQUEST_PART);
+		createEAttribute(requestPartEClass, REQUEST_PART__VALUE);
+		createEAttribute(requestPartEClass, REQUEST_PART__REQUIRED);
 
 		autowiredEClass = createEClass(AUTOWIRED);
 
 		exceptionEClass = createEClass(EXCEPTION);
+		createEAttribute(exceptionEClass, EXCEPTION__NAME);
 
 		entityEClass = createEClass(ENTITY);
 		createEReference(entityEClass, ENTITY__TABLE);
@@ -4015,8 +4293,12 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEAttribute(column_pEClass, COLUMN_P__NAME);
 
 		generatedValueEClass = createEClass(GENERATED_VALUE);
+		createEAttribute(generatedValueEClass, GENERATED_VALUE__STRATEGY);
 
 		namedNativeQueryEClass = createEClass(NAMED_NATIVE_QUERY);
+		createEAttribute(namedNativeQueryEClass, NAMED_NATIVE_QUERY__NAME);
+		createEAttribute(namedNativeQueryEClass, NAMED_NATIVE_QUERY__QUERY);
+		createEAttribute(namedNativeQueryEClass, NAMED_NATIVE_QUERY__RESULT_CLASS);
 
 		specificationEClass = createEClass(SPECIFICATION);
 		createEReference(specificationEClass, SPECIFICATION__SEARCHCRITERIA);
@@ -4028,6 +4310,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		configurationEClass = createEClass(CONFIGURATION);
 		createEReference(configurationEClass, CONFIGURATION__BEAN);
+		createEAttribute(configurationEClass, CONFIGURATION__NAME);
 		createEReference(configurationEClass, CONFIGURATION__ENABLEWEBSECURITY);
 		createEReference(configurationEClass, CONFIGURATION__ENABLERESOURCESERVER);
 		createEReference(configurationEClass, CONFIGURATION__ENABLEAUTHORIZATIONSERVER);
@@ -4035,6 +4318,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__ORDER);
+		createEAttribute(componentEClass, COMPONENT__NAME);
 
 		order_sEClass = createEClass(ORDER_S);
 
@@ -4045,6 +4329,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		enableWebSecurityEClass = createEClass(ENABLE_WEB_SECURITY);
 
 		enableGlobalMethodSecurityEClass = createEClass(ENABLE_GLOBAL_METHOD_SECURITY);
+		createEAttribute(enableGlobalMethodSecurityEClass, ENABLE_GLOBAL_METHOD_SECURITY__PRE_POST_ENABLED);
 
 		beanEClass = createEClass(BEAN);
 
@@ -4059,10 +4344,13 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEReference(foreignKeyEClass, FOREIGN_KEY__REFERENCE);
 
 		triggerEClass = createEClass(TRIGGER);
+		createEAttribute(triggerEClass, TRIGGER__NAME);
 
 		viewEClass = createEClass(VIEW);
+		createEAttribute(viewEClass, VIEW__NAME);
 
 		index_pEClass = createEClass(INDEX_P);
+		createEAttribute(index_pEClass, INDEX_P__NAME);
 
 		table_pEClass = createEClass(TABLE_P);
 		createEReference(table_pEClass, TABLE_P__COLUMN);
@@ -4073,6 +4361,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		createEAttribute(table_pEClass, TABLE_P__NAME);
 
 		function_pEClass = createEClass(FUNCTION_P);
+		createEAttribute(function_pEClass, FUNCTION_P__NAME);
 
 		databaseEClass = createEClass(DATABASE);
 		createEReference(databaseEClass, DATABASE__SCHEME);
@@ -4114,11 +4403,13 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		policyEClass = createEClass(POLICY);
 
 		clauseEClass = createEClass(CLAUSE);
+		createEAttribute(clauseEClass, CLAUSE__KEYWORD);
 
 		indexEClass = createEClass(INDEX);
 
 		column_sEClass = createEClass(COLUMN_S);
 		createEAttribute(column_sEClass, COLUMN_S__NAME);
+		createEAttribute(column_sEClass, COLUMN_S__NULLABLE);
 
 		user_dEClass = createEClass(USER_D);
 		createEAttribute(user_dEClass, USER_D__FIRST_NAME);
@@ -4346,6 +4637,10 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		associationEClass = createEClass(ASSOCIATION);
 		createEReference(associationEClass, ASSOCIATION__SOURCE);
 		createEReference(associationEClass, ASSOCIATION__TARGET);
+
+		pathVariableEClass = createEClass(PATH_VARIABLE);
+		createEAttribute(pathVariableEClass, PATH_VARIABLE__DATA_TYPE);
+		createEAttribute(pathVariableEClass, PATH_VARIABLE__VALUE);
 	}
 
 	/**
@@ -4447,6 +4742,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getReact_Modules(), this.getModules(), null, "modules", null, 0, -1, React.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRepository_Name(), ecorePackage.getEString(), "name", null, 0, 1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restControllerEClass, RestController.class, "RestController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRestController_Requestmapping(), this.getRequestMapping(), null, "requestmapping", null, 0, -1, RestController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4461,9 +4757,14 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getSpringBootApplication_Entity(), this.getEntity(), null, "entity", null, 0, -1, SpringBootApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpringBootApplication_Component(), this.getComponent(), null, "component", null, 0, -1, SpringBootApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpringBootApplication_Configuration(), this.getConfiguration(), null, "configuration", null, 0, -1, SpringBootApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpringBootApplication_Name(), ecorePackage.getEString(), "name", null, 0, 1, SpringBootApplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requestMappingEClass, RequestMapping.class, "RequestMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRequestMapping_Requestpart(), this.getRequestPart(), null, "requestpart", null, 0, -1, RequestMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRequestMapping_Value(), ecorePackage.getEString(), "value", null, 0, 1, RequestMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRequestMapping_Method(), ecorePackage.getEString(), "method", null, 0, 1, RequestMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRequestMapping_Produces(), ecorePackage.getEString(), "produces", null, 0, 1, RequestMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequestMapping_PathVariable(), this.getPathVariable(), null, "pathVariable", null, 0, -1, RequestMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(postMappingEClass, PostMapping.class, "PostMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4473,14 +4774,18 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		initEClass(exceptionHandlerEClass, ExceptionHandler.class, "ExceptionHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExceptionHandler_Exception(), this.getException(), null, "exception", null, 0, -1, ExceptionHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExceptionHandler_Value(), ecorePackage.getEString(), "value", null, 0, 1, ExceptionHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deleteMappingEClass, DeleteMapping.class, "DeleteMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(requestPartEClass, RequestPart.class, "RequestPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRequestPart_Value(), ecorePackage.getEString(), "value", null, 0, 1, RequestPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRequestPart_Required(), ecorePackage.getEBoolean(), "required", null, 0, 1, RequestPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(autowiredEClass, Autowired.class, "Autowired", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(exceptionEClass, PhotosMetaModel.Exception.class, "Exception", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getException_Name(), ecorePackage.getEString(), "name", null, 0, 1, PhotosMetaModel.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEntity_Table(), this.getTable_s(), null, "table", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4500,8 +4805,12 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEAttribute(getColumn_p_Name(), ecorePackage.getEString(), "name", null, 0, 1, Column_p.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generatedValueEClass, GeneratedValue.class, "GeneratedValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGeneratedValue_Strategy(), ecorePackage.getEString(), "strategy", null, 0, 1, GeneratedValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedNativeQueryEClass, NamedNativeQuery.class, "NamedNativeQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedNativeQuery_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedNativeQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNamedNativeQuery_Query(), ecorePackage.getEString(), "query", null, 0, 1, NamedNativeQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNamedNativeQuery_ResultClass(), ecorePackage.getEString(), "resultClass", null, 0, 1, NamedNativeQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(specificationEClass, Specification.class, "Specification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpecification_Searchcriteria(), this.getSearchCriteria(), null, "searchcriteria", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4513,13 +4822,15 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 
 		initEClass(configurationEClass, Configuration.class, "Configuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConfiguration_Bean(), this.getBean(), null, "bean", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_Enablewebsecurity(), this.getEnableWebSecurity(), null, "enablewebsecurity", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_Enableresourceserver(), this.getEnableResourceServer(), null, "enableresourceserver", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_Enableauthorizationserver(), this.getEnableAuthorizationServer(), null, "enableauthorizationserver", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_Enableglobalmethodsecurity(), this.getEnableGlobalMethodSecurity(), null, "enableglobalmethodsecurity", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConfiguration_Name(), ecorePackage.getEString(), "name", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_Enablewebsecurity(), this.getEnableWebSecurity(), null, "enablewebsecurity", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_Enableresourceserver(), this.getEnableResourceServer(), null, "enableresourceserver", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_Enableauthorizationserver(), this.getEnableAuthorizationServer(), null, "enableauthorizationserver", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_Enableglobalmethodsecurity(), this.getEnableGlobalMethodSecurity(), null, "enableglobalmethodsecurity", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_Order(), this.getOrder_s(), null, "order", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(order_sEClass, Order_s.class, "Order_s", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4530,6 +4841,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEClass(enableWebSecurityEClass, EnableWebSecurity.class, "EnableWebSecurity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(enableGlobalMethodSecurityEClass, EnableGlobalMethodSecurity.class, "EnableGlobalMethodSecurity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEnableGlobalMethodSecurity_PrePostEnabled(), ecorePackage.getEBoolean(), "prePostEnabled", null, 0, 1, EnableGlobalMethodSecurity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(beanEClass, Bean.class, "Bean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4544,10 +4856,13 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEReference(getForeignKey_Reference(), this.getTable_p(), null, "reference", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(triggerEClass, Trigger.class, "Trigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrigger_Name(), ecorePackage.getEString(), "name", null, 0, 1, Trigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(viewEClass, View.class, "View", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getView_Name(), ecorePackage.getEString(), "name", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(index_pEClass, Index_p.class, "Index_p", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIndex_p_Name(), ecorePackage.getEString(), "name", null, 0, 1, Index_p.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(table_pEClass, Table_p.class, "Table_p", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTable_p_Column(), this.getColumn_p(), null, "column", null, 0, -1, Table_p.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4558,6 +4873,7 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEAttribute(getTable_p_Name(), ecorePackage.getEString(), "name", null, 0, 1, Table_p.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(function_pEClass, Function_p.class, "Function_p", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunction_p_Name(), ecorePackage.getEString(), "name", null, 0, 1, Function_p.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDatabase_Scheme(), this.getScheme(), null, "scheme", null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4599,11 +4915,13 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEClass(policyEClass, Policy.class, "Policy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(clauseEClass, Clause.class, "Clause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClause_Keyword(), ecorePackage.getEString(), "keyword", null, 0, 1, Clause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(indexEClass, Index.class, "Index", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(column_sEClass, Column_s.class, "Column_s", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumn_s_Name(), ecorePackage.getEString(), "name", null, 0, 1, Column_s.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColumn_s_Nullable(), ecorePackage.getEBoolean(), "nullable", null, 0, 1, Column_s.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(user_dEClass, User_d.class, "User_d", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUser_d_First_name(), ecorePackage.getEString(), "first_name", null, 0, 1, User_d.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4831,6 +5149,10 @@ public class PhotosMetaModelPackageImpl extends EPackageImpl implements PhotosMe
 		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociation_Source(), this.getFunctionalities(), null, "source", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociation_Target(), this.getFunctionalities(), null, "target", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pathVariableEClass, PathVariable.class, "PathVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPathVariable_DataType(), ecorePackage.getEString(), "dataType", null, 0, 1, PathVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathVariable_Value(), ecorePackage.getEString(), "value", null, 0, 1, PathVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

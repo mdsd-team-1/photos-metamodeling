@@ -76,6 +76,7 @@ import PhotosMetaModel.NamedNativeQuery;
 import PhotosMetaModel.ObjectsPublic;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.PathVariable;
 import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotoActions;
 import PhotosMetaModel.PhotosMetaModelFactory;
@@ -314,6 +315,7 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 			case PhotosMetaModelPackage.FILES: return createFiles();
 			case PhotosMetaModelPackage.AMAZON_ELASTIC_COMPUTE_CLOUD: return createAmazonElasticComputeCloud();
 			case PhotosMetaModelPackage.ASSOCIATION: return createAssociation();
+			case PhotosMetaModelPackage.PATH_VARIABLE: return createPathVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1736,6 +1738,17 @@ public class PhotosMetaModelFactoryImpl extends EFactoryImpl implements PhotosMe
 	public Association createAssociation() {
 		AssociationImpl association = new AssociationImpl();
 		return association;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PathVariable createPathVariable() {
+		PathVariableImpl pathVariable = new PathVariableImpl();
+		return pathVariable;
 	}
 
 	/**

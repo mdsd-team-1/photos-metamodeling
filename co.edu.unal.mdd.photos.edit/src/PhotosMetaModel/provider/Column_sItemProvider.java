@@ -61,6 +61,7 @@ public class Column_sItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addNullablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,6 +84,28 @@ public class Column_sItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nullable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNullablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Column_s_nullable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Column_s_nullable_feature", "_UI_Column_s_type"),
+				 PhotosMetaModelPackage.Literals.COLUMN_S__NULLABLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -126,6 +149,7 @@ public class Column_sItemProvider
 
 		switch (notification.getFeatureID(Column_s.class)) {
 			case PhotosMetaModelPackage.COLUMN_S__NAME:
+			case PhotosMetaModelPackage.COLUMN_S__NULLABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

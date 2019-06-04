@@ -17,12 +17,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -61,8 +63,31 @@ public class ExceptionHandlerItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExceptionHandler_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExceptionHandler_value_feature", "_UI_ExceptionHandler_type"),
+				 PhotosMetaModelPackage.Literals.EXCEPTION_HANDLER__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -114,7 +139,10 @@ public class ExceptionHandlerItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ExceptionHandler_type");
+		String label = ((ExceptionHandler)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ExceptionHandler_type") :
+			getString("_UI_ExceptionHandler_type") + " " + label;
 	}
 
 
@@ -130,6 +158,9 @@ public class ExceptionHandlerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExceptionHandler.class)) {
+			case PhotosMetaModelPackage.EXCEPTION_HANDLER__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case PhotosMetaModelPackage.EXCEPTION_HANDLER__EXCEPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

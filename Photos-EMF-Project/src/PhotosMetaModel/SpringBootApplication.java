@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link PhotosMetaModel.SpringBootApplication#getEntity <em>Entity</em>}</li>
  *   <li>{@link PhotosMetaModel.SpringBootApplication#getComponent <em>Component</em>}</li>
  *   <li>{@link PhotosMetaModel.SpringBootApplication#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link PhotosMetaModel.SpringBootApplication#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see PhotosMetaModel.PhotosMetaModelPackage#getSpringBootApplication()
@@ -86,5 +87,27 @@ public interface SpringBootApplication extends EObject {
 	 * @generated
 	 */
 	EList<Configuration> getConfiguration();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see PhotosMetaModel.PhotosMetaModelPackage#getSpringBootApplication_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link PhotosMetaModel.SpringBootApplication#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // SpringBootApplication

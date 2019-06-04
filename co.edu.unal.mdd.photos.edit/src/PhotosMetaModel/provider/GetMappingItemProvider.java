@@ -3,6 +3,8 @@
 package PhotosMetaModel.provider;
 
 
+import PhotosMetaModel.GetMapping;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +64,10 @@ public class GetMappingItemProvider extends RequestMappingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_GetMapping_type");
+		String label = ((GetMapping)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_GetMapping_type") :
+			getString("_UI_GetMapping_type") + " " + label;
 	}
 
 

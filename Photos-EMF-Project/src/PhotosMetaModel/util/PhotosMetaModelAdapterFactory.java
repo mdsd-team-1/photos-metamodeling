@@ -76,6 +76,7 @@ import PhotosMetaModel.NamedNativeQuery;
 import PhotosMetaModel.ObjectsPublic;
 import PhotosMetaModel.OnlyAuthorized;
 import PhotosMetaModel.Order_s;
+import PhotosMetaModel.PathVariable;
 import PhotosMetaModel.Photo;
 import PhotosMetaModel.PhotoActions;
 import PhotosMetaModel.PhotosMetaModelPackage;
@@ -710,6 +711,10 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAssociation(Association object) {
 				return createAssociationAdapter();
+			}
+			@Override
+			public Adapter casePathVariable(PathVariable object) {
+				return createPathVariableAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -2534,6 +2539,20 @@ public class PhotosMetaModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link PhotosMetaModel.PathVariable <em>Path Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see PhotosMetaModel.PathVariable
+	 * @generated
+	 */
+	public Adapter createPathVariableAdapter() {
 		return null;
 	}
 
