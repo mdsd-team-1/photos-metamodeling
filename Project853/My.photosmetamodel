@@ -57,7 +57,35 @@
       </springbootapplication>
     </spring>
     <postgresql>
-      <cluster/>
+      <cluster>
+        <database name="photos">
+          <scheme name="public">
+            <table_postgresql name="album">
+              <column name="id"/>
+              <column name="name"/>
+              <column name="user_id"/>
+              <foreignkey column="//@technology/@postgresql/@cluster/@database.0/@scheme.0/@table_postgresql.0/@column.2" reference="//@technology/@postgresql/@cluster/@database.0/@scheme.0/@table_postgresql.2"/>
+            </table_postgresql>
+            <table_postgresql name="photo">
+              <column name="id"/>
+              <column name="url"/>
+              <column name="name"/>
+              <column name="album_id"/>
+              <foreignkey column="//@technology/@postgresql/@cluster/@database.0/@scheme.0/@table_postgresql.1/@column.3" reference="//@technology/@postgresql/@cluster/@database.0/@scheme.0/@table_postgresql.1"/>
+            </table_postgresql>
+            <table_postgresql name="users">
+              <column name="id"/>
+              <column name="first_name"/>
+              <column name="last_name"/>
+              <column name="profile_description"/>
+              <column name="username"/>
+              <column name="password"/>
+              <column name="email"/>
+            </table_postgresql>
+          </scheme>
+        </database>
+        <user_p username="postgres" password="modelos123"/>
+      </cluster>
     </postgresql>
     <react/>
     <amazonwebservices/>
